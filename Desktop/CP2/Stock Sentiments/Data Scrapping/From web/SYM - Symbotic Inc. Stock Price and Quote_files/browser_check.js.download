@@ -1,0 +1,102 @@
+
+const SCRIPT_NOT_LOADED_MESSAGE = 'One or more of the required application components couldn’t be loaded. Please, <a href="" onClick="window.location.reload()">refresh the page.</a>'
+const UNSUPPORTED_BROWSER_MESSAGE = 'Your browser is no longer supported. Please, <a href="https://browser-update.org/update.html" target="_blank">upgrade your browser.</a>';
+const COOKIES_AND_OR_LOCAL_STORAGE_UNAVAILABLE_MESSAGE = 'Your browser blocks cookies and/or local storage, some page functionality might be unavailable.';
+
+function areCookiesEnabled(){
+  var cookieEnabled = navigator.cookieEnabled;
+  if (!cookieEnabled){
+      document.cookie = "testcookie=1";
+      cookieEnabled = document.cookie.indexOf("testcookie") !== -1;
+  }
+  return cookieEnabled;
+}
+
+function isLocalStorageAvailable(){
+  var test = 'test';
+  try {
+      localStorage.setItem(test, test);
+      return true;
+  } catch(e) {
+      return false;
+  }
+}
+
+function insertNotification (message, isWarningMessage) {
+  const el = document.getElementById('notifications-container')
+  if (el) {
+    const newElement = document.createElement('div')
+    newElement.style.backgroundColor = isWarningMessage ? '#EF9323' : '#fd656a'
+    newElement.innerHTML = message
+    el.appendChild(newElement)
+    el.style.display = 'block'
+  }
+}
+
+(function () {
+  try {
+    function ready(fn) {
+      if (document.readyState !== 'loading') {
+        fn()
+      } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', fn)
+      } else {
+        document.attachEvent('onreadystatechange', function () {
+          if (document.readyState !== 'loading') fn()
+        })
+      }
+    }
+
+    function showMessage(message, isWarningMessage) {
+      window.sentryDisabled = true
+      ready(function () {
+        insertNotification(message, isWarningMessage)
+      })
+    }
+
+    const featureChecks = [
+      /**
+       * We're using https://caniuse.com/mdn-css_types_color_rgb_alpha_parameter which isn't supported in Safari <12.1. Using https://caniuse.com/mdn-api_intersectionobserver to detect support.
+       * Added in #704
+       * Supported from Chrome 51, Edge 15, FF 55, Safari 12.1, SafariIOS 12.2
+       */
+      'IntersectionObserver' in window,
+      /**
+       * Check min supported browser version by checking newest required browser feature feature `actualBoundingBoxAscent`
+       * Added in #343
+       * Supported from Edge 79, FF 74, Chrome 77, Safari 12.1, Opera 64, SafariIOS 12.2
+       */
+      'TextMetrics' in window && window.TextMetrics.prototype.hasOwnProperty('actualBoundingBoxAscent'),
+      /**
+       * Used for getMonth, getDay, getTime helper functions
+       * Added in #578
+       * Supported from Chrome 1, Edge 12, FF 1, Safari 1, SafariIOS 1
+       */
+      typeof Date.prototype.toLocaleDateString === 'function',
+      /**
+       * Check CSS3 grid support
+       * Supported from Chrome 57, Edge 16, Firefox 52, Safari 10.1, SafariIOS 10.3
+       */
+      'CSS' in window && 'supports' in CSS && CSS.supports('grid-template-columns', '1fr'),
+    ]
+
+    if (featureChecks.some(function (check) { return check === false })) {
+      return showMessage(UNSUPPORTED_BROWSER_MESSAGE)
+    }
+
+    if(!areCookiesEnabled() || !isLocalStorageAvailable()) {
+      return showMessage(COOKIES_AND_OR_LOCAL_STORAGE_UNAVAILABLE_MESSAGE, true)
+    }
+
+    window.handleScriptNotLoaded = function (element) {
+      window.notificationsArray.push(element)
+      window.sentryDisabled = true
+      window.handleScriptNotLoaded = function () {}
+    }
+    window.renderScriptNotLoaded = function () {
+      if(window.notificationsArray.length > 0){
+        insertNotification(SCRIPT_NOT_LOADED_MESSAGE, true)
+      }
+    }
+  } catch (e) {}
+})()

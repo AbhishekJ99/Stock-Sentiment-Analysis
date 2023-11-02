@@ -1,0 +1,186 @@
+/**
+ * Get random element from array and return it along with its position
+ * @template Item
+ * @param {Item[]} arr
+ */
+function random(arr) {
+  var index = Math.floor(Math.random() * arr.length);
+  return { element: arr[index], key: index + 1 };
+}
+
+function isScreener() {
+  return window.location.pathname.indexOf("/screener.ashx") === 0
+}
+
+function isQuote() {
+  return window.location.pathname.indexOf("/quote.ashx") === 0
+}
+
+/**
+ * @param {string} campaign
+ */
+function getUTM(campaign) {
+  return "utm_source=finviz&utm_medium=banner&utm_campaign=" + campaign;
+}
+
+var selector = "IC_D_";
+var selectors = {
+  Header: "IC_D_728x90",
+  TextLink: "IC_D_234x20",
+  TickerInContent: "IC_D_3x3",
+  InContentVideo: "IC_D_3x6",
+  NewsNative: "IC_D_3x8",
+  HomepageNewsLink: "IC_D_3x1",
+  QuoteChart: "IC_D_970x91",
+  ScreenerInContent1: "IC_D_3x7",
+  ScreenerInContent2: "IC_D_3x8",
+  Statements: "IC_D_300x60",
+};
+
+var houseImageBanners = ['advanced-charts', 'explore-market-trends', 'real-time-quotes'];
+var houseImageVariations = [1, 2, 3, 4];
+
+
+var houseNativeBanners = [
+  "Upgrade to FINVIZ*Elite to get real-time quotes, intraday charts, and advanced charting tools.",
+  "Join thousands of traders who make more informed decisions with our premium features. Real-time quotes, advanced visualizations, backtesting, and much more.",
+];
+
+/**
+ * @param {string} format
+ */
+function getPictureSrcSet(path, format) {
+  return path + "." + format + " 1x," + path + "@2x." + format + " 2x";
+}
+
+/**
+ * @param {HTMLElement} element
+ */
+function placeImageBanner(element) {
+  var banner = random(houseImageBanners).element;
+  var variation = random(houseImageVariations).element;
+  var bannerName = banner + '-' + variation;
+  var path = "/img/a/" + bannerName;
+  var webpSource = "<source srcset='" + getPictureSrcSet(path, 'webp') + "' type='image/webp'>";
+  var imgTag = "<img width='728' height='90' src='" + path + ".png' srcset='" + getPictureSrcSet(path, 'png') + "'>";
+
+  element.innerHTML = "<a href='/elite.ashx?" + getUTM(bannerName) + "'><picture>" + webpSource + imgTag + "</picture></a>";
+
+  return bannerName;
+}
+
+/**
+ * @param {HTMLElement} element
+ * @param {string} customClass
+ * @param {string} campaign
+ */
+function placeTextBanner(element, customClass, campaign) {
+  var banner = random(houseNativeBanners);
+  var classAttr = customClass ? "class='" + customClass + "' " : "";
+  var utmCampaign = campaign + "_" + banner.key;
+
+  element.classList.add("flex", "items-baseline")
+  element.innerHTML = "<a " + classAttr + "href='/elite.ashx?" + getUTM(utmCampaign) + "'>" + banner.element + "</a><span class='news-link-source shrink-0 ml-1'>Finviz Elite</span>";
+
+  /**
+   * @type {HTMLImageElement}
+   */
+  var icon = element.parentElement.querySelector(".news_source_icon img");
+  if (icon) icon.src = "//finviz.com/favicon_2x.png";
+
+  return utmCampaign;
+}
+
+var definitions = [
+  {
+    selectors: [
+      selectors.HomepageNewsLink,
+      selectors.NewsNative
+    ],
+    template: function (element) {
+      // NewsNative and ScreenerInContent2 have the same id. If we’re on screener, place image banner
+      if (element.id.indexOf(selectors.NewsNative) === 0 && isScreener()) {
+        return placeImageBanner(element)
+      }
+
+      return placeTextBanner(element, (isQuote() ? "tab-link-news" : "nn-tab-link") + " truncate", "news")
+    },
+  },
+  {
+    selectors: [
+      selectors.Statements
+    ],
+    /**
+     * @param {HTMLElement} element
+     */
+    template: function (element) {
+      return placeTextBanner(element, "truncate", "stats")
+    },
+  },
+  {
+    selectors: [
+      selectors.Header,
+      selectors.InContentVideo,
+      selectors.ScreenerInContent1,
+      selectors.ScreenerInContent2,
+      selectors.TickerInContent,
+      selectors.QuoteChart,
+    ],
+    template: placeImageBanner,
+  },
+];
+
+/**
+ * @param {HTMLElement} slot
+ */
+function placeBanner(slot) {
+  var bannerDefinition;
+  /**
+   * Check if some selector matches current slot
+   * @param {string} selector
+   */
+  function matchesSlotId(selector) {
+    return slot.id.indexOf(selector) === 0;
+  }
+
+  for (var j = 0; j < definitions.length; j++) {
+    if (definitions[j].selectors.some(matchesSlotId)) {
+      bannerDefinition = definitions[j];
+      break;
+    }
+  }
+
+  // Set flag on slot so we don’t place banner again
+  slot.setAttribute("data-fv-banner", true)
+  return bannerDefinition && bannerDefinition.template(slot);
+}
+
+function initFinvizBanners() {
+  /**
+   * @type HTMLElement[]
+   */
+  var bannerSlots = Array.from(document.querySelectorAll("[id*=" + selector + "]:not([data-fv-banner])"));
+
+  for (var i = 0; i < bannerSlots.length; i++) {
+    try {
+      var trackingLabel = placeBanner(bannerSlots[i]);
+
+      if (trackingLabel) {
+        window.gtag && window.gtag('event', 'impression', { event_category: 'banner', event_label: trackingLabel, non_interaction: true });
+      }
+    } catch (e) {
+      // Do nothing
+      continue;
+    }
+  }
+}
+
+(function () {
+  window.initFinvizBanners = initFinvizBanners
+
+  if (document.readyState !== 'loading'){
+    initFinvizBanners();
+  } else {
+    document.addEventListener('DOMContentLoaded', initFinvizBanners);
+  }
+})();

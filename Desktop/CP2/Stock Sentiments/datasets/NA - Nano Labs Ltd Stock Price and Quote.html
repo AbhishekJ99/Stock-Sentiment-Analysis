@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<title>NA - Nano Labs Ltd Stock Price and Quote</title>
+<meta charset="utf-8"/><meta content="width=1024" name="viewport"/><meta content="NA - Nano Labs Ltd - Stock screener for investors and traders, financial visualizations." name="description"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-regular.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-700.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-900.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/inter-latin.woff2" rel="preload"/>
+<script>
+                window.notificationsArray = [];
+                window.renderScriptNotLoaded = function () {};
+                window.handleScriptNotLoaded = function (element) {
+                    window.notificationsArray.push(element);
+                    window.sentryDisabled = true;
+                    window.handleScriptNotLoaded = function () {};
+                };
+            </script>
+<link href="/assets/dist/finviz.5f37f1c7.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/assets/dist/redesign.8c6f6ebc.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/assets/dist/main.965d9b7f.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/favicon_2x.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/quote.ashx?t=NA" rel="canonical"/>
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script async="true" type="text/javascript">
+          (function() {
+            var host = 'finviz.com';
+            var element = document.createElement('script');
+            var firstScript = document.getElementsByTagName('script')[0];
+            var url = 'https://cmp.quantcast.com'
+              .concat('/choice/', 'c2W8esUZ6Q8oA', '/', host, '/choice.js?tag_version=V2');
+            var uspTries = 0;
+            var uspTriesLimit = 3;
+            element.async = true;
+            element.type = 'text/javascript';
+            element.src = url;
+
+            firstScript.parentNode.insertBefore(element, firstScript);
+
+            function makeStub() {
+              var TCF_LOCATOR_NAME = '__tcfapiLocator';
+              var queue = [];
+              var win = window;
+              var cmpFrame;
+
+              function addFrame() {
+                var doc = win.document;
+                var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+                if (!otherCMP) {
+                  if (doc.body) {
+                    var iframe = doc.createElement('iframe');
+
+                    iframe.style.cssText = 'display:none';
+                    iframe.name = TCF_LOCATOR_NAME;
+                    doc.body.appendChild(iframe);
+                  } else {
+                    setTimeout(addFrame, 5);
+                  }
+                }
+                return !otherCMP;
+              }
+
+              function tcfAPIHandler() {
+                var gdprApplies;
+                var args = arguments;
+
+                if (!args.length) {
+                  return queue;
+                } else if (args[0] === 'setGdprApplies') {
+                  if (
+                    args.length > 3 &&
+                    args[2] === 2 &&
+                    typeof args[3] === 'boolean'
+                  ) {
+                    gdprApplies = args[3];
+                    if (typeof args[2] === 'function') {
+                      args[2]('set', true);
+                    }
+                  }
+                } else if (args[0] === 'ping') {
+                  var retr = {
+                    gdprApplies: gdprApplies,
+                    cmpLoaded: false,
+                    cmpStatus: 'stub'
+                  };
+
+                  if (typeof args[2] === 'function') {
+                    args[2](retr);
+                  }
+                } else {
+                  if(args[0] === 'init' && typeof args[3] === 'object') {
+                    args[3] = Object.assign(args[3], { tag_version: 'V2' });
+                  }
+                  queue.push(args);
+                }
+              }
+
+              function postMessageEventHandler(event) {
+                var msgIsString = typeof event.data === 'string';
+                var json = {};
+
+                try {
+                  if (msgIsString) {
+                    json = JSON.parse(event.data);
+                  } else {
+                    json = event.data;
+                  }
+                } catch (ignore) {}
+
+                var payload = json.__tcfapiCall;
+
+                if (payload) {
+                  window.__tcfapi(
+                    payload.command,
+                    payload.version,
+                    function(retValue, success) {
+                      var returnMsg = {
+                        __tcfapiReturn: {
+                          returnValue: retValue,
+                          success: success,
+                          callId: payload.callId
+                        }
+                      };
+                      if (msgIsString) {
+                        returnMsg = JSON.stringify(returnMsg);
+                      }
+                      if (event && event.source && event.source.postMessage) {
+                        event.source.postMessage(returnMsg, '*');
+                      }
+                    },
+                    payload.parameter
+                  );
+                }
+              }
+
+              while (win) {
+                try {
+                  if (win.frames[TCF_LOCATOR_NAME]) {
+                    cmpFrame = win;
+                    break;
+                  }
+                } catch (ignore) {}
+
+                if (win === window.top) {
+                  break;
+                }
+                win = win.parent;
+              }
+              if (!cmpFrame) {
+                addFrame();
+                win.__tcfapi = tcfAPIHandler;
+                win.addEventListener('message', postMessageEventHandler, false);
+              }
+            };
+
+            makeStub();
+
+            var uspStubFunction = function() {
+              var arg = arguments;
+              if (typeof window.__uspapi !== uspStubFunction) {
+                setTimeout(function() {
+                  if (typeof window.__uspapi !== 'undefined') {
+                    window.__uspapi.apply(window.__uspapi, arg);
+                  }
+                }, 500);
+              }
+            };
+
+            var checkIfUspIsReady = function() {
+              uspTries++;
+              if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+                console.warn('USP is not accessible');
+              } else {
+                clearInterval(uspInterval);
+              }
+            };
+
+            if (typeof window.__uspapi === 'undefined') {
+              window.__uspapi = uspStubFunction;
+              var uspInterval = setInterval(checkIfUspIsReady, 6000);
+            }
+          })();
+          </script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script>
+            FinvizSettings = {
+                hasUserPremium: false,
+                name: "",
+                email: "",
+                nodeChartsDomain: "https://charts2-node.finviz.com",
+                hasUserRetinaNodeCharts: true,
+                hasUserStickyHeader: true,
+                adsProvider: 1,
+                hasRedesignEnabled: true,
+                hasQuoteOptions: false,
+                hasForexFuturesCryptoNodeCharts: true,
+                quoteSearchExt: '',
+            };
+        </script><script src="/script/browser_check.js?rev=344"></script><script src="/script/vendor/boxover.js?rev=344"></script>
+<script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/runtime.c62c08ff.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/7345.b33e04ab.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/738.128340f6.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/libs_init.cc67a770.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/5904.aa665648.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/3372.46f66dc0.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/header.1f97a566.js"></script></head>
+<script>
+            const channelIdToLabel = {
+                '1': 'MarketWatch',
+                '2': 'WSJ',
+                '3': 'Reuters',
+                '4': 'Yahoo Finance',
+                '5': 'CNN',
+                '6': 'The New York Times',
+                '7': 'Bloomberg',
+                '9': 'BBC',
+                '10': 'CNBC',
+                '11': 'Fox Business',
+                '102': 'Mish\'s Global Economic Trend Analysis',
+                '105': 'Trader Feed',
+                '113': 'Howard Lindzon',
+                '114': 'Seeking Alpha',
+                '123': 'Fallond Stock Picks',
+                '132': 'Zero Hedge',
+                '133': 'market folly',
+                '136': 'Daily Reckoning',
+                '141': 'Abnormal Returns',
+                '142': 'Calculated Risk',
+            }
+            function trackAndOpenNews(event, channel, url) {
+              event.preventDefault()
+              window.open(url, '_blank')
+
+              let channelLabel
+              if (typeof channel === 'string') {
+                channelLabel = channel
+              } else {
+                const label = channelIdToLabel[channel]
+                channelLabel = label !== undefined ? label : channel
+              }
+              window.gtag && window.gtag('event', 'click', {
+                send_to: 'G-ZT9VQEWD4N',
+                non_interaction: true,
+                event_category: 'news',
+                event_label: channelLabel,
+                value: 1 });
+            }
+          </script>
+<body class="m-0 yellow-tooltip is-quote min-w-[1009px] table w-full">
+<script>
+                var cookieName = 'fv_block';
+                var selector = '[ic_placementid]';
+                var selectorFrame = selector + ' iframe, ' + selector + ' [id*=aax]';
+                var cookieExpiry = 5 * 60 * 1000; // 5min
+                var checkTimeout = 20 * 1000; // 20sec
+
+                function getCookie(value) {
+                    var expiration = +new Date() + cookieExpiry;
+                    return cookieName + '=' + value + '; expires=' + (new Date(expiration)).toUTCString() + '; path=/';
+                }
+
+                var finvizBannersLoaded = false;
+                function loadFinvizBanners(setCookie) {
+                    if (setCookie) document.cookie = getCookie('block');
+                    finvizBannersLoaded = true;
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = '/script/finviz_b.js?rev=344';
+                    document.head.appendChild(s);
+                }
+
+                function checkBannersLoaded() {
+                    var checkEnd = +new Date() + checkTimeout;
+                    function asyncCheckIfExists(selector, resolve) {
+                        var now = +new Date();
+                        var container = document.querySelector(selector);
+                        if (!container && checkEnd > now) return setTimeout(function () { asyncCheckIfExists(selector, resolve) }, 1000)
+                        resolve(!!container);
+                    }
+                    
+                    asyncCheckIfExists(selector, function (exists) {
+                        if (!exists) return loadFinvizBanners(true);
+
+                        asyncCheckIfExists(selectorFrame, function (hasIframe) {
+                            if (!hasIframe) return loadFinvizBanners(true);
+                        })
+                    })
+                }
+
+                if (document.cookie.indexOf(cookieName) >= 0) {
+                    loadFinvizBanners(false);
+                } else {
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.onerror = loadFinvizBanners;
+                    s.onload = checkBannersLoaded;
+                    s.src = 'https://u5.investingchannel.com/static/uat.js';
+                    document.head.appendChild(s);
+
+                    InvestingChannelQueue = window.InvestingChannelQueue || [];
+                    var ic_page;
+
+                    function refreshAd(container, refreshes) { 
+                        var placementTag, adslot;
+                        window.InvestingChannelQueue.push(function () {
+                            var pubTags = ic_page.getPubTag.call(ic_page, container.id);
+                            if (!pubTags) return;
+                            var pubTag = pubTags[0];
+                            placementTag = pubTag.mPlacements[0].mTagToRender;
+                            adslot = pubTag.mPlacements[0].mPublisherKval.adslot[0];
+                            // Update div ID
+                            var id = container.id.split('_');
+                            var numberOfDivs = document.querySelectorAll('[id*=' + id.slice(0, id.length - 1).join('_') + ']').length;
+                            var newDivNumber = Number(id.pop()) + numberOfDivs * refreshes;
+                            container.setAttribute('id', id.join('_') + '_' + newDivNumber);
+                            // Destroy previous pubtag & reset container html (loading span)
+                            pubTag.destroy();
+                            container.innerHTML = '';
+                        }); 
+                        window.InvestingChannelQueue.push(function () {
+                            if (!placementTag || !adslot) return
+                            // Create new pub tag
+                            var newTag;
+                            var layoutId = placementTag.mNativeLayout ? placementTag.mNativeLayout.nativelayoutid : null;
+                            if (layoutId) {
+                                newTag = ic_page.defineNativeTag('finviz/' + placementTag.mTarget.dfpkeyname, placementTag.mAdSize, container.id, layoutId);
+                                var nativeLayout, layoutData
+
+                                try {
+                                  nativeLayout = newTag.mPlacements[0].mTags[0].mNativeLayout;
+                                } catch (e) {
+                                    console.log(e.message)
+                                }
+
+                                try {
+                                  layoutData = newTag.mTemplate.mNativeLayout[layoutId].Data
+                                  if (layoutData && nativeLayout && !nativeLayout.layout) {
+                                    newTag.mPlacements[0].mTags[0].mNativeLayout = layoutData
+                                  }
+                                } catch (e) {
+                                    console.log(e.message)
+                                }
+                            } else {
+                                newTag = ic_page.defineTag('finviz/' + placementTag.mTarget.dfpkeyname, placementTag.mAdSize, container.id);
+                            }
+                            // Set adslot param
+                            newTag.setKval({ adslot: adslot });
+                            newTag.setKval({ kw: 'ajax' });
+                            newTag.render();
+                        });
+                    }
+
+                    var refreshCount = 1;
+                    function refreshAds(selectors) { 
+                        if (window.ic_page) {
+                            document.querySelectorAll(selectors).forEach(function (element) {
+                                try {
+                                    refreshAd(element, refreshCount);
+                                } catch (e) {
+                                    console.log('Ad refresh error for:', element, e);
+                                }
+                            }); 
+                            refreshCount++;
+                        } 
+                    }
+
+
+                    InvestingChannelQueue.push(function() {
+                        ic_page = InvestingChannel.UAT.Run('df0d0d52-cc7f-11e8-82a5-0abbb61c4a6a');
+                    });
+
+                    var hash = null;
+                    if (typeof hash === 'string') {
+                      InvestingChannelQueue.push(function() {
+                          if (ic_page) {
+                              ic_page.setUserId('email', hash, true);
+                          }
+                      });
+                    }
+                }
+            </script>
+<script>
+            function checkMediaQuery(matches) {
+              if (matches) {
+                FinvizSettings.hasUserStickyHeader = true;
+                document.body.classList.add('is-header-sticky');
+              } else {
+                FinvizSettings.hasUserStickyHeader = false;
+                document.body.classList.remove('is-header-sticky');
+              }
+            }
+            var mediaMatch = window.matchMedia('(min-width: 1025px) and (min-height: 650px)');
+            checkMediaQuery(mediaMatch.matches);
+            mediaMatch.addListener(function (ev) { checkMediaQuery(ev.matches) });
+          </script>
+<div id="notifications-container"></div><table class="header">
+<tr class="align-top">
+<td>
+<table class="header-container">
+<tr>
+<td class="w-[30%]">
+<table class="w-full">
+<tr>
+<td class="h-[50px] align-middle">
+<a class="logo" href="/"><svg class="block" height="32" width="225">
+<use class="dark:hidden" href="/img/logo.svg#free"></use>
+<use class="hidden dark:block" href="/img/logo.svg#free-dark"></use>
+</svg></a>
+</td>
+</tr>
+<tr>
+<td id="search" style="padding-top: 7px">
+<div class="navbar-search-placeholder">
+<span class="icon-wrapper">
+<svg class="icon" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.9 15.5l4 4c.2.2.1.5 0 .7l-.7.7a.5.5 0 01-.8 0l-4-4c0-.2-.2-.3-.3-.4l-.7-1a7 7 0 01-11.2-4 7 7 0 1112.2 3l1 .6.5.4zM5 10a5 5 0 1010 0 5 5 0 00-10 0z"></path>
+</svg>
+</span>
+<input class="search-input is-free" placeholder="Search ticker, company or profile"/>
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td class="align-bottom pb-1">
+<div class="hidden xl:flex items-center h-[37px] pl-2" id="microbar_position"><div>
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_88x31_1" style="width:88px;height:31px;max-height:31px"></div>
+</div></div>
+</td>
+<td class="relative w-[730px] text-right">
+<div class="overflow-hidden absolute top-0 right-0 w-full h-24" id="banner_position">
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_728x90_1" style="width:728px;height:90px;max-height:90px"></div>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="w-[994px]" style="font-size:0">
+<img alt="" class="w-[994px] h-px" src="/gfx/nic2x2.gif"/>
+</td>
+</tr>
+</table>
+<table class="navbar">
+<tr>
+<td class="h-[30px]">
+<table class="header-container">
+<tr><td><a class="nav-link is-first" href="/">Home</a></td><td><a class="nav-link" href="/news.ashx">News</a></td><td><a class="nav-link" href="/screener.ashx">Screener</a></td><td><a class="nav-link" href="/map.ashx">Maps</a></td><td><a class="nav-link" href="/groups.ashx">Groups</a></td><td><a class="nav-link" href="/portfolio.ashx">Portfolio</a></td><td><a class="nav-link" href="/insidertrading.ashx">Insider</a></td><td><a class="nav-link" href="/futures.ashx">Futures</a></td><td><a class="nav-link" href="/forex.ashx">Forex</a></td><td><a class="nav-link" href="/crypto.ashx">Crypto</a></td><td><a class="nav-link" href="/elite.ashx?utm_source=finviz&amp;utm_medium=banner&amp;utm_campaign=main-navbar-backtests">Backtests</a></td><td><a class="nav-link is-elite" href="/elite.ashx">Elite</a></td><td class="w-full relative"><div class="absolute bottom-0 left-0 right-0 top-0"><div class="pr-1" id="time"></div></div></td>
+<td class="nav relative">
+<a class="!flex !bg-transparent !border-b-0 mt-1 !py-0 !px-1" data-testid="chart-layout-theme" href="#" onclick="setChartThemeCookie('light', true)" style="border-left: 1px solid #444a57" title="Toggle Light/Dark mode">
+<div class="relative box-content flex rounded-full w-10 h-5 border border-gray-750 bg-gray-800 text-white justify-end">
+<div class="box-border w-1/2 rounded-full p-px border border-gray-800 bg-[#4c5261] flex justify-center items-center">
+<svg class="fill-current text-white inline-block -ml-px" height="16" width="16">
+<use href="/assets/icons.svg?rev=3#moonOutlined"></use>
+</svg>
+</div>
+</div>
+<span class="ml-1 select-none font-medium text-xs text-white">Theme</span>
+</a>
+</td>
+<td>
+<a class="nav-link is-help" href="/help/screener.ashx" style="border-left: 1px solid #444a57"><span class="fa fa-question-circle"></span>Help</a>
+</td>
+<td><a class="nav-link sign-in" href="/login.ashx">Login</a></td>
+<td><a class="nav-link sign-up" href="/register.ashx">Register</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<script>
+            function reloadPage () { location.reload() }
+            function setChartThemeCookie(chartsTheme) {
+              fetch('/api/set_cookie.ashx?cookie=chartsTheme&value=' + chartsTheme ).catch(function(){}).then(function(){
+                window.gtag && window.gtag('event', 'click', { event_category: 'theme', event_label: 'toggle', value: chartsTheme, event_callback: reloadPage });
+                setTimeout(reloadPage,1000);
+              })
+            }
+          </script><div class="content"><div class="ticker-wrapper gradient-fade">
+<div class="quote-menu empty:py-3 empty:min-h-8" data-ischarttas="1" data-isscreener="1"></div>
+<div id="react-root"></div>
+<script>
+            FinvizSettings.TA = {"style":"candlestick","overlays":[{"name":"sma","parameters":"20","color":"rgba(220,  50, 179, 0.39)"},{"name":"sma","parameters":"50","color":"rgba(255, 143,  51, 0.78)"},{"name":"sma","parameters":"200","color":"rgba(220, 179,  50, 0.43)"},{"name":"patterns","parameters":"","color":"rgba(135, 206, 239, 1)|rgba(220, 159, 229, 1)"}],"indicators":[]};
+        </script><div style="display: flex; flex-direction: column; align-items: center">
+<link href="/assets/dist-charts/main.1855f85e.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet"/>
+<div class="interactive-chart" id="app">
+<div id="chart" style="min-height: 401px; position: relative"></div>
+</div>
+<div id="js-charts-modal"><div class="overlay modal hidden has-footer"></div></div>
+<div class="context-menu hidden"></div>
+<script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/runtime.4eb20b9b.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/976.76a22507.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/main.393da18b.js"></script><script>
+                                    (function() {
+                                        var Quote = FLibs.Charts.Quote;
+                                        var data = {"ticker":"NA","timeframe":"d","volume":[1486813,264442,134129,46992,69408,39218,190910,28176,37733,4532543,328723,176985,185673,858151,434914,978108,291867,91143,406829,178444,79902,75234,74767,32323,36250,70401,34451,31696,35267,64160,53853,14590,16505,55141,24757,52601,43130,49676,3932664,201986,85070,52195,133694,140964,79335,132117,103858,244496,62639,58033,50081,226981,140159,150410,263794,1588140,381978,235695,248688,128331,86863,89089,45516,199358,143656,58918,87317,179925,44718,26030,55559,169556,262230,157769,55352,108317,88813,34677,25563,63210,51334,65688,50224,87508,73455,70129,157714,149733,30063,64254,57948,284101,61558,39342,46575,16022,5838,29809,14170,25963,42179,35686,62682,42331,40942,30841,42839,34923,103630,40973,49645,76948,51998,24344,24805,46116,98547,66155,70532,55454,101203,24941,16258,175336,150065,72411,23154,55961,102860,142856,855860,193794,62658,71227,127520,36490,95679,117247,22173,77918,41752,95199,54463,80081,49605,28647,23599,81060,30082,50308,44547,11325,2562,24375,20516,20791,30795,26718,27543,17879,28566,6596,16614,50006,9323,9572,17297,10184,43992,2722,9981,7622,15708,25852,8157,15953,13380,4945,80913,4358,15493,36229,6292,11305,3770,6092,13459,3788,4895,83300,22261,6431,9648,13629,2925,6022,7771,8704,6281,24648,257486,578436,46254,10583,18448,51478,13451,11343,7190,137841,737767,98544,33461,166714,192999,60011,30882,166291,24848172,1152054,788500,476087,421288,274023,353896,171334,138430,1229378,328532,165671,98551,72548,222234,96775,76409,57689,31596,12003,119173,88568,94313,55011,141746,13825,177001,117692,93202,63619,28076,69307,190703,70883,34833,27305,156719,11246,70342,24848,14103,61257,49088,131592,1084653,123532,124651,56694,124090,83106,117427,39139,34031,100370,81631,48646,71979,22881,15290,59004,83339,67129,23960,73902,41633,113141,23493,34638,13985,15935,29979,81024,79395,60536,36333,31079,148959,57777,9762,7786,51824,107961,29811],"date":[1657630800,1657717200,1657803600,1657890000,1658149200,1658235600,1658322000,1658408400,1658494800,1658754000,1658840400,1658926800,1659013200,1659099600,1659358800,1659445200,1659531600,1659618000,1659704400,1659963600,1660050000,1660136400,1660222800,1660309200,1660568400,1660654800,1660741200,1660827600,1660914000,1661173200,1661259600,1661346000,1661432400,1661518800,1661778000,1661864400,1661950800,1662037200,1662123600,1662469200,1662555600,1662642000,1662728400,1662987600,1663074000,1663160400,1663246800,1663333200,1663592400,1663678800,1663765200,1663851600,1663938000,1664197200,1664283600,1664370000,1664456400,1664542800,1664802000,1664888400,1664974800,1665061200,1665147600,1665406800,1665493200,1665579600,1665666000,1665752400,1666011600,1666098000,1666184400,1666270800,1666357200,1666616400,1666702800,1666789200,1666875600,1666962000,1667221200,1667307600,1667394000,1667480400,1667566800,1667829600,1667916000,1668002400,1668088800,1668175200,1668434400,1668520800,1668607200,1668693600,1668780000,1669039200,1669125600,1669212000,1669384800,1669644000,1669730400,1669816800,1669903200,1669989600,1670248800,1670335200,1670421600,1670508000,1670594400,1670853600,1670940000,1671026400,1671112800,1671199200,1671458400,1671544800,1671631200,1671717600,1671804000,1672149600,1672236000,1672322400,1672408800,1672754400,1672840800,1672927200,1673013600,1673272800,1673359200,1673445600,1673532000,1673618400,1673964000,1674050400,1674136800,1674223200,1674482400,1674568800,1674655200,1674741600,1674828000,1675087200,1675173600,1675260000,1675346400,1675432800,1675692000,1675778400,1675864800,1675951200,1676037600,1676296800,1676383200,1676469600,1676556000,1676642400,1676988000,1677074400,1677160800,1677247200,1677506400,1677679200,1677765600,1677852000,1678111200,1678197600,1678284000,1678370400,1678456800,1678712400,1678798800,1678885200,1678971600,1679058000,1679317200,1679403600,1679490000,1679576400,1679662800,1679922000,1680008400,1680094800,1680181200,1680267600,1680526800,1680613200,1680699600,1680786000,1681131600,1681218000,1681304400,1681390800,1681477200,1681736400,1681822800,1681909200,1682082000,1682341200,1682427600,1682514000,1682600400,1682686800,1682946000,1683032400,1683118800,1683205200,1683291600,1683550800,1683637200,1683723600,1683810000,1683896400,1684155600,1684242000,1684328400,1684414800,1684501200,1684760400,1684846800,1684933200,1685019600,1685106000,1685451600,1685538000,1685624400,1685710800,1685970000,1686056400,1686142800,1686229200,1686315600,1686574800,1686661200,1686747600,1686834000,1686920400,1687266000,1687352400,1687438800,1687525200,1687784400,1687870800,1687957200,1688043600,1688130000,1688389200,1688562000,1688648400,1688734800,1688994000,1689080400,1689166800,1689253200,1689339600,1689598800,1689685200,1689771600,1689858000,1689944400,1690203600,1690290000,1690376400,1690462800,1690549200,1690808400,1690894800,1690981200,1691067600,1691154000,1691413200,1691499600,1691586000,1691672400,1691758800,1692018000,1692104400,1692190800,1692277200,1692363600,1692622800,1692709200,1692795600,1692882000,1692968400,1693227600,1693314000,1693400400,1693486800,1693573200,1693918800,1694005200,1694091600,1694178000,1694437200,1694523600,1694610000,1694696400,1694782800,1695042000,1695128400,1695214800,1695301200,1695387600],"open":[7.61,9.77,8.01,7.64,6.45,6.72,6.54,7.7,7.91,7.1,9.6,9.59,8.97,7.81,9.42,11.53,9.22,7.83,6.8,7.2,6.19,6.1,6.4,6.53,6.11,6.54,6.47,6.56,6.32,6.1,5.72,5.44,5.29,5.2,5.39,5.182,5.132,4.86,4.7,4.47,3.81,3.84,3.97,4.2,4.48,4.42,5.03,4.24,5.46,5.11,5,4.76,3.86,3.86,3.96,2.23,2,1.71,1.58,1.69,1.66,1.63,1.61,1.53,1.34,1.3,1.2,1.345,1.3,1.35,1.34,1.226,1.12,1.15,1.06,1.1,1.17,1.3,1.29,1.23,1.24,1.186,1.12,1.18,1.17,1.12,1.09,1.2,1.27,1.32,1.41,1.43,1.52,1.27,1.314,1.215,1.24,1.24,1.21,1.2,1.26,1.09,1.139,1.2,1.138,1.163,1.1,1.14,1.17,1.08,1.08,1.02,1.02,0.96,1.01,1.06,0.974,1.05,1.05,1.05,1.04,1.15,1.171,1.19,1.2,1.11,1.26,1.215,1.26,1.29,1.41,1.6,1.58,1.52,1.63,1.75,1.58,1.51,1.33,1.385,1.31,1.36,1.305,1.36,1.37,1.54,1.43,1.32,1.28,1.25,1.32,1.271,1.37,1.35,1.25,1.25,1.33,1.2,1.17,1.27,1.13,1.22,1.28,1.16,1.13,1.15,1.07,1.09,1.09,1.03,1.04,1.03,1,1.111,1.06,1.05,1.1,1.04,1.04,1.092,1.07,1.083,1.15,1.11,1.1,1.09,1.09,1.07,1.1,1.115,1.1,1.14,1.1,1.109,1.14,1.08,1.1,1.04,1.06,1.09,1.03,1.2,1.1,1.08,1.05,1.04,1.08,1.08,1.11,1.01,1.23,1.2,1.16,1.23,1.49,1.4,1.58,1.43,2.07,1.95,2.13,2.16,1.95,2.22,2.17,2.18,2.06,2.1,2.82,2.54,2.59,2.54,2.46,2.33,2.2,2.04,1.81,1.9,1.844,2,2.06,2.028,2.1,1.98,2.03,2.11,1.98,2,1.87,1.94,1.8,1.82,1.68,1.8,1.76,1.69,1.67,1.65,1.54,1.58,1.57,1.451,1.601,1.41,1.57,1.67,1.48,1.41,1.25,1.35,1.33,1.35,1.19,1.29,1.13,1.06,1.05,1.138,1.09,1.053,1.089,1.03,1.05,1.03,1.04,1.06,1.03,1.04,1.03,1.1,1.16,1.25,1.1,1.14,1.13,1.12,1.18,1.13,1.15,1.14,1.19],"high":[13.4,12,8.26,7.82,8.49,7.515,8.3,8,7.91,13,11.352,10.5,9.205,12.49,11.193,13.95,9.9,7.83,7.9,7.25,6.65,6.68,6.87,6.69,6.57,6.85,6.72,6.654,6.32,6.15,5.83,5.5,5.558,5.79,5.78,5.646,5.43,5,6.95,4.585,4.21,4.16,4.19,4.477,4.77,4.86,5.03,5.74,5.55,5.361,5.1,4.762,4.325,4.072,4.15,2.25,2.03,1.721,1.75,1.79,1.73,1.68,1.654,1.54,1.39,1.32,1.335,1.357,1.36,1.36,1.343,1.282,1.25,1.17,1.14,1.271,1.29,1.3,1.29,1.27,1.244,1.206,1.18,1.21,1.22,1.144,1.19,1.32,1.33,1.4,1.45,1.68,1.52,1.399,1.314,1.286,1.24,1.269,1.21,1.25,1.26,1.13,1.29,1.21,1.138,1.24,1.2,1.18,1.17,1.118,1.08,1.05,1.05,1.07,1.08,1.07,1.12,1.09,1.05,1.05,1.16,1.19,1.181,1.33,1.33,1.21,1.26,1.26,1.29,1.4,1.74,1.72,1.6,1.65,1.717,1.75,1.59,1.51,1.42,1.4,1.38,1.363,1.38,1.39,1.5,1.54,1.43,1.396,1.28,1.32,1.33,1.37,1.37,1.35,1.36,1.359,1.33,1.25,1.245,1.27,1.25,1.221,1.28,1.19,1.17,1.15,1.08,1.14,1.112,1.03,1.04,1.06,1.075,1.15,1.13,1.15,1.11,1.049,1.14,1.092,1.07,1.13,1.15,1.11,1.1,1.13,1.123,1.12,1.14,1.24,1.15,1.14,1.15,1.11,1.14,1.095,1.1,1.065,1.069,1.12,1.35,1.37,1.13,1.09,1.1,1.08,1.1,1.105,1.11,1.12,1.56,1.34,1.24,1.47,1.64,1.51,1.58,1.45,2.97,2.38,2.49,2.41,2.22,2.25,2.4,2.21,2.16,2.95,2.85,2.59,2.75,2.65,2.54,2.44,2.24,2.04,1.99,1.928,2.1,2.07,2.151,2.1,2.1,2.04,2.2,2.156,2.13,2.03,1.958,1.99,1.935,1.821,1.845,1.88,1.8,1.72,1.67,1.681,1.665,1.64,1.59,1.494,1.85,1.67,1.6,1.67,1.52,1.44,1.46,1.42,1.394,1.35,1.328,1.29,1.151,1.111,1.14,1.14,1.16,1.14,1.09,1.12,1.1,1.105,1.07,1.087,1.08,1.05,1.08,1.182,1.27,1.25,1.16,1.16,1.29,1.182,1.18,1.15,1.2,1.19,1.22],"low":[7.51,8.8,6.321,6.8,6.3,6.71,6.33,7.08,6.688,7.01,8.87,8.8,7.007,7.35,9.13,8.07,6.8,7,6.8,6.133,6.125,6.1,6.152,6.259,6.11,6.24,6.321,6.23,6,5.68,5.4,5.231,5.28,5.2,5.06,5.03,4.8,4.14,4.43,3.8,3.66,3.81,3.57,3.91,4.07,4.352,4.42,4.24,4.8,4.844,4.7,3.74,3.7,3.65,3.08,1.91,1.65,1.55,1.57,1.65,1.63,1.61,1.55,1.31,1.27,1.25,1.18,1.26,1.28,1.29,1.22,1.14,1.12,1.01,1.06,1.1,1.17,1.22,1.21,1.19,1.15,1.1,1.12,1.13,1.12,0.98,1.04,1.16,1.26,1.29,1.32,1.43,1.21,1.27,1.13,1.21,1.13,1.12,1.15,1.1,1.05,1.07,1.08,1.11,1,1.08,1.08,1.074,1.02,1.02,1.02,0.923,0.94,0.96,1.01,0.93,0.92,1.04,0.99,0.99,1.025,1.1,1.1,1.16,1.03,1.09,1.12,1.18,1.16,1.26,1.41,1.5,1.5,1.51,1.51,1.51,1.43,1.27,1.31,1.34,1.303,1.29,1.305,1.34,1.37,1.38,1.35,1.23,1.15,1.19,1.29,1.271,1.34,1.255,1.25,1.25,1.222,1.16,1.13,1.15,1.13,1.175,1.126,1.11,1.13,1.11,1.05,1.09,1.01,1.025,1.001,1.01,0.98,1.06,1.036,1.05,1,1.03,1,1.04,1.02,1.032,1.06,1.08,1.08,1.06,1.07,1.03,1.08,1.082,1.09,1.1,1.1,1.107,1.08,1.07,1.04,1.031,1.04,1.033,1.03,1.04,1.06,1.05,1.04,0.97,1.06,1.08,1.05,1.01,1.09,1.11,1.13,1.22,1.3,1.36,1.335,1.3,1.87,1.85,2.1,2.04,1.91,2,1.97,2,2.03,2.1,2.4,2.34,2.41,2.45,2.11,2.17,2.01,1.81,1.81,1.811,1.83,1.87,1.95,1.93,1.87,1.98,1.9,1.95,1.8,1.8,1.85,1.85,1.72,1.6,1.68,1.77,1.65,1.69,1.56,1.52,1.54,1.51,1.4,1.41,1.35,1.41,1.38,1.4,1.38,1.3,1.25,1.31,1.28,1.19,1.14,1.08,1.05,1.05,1.05,1.05,1.04,1.01,1.05,1.01,1.02,0.995,1.03,1.05,1.03,1.02,1.03,1.03,1.12,1.02,1.05,1.085,1.09,1.09,1.117,1.1,1.06,1.05,1.132],"close":[12.05,8.8,7.35,6.8,6.7,7.42,7.73,8,6.79,10.56,9.25,8.9,7.8,9.62,10.87,9.2,7.15,7.12,7.09,6.335,6.14,6.4,6.47,6.37,6.54,6.47,6.69,6.55,6.05,5.835,5.45,5.28,5.39,5.3,5.27,5.11,4.85,4.49,4.47,4.04,3.93,4.06,4.04,4.3,4.42,4.85,4.645,5.56,5.29,5.097,4.86,3.895,3.966,3.778,3.18,2.1,1.73,1.61,1.75,1.77,1.66,1.64,1.57,1.33,1.28,1.28,1.335,1.29,1.36,1.36,1.22,1.15,1.19,1.07,1.14,1.22,1.26,1.28,1.21,1.21,1.15,1.1,1.12,1.18,1.12,0.98,1.17,1.29,1.3,1.4,1.4,1.44,1.413,1.29,1.205,1.251,1.24,1.22,1.2,1.12,1.1,1.1,1.25,1.139,1,1.1,1.12,1.12,1.06,1.05,1.02,0.923,0.96,1,1.079,1.02,1.06,1.04,1,0.99,1.15,1.174,1.18,1.28,1.09,1.18,1.21,1.23,1.29,1.4,1.64,1.53,1.51,1.59,1.7,1.6,1.49,1.35,1.31,1.35,1.34,1.347,1.36,1.36,1.483,1.432,1.385,1.28,1.22,1.32,1.32,1.36,1.36,1.32,1.285,1.31,1.26,1.188,1.15,1.156,1.2,1.21,1.15,1.12,1.13,1.11,1.06,1.14,1.05,1.03,1.005,1.01,1.01,1.06,1.13,1.095,1.07,1.03,1.04,1.04,1.07,1.04,1.06,1.08,1.08,1.07,1.08,1.08,1.08,1.127,1.117,1.13,1.14,1.11,1.08,1.095,1.08,1.065,1.04,1.097,1.26,1.13,1.06,1.09,1.085,1.07,1.1,1.105,1.09,1.114,1.33,1.12,1.24,1.46,1.54,1.36,1.41,1.45,2.37,2.35,2.45,2.12,2.08,2.15,2.15,2.09,2.16,2.72,2.7,2.59,2.575,2.545,2.3,2.17,2.04,1.9,1.99,1.84,1.92,2.055,2.03,1.95,1.97,2.03,2.1,1.96,1.87,1.8,1.9,1.86,1.76,1.687,1.845,1.81,1.69,1.705,1.62,1.53,1.617,1.55,1.4,1.43,1.47,1.6,1.46,1.44,1.44,1.3,1.38,1.33,1.28,1.22,1.29,1.2,1.06,1.07,1.08,1.05,1.04,1.03,1.05,1.03,1.04,1.04,1.07,1.05,1.04,1.05,1.052,1.14,1.27,1.02,1.09,1.15,1.14,1.121,1.15,1.1,1.16,1.15,1.2],"lastOpen":1.190000057220459,"lastHigh":1.2200000286102295,"lastLow":1.1318999528884888,"lastClose":1.2000000476837158,"lastVolume":29811,"dataId":"29811|1.2","lastDate":20230922,"prevClose":1.149999976158142,"afterClose":null,"afterChange":null,"chartEvents":[],"patterns":[{"kind":3,"strength":5205.81,"status":1,"bounces":5,"x1":9,"y1":240,"x2":600,"y2":240,"x3":0,"y3":0,"x4":0,"y4":0,"ticker":""}],"patternsMinRange":0.5,"patternsMaxRange":3};
+                                        data.instrument = 'stock';
+                                        data.premarket = false;
+                                        data.aftermarket = false;
+                                        data.hasPatterns = true;
+                                        data.events = false;
+                                        Quote.create(data);
+                                    })();
+                                  </script><script type="text/javascript">
+                                    var chartConfig = {
+          "layout":"1h1v",
+          "height": 400,
+          "scrollable": false,
+          "colors": undefined,
+          "ideas": false,
+          "editable": false,
+          "editors": ['tools', 'ideas', 'publish'],
+          "charts":[{
+                "height": 400,
+                "timeframe": "d",
+                "dateRange": "",
+                "scale": "linear",
+                "ticker": "NA",
+                "instrument": "stock",
+                "refreshData": true,
+                "premarket": false,
+                "hasChartEvents": false,
+                "aftermarket": false,
+                "panes": []
+              }],
+        };
+                                    var taConfig = JSON.parse(JSON.stringify(FinvizSettings.TA));
+
+                                    taConfig.style = 'candlestick';
+                                    var FinvizQuoteTypeCurrent = taConfig.style;
+
+                                    var mergeChartAndTAConfig = FLibs.Charts.convertTa.mergeChartAndTAConfig;
+                                    mergeChartAndTAConfig(chartConfig, taConfig);
+
+                                    window.globalChartConfig = chartConfig
+                                  </script></div><div class="fv-container">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" valign="top">
+<div class="content" data-testid="quote-data-content"><table width="100%"><tr>
+<td align="center" valign="top">
+<table cellpadding="3" cellspacing="0" class="fullview-title" width="100%">
+<tr class="text-blue-500"><td align="center"><h1><a class="tab-link" href="quote.ashx?t=NA&amp;ty=c&amp;ta=1&amp;p=d" id="ticker">NA</a> | <span><a class="tab-link" href="https://www.nano.cn" rel="nofollow" target="_blank"><b>Nano Labs Ltd</b></a></span></h1></td></tr>
+<tr><td align="center" class="fullview-links"><a class="tab-link" href="screener.ashx?v=111&amp;f=sec_technology">Technology</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=ind_semiconductors">Semiconductors</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=geo_china">China</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=exch_nasd">NASD</a></td></tr>
+</table>
+<div class="my-3"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_970x91_1" style="width:970px;height:100px;max-height:100px"></div></div><table cellpding="0" cellspacing="0" class="fullview-links" width="100%">
+<td align="left" class="js-quote-correlation-links-container" width="80%">
+</td></table></td></tr>
+</table></div></td>
+</tr></table>
+<div class="snapshot-table-wrapper"><table border="0" cellpadding="3" cellspacing="0" class="snapshot-table2" width="100%">
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Major index membership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Index</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Earnings (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/E</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Diluted EPS (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS (ttm)</td><td align="left" class="snapshot-td2" width="8%"><b>-0.55</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Insider ownership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Insider Own</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Shares outstanding] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shs Outstand</td><td align="left" class="snapshot-td2" width="8%"><b>55.75M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Week)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Week</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">7.04%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Market capitalization] offsetx=[10] offsety=[20] delay=[300]" width="7%">Market Cap</td><td align="left" class="snapshot-td2" width="8%"><b>68.09M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Forward Price-to-Earnings (next fiscal year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Forward P/E</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS estimate for next year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Insider transactions (6-Month change in Insider Ownership)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Insider Trans</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Shares float] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shs Float</td><td align="left" class="snapshot-td2" width="8%"><b>27.16M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Month</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">16.50%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Income (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Income</td><td align="left" class="snapshot-td2" width="8%"><b>-29.50M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Earnings-to-Growth] offsetx=[10] offsety=[20] delay=[300]" width="7%">PEG</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS estimate for next quarter] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Q</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Institutional ownership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Inst Own</td><td align="left" class="snapshot-td2" width="8%"><b>0.30%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Short interest share / ratio] offsetx=[10] offsety=[20] delay=[300]" width="7%">Short Float / Ratio</td><td align="left" class="snapshot-td2" width="8%"><b>0.03% / 0.09</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Quarter)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Quarter</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-34.78%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Revenue (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales</td><td align="left" class="snapshot-td2" width="8%"><b>90.10M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Sales (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/S</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">0.76</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS growth this year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS this Y</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">117.90%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Institutional transactions (3-Month change in Institutional Ownership)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Inst Trans</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">86.60%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Short interest] offsetx=[10] offsety=[20] delay=[300]" width="7%">Short Interest</td><td align="left" class="snapshot-td2" width="8%"><b>0.01M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Half Year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Half Y</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">6.19%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Book value per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Book/sh</td><td align="left" class="snapshot-td2" width="8%"><b>0.08</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Book (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/B</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">15.00</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS growth next year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Assets (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROA</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-44.80%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Analysts' mean target price] offsetx=[10] offsety=[20] delay=[300]" width="7%">Target Price</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Year</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-77.32%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Cash per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Cash/sh</td><td align="left" class="snapshot-td2" width="8%"><b>0.04</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price to cash per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/C</td><td align="left" class="snapshot-td2" width="8%"><b>29.60</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Long term annual growth estimate (5 years)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next 5Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Equity (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROE</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-156.60%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[52-Week trading range] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W Range</td><td align="left" class="snapshot-td2" width="8%"><b><small>0.92 - 4.76</small></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Year To Date)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf YTD</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">4.35%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend (annual)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Dividend</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price to Free Cash Flow (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/FCF</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Annual EPS growth past 5 years] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS past 5Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Investment (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROI</td><td align="left" class="snapshot-td2" width="8%"><b>11.40%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 52-Week High] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W High</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-74.80%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Beta] offsetx=[10] offsety=[20] delay=[300]" width="7%">Beta</td><td align="left" class="snapshot-td2" width="8%"><b>1.82</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend yield (annual)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Dividend %</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quick Ratio (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Quick Ratio</td><td align="left" class="snapshot-td2" width="8%"><b>0.50</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Annual sales growth past 5 years] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales past 5Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Gross Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Gross Margin</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-1.40%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 52-Week Low] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W Low</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">30.43%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Average True Range (14)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ATR</td><td align="left" class="snapshot-td2" width="8%"><b>0.12</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Full time employees] offsetx=[10] offsety=[20] delay=[300]" width="7%">Employees</td><td align="left" class="snapshot-td2" width="8%"><b>179</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Current Ratio (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Current Ratio</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">0.70</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quarterly revenue growth (YoY)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales Q/Q</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-86.30%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Operating Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Oper. Margin</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-34.10%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Relative Strength Index] offsetx=[10] offsety=[20] delay=[300]" width="7%">RSI (14)</td><td align="left" class="snapshot-td2" width="8%"><b>52.49</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Volatility (Week, Month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Volatility</td><td align="left" class="snapshot-td2" width="8%"><b><small>8.90% 9.19%</small></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Stock has options trading on a market exchange] offsetx=[10] offsety=[20] delay=[300]" width="7%">Optionable</td><td align="left" class="snapshot-td2" width="8%"><b>No</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Total Debt to Equity (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Debt/Eq</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">2.09</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quarterly earnings growth (YoY)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS Q/Q</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Net Profit Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Profit Margin</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-32.70%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Relative volume] offsetx=[10] offsety=[20] delay=[300]" width="7%">Rel Volume</td><td align="left" class="snapshot-td2" width="8%"><b>0.36</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Previous close] offsetx=[10] offsety=[20] delay=[300]" width="7%">Prev Close</td><td align="left" class="snapshot-td2" width="8%"><b>1.15</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Stock available to sell short] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shortable</td><td align="left" class="snapshot-td2" width="8%"><b>Yes</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Long Term Debt to Equity (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">LT Debt/Eq</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">2.05</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Earnings date&lt;br&gt;&lt;br&gt;BMO = Before Market Open&lt;br&gt;AMC = After Market Close] offsetx=[10] offsety=[20] delay=[300]" width="7%">Earnings</td><td align="left" class="snapshot-td2" width="8%"><b>Aug 15 BMO</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend Payout Ratio (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Payout</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Average volume (3 month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Avg Volume</td><td align="left" class="snapshot-td2" width="8%"><b>83.26K</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Current stock price] offsetx=[10] offsety=[20] delay=[300]" width="7%">Price</td><td align="left" class="snapshot-td2" width="8%"><b>1.20</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Analysts' mean recommendation (1=Buy 5=Sell)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Recom</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 20-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA20</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">9.52%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 50-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA50</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-6.68%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 200-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA200</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-12.11%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Volume] offsetx=[10] offsety=[20] delay=[300]" width="7%">Volume</td><td align="left" class="snapshot-td2" width="8%"><b>29,811</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (today)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Change</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">4.35%</span></b></td>
+</tr>
+</table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr><td align="center"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_3x6_1" style="width:970px;height:315px;max-height:315px"></div></td></tr><tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" width="100%"><tr><td><div class="body-table-news-wrapper"><table border="0" cellpadding="1" cellspacing="0" class="fullview-news-outer" id="news-table" width="100%">
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/nano-labs-enters-agreements-shareholders-020000128.html');">
+<td align="right" width="130">
+            Sep-06-23 10:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-enters-agreements-shareholders-020000128.html" rel="nofollow" target="_blank">Nano Labs Enters into Agreements with Shareholders to Convert Loans into Ordinary Shares</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Insider Monkey', 'https://finance.yahoo.com/news/nano-labs-ltd-nasdaq-na-133842119.html');">
+<td align="right" width="130">
+            Aug-21-23 09:38AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-ltd-nasdaq-na-133842119.html" rel="nofollow" target="_blank">Nano Labs Ltd (NASDAQ:NA) Q2 2023 Earnings Call Transcript</a>
+</div>
+<div class="news-link-right">
+<span>(Insider Monkey)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Thomson Reuters StreetEvents', 'https://finance.yahoo.com/news/half-2023-nano-labs-ltd-011143719.html');">
+<td align="right" width="130">
+            Aug-15-23 09:11PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/half-2023-nano-labs-ltd-011143719.html" rel="nofollow" target="_blank">Half Year 2023 Nano Labs Ltd Earnings Call</a>
+</div>
+<div class="news-link-right">
+<span>(Thomson Reuters StreetEvents)</span> <span class="body-table-news-loss">-6.98%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-announces-first-half-113000598.html');">
+<td align="right" width="130">
+            07:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announces-first-half-113000598.html" rel="nofollow" target="_blank">Nano Labs Announces First Half of 2023 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/nano-labs-announce-first-half-120000955.html');">
+<td align="right" width="130">
+            Aug-11-23 08:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announce-first-half-120000955.html" rel="nofollow" target="_blank">Nano Labs to Announce First Half of 2023 Financial Results on August 15, 2023</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/nano-labs-announces-receipt-interest-210000252.html');">
+<td align="right" width="130">
+            Jul-28-23 05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announces-receipt-interest-210000252.html" rel="nofollow" target="_blank">Nano Labs Announces Receipt of Interest-Free Loans from Shareholders</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/past-nano-labs-nasdaq-na-104901975.html');">
+<td align="right" width="130">
+            Jul-19-23 06:49AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/past-nano-labs-nasdaq-na-104901975.html" rel="nofollow" target="_blank">The past year for Nano Labs (NASDAQ:NA) investors has not been profitable</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span> <span class="body-table-news-loss">-6.63%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Insider Monkey', 'https://finance.yahoo.com/news/10-best-semiconductor-penny-stocks-131612533.html');">
+<td align="right" width="130">
+            Jul-05-23 09:16AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/10-best-semiconductor-penny-stocks-131612533.html" rel="nofollow" target="_blank">10 Best Semiconductor Penny Stocks to Buy</a>
+</div>
+<div class="news-link-right">
+<span>(Insider Monkey)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/nano-labs-ltds-nasdaq-na-102500775.html');">
+<td align="right" width="130">
+            May-29-23 06:25AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-ltds-nasdaq-na-102500775.html" rel="nofollow" target="_blank">Nano Labs Ltd's (NASDAQ:NA) CEO Jianping Kong is the most upbeat insider, and their holdings increased by 73% last week</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/nano-labs-files-annual-report-110000401.html');">
+<td align="right" width="130">
+            Apr-19-23 07:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-files-annual-report-110000401.html" rel="nofollow" target="_blank">Nano Labs Files Annual Report on Form 20-F for Fiscal Year 2022</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/shareholders-feeling-restless-over-nano-104946323.html');">
+<td align="right" width="130">
+            Apr-17-23 06:49AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/shareholders-feeling-restless-over-nano-104946323.html" rel="nofollow" target="_blank">Some Shareholders Feeling Restless Over Nano Labs Ltd's (NASDAQ:NA) P/E Ratio</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Insider Monkey', 'https://finance.yahoo.com/news/nano-labs-ltd-nasdaq-na-003938253.html');">
+<td align="right" width="130">
+            Mar-20-23 08:39PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-ltd-nasdaq-na-003938253.html" rel="nofollow" target="_blank">Nano Labs Ltd (NASDAQ:NA) Q4 2022 Earnings Call Transcript</a>
+</div>
+<div class="news-link-right">
+<span>(Insider Monkey)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Thomson Reuters StreetEvents', 'https://finance.yahoo.com/news/q4-2022-nano-labs-ltd-022924505.html');">
+<td align="right" width="130">
+            Mar-14-23 10:29PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/q4-2022-nano-labs-ltd-022924505.html" rel="nofollow" target="_blank">Q4 2022 Nano Labs Ltd Earnings Call</a>
+</div>
+<div class="news-link-right">
+<span>(Thomson Reuters StreetEvents)</span> <span class="body-table-news-loss">-7.89%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-announces-fourth-quarter-110000118.html');">
+<td align="right" width="130">
+            07:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announces-fourth-quarter-110000118.html" rel="nofollow" target="_blank">Nano Labs Announces Fourth Quarter 2022 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/nano-labs-announce-2022-fourth-130000429.html');">
+<td align="right" width="130">
+            Mar-10-23 08:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announce-2022-fourth-130000429.html" rel="nofollow" target="_blank">Nano Labs to Announce 2022 Fourth Quarter Financial Results on March 14, 2023</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/nano-labs-launches-self-developed-130000543.html');">
+<td align="right" width="130">
+            Mar-01-23 08:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-launches-self-developed-130000543.html" rel="nofollow" target="_blank">Nano Labs Launches New Self-Developed A-Series iPollo Computing Devices</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/nano-labs-ltd-nasdaq-na-125925174.html');">
+<td align="right" width="130">
+            Nov-20-22 07:59AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-ltd-nasdaq-na-125925174.html" rel="nofollow" target="_blank">Should Nano Labs Ltd (NASDAQ:NA) Focus On Improving This Fundamental Metric?</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/nano-labs-third-quarter-2022-124243696.html');">
+<td align="right" width="130">
+            07:42AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-third-quarter-2022-124243696.html" rel="nofollow" target="_blank">Nano Labs Third Quarter 2022 Earnings: EPS: CN¥1.01 (vs CN¥1.53 loss in 3Q 2021)</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-announces-third-quarter-120000059.html');">
+<td align="right" width="130">
+            Nov-17-22 07:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announces-third-quarter-120000059.html" rel="nofollow" target="_blank">Nano Labs Announces Third Quarter 2022 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-announce-third-quarter-120000531.html');">
+<td align="right" width="130">
+            Nov-11-22 07:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announce-third-quarter-120000531.html" rel="nofollow" target="_blank">Nano Labs to Announce Third Quarter 2022 Financial Results on November 17, 2022</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span> <span class="body-table-news-gain">+10.26%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-announces-breakthrough-achievement-130000726.html');">
+<td align="right" width="130">
+            Oct-21-22 09:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announces-breakthrough-achievement-130000726.html" rel="nofollow" target="_blank">Nano Labs Announces Breakthrough Achievement of iPolloverse Distributed Rendering</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-regains-compliance-nasdaq-120000921.html');">
+<td align="right" width="130">
+            Oct-14-22 08:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-regains-compliance-nasdaq-120000921.html" rel="nofollow" target="_blank">Nano Labs Regains Compliance with Nasdaq Listing Rule</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-ltd-announces-pricing-023000531.html');">
+<td align="right" width="130">
+            Sep-27-22 10:30PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-ltd-announces-pricing-023000531.html" rel="nofollow" target="_blank">Nano Labs Ltd Announces Pricing of Public Offering of American Depositary Shares</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span> <span class="body-table-news-loss">-15.83%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-announces-receipt-nasdaq-130000774.html');">
+<td align="right" width="130">
+            Sep-02-22 09:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announces-receipt-nasdaq-130000774.html" rel="nofollow" target="_blank">Nano Labs Announces Receipt of Nasdaq Hearings Panels Decision to Grant Request for Continued Listing</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-holds-press-conference-210000605.html');">
+<td align="right" width="130">
+            Aug-30-22 05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-holds-press-conference-210000605.html" rel="nofollow" target="_blank">Nano Labs Holds Press Conference for New iPollo Products in Singapore</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-announces-first-half-110000268.html');">
+<td align="right" width="130">
+            Aug-10-22 07:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announces-first-half-110000268.html" rel="nofollow" target="_blank">Nano Labs Announces First Half of 2022 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-announces-receipt-nasdaq-130000295.html');">
+<td align="right" width="130">
+            Jul-20-22 09:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-announces-receipt-nasdaq-130000295.html" rel="nofollow" target="_blank">Nano Labs Announces Receipt of Nasdaq Delisting Determination; Plans to Appeal</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/nano-labs-ltd-announces-pricing-103000101.html');">
+<td align="right" width="130">
+            Jul-12-22 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nano-labs-ltd-announces-pricing-103000101.html" rel="nofollow" target="_blank">Nano Labs Ltd Announces Pricing of Initial Public Offering</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/sure-check-national-bank-canada-153451247.html');">
+<td align="right" width="130">
+            Mar-21-22 11:34AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/sure-check-national-bank-canada-153451247.html" rel="nofollow" target="_blank">Be Sure To Check Out National Bank of Canada (TSE:NA) Before It Goes Ex-Dividend</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'CNW Group', 'https://finance.yahoo.com/news/laurent-ferreira-president-ceo-national-140000031.html');">
+<td align="right" width="130">
+            Mar-17-22 10:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/laurent-ferreira-president-ceo-national-140000031.html" rel="nofollow" target="_blank">Laurent Ferreira, President and CEO at National Bank to speak at the National Bank Financial 20th Annual Canadian Financial Services Conference</a>
+</div>
+<div class="news-link-right">
+<span>(CNW Group)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'CNW Group', 'https://finance.yahoo.com/news/national-bank-investments-announces-march-123000797.html');">
+<td align="right" width="130">
+            08:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/national-bank-investments-announces-march-123000797.html" rel="nofollow" target="_blank">National Bank Investments Announces March 2022 Cash Distributions for certain NBI Exchange-Traded Funds</a>
+</div>
+<div class="news-link-right">
+<span>(CNW Group)</span></div></div></td></tr>
+</table>
+</div>
+</td><td style="padding-left: 10px" valign="top" width="300"><div class="fullview-news-outer" data-testid="quote-stocktwits-widget-news-container" id="stocktwits-widget-news">
+<div class="footer-cover"></div>
+<div class="right-side-cover"></div>
+</div>
+<script type="text/javascript">
+    function StocktwitsInit() {
+        var StocktwitsHeight = document.getElementById('news-table').clientHeight - 0;
+        if(typeof STWT !== 'undefined') {
+            var isNewLayout = true;
+            var isDarkTheme = true;
+            var MIN_TWIT_HEIGHT = 71;
+            var quoteTicker = 'NA';
+            var bgColor = isNewLayout ? (isDarkTheme ? '22262F' : 'FFFFFF') : 'transparent';
+            var text_color = isNewLayout ? (isDarkTheme ? 'C3C6D0' : '4C5263') : '000000';
+            var link_color = isNewLayout ? (isDarkTheme ? '57aefb' : '306DCA') : '4871a8';
+            var divider_color = isNewLayout ? (isDarkTheme ? '353945' : 'DEDFE5') : 'd3d3d3';
+            var time_color = isNewLayout ? '868EA5' : '999999';
+            var username_color = isNewLayout ? (isDarkTheme ? 'F3F3F5' : '22262F') : '600D0B';
+            var font_size = isNewLayout ? 12 : 11;
+            STWT.Widget({
+                container: 'stocktwits-widget-news',
+                symbol: quoteTicker,
+                width: '300',
+                height: StocktwitsHeight,
+                limit: Math.ceil(StocktwitsHeight / MIN_TWIT_HEIGHT),
+                scrollbars: 0,
+                header: 0,
+                streaming: 'true',
+                style: { link_color, link_hover_color: link_color, header_text_color: text_color, border_color: bgColor, border_color_2: bgColor, divider_color, divider_type: 'solid', box_color: bgColor, stream_color: bgColor, text_color, time_color, font: 'Verdana, Arial, Tahoma', font_size, time_font_size: 10, username_font: 'Verdana, Arial, Tahoma', username_size: font_size, username_color, username_hover_color: username_color }
+            });
+        }
+    }
+
+    function loadStocktwitsScript() {
+        var s = document.createElement('script');
+        s.addEventListener('load', StocktwitsInit)
+        s.setAttribute('async', true)
+        s.src = '//api.stocktwits.com/addon/widget/2/widget-loader.min.js'
+        document.body.appendChild(s)
+    }
+
+    if (document.readyState != 'loading'){
+        loadStocktwitsScript();
+    } else {
+        document.addEventListener('DOMContentLoaded', loadStocktwitsScript);
+    }
+</script></td></tr></table></td>
+</tr>
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr class="table-light3-row">
+<td align="left" class="fullview-profile"><div>Nano Labs Ltd operates as a fabless integrated circuit design company and product solution provider in the People's Republic of China and internationally. It develops high throughput computing and high-performance computing chips. The company also offers distributed computing and storage solutions, smart network interface cards, and vision computing chips, as well as distributed rendering technology. In addition, it engages in the research and development of software. Its customers include enterprises and individual buyers. The company was founded in 2019 and is headquartered in Hangzhou, the People's Republic of China.</div></td></tr>
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr><td width="100%"><div id="statements"></div></td></tr><tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 21px auto 14px auto">
+<tr class="flex">
+<td align="left" class="fullview-links flex items-center" valign="center">
+<a class="tab-link" href="https://finance.yahoo.com/quote/NA" rel="nofollow" target="_blank">open in yahoo</a> | <a class="tab-link" href="https://www.reuters.com/companies/NA.OQ" rel="nofollow" target="_blank">open in reuters</a> | <a class="tab-link" href="https://www.marketwatch.com/investing/stock/na" rel="nofollow" target="_blank">open in marketwatch</a> | <a class="tab-link" href="https://www.google.com/finance/quote/NA:NASDAQ" rel="nofollow" target="_blank">open in google</a> | <a class="tab-link" href="https://www.sec.gov/edgar/browse/?CIK=1872302" rel="nofollow" target="_blank">open in EDGAR</a></td>
+</tr>
+</table>
+</table></div><script onerror="window.handleScriptNotLoaded(this)" src="/script/recent_quotes.js?v=344" type="text/javascript"></script>
+</div></div><div class="my-3"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_3x3_1" style="width:970px;height:250px;max-height:250px"></div></div>
+<div class="footer" style="margin-top: 20px;padding-bottom: 215px">
+<div class="footer_links">
+<a class="tab-link" href="/affiliate.ashx">affiliate</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/advertise.ashx">advertise</a>
+<span class="footer_dot"> • </span><a class="tab-link" href="/careers.ashx">careers</a>
+<span class="footer_dot"> • </span><a class="tab-link" href="#" onclick="setChartThemeCookie('light')">toggle light mode</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/contact.ashx">contact</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/privacy.ashx">privacy</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/help/screener.ashx">help</a>
+<br/>
+<a class="tab-link" href="javascript:void(0)" onclick="window.__uspapi &amp;&amp; window.__uspapi('displayUspUi');">do not sell my data</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="javascript:void(0)" onclick="window.__tcfapi &amp;&amp; window.__tcfapi('displayConsentUi', 2, function() {})">privacy settings</a>
+</div>
+    Quotes delayed 15 minutes for NASDAQ, NYSE and AMEX.
+    <br/>
+    Copyright © 2007-2023 FINVIZ.com. All Rights Reserved.
+    
+</div><script>SearchFocus();</script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/4187.fd7fe045.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/quote.d837ebfb.js"></script><script>
+            function FinvizReady(fn) {
+              if (document.readyState != 'loading'){
+                fn();
+              } else {
+                document.addEventListener('DOMContentLoaded', fn);
+              }
+            }
+
+            (typeof StocktwitsInit === 'function' && FinvizReady(StocktwitsInit));
+            (typeof FinvizSettings === 'object' && (FinvizSettings.quoteSearchExt = '&ty=c&ta=1&p=d'));
+        </script>
+<div class="hidden" data-set-search-ext-argument="&amp;ty=c&amp;ta=1&amp;p=d" id="js-set-search-ext-argument"></div>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-3261808-1"></script>
+<script>
+              function getSystemTheme() {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                  return 'Dark';
+                }
+                else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                  return 'Light';
+                }
+                return 'No Preference';
+              }
+
+              var systemTheme = getSystemTheme()
+
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('set', {'dimension1': 'NotLoggedIn'});
+              gtag('set', {'dimension3': window.devicePixelRatio + ''});
+              gtag('set', {'layoutTheme': 'dark'});
+              gtag('set', {'systemTheme': systemTheme });
+              gtag('set', {'bundle': 'modern' });
+
+              gtag('config', 'UA-3261808-1', { sample_rate: 10 });
+              gtag('config', 'G-ZT9VQEWD4N', {'dimension1': 'NotLoggedIn', 'dimension3': window.devicePixelRatio + '', 'layoutTheme': 'dark', 'systemTheme': systemTheme });
+              
+            </script>
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_1x1_1"></div><div class="modal-elite-ad" id="modal-elite-ad">
+<div class="modal-elite-ad_content" id="modal-elite-ad_content">
+<button class="modal-elite-ad_close" id="modal-elite-ad-close" type="button">×</button>
+<!--<div id="modal-elite-ad-content-0" style="display: none">
+			                        <h2>Ever heard of Finviz*Elite?</h2>
+                                    <p>
+                                        Our premium service offers you real-time quotes, advanced visualizations, technical studies, and much more.<br>
+                                        Become Elite and make informed financial decisions.
+                                    </p>
+                                    <a href="/elite.ashx?utm_source=finviz&utm_medium=banner&utm_campaign=modal-0" id="modal-elite-ad-btn-0" class="" target="_blank">Find out more</a>
+                                </div>-->
+<div id="modal-elite-ad-content-1" style="display: block">
+<h2>Upgrade your FINVIZ experience</h2>
+<p>
+                                        Join thousands of traders who make more informed decisions with our premium features.
+                                        Real-time quotes, advanced visualizations, backtesting, and much more.
+                                    </p>
+<a class="modal-elite_button" href="/elite.ashx?utm_source=finviz&amp;utm_medium=banner&amp;utm_campaign=modal-1" id="modal-elite-ad-btn-1" target="_blank">Learn more about FINVIZ*Elite</a>
+</div>
+</div>
+</div><script async="" src="/script/pv.js?rev=344"></script><script defer="">window.renderScriptNotLoaded();</script>
+<script crossorigin="anonymous" data-cf-beacon='{"rayId":"80b1fff848e648e9","token":"e53f08f6c9e04bfd9760701085ec93b4","version":"2023.8.0","si":100}' defer="" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"></script>
+</div></body>
+</html>

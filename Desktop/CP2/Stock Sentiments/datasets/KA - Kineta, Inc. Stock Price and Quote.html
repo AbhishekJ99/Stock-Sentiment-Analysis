@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<title>KA - Kineta, Inc. Stock Price and Quote</title>
+<meta charset="utf-8"/><meta content="width=1024" name="viewport"/><meta content="KA - Kineta, Inc. - Stock screener for investors and traders, financial visualizations." name="description"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-regular.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-700.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-900.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/inter-latin.woff2" rel="preload"/>
+<script>
+                window.notificationsArray = [];
+                window.renderScriptNotLoaded = function () {};
+                window.handleScriptNotLoaded = function (element) {
+                    window.notificationsArray.push(element);
+                    window.sentryDisabled = true;
+                    window.handleScriptNotLoaded = function () {};
+                };
+            </script>
+<link href="/assets/dist/finviz.5f37f1c7.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/assets/dist/redesign.8c6f6ebc.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/assets/dist/main.965d9b7f.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/favicon_2x.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/quote.ashx?t=KA" rel="canonical"/>
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script async="true" type="text/javascript">
+          (function() {
+            var host = 'finviz.com';
+            var element = document.createElement('script');
+            var firstScript = document.getElementsByTagName('script')[0];
+            var url = 'https://cmp.quantcast.com'
+              .concat('/choice/', 'c2W8esUZ6Q8oA', '/', host, '/choice.js?tag_version=V2');
+            var uspTries = 0;
+            var uspTriesLimit = 3;
+            element.async = true;
+            element.type = 'text/javascript';
+            element.src = url;
+
+            firstScript.parentNode.insertBefore(element, firstScript);
+
+            function makeStub() {
+              var TCF_LOCATOR_NAME = '__tcfapiLocator';
+              var queue = [];
+              var win = window;
+              var cmpFrame;
+
+              function addFrame() {
+                var doc = win.document;
+                var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+                if (!otherCMP) {
+                  if (doc.body) {
+                    var iframe = doc.createElement('iframe');
+
+                    iframe.style.cssText = 'display:none';
+                    iframe.name = TCF_LOCATOR_NAME;
+                    doc.body.appendChild(iframe);
+                  } else {
+                    setTimeout(addFrame, 5);
+                  }
+                }
+                return !otherCMP;
+              }
+
+              function tcfAPIHandler() {
+                var gdprApplies;
+                var args = arguments;
+
+                if (!args.length) {
+                  return queue;
+                } else if (args[0] === 'setGdprApplies') {
+                  if (
+                    args.length > 3 &&
+                    args[2] === 2 &&
+                    typeof args[3] === 'boolean'
+                  ) {
+                    gdprApplies = args[3];
+                    if (typeof args[2] === 'function') {
+                      args[2]('set', true);
+                    }
+                  }
+                } else if (args[0] === 'ping') {
+                  var retr = {
+                    gdprApplies: gdprApplies,
+                    cmpLoaded: false,
+                    cmpStatus: 'stub'
+                  };
+
+                  if (typeof args[2] === 'function') {
+                    args[2](retr);
+                  }
+                } else {
+                  if(args[0] === 'init' && typeof args[3] === 'object') {
+                    args[3] = Object.assign(args[3], { tag_version: 'V2' });
+                  }
+                  queue.push(args);
+                }
+              }
+
+              function postMessageEventHandler(event) {
+                var msgIsString = typeof event.data === 'string';
+                var json = {};
+
+                try {
+                  if (msgIsString) {
+                    json = JSON.parse(event.data);
+                  } else {
+                    json = event.data;
+                  }
+                } catch (ignore) {}
+
+                var payload = json.__tcfapiCall;
+
+                if (payload) {
+                  window.__tcfapi(
+                    payload.command,
+                    payload.version,
+                    function(retValue, success) {
+                      var returnMsg = {
+                        __tcfapiReturn: {
+                          returnValue: retValue,
+                          success: success,
+                          callId: payload.callId
+                        }
+                      };
+                      if (msgIsString) {
+                        returnMsg = JSON.stringify(returnMsg);
+                      }
+                      if (event && event.source && event.source.postMessage) {
+                        event.source.postMessage(returnMsg, '*');
+                      }
+                    },
+                    payload.parameter
+                  );
+                }
+              }
+
+              while (win) {
+                try {
+                  if (win.frames[TCF_LOCATOR_NAME]) {
+                    cmpFrame = win;
+                    break;
+                  }
+                } catch (ignore) {}
+
+                if (win === window.top) {
+                  break;
+                }
+                win = win.parent;
+              }
+              if (!cmpFrame) {
+                addFrame();
+                win.__tcfapi = tcfAPIHandler;
+                win.addEventListener('message', postMessageEventHandler, false);
+              }
+            };
+
+            makeStub();
+
+            var uspStubFunction = function() {
+              var arg = arguments;
+              if (typeof window.__uspapi !== uspStubFunction) {
+                setTimeout(function() {
+                  if (typeof window.__uspapi !== 'undefined') {
+                    window.__uspapi.apply(window.__uspapi, arg);
+                  }
+                }, 500);
+              }
+            };
+
+            var checkIfUspIsReady = function() {
+              uspTries++;
+              if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+                console.warn('USP is not accessible');
+              } else {
+                clearInterval(uspInterval);
+              }
+            };
+
+            if (typeof window.__uspapi === 'undefined') {
+              window.__uspapi = uspStubFunction;
+              var uspInterval = setInterval(checkIfUspIsReady, 6000);
+            }
+          })();
+          </script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script>
+            FinvizSettings = {
+                hasUserPremium: false,
+                name: "",
+                email: "",
+                nodeChartsDomain: "https://charts2-node.finviz.com",
+                hasUserRetinaNodeCharts: true,
+                hasUserStickyHeader: true,
+                adsProvider: 1,
+                hasRedesignEnabled: true,
+                hasQuoteOptions: false,
+                hasForexFuturesCryptoNodeCharts: true,
+                quoteSearchExt: '',
+            };
+        </script><script src="/script/browser_check.js?rev=344"></script><script src="/script/vendor/boxover.js?rev=344"></script>
+<script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/runtime.c62c08ff.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/7345.b33e04ab.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/738.128340f6.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/libs_init.cc67a770.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/5904.aa665648.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/3372.46f66dc0.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/header.1f97a566.js"></script></head>
+<script>
+            const channelIdToLabel = {
+                '1': 'MarketWatch',
+                '2': 'WSJ',
+                '3': 'Reuters',
+                '4': 'Yahoo Finance',
+                '5': 'CNN',
+                '6': 'The New York Times',
+                '7': 'Bloomberg',
+                '9': 'BBC',
+                '10': 'CNBC',
+                '11': 'Fox Business',
+                '102': 'Mish\'s Global Economic Trend Analysis',
+                '105': 'Trader Feed',
+                '113': 'Howard Lindzon',
+                '114': 'Seeking Alpha',
+                '123': 'Fallond Stock Picks',
+                '132': 'Zero Hedge',
+                '133': 'market folly',
+                '136': 'Daily Reckoning',
+                '141': 'Abnormal Returns',
+                '142': 'Calculated Risk',
+            }
+            function trackAndOpenNews(event, channel, url) {
+              event.preventDefault()
+              window.open(url, '_blank')
+
+              let channelLabel
+              if (typeof channel === 'string') {
+                channelLabel = channel
+              } else {
+                const label = channelIdToLabel[channel]
+                channelLabel = label !== undefined ? label : channel
+              }
+              window.gtag && window.gtag('event', 'click', {
+                send_to: 'G-ZT9VQEWD4N',
+                non_interaction: true,
+                event_category: 'news',
+                event_label: channelLabel,
+                value: 1 });
+            }
+          </script>
+<body class="m-0 yellow-tooltip is-quote min-w-[1009px] table w-full">
+<script>
+                var cookieName = 'fv_block';
+                var selector = '[ic_placementid]';
+                var selectorFrame = selector + ' iframe, ' + selector + ' [id*=aax]';
+                var cookieExpiry = 5 * 60 * 1000; // 5min
+                var checkTimeout = 20 * 1000; // 20sec
+
+                function getCookie(value) {
+                    var expiration = +new Date() + cookieExpiry;
+                    return cookieName + '=' + value + '; expires=' + (new Date(expiration)).toUTCString() + '; path=/';
+                }
+
+                var finvizBannersLoaded = false;
+                function loadFinvizBanners(setCookie) {
+                    if (setCookie) document.cookie = getCookie('block');
+                    finvizBannersLoaded = true;
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = '/script/finviz_b.js?rev=344';
+                    document.head.appendChild(s);
+                }
+
+                function checkBannersLoaded() {
+                    var checkEnd = +new Date() + checkTimeout;
+                    function asyncCheckIfExists(selector, resolve) {
+                        var now = +new Date();
+                        var container = document.querySelector(selector);
+                        if (!container && checkEnd > now) return setTimeout(function () { asyncCheckIfExists(selector, resolve) }, 1000)
+                        resolve(!!container);
+                    }
+                    
+                    asyncCheckIfExists(selector, function (exists) {
+                        if (!exists) return loadFinvizBanners(true);
+
+                        asyncCheckIfExists(selectorFrame, function (hasIframe) {
+                            if (!hasIframe) return loadFinvizBanners(true);
+                        })
+                    })
+                }
+
+                if (document.cookie.indexOf(cookieName) >= 0) {
+                    loadFinvizBanners(false);
+                } else {
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.onerror = loadFinvizBanners;
+                    s.onload = checkBannersLoaded;
+                    s.src = 'https://u5.investingchannel.com/static/uat.js';
+                    document.head.appendChild(s);
+
+                    InvestingChannelQueue = window.InvestingChannelQueue || [];
+                    var ic_page;
+
+                    function refreshAd(container, refreshes) { 
+                        var placementTag, adslot;
+                        window.InvestingChannelQueue.push(function () {
+                            var pubTags = ic_page.getPubTag.call(ic_page, container.id);
+                            if (!pubTags) return;
+                            var pubTag = pubTags[0];
+                            placementTag = pubTag.mPlacements[0].mTagToRender;
+                            adslot = pubTag.mPlacements[0].mPublisherKval.adslot[0];
+                            // Update div ID
+                            var id = container.id.split('_');
+                            var numberOfDivs = document.querySelectorAll('[id*=' + id.slice(0, id.length - 1).join('_') + ']').length;
+                            var newDivNumber = Number(id.pop()) + numberOfDivs * refreshes;
+                            container.setAttribute('id', id.join('_') + '_' + newDivNumber);
+                            // Destroy previous pubtag & reset container html (loading span)
+                            pubTag.destroy();
+                            container.innerHTML = '';
+                        }); 
+                        window.InvestingChannelQueue.push(function () {
+                            if (!placementTag || !adslot) return
+                            // Create new pub tag
+                            var newTag;
+                            var layoutId = placementTag.mNativeLayout ? placementTag.mNativeLayout.nativelayoutid : null;
+                            if (layoutId) {
+                                newTag = ic_page.defineNativeTag('finviz/' + placementTag.mTarget.dfpkeyname, placementTag.mAdSize, container.id, layoutId);
+                                var nativeLayout, layoutData
+
+                                try {
+                                  nativeLayout = newTag.mPlacements[0].mTags[0].mNativeLayout;
+                                } catch (e) {
+                                    console.log(e.message)
+                                }
+
+                                try {
+                                  layoutData = newTag.mTemplate.mNativeLayout[layoutId].Data
+                                  if (layoutData && nativeLayout && !nativeLayout.layout) {
+                                    newTag.mPlacements[0].mTags[0].mNativeLayout = layoutData
+                                  }
+                                } catch (e) {
+                                    console.log(e.message)
+                                }
+                            } else {
+                                newTag = ic_page.defineTag('finviz/' + placementTag.mTarget.dfpkeyname, placementTag.mAdSize, container.id);
+                            }
+                            // Set adslot param
+                            newTag.setKval({ adslot: adslot });
+                            newTag.setKval({ kw: 'ajax' });
+                            newTag.render();
+                        });
+                    }
+
+                    var refreshCount = 1;
+                    function refreshAds(selectors) { 
+                        if (window.ic_page) {
+                            document.querySelectorAll(selectors).forEach(function (element) {
+                                try {
+                                    refreshAd(element, refreshCount);
+                                } catch (e) {
+                                    console.log('Ad refresh error for:', element, e);
+                                }
+                            }); 
+                            refreshCount++;
+                        } 
+                    }
+
+
+                    InvestingChannelQueue.push(function() {
+                        ic_page = InvestingChannel.UAT.Run('df0d0d52-cc7f-11e8-82a5-0abbb61c4a6a');
+                    });
+
+                    var hash = null;
+                    if (typeof hash === 'string') {
+                      InvestingChannelQueue.push(function() {
+                          if (ic_page) {
+                              ic_page.setUserId('email', hash, true);
+                          }
+                      });
+                    }
+                }
+            </script>
+<script>
+            function checkMediaQuery(matches) {
+              if (matches) {
+                FinvizSettings.hasUserStickyHeader = true;
+                document.body.classList.add('is-header-sticky');
+              } else {
+                FinvizSettings.hasUserStickyHeader = false;
+                document.body.classList.remove('is-header-sticky');
+              }
+            }
+            var mediaMatch = window.matchMedia('(min-width: 1025px) and (min-height: 650px)');
+            checkMediaQuery(mediaMatch.matches);
+            mediaMatch.addListener(function (ev) { checkMediaQuery(ev.matches) });
+          </script>
+<div id="notifications-container"></div><table class="header">
+<tr class="align-top">
+<td>
+<table class="header-container">
+<tr>
+<td class="w-[30%]">
+<table class="w-full">
+<tr>
+<td class="h-[50px] align-middle">
+<a class="logo" href="/"><svg class="block" height="32" width="225">
+<use class="dark:hidden" href="/img/logo.svg#free"></use>
+<use class="hidden dark:block" href="/img/logo.svg#free-dark"></use>
+</svg></a>
+</td>
+</tr>
+<tr>
+<td id="search" style="padding-top: 7px">
+<div class="navbar-search-placeholder">
+<span class="icon-wrapper">
+<svg class="icon" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.9 15.5l4 4c.2.2.1.5 0 .7l-.7.7a.5.5 0 01-.8 0l-4-4c0-.2-.2-.3-.3-.4l-.7-1a7 7 0 01-11.2-4 7 7 0 1112.2 3l1 .6.5.4zM5 10a5 5 0 1010 0 5 5 0 00-10 0z"></path>
+</svg>
+</span>
+<input class="search-input is-free" placeholder="Search ticker, company or profile"/>
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td class="align-bottom pb-1">
+<div class="hidden xl:flex items-center h-[37px] pl-2" id="microbar_position"><div>
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_88x31_1" style="width:88px;height:31px;max-height:31px"></div>
+</div></div>
+</td>
+<td class="relative w-[730px] text-right">
+<div class="overflow-hidden absolute top-0 right-0 w-full h-24" id="banner_position">
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_728x90_1" style="width:728px;height:90px;max-height:90px"></div>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="w-[994px]" style="font-size:0">
+<img alt="" class="w-[994px] h-px" src="/gfx/nic2x2.gif"/>
+</td>
+</tr>
+</table>
+<table class="navbar">
+<tr>
+<td class="h-[30px]">
+<table class="header-container">
+<tr><td><a class="nav-link is-first" href="/">Home</a></td><td><a class="nav-link" href="/news.ashx">News</a></td><td><a class="nav-link" href="/screener.ashx">Screener</a></td><td><a class="nav-link" href="/map.ashx">Maps</a></td><td><a class="nav-link" href="/groups.ashx">Groups</a></td><td><a class="nav-link" href="/portfolio.ashx">Portfolio</a></td><td><a class="nav-link" href="/insidertrading.ashx">Insider</a></td><td><a class="nav-link" href="/futures.ashx">Futures</a></td><td><a class="nav-link" href="/forex.ashx">Forex</a></td><td><a class="nav-link" href="/crypto.ashx">Crypto</a></td><td><a class="nav-link" href="/elite.ashx?utm_source=finviz&amp;utm_medium=banner&amp;utm_campaign=main-navbar-backtests">Backtests</a></td><td><a class="nav-link is-elite" href="/elite.ashx">Elite</a></td><td class="w-full relative"><div class="absolute bottom-0 left-0 right-0 top-0"><div class="pr-1" id="time"></div></div></td>
+<td class="nav relative">
+<a class="!flex !bg-transparent !border-b-0 mt-1 !py-0 !px-1" data-testid="chart-layout-theme" href="#" onclick="setChartThemeCookie('light', true)" style="border-left: 1px solid #444a57" title="Toggle Light/Dark mode">
+<div class="relative box-content flex rounded-full w-10 h-5 border border-gray-750 bg-gray-800 text-white justify-end">
+<div class="box-border w-1/2 rounded-full p-px border border-gray-800 bg-[#4c5261] flex justify-center items-center">
+<svg class="fill-current text-white inline-block -ml-px" height="16" width="16">
+<use href="/assets/icons.svg?rev=3#moonOutlined"></use>
+</svg>
+</div>
+</div>
+<span class="ml-1 select-none font-medium text-xs text-white">Theme</span>
+</a>
+</td>
+<td>
+<a class="nav-link is-help" href="/help/screener.ashx" style="border-left: 1px solid #444a57"><span class="fa fa-question-circle"></span>Help</a>
+</td>
+<td><a class="nav-link sign-in" href="/login.ashx">Login</a></td>
+<td><a class="nav-link sign-up" href="/register.ashx">Register</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<script>
+            function reloadPage () { location.reload() }
+            function setChartThemeCookie(chartsTheme) {
+              fetch('/api/set_cookie.ashx?cookie=chartsTheme&value=' + chartsTheme ).catch(function(){}).then(function(){
+                window.gtag && window.gtag('event', 'click', { event_category: 'theme', event_label: 'toggle', value: chartsTheme, event_callback: reloadPage });
+                setTimeout(reloadPage,1000);
+              })
+            }
+          </script><div class="content"><div class="ticker-wrapper gradient-fade">
+<div class="quote-menu empty:py-3 empty:min-h-8" data-ischarttas="1" data-isscreener="1"></div>
+<div id="react-root"></div>
+<script>
+            FinvizSettings.TA = {"style":"candlestick","overlays":[{"name":"sma","parameters":"20","color":"rgba(220,  50, 179, 0.39)"},{"name":"sma","parameters":"50","color":"rgba(255, 143,  51, 0.78)"},{"name":"sma","parameters":"200","color":"rgba(220, 179,  50, 0.43)"},{"name":"patterns","parameters":"","color":"rgba(135, 206, 239, 1)|rgba(220, 159, 229, 1)"}],"indicators":[]};
+        </script><div style="display: flex; flex-direction: column; align-items: center">
+<link href="/assets/dist-charts/main.1855f85e.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet"/>
+<div class="interactive-chart" id="app">
+<div id="chart" style="min-height: 401px; position: relative"></div>
+</div>
+<div id="js-charts-modal"><div class="overlay modal hidden has-footer"></div></div>
+<div class="context-menu hidden"></div>
+<script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/runtime.4eb20b9b.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/976.76a22507.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/main.393da18b.js"></script><script>
+                                    (function() {
+                                        var Quote = FLibs.Charts.Quote;
+                                        var data = {"ticker":"KA","timeframe":"d","volume":[15075,1368,1956,555,68,1512,1867,83,1297,92,433,432,1657,569,203,170,1660,646,2556,1754,470,576,296,406,287,1142,374,429,161,339,454,130,108,292,132,137,119,124,117,340,141,103,150,239,194,130,80,66,173,147,111,83,61,76,44,114,427,176,247,121,98,226,129,223,141,170,307,263,153,189,212,518,753,297,273,290,258,241,126,474,480,302,287,275,406,353,306,878,1319,440,424,336,375,5314,1138,814,368,359,273,313,503,499,453,223,636,407,282,334,395,314,384,354,266,473,322,217,171,200,288,353,63,103,199,557,556,644,273,458,397,1059,2705,2447,497,829,1681,484,1107,1032,532,2057,974,1285,1578,3576,3298,1367,22256,2670,1523,968,998,1817,1365,1055,1064,3353,4095,1273,1181,1433,2538,2281,817,675,799,716,1035,878,1412,987,1164,2706,1246,603,781,889,650,781,1067,1469,5517,5290,3173,1761,1179,2987,1744,2559,1287,1192,2324,1617,706,781,651,422,866,1476,1367,2164,342,466,1448,508,913,1048,617,492,717,663,406,1642,776,266,961,719,263,1144,600,542,337,280,358,383,277,402,712,1877,287,520,603,803,341,779,714,753,343,418,648,641,406,284,285,478,1007,1397,2228,1018,1355,452,349,557,456,484,338,295,850,360,711,499,437,1031,906,920,1723,2788,1229,1684,2750,998,542,1269,1399,487,1049,1049,785,291,588,443,1153,581,324,437,406,704,8973,3046,1554,1059,822,600,700,775,1164,1641,1592,704,2488,1927,1436,1121,2449,2327,3311,2586,1734,863,1882,1013,940,620,1141,1691,1289,1949,2205,2568,2210,2383,1444,674,589,3003,3064,993,1277,897,1149,809,827,1928,1690,771,831,1109,1254,800,779,1326,833,833,663,1052,8227,2436,1286,469,1705,2006,1009,827,635,930,877,1689,1267,675,675,602,736,2410,3627,3654,1205,795,538,1574,1249,986,4086,2065,674,581,527,867,384,834,737,1567,796,1011,482,1207,629,474,419,275,309,263,364,214,634,378,574,311,818,614,9586,598,520,305,1653,340,252,312,304,177,193,281,412,412,589,504,538,406,328,203,835,185,874,649,3659,870,476,4001,747,1524,1380,894,846,808,360,821,1566,464,700,1530,369,537,383,337,528,421,297,452,717,1051,979,310,213,163,206,299,14088,2653,928,663,1898,571,256,466,7502,229071,30841,60086,9780,10727,16306,15765,5613,10687,10055,4855,5681,4586,4278,4458,3246,4661,5379,2226,4351,9638,8023,7603,5542,4808,2712,3409,5695,4253,2497,3365,2864,12429,4649,19345,17436,6158,6999,3717,3293,4197,5117,3460,3029,2606,3336,15854,4264,1718,1453,1410,1100,1733,2156,2478,2365,2074,2671,3496,12059,13673,250895,96314,111712,30775,23423,77787,39386,19881,9313,14242,7466,7347,7475,6095,6357,45628,8157,5142,3512,5951,6924,6023,6836,6163,5222,4708,4927,3897,3127,3377,2923,2490,2849,2652,2526,3093,1915,1597,3343,3549,3389,3743,2101,4189,4014,2508,3220,1217,1667,1521,1824,3206,1893,1382,6097,2699,2873,2864,1092,11613,45588,14264,6618,11839,5222,3800,9607,6540,4535,2795,5979,23197,3427,2817,3389,1691,2439,1968,1486,2361,3576,1091,2403,774,1267,1363,1326,1506,1400,929,880,1710,1772,2035,2720,1818,2071,1952,1394,1295,1699,631,591,896,913,799,1467,862,1452,600,625,654,1606,507,713,658,774,520,465,818,1224,1841,1148,1046,430,432,1142,629,398,582,845,781,611,772,1310,921,515,1026,1396,1713,1018,848,1422,2207,1004,2181,1334,1253,779,868,761,1185,3150,673127,98774,28367,33689,92723,32944,43132,29044,10601,9836,15496,15005,6266,5934,8078,7539,4721,4011,4337,6018,4651,5798,3993,7016,7956,1343,4639,5899,3612,7099,2876,2200,2224,2728,2322,1983,3454,3289,3650,2940,60117,9694,5979,5913,23705,2611,4585,8380,5661,5849,4778,5108,2793,9589,3320,2081,7532,8214,11838,3907,4138,2249,3771,6567,3368,1953,6615,2656,2170,2578,2789,6506,3198,3501,32703,8125,4915,60179,18227,7707,11250,5170,4484,8567,4849,3210,3586,6382,6818,7740,8040,8003,7941,7233,6475,2949,5146,6433,4515,5725,8971,7616,8166,6607,4713,6101,202219,62525,37796,11110,20797,22002,24880,17256,9271,13596,17372,21580,12121,10887,8885,6616,5525,8488,10404,12694,9419,13527,18810,14840,8217,6999,6391,8787,6535,4763,5036,5155,30821,7085,7766,4359,8162,3780,4925,7583,5459,10067,13544,5248,4510,4119,2719,9812,6962,117252,14042,14835,11419,5530,5912,4339,4981,2710,4998,5311,3445,2033,5750,2800,3307,6630,11649,26588,5399,2524,1286,2443,3326,2350,2854,5488,4150,2178,1919,2013,3614,4596,3644,3586,1424,3335,2128,6241,3899,2792,2164,2183,1558,1394,6682,5478,3334,2601,3957,8802,4718,4636,1273,2150,2582,1056,1242,1847,2051,7591,1269,3314,1129,934,1725,2507,2639,7793,3484,1651,7068,3656,3486,1474,1243,2396,1832,2193,1258,4161,1063,1490,2359,1237,553,1085,1842,5182,2449,1734,2896,951,1357,3628,8666,1842,27996,2593,1913,2913,4566,3860,3206,4121,1512,2412,4292,1863,31157,9942,11052,8732,24554,10377,6633,5001,4737,6395,35032,33114,46911,24824,96711,77128,19301,24708,32835,38886,156334,77438,39048,49954,106228,35593,29773,34625,362581,81409,81932,40896,77069,224869,206500,68051,27959,30653,19779,32660,15245,19531,27182,31846,22221,29416,16905,15710,12851,14060,13517,18349,11694,13778,9819,5585,4000,9406,6787,9164,6339,7044,4925,6883,8686,7585,4625,3141,5417,4107,6633,34740,21329,14881,12068,12345,12346,11588,8047,8018,5982,5130,5367,9825,7534,9392,9473,11976,8930,8277,23397,9013,7005,5498,5628,8033,6020,2657,3500,5019,4005,2982,3152,4275,4020,2923,3046,10007,4946,5883,4304,2943,3486,3816,2658,3067,2487,3944,14401,18315,4234,7436,3640,6253,4383,4085,3268,16139,11322,9285,3782,5173,12594,6240,8965,5202,5143,7348,15207,25561,18288,23785,8012,4368,13432,10493,8429,7957,8086,8138,3517,5711,4312,3230,4620,6777,3992,6570,7307,8431,7390,8307,6156,3862,6060,5723,4813,3789,6021,4848,7811,4505,6074,8899,12278,11746,10094,5356,11190,5387,4566,4910,4671,2793,3614,4644,27247,10456,9571,13521,5530,9130,4557,3684,2687,3725,2586,2363,3082,4940,36614,34706,8125,5523,6823,5219,5089,4348,3197,5367,2579,2116,2610,2616,6050,2005,2822,1930,3181,2900,3754,4652,5542,2897,1882,2299,1860,1470,2083,3688,2698,2929,1512,753,1492,1491,14412,2915,2700,2288,1748,1295,1184,963,2670,1811,4510,2185,2323,1705,2805,2617,2349,3437,4489,1796,3478,3182,2085,4120,2294,2216,2224,2913,4784,4166,4481,2755,3446,4870,2253,2019,2819,6844,23323,10366,11619,7488,4605,5243,5412,5497,6163,6032,15072,15514,8523,31421,16836,15303,8973,11286,16692,9639,7938,5940,14953,13113,7958,7644,5748,7974,7401,12501,4971,7525,5595,8163,10527,6251,6564,4581,12288,23619,5329,12890,7068,11463,9324,46335,10786,15334,9281,44245,7685,14991,12017,14195,20012,15616,11821,10504,21730,16643,8488,20517,9271,10569,8837,9119,5383,9226,11081,11519,13136,11285,8399,3871,1861,8154,6195,2821,7796,4154,5449,1695,8811,1629,9619,5727,3325,2901,3212,2594,4659,1659,9980,4043,2169,2279,4219,4047,2946,2141,4826,4069,9688,5452,4372,8959,3328,6325,9605,9364,7361,6329,4583,17925,4550,2240,11609,26040,6714,11415,8686,13732,34292,90208,18803,23736,16620,15787,14270,11489,45632,26140,30320,10167,10189,10260,9279,16778,6270,5053,11704,6383,10021,9364,13202,6727,8415,15550,11663,7438,3878,8010,18015,25696,27708,13502,12194,38764,14576,22445,7489,5554,8139,12201,9428,7071,15101,17352,11044,26365,14641,12316,12278,16061,17558,21673,21659,14001,21356,18950,18842,13962,8840,15690,15239,11707,14728,13752,14303,21983,15575,31196,29582,12382,233400,86080,26559,66823,12305,36992,10841,11358,10351,20215,9858,8930,10778,20895,36531,13226,10588,7742,6492,14254,22720,13696,17916,17116,13675,9957,28870,12738,12849,13170,14769,11291,15167,15170,21718,8028,10777,10105,16372,389471,108171,42318,25448,30811,31671,52421,14753,15745,10748,31362,38081,21753,47024,24052,26702,22260,35133,16591,11565,15636,7891,6931,17353,12570,12976,6793,7809,33785,7448,10963,16924,28304,22270,14391,34005,7875,18069,7183,6891,3546,5994,8414,3202,5167,5593,10938,34426,11421,10687,10568,7030,7955,4891,3594,12622,17248,14249,8552,3496,10274,54525,13532,7572,9172,6079,4133,7453,49194,15746,14354,7833,4555,2619,13016,13563,7294,1960,1744,6990,13483,6661,5649,6046,25724,2069,12116,19304,56456,2393439,193072,44382,451616,89590,25921,81903,34539,36814,12320,9395,21877,14491,12278,8714,9720,9140,8994,3235,5637,8614,3208,8304,2175,1801,3906,4235,11228,10648,5183,1373,11312,2652,1761,17132,6580,11481,8414,6941,9009,1028,5781,4556,12741,5750,8513,2841,1650,3763,4023,3548,255663,116917,8889893,338905,598770,85204,49128,25042,41881,28345,15241,17644,20529,13026,39492,31862,17216,11497,6658,16596,27968,12871,7649,13283,14797,6408,5516,6805,5575,3984,6732,5498,1843,4644,4771,4488,13663,9389,3132,5378,28924,8382,4263,6177,7403,3652,2905,3209,3185,7269,4295,2342,3450,3483,2104,2139,9231,581,3387,2306,11881,7212,6902,9458,1520,5185,7612,2759,8158,2240,3095,10055,969,8672,4188,5173,3364,9463,3572,4798,1793,21755,700,13054,1420,1274,4509,1663,2760,4360,5545,3819,4200,2367,14591,3559,1986,716,669,3417,2019,3897,1161,227,1776,249,420,989,634,7677,1508,3624,2214,3205,2044,16129,11534,15584,21014,14434,802,3022,346,2925,3046,3857,4566,6911,246712,57101,73860,23954,16058,10867,16813,190151,96776,99639,603304,130948,156917,23193,103779,46584,54089,40546,39086,13520,19514,20913,10444,15492,33862,12591,12942,7621,16725,8213,26911,21972,8593,7575,35832,61809,15023,56459,17710,24976,21225,8146,10405,6447,10604,9284,6046,27715,17913,14510,26044,8742,15090,2759,2260,3730,3695,1581,5742,14719,24559,35537,48358,11047,62268,12976,10177,11496,52666,17400,180384,67825,44821,16291,92261,42590,9693,5319,10379,13877,15481,2030,2293,5636,10113,17786,30914,6064,2468,48998,130406,137724,27441,93514,9547,9569,5545,9095,12703,6471,13282,2064,12151,6525,5964,4996,4574,4727,5935,6064,29382,25898,3386,8184,7179,15917,8442,7281,19123,6002,10414,4562,8997,9334,10001,11264,16140,16116,6948,17984,12467,17111,23846,35774,35258,31022,13584,19764,21932,11845,21536,20809,15121,9715,19583,25352,51349,87890,31283,15054,21796,9621,23235,35127,15335,60787,69733,127412,26996,15497,38908,17850,5827,68499,13493,14958,6532,15398,24431,5376,11228,17428,7292,10356,9242,19991,7450,13676,22225,6887,3470,10548,2727,6804,7158,6565,11368,27827,5299,8906,11628,22256,12890,18967,22338,47204,116072,31645,109340,15008,4476],"date":[1455199200,1455285600,1455631200,1455717600,1455804000,1455890400,1456149600,1456236000,1456322400,1456408800,1456495200,1456754400,1456840800,1456927200,1457013600,1457100000,1457359200,1457445600,1457532000,1457618400,1457704800,1457960400,1458046800,1458133200,1458219600,1458306000,1458565200,1458651600,1458738000,1458824400,1459170000,1459256400,1459342800,1459429200,1459515600,1459774800,1459861200,1459947600,1460034000,1460120400,1460379600,1460466000,1460552400,1460638800,1460725200,1460984400,1461070800,1461157200,1461243600,1461330000,1461589200,1461675600,1461762000,1461848400,1461934800,1462194000,1462280400,1462366800,1462453200,1462539600,1462798800,1462885200,1462971600,1463058000,1463144400,1463403600,1463490000,1463576400,1463662800,1463749200,1464008400,1464094800,1464181200,1464267600,1464354000,1464699600,1464786000,1464872400,1464958800,1465218000,1465304400,1465390800,1465477200,1465563600,1465822800,1465909200,1465995600,1466082000,1466168400,1466427600,1466514000,1466600400,1466686800,1466773200,1467032400,1467118800,1467205200,1467291600,1467378000,1467723600,1467810000,1467896400,1467982800,1468242000,1468328400,1468414800,1468501200,1468587600,1468846800,1468933200,1469019600,1469106000,1469192400,1469451600,1469538000,1469624400,1469710800,1469797200,1470056400,1470142800,1470229200,1470315600,1470402000,1470661200,1470747600,1470834000,1470920400,1471006800,1471266000,1471352400,1471438800,1471525200,1471611600,1471870800,1471957200,1472043600,1472130000,1472216400,1472475600,1472562000,1472648400,1472734800,1472821200,1473166800,1473253200,1473339600,1473426000,1473685200,1473771600,1473858000,1473944400,1474030800,1474290000,1474376400,1474462800,1474549200,1474635600,1474894800,1474981200,1475067600,1475154000,1475240400,1475499600,1475586000,1475672400,1475758800,1475845200,1476104400,1476190800,1476277200,1476363600,1476450000,1476709200,1476795600,1476882000,1476968400,1477054800,1477314000,1477400400,1477486800,1477573200,1477659600,1477918800,1478005200,1478091600,1478178000,1478264400,1478527200,1478613600,1478700000,1478786400,1478872800,1479132000,1479218400,1479304800,1479391200,1479477600,1479736800,1479823200,1479909600,1480082400,1480341600,1480428000,1480514400,1480600800,1480687200,1480946400,1481032800,1481119200,1481205600,1481292000,1481551200,1481637600,1481724000,1481810400,1481896800,1482156000,1482242400,1482328800,1482415200,1482501600,1482847200,1482933600,1483020000,1483106400,1483452000,1483538400,1483624800,1483711200,1483970400,1484056800,1484143200,1484229600,1484316000,1484661600,1484748000,1484834400,1484920800,1485180000,1485266400,1485352800,1485439200,1485525600,1485784800,1485871200,1485957600,1486044000,1486130400,1486389600,1486476000,1486562400,1486648800,1486735200,1486994400,1487080800,1487167200,1487253600,1487340000,1487685600,1487772000,1487858400,1487944800,1488204000,1488290400,1488376800,1488463200,1488549600,1488808800,1488895200,1488981600,1489068000,1489154400,1489410000,1489496400,1489582800,1489669200,1489755600,1490014800,1490101200,1490187600,1490274000,1490360400,1490619600,1490706000,1490792400,1490878800,1490965200,1491224400,1491310800,1491397200,1491483600,1491570000,1491829200,1491915600,1492002000,1492088400,1492434000,1492520400,1492606800,1492693200,1492779600,1493038800,1493125200,1493211600,1493298000,1493384400,1493643600,1493730000,1493816400,1493902800,1493989200,1494248400,1494334800,1494421200,1494507600,1494594000,1494853200,1494939600,1495026000,1495112400,1495198800,1495458000,1495544400,1495630800,1495717200,1495803600,1496149200,1496235600,1496322000,1496408400,1496667600,1496754000,1496840400,1496926800,1497013200,1497272400,1497358800,1497445200,1497531600,1497618000,1497877200,1497963600,1498050000,1498136400,1498222800,1498482000,1498568400,1498654800,1498741200,1498827600,1499086800,1499259600,1499346000,1499432400,1499691600,1499778000,1499864400,1499950800,1500037200,1500296400,1500382800,1500469200,1500555600,1500642000,1500901200,1500987600,1501074000,1501160400,1501246800,1501506000,1501592400,1501678800,1501765200,1501851600,1502110800,1502197200,1502283600,1502370000,1502456400,1502715600,1502802000,1502888400,1502974800,1503061200,1503320400,1503406800,1503493200,1503579600,1503666000,1503925200,1504011600,1504098000,1504184400,1504270800,1504616400,1504702800,1504789200,1504875600,1505134800,1505221200,1505307600,1505394000,1505480400,1505739600,1505826000,1505912400,1505998800,1506085200,1506344400,1506430800,1506517200,1506603600,1506690000,1506949200,1507035600,1507122000,1507208400,1507294800,1507554000,1507640400,1507726800,1507813200,1507899600,1508158800,1508245200,1508331600,1508418000,1508504400,1508763600,1508850000,1508936400,1509022800,1509109200,1509368400,1509454800,1509541200,1509627600,1509714000,1509976800,1510063200,1510149600,1510236000,1510322400,1510581600,1510668000,1510754400,1510840800,1510927200,1511186400,1511272800,1511359200,1511532000,1511791200,1511877600,1511964000,1512050400,1512136800,1512396000,1512482400,1512568800,1512655200,1512741600,1513000800,1513087200,1513173600,1513260000,1513346400,1513605600,1513692000,1513778400,1513864800,1513951200,1514296800,1514383200,1514469600,1514556000,1514901600,1514988000,1515074400,1515160800,1515420000,1515506400,1515592800,1515679200,1515765600,1516111200,1516197600,1516284000,1516370400,1516629600,1516716000,1516802400,1516888800,1516975200,1517234400,1517320800,1517407200,1517493600,1517580000,1517839200,1517925600,1518012000,1518098400,1518184800,1518444000,1518530400,1518616800,1518703200,1518789600,1519135200,1519221600,1519308000,1519394400,1519653600,1519740000,1519826400,1519912800,1519999200,1520258400,1520344800,1520431200,1520517600,1520604000,1520859600,1520946000,1521032400,1521118800,1521205200,1521464400,1521550800,1521637200,1521723600,1521810000,1522069200,1522155600,1522242000,1522328400,1522674000,1522760400,1522846800,1522933200,1523019600,1523278800,1523365200,1523451600,1523538000,1523624400,1523883600,1523970000,1524056400,1524142800,1524229200,1524488400,1524574800,1524661200,1524747600,1524834000,1525093200,1525179600,1525266000,1525352400,1525438800,1525698000,1525784400,1525870800,1525957200,1526043600,1526302800,1526389200,1526475600,1526562000,1526648400,1526907600,1526994000,1527080400,1527166800,1527253200,1527598800,1527685200,1527771600,1527858000,1528117200,1528203600,1528290000,1528376400,1528462800,1528722000,1528808400,1528894800,1528981200,1529067600,1529326800,1529413200,1529499600,1529586000,1529672400,1529931600,1530018000,1530104400,1530190800,1530277200,1530536400,1530622800,1530795600,1530882000,1531141200,1531227600,1531314000,1531400400,1531486800,1531746000,1531832400,1531918800,1532005200,1532091600,1532350800,1532437200,1532523600,1532610000,1532696400,1532955600,1533042000,1533128400,1533214800,1533301200,1533560400,1533646800,1533733200,1533819600,1533906000,1534165200,1534251600,1534338000,1534424400,1534510800,1534770000,1534856400,1534942800,1535029200,1535115600,1535374800,1535461200,1535547600,1535634000,1535720400,1536066000,1536152400,1536238800,1536325200,1536584400,1536670800,1536757200,1536843600,1536930000,1537189200,1537275600,1537362000,1537448400,1537534800,1537794000,1537880400,1537966800,1538053200,1538139600,1538398800,1538485200,1538571600,1538658000,1538744400,1539003600,1539090000,1539176400,1539262800,1539349200,1539608400,1539694800,1539781200,1539867600,1539954000,1540213200,1540299600,1540386000,1540472400,1540558800,1540818000,1540904400,1540990800,1541077200,1541163600,1541426400,1541512800,1541599200,1541685600,1541772000,1542031200,1542117600,1542204000,1542290400,1542376800,1542636000,1542722400,1542808800,1542981600,1543240800,1543327200,1543413600,1543500000,1543586400,1543845600,1543932000,1544104800,1544191200,1544450400,1544536800,1544623200,1544709600,1544796000,1545055200,1545141600,1545228000,1545314400,1545400800,1545660000,1545832800,1545919200,1546005600,1546264800,1546437600,1546524000,1546610400,1546869600,1546956000,1547042400,1547128800,1547215200,1547474400,1547560800,1547647200,1547733600,1547820000,1548165600,1548252000,1548338400,1548424800,1548684000,1548770400,1548856800,1548943200,1549029600,1549288800,1549375200,1549461600,1549548000,1549634400,1549893600,1549980000,1550066400,1550152800,1550239200,1550584800,1550671200,1550757600,1550844000,1551103200,1551189600,1551276000,1551362400,1551448800,1551708000,1551794400,1551880800,1551967200,1552053600,1552309200,1552395600,1552482000,1552568400,1552654800,1552914000,1553000400,1553086800,1553173200,1553259600,1553518800,1553605200,1553691600,1553778000,1553864400,1554123600,1554210000,1554296400,1554382800,1554469200,1554728400,1554814800,1554901200,1554987600,1555074000,1555333200,1555419600,1555506000,1555592400,1555938000,1556024400,1556110800,1556197200,1556283600,1556542800,1556629200,1556715600,1556802000,1556888400,1557147600,1557234000,1557320400,1557406800,1557493200,1557752400,1557838800,1557925200,1558011600,1558098000,1558357200,1558443600,1558530000,1558616400,1558702800,1559048400,1559134800,1559221200,1559307600,1559566800,1559653200,1559739600,1559826000,1559912400,1560171600,1560258000,1560344400,1560430800,1560517200,1560776400,1560862800,1560949200,1561035600,1561122000,1561381200,1561467600,1561554000,1561640400,1561726800,1561986000,1562072400,1562158800,1562331600,1562590800,1562677200,1562763600,1562850000,1562936400,1563195600,1563282000,1563368400,1563454800,1563541200,1563800400,1563886800,1563973200,1564059600,1564146000,1564405200,1564491600,1564578000,1564664400,1564750800,1565010000,1565096400,1565182800,1565269200,1565355600,1565614800,1565701200,1565787600,1565874000,1565960400,1566219600,1566306000,1566392400,1566478800,1566565200,1566824400,1566910800,1566997200,1567083600,1567170000,1567515600,1567602000,1567688400,1567774800,1568034000,1568120400,1568206800,1568293200,1568379600,1568638800,1568725200,1568811600,1568898000,1568984400,1569243600,1569330000,1569416400,1569502800,1569589200,1569848400,1569934800,1570021200,1570107600,1570194000,1570453200,1570539600,1570626000,1570712400,1570798800,1571058000,1571144400,1571230800,1571317200,1571403600,1571662800,1571749200,1571835600,1571922000,1572008400,1572267600,1572354000,1572440400,1572526800,1572613200,1572876000,1572962400,1573048800,1573135200,1573221600,1573480800,1573567200,1573653600,1573740000,1573826400,1574085600,1574172000,1574258400,1574344800,1574431200,1574690400,1574776800,1574863200,1575036000,1575295200,1575381600,1575468000,1575554400,1575640800,1575900000,1575986400,1576072800,1576159200,1576245600,1576504800,1576591200,1576677600,1576764000,1576850400,1577109600,1577196000,1577368800,1577455200,1577714400,1577800800,1577973600,1578060000,1578319200,1578405600,1578492000,1578578400,1578664800,1578924000,1579010400,1579096800,1579183200,1579269600,1579615200,1579701600,1579788000,1579874400,1580133600,1580220000,1580306400,1580392800,1580479200,1580738400,1580824800,1580911200,1580997600,1581084000,1581343200,1581429600,1581516000,1581602400,1581688800,1582034400,1582120800,1582207200,1582293600,1582552800,1582639200,1582725600,1582812000,1582898400,1583157600,1583244000,1583330400,1583416800,1583503200,1583758800,1583845200,1583931600,1584018000,1584104400,1584363600,1584450000,1584536400,1584622800,1584709200,1584968400,1585054800,1585141200,1585227600,1585314000,1585573200,1585659600,1585746000,1585832400,1585918800,1586178000,1586264400,1586350800,1586437200,1586782800,1586869200,1586955600,1587042000,1587128400,1587387600,1587474000,1587560400,1587646800,1587733200,1587992400,1588078800,1588165200,1588251600,1588338000,1588597200,1588683600,1588770000,1588856400,1588942800,1589202000,1589288400,1589374800,1589461200,1589547600,1589806800,1589893200,1589979600,1590066000,1590152400,1590498000,1590584400,1590670800,1590757200,1591016400,1591102800,1591189200,1591275600,1591362000,1591621200,1591707600,1591794000,1591880400,1591966800,1592226000,1592312400,1592398800,1592485200,1592571600,1592830800,1592917200,1593003600,1593090000,1593176400,1593435600,1593522000,1593608400,1593694800,1594040400,1594126800,1594213200,1594299600,1594386000,1594645200,1594731600,1594818000,1594904400,1594990800,1595250000,1595336400,1595422800,1595509200,1595595600,1595854800,1595941200,1596027600,1596114000,1596200400,1596459600,1596546000,1596632400,1596718800,1596805200,1597064400,1597150800,1597237200,1597323600,1597410000,1597669200,1597755600,1597842000,1597928400,1598014800,1598274000,1598360400,1598446800,1598533200,1598619600,1598878800,1598965200,1599051600,1599138000,1599224400,1599570000,1599656400,1599742800,1599829200,1600088400,1600174800,1600261200,1600347600,1600434000,1600693200,1600779600,1600866000,1600952400,1601038800,1601298000,1601384400,1601470800,1601557200,1601643600,1601902800,1601989200,1602075600,1602162000,1602248400,1602507600,1602594000,1602680400,1602766800,1602853200,1603112400,1603198800,1603285200,1603371600,1603458000,1603717200,1603803600,1603890000,1603976400,1604062800,1604325600,1604412000,1604498400,1604584800,1604671200,1604930400,1605016800,1605103200,1605189600,1605276000,1605535200,1605621600,1605708000,1605794400,1605880800,1606140000,1606226400,1606312800,1606485600,1606744800,1606831200,1606917600,1607004000,1607090400,1607349600,1607436000,1607522400,1607608800,1607695200,1607954400,1608040800,1608127200,1608213600,1608300000,1608559200,1608645600,1608732000,1608818400,1609164000,1609250400,1609336800,1609423200,1609768800,1609855200,1609941600,1610028000,1610114400,1610373600,1610460000,1610546400,1610632800,1610719200,1611064800,1611151200,1611237600,1611324000,1611583200,1611669600,1611756000,1611842400,1611928800,1612188000,1612274400,1612360800,1612447200,1612533600,1612792800,1612879200,1612965600,1613052000,1613138400,1613484000,1613570400,1613656800,1613743200,1614002400,1614088800,1614175200,1614261600,1614348000,1614607200,1614693600,1614780000,1614866400,1614952800,1615212000,1615298400,1615384800,1615471200,1615557600,1615813200,1615899600,1615986000,1616072400,1616158800,1616418000,1616504400,1616590800,1616677200,1616763600,1617022800,1617109200,1617195600,1617282000,1617627600,1617714000,1617800400,1617886800,1617973200,1618232400,1618318800,1618405200,1618491600,1618578000,1618837200,1618923600,1619010000,1619096400,1619182800,1619442000,1619528400,1619614800,1619701200,1619787600,1620046800,1620133200,1620219600,1620306000,1620392400,1620651600,1620738000,1620824400,1620910800,1620997200,1621256400,1621342800,1621429200,1621515600,1621602000,1621861200,1621947600,1622034000,1622120400,1622206800,1622552400,1622638800,1622725200,1622811600,1623070800,1623157200,1623243600,1623330000,1623416400,1623675600,1623762000,1623848400,1623934800,1624021200,1624280400,1624366800,1624453200,1624539600,1624626000,1624885200,1624971600,1625058000,1625144400,1625230800,1625576400,1625662800,1625749200,1625835600,1626094800,1626181200,1626267600,1626354000,1626440400,1626699600,1626786000,1626872400,1626958800,1627045200,1627304400,1627390800,1627477200,1627563600,1627650000,1627909200,1627995600,1628082000,1628168400,1628254800,1628514000,1628600400,1628686800,1628773200,1628859600,1629118800,1629205200,1629291600,1629378000,1629464400,1629723600,1629810000,1629896400,1629982800,1630069200,1630328400,1630414800,1630501200,1630587600,1630674000,1631019600,1631106000,1631192400,1631278800,1631538000,1631624400,1631710800,1631797200,1631883600,1632142800,1632229200,1632315600,1632402000,1632488400,1632747600,1632834000,1632920400,1633006800,1633093200,1633352400,1633438800,1633525200,1633611600,1633698000,1633957200,1634043600,1634130000,1634216400,1634302800,1634562000,1634648400,1634734800,1634821200,1634907600,1635166800,1635253200,1635339600,1635426000,1635512400,1635771600,1635858000,1635944400,1636030800,1636117200,1636380000,1636466400,1636552800,1636639200,1636725600,1636984800,1637071200,1637157600,1637244000,1637330400,1637589600,1637676000,1637762400,1637935200,1638194400,1638280800,1638367200,1638453600,1638540000,1638799200,1638885600,1638972000,1639058400,1639144800,1639404000,1639490400,1639576800,1639663200,1639749600,1640008800,1640095200,1640181600,1640268000,1640613600,1640700000,1640786400,1640872800,1640959200,1641218400,1641304800,1641391200,1641477600,1641564000,1641823200,1641909600,1641996000,1642082400,1642168800,1642514400,1642600800,1642687200,1642773600,1643032800,1643119200,1643205600,1643292000,1643378400,1643637600,1643724000,1643810400,1643896800,1643983200,1644242400,1644328800,1644415200,1644501600,1644588000,1644847200,1644933600,1645020000,1645106400,1645192800,1645538400,1645624800,1645711200,1645797600,1646056800,1646143200,1646229600,1646316000,1646402400,1646661600,1646748000,1646834400,1646920800,1647007200,1647262800,1647349200,1647435600,1647522000,1647608400,1647867600,1647954000,1648040400,1648126800,1648213200,1648472400,1648558800,1648645200,1648731600,1648818000,1649077200,1649163600,1649250000,1649336400,1649422800,1649682000,1649768400,1649854800,1649941200,1650286800,1650373200,1650459600,1650546000,1650632400,1650891600,1650978000,1651064400,1651150800,1651237200,1651496400,1651582800,1651669200,1651755600,1651842000,1652101200,1652187600,1652274000,1652360400,1652446800,1652706000,1652792400,1652878800,1652965200,1653051600,1653310800,1653397200,1653483600,1653570000,1653656400,1654002000,1654088400,1654174800,1654261200,1654520400,1654606800,1654693200,1654779600,1654866000,1655125200,1655211600,1655298000,1655384400,1655470800,1655816400,1655902800,1655989200,1656075600,1656334800,1656421200,1656507600,1656594000,1656680400,1657026000,1657112400,1657198800,1657285200,1657544400,1657630800,1657717200,1657803600,1657890000,1658149200,1658235600,1658322000,1658408400,1658494800,1658754000,1658840400,1658926800,1659013200,1659099600,1659358800,1659445200,1659531600,1659618000,1659704400,1659963600,1660050000,1660136400,1660222800,1660309200,1660568400,1660654800,1660741200,1660827600,1660914000,1661173200,1661259600,1661346000,1661432400,1661518800,1661778000,1661864400,1661950800,1662037200,1662123600,1662469200,1662555600,1662642000,1662728400,1662987600,1663074000,1663160400,1663246800,1663333200,1663592400,1663678800,1663765200,1663851600,1663938000,1664197200,1664283600,1664370000,1664456400,1664542800,1664802000,1664888400,1664974800,1665061200,1665147600,1665406800,1665493200,1665579600,1665666000,1665752400,1666011600,1666098000,1666184400,1666270800,1666357200,1666616400,1666702800,1666789200,1666875600,1666962000,1667221200,1667307600,1667394000,1667480400,1667566800,1667829600,1667916000,1668002400,1668088800,1668175200,1668434400,1668520800,1668607200,1668693600,1668780000,1669039200,1669125600,1669212000,1669384800,1669644000,1669730400,1669816800,1669903200,1669989600,1670248800,1670335200,1670421600,1670508000,1670594400,1670853600,1670940000,1671026400,1671112800,1671199200,1671458400,1671544800,1671631200,1671717600,1671804000,1672149600,1672236000,1672322400,1672408800,1672754400,1672840800,1672927200,1673013600,1673272800,1673359200,1673445600,1673532000,1673618400,1673964000,1674050400,1674136800,1674223200,1674482400,1674568800,1674655200,1674741600,1674828000,1675087200,1675173600,1675260000,1675346400,1675432800,1675692000,1675778400,1675864800,1675951200,1676037600,1676296800,1676383200,1676469600,1676556000,1676642400,1676988000,1677074400,1677160800,1677247200,1677506400,1677592800,1677679200,1677765600,1677852000,1678111200,1678197600,1678284000,1678370400,1678456800,1678712400,1678798800,1678885200,1678971600,1679058000,1679317200,1679403600,1679490000,1679576400,1679662800,1679922000,1680008400,1680094800,1680181200,1680267600,1680526800,1680613200,1680699600,1680786000,1681131600,1681218000,1681304400,1681390800,1681477200,1681736400,1681822800,1681909200,1681995600,1682082000,1682341200,1682427600,1682514000,1682600400,1682686800,1682946000,1683032400,1683118800,1683205200,1683291600,1683550800,1683637200,1683723600,1683810000,1683896400,1684155600,1684242000,1684328400,1684414800,1684501200,1684760400,1684846800,1684933200,1685019600,1685106000,1685451600,1685538000,1685624400,1685710800,1685970000,1686056400,1686142800,1686229200,1686315600,1686574800,1686661200,1686747600,1686834000,1686920400,1687266000,1687352400,1687438800,1687525200,1687784400,1687870800,1687957200,1688043600,1688130000,1688389200,1688562000,1688648400,1688734800,1688994000,1689080400,1689166800,1689253200,1689339600,1689598800,1689685200,1689771600,1689858000,1689944400,1690203600,1690290000,1690376400,1690462800,1690549200,1690808400,1690894800,1690981200,1691067600,1691154000,1691413200,1691499600,1691586000,1691672400,1691758800,1692018000,1692104400,1692190800,1692277200,1692363600,1692622800,1692709200,1692795600,1692882000,1692968400,1693227600,1693314000,1693400400,1693486800,1693573200,1693918800,1694005200,1694091600,1694178000,1694437200,1694523600,1694610000,1694696400,1694782800,1695042000,1695128400,1695214800,1695301200,1695387600],"open":[1120,917,830.2,796.6,777,805,854,910,862.4,880.6,842.8,854,840,812,800.8,792.4,831.6,1033.2,1162,1661.8,1325.8,1241.8,1313.2,1398.6,1337,1394.4,1365,1344.406,1544.2,1400,1377.6,1411.2,1265.6,1339.8,1371.986,1365,1307.6,1278.2,1311.8,1290.8,1429.4,1335.88,1428,1423.8,1380.4,1405.6,1356.6,1355.2,1296.4,1279.6,1306.2,1289.4,1283.8,1274,1260.84,1287.16,1299.2,1526,1555.4,1675.8,1633.8,1663.2,1716.4,1790.6,1736,1764,1750,1740.2,1619.8,1573.6,1537.2,1624,1787.8,2031.4,2154.6,2213.4,2298.8,2227.4,2275,2482.2,2760.8,2847.6,2667,2683.8,2800,2661.4,2433.9,2800,2689.4,2345,2338,2319.8,2431.8,2300.2,2137.8,1748.6,1656.2,1719.2,1670.2,1611.4,1407,1624,1624,1668.8,1743,1821.4,1717.8,1642.2,1582,1586.2,1499.4,1608.46,1523.2,1513.4,1418.2,1430.8,1465.8,1524.6,1520.4,1506.4,1503.6,1514.8,1528.8,1569.4,1757,1853.6,1832.6,1855,1877.4,2029.328,2291.8,2695,2658.6,2643.2,2541,2424.856,2241.4,2009,1867.6,1974,2013.2,2003.4,2114,1996.4,2072,1835.4,1827,1771,1800.4,1722,1762.6,1832.6,1821.4,1804.6,1835.4,1892.8,2142,2093,2030,2146.2,2191,2135,2184,2193.8,2140.6,2150.4,2079,2157.4,2114,2112.6,2065,2111.2,1820,1834,1723.4,1727.6,1866.2,1930.6,1877.4,1790.6,1824.2,1211,1008,974.4,981.4,946.4,1069.6,1187.2,1246,1302,1486.8,1614.2,1568,1632.4,1597.4,1586.2,1636.6,1649.2,1640.8,1549.8,1671.6,1647.8,1558.2,1530.2,1479.8,1464.4,1463,1526,1538.6,1505,1565.2,1584.8,1561,1537.2,1486.8,1642.2,1569.4,1582,1696.8,1743,1646.4,1762.6,1752.8,1750,1678.6,1762.6,1801.8,1999.2,1943.2,1884.4,1965.6,1932,1835.4,1803.2,1768.2,1751.4,1750,1626.8,1542.8,1538.6,1680,1785,1808.8,1825.6,1884.4,2065,1999.2,2045.4,2083.2,2084.6,2049.6,2048.2,2132.2,2091.6,2087.4,2147.6,2165.8,2228.8,2314.2,2114,2094.4,1992.2,2058,2060.8,2083.2,2072,1923.6,1863.4,1835.4,1737.4,1667.4,1730.4,1740.2,1803.2,1759.8,1751.4,1675.8,1737.4,1705.2,1583.4,1558.2,1470,1446.2,1628.2,1558.2,1556.8,1381.8,1107.4,1080.8,1048.6,1012.2,1001,996.8,1015,998.2,994,959,994,959,869.4,851.2,824.6,778.4,840,886.2,1015,854,827.4,806.4,826,733.6,722.4,702.8,684.6,632.8,610.4,632.8,575.4,526.4,499.8,588,532,546,547.4,639.8,592.2,582.4,579.6,554.4,620.2,618.8,588,660.8,583.8,574,597.8,579.6,541.8,529.2,515.2,546,579.6,600.6,602,616,607.6,684.6,620.2,530.6,593.6,681.8,677.6,677.6,656.6,663.6,667.8,712.6,693,683.2,679,660.8,651,555.8,511,481.6,470.4,484.4,487.2,434,429.8,401.8,313.6,315,308,313.6,310.8,309.4,303.8,294,303.8,320.6,310.8,295.4,288.4,281.4,260.4,245,254.8,270.2,266,274.4,292.6,294,308,305.2,302.4,294,295.4,316.4,291.2,296.8,288.4,273,266,263.2,267.4,263.2,280,273,281.4,281.4,287,296.8,295.4,296.8,305.2,295.4,295.4,303.8,275.8,287,309.4,298.9,298.2,292.6,303.8,316.4,299.6,313.6,292.782,291.2,282.8,277.2,278.6,273,268.002,263.2,250.6,240.8,239.4,221.2,221.2,219.8,225.4,226.8,228.2,243.6,240.8,263.2,268.8,273,261.8,259,271.6,277.2,364,359.8,354.2,357,351.4,350,356.3,343,768.6,781.2,721,670.6,707,660.8,729.4,736.4,702.8,796.6,840,813.4,845.6,809.2,880.6,841.4,841.4,830.2,772.8,784,765.8,735,708.4,628.6,607.6,600.6,583.8,593.6,638.4,599.2,586.6,600.6,674.8,656.6,644,449.4,387.8,392,404.6,390.6,365.4,385,421.4,441,418.6,439.6,403.2,445.2,436.8,413,421.4,432.6,417.2,418.6,431.2,469,466.2,467.6,485.8,544.6,589.4,877.8,929.6,1162,978.6,1008,849.8,819,750.4,750.4,691.6,700,707,667.8,659.4,655.2,677.6,665,639.8,652.4,658,695.8,701.4,725.2,712.6,718.2,746.2,747.6,707,721,704.2,723.8,719.6,743.4,740.6,712.6,721,754.6,723.8,728,723.8,707,701.4,733.6,735,736.4,763,714,700,697.2,701.4,694.4,701.4,680.4,658,655.2,704.2,676.2,700,684.6,680.4,476,421.4,417.2,414.4,387.8,392,399,441,420,427,429.8,408.8,434,417.2,415.8,393.4,392,389.2,389.2,392,400.4,411.6,399,401.8,397.6,401.8,397.6,385,387.8,392,389.2,380.8,389.2,386.4,365.4,359.8,338.8,327.6,347.2,351.4,347.2,331.8,345.8,348.6,351.4,340.2,336,347.2,324.8,316.4,324.8,334.6,313.6,345.8,341.6,344.4,345.8,344.4,348.6,352.8,359.8,379.4,386.4,373.8,340.2,348.6,341.6,330.4,340.2,333.2,313.6,308,326.2,345.8,344.4,362.6,354.2,358.4,375.2,345.8,343,344.4,336,351.4,322,308,277.2,271.6,243.6,250.6,243.6,250.6,263.2,835.8,1148,1029,943.6,1092,775.6,722.4,875,827.4,827.4,859.6,942.2,980,970.2,1008,945,987,970.2,918.4,872.2,830.2,865.2,869.4,827.4,807.8,770,763,743.4,707,749,707,721,712.6,686,700,669.2,691.6,684.6,714,677.6,793.8,635.6,616,607.6,459.2,554.4,499.8,448,421.4,418.6,445.2,481.6,483,513.8,525,515.2,513.8,522.2,546,478.8,445.2,441,441,435.4,407.4,407.4,406,417.2,407.4,424.2,420,422.8,424.2,420,436.8,462,431.2,455,546,522.2,550.2,582.4,569.8,581,564.2,565.6,572.6,572.6,604.8,574,581,606.2,630,618.8,574,553,561.4,581,567,569.8,557.2,576.8,590.8,589.4,599.2,599.2,277.2,197.4,191.8,175,175,176.4,183.4,176.4,180.6,175,184.8,190.4,194.6,191.8,190.4,186.2,183.4,177.8,175,165.2,165.2,166.6,158.2,145.6,152.6,149.8,151.2,148.4,141.4,147,148.4,144.2,154,158.2,151.2,148.4,151.2,159.6,159.6,155.4,159.6,161,148.4,142.8,141.4,140,141.4,140,141.4,173.6,154,140,137.2,140,141.4,136.612,135.8,140,141.4,149.8,148.4,149.8,145.6,148.4,147,144.2,137.2,131.6,142.8,137.018,135.8,134.68,138.25,141.4,135.8,140,141.4,140,138.362,137.2,138.586,133.462,126.126,120.568,124.768,129.528,123.228,120.4,115.78,124.6,115.304,117.6,108.92,112,115.906,103.992,102.2,98,95.2,85.4,99.26,90.398,92.554,93.73,91.728,96.964,96.082,95.144,95.69,92.47,99.54,101.99,105.7,106.302,107.73,114.52,108.472,117.6,133.112,127.666,128.8,137.2,142.8,130.2,131.992,134.4,133,134.4,133,130.69,124.964,126,117.6,109.48,115.052,121.8,116.2,112.7,110.6,111.566,107.38,109.704,110.6,107.8,103.6,103.6,102.2,102.382,106.05,109.2,110.95,114.1,121.45,119.378,114.072,115.066,114.156,113.05,112.014,126,129.5,133.238,142.8,154,154,149.8,149.8,151.2,156.8,200.2,222.6,261.8,273,354.2,327.6,357,345.8,383.6,389.2,523.6,501.2,491.4,602,562.8,579.6,623,345.8,215.6,210,187.6,180.6,242.2,302.4,329,315,295.4,326.2,299.6,316.4,322,310.8,295.4,287,280,285.6,274.4,266,275.8,280,280,264.6,264.6,232.4,238,246.4,245,235.2,232.4,260.4,242.2,240.8,238,238,225.4,232.4,232.4,232.4,240.8,236.6,245,284.2,273,271.6,252,224,211.4,228.2,228.2,236.6,228.2,225.4,197.4,211.4,183.4,142.8,154,121.8,128.8,161,189,194.6,169.4,168,179.2,191.8,175,180.6,169.4,154,152.6,147,159.6,163.8,155.4,161,166.6,193.2,194.6,215.6,208.6,193.2,196,193.2,186.2,186.2,184.8,187.6,252,235.2,225.4,201.6,210,208.6,224,218.4,221.2,261.8,256.2,236.6,228.2,254.8,225.4,235.2,250.6,233.8,235.2,224,205.8,184.8,218.4,198.8,194.6,191.8,214.2,222.6,211.4,211.4,203,203,196,211.4,204.4,201.6,211.4,210,208.6,210,201.6,208.6,201.6,194.6,190.4,193.2,191.8,187.6,191.8,193.2,187.6,189,180.6,180.6,187.6,198.8,218.4,211.4,200.2,200.2,190.4,197.4,197.4,198.8,198.8,200.2,204.4,208.6,250.6,222.6,194.6,194.6,197.4,191.8,189,193.2,187.6,197.4,190.4,186.2,184.8,221.2,180.6,189,193.2,190.4,189,189,184.8,184.8,179.2,179.2,182,186.2,183.4,182,173.6,179.2,179.2,177.8,179.2,170.8,161,154,142.8,159.6,152.6,155.4,151.2,151.2,149.8,156.8,155.4,165.2,162.4,161,159.6,165.2,162.4,168,173.6,166.6,163.8,159.6,159.6,156.8,155.4,148.4,141.4,141.4,135.814,147,147,154,147,147,144.2,141.4,148.4,149.8,152.6,152.936,156.8,149.8,149.8,145.6,140,142.8,144.2,149.8,145.6,144.2,145.6,144.2,141.4,140,168,161,175,168,163.8,163.8,166.6,165.2,158.2,163.8,140.28,146.09,135.87,120.33,119.07,122.78,118.51,124.74,143.5,136.85,146.23,145.6,160.79,157.01,150.15,153.79,149.59,155.68,139.72,141.26,139.3,141.33,134.82,130.55,120.96,125.51,125.44,128.52,140,149.1,143.92,151.27,148.61,145.81,138.6,153.51,144.06,139.65,136.64,144.62,137.34,129.5,128.87,130.41,125.37,126,124.39,122.22,117.18,118.44,118.93,127.75,126.07,123.34,135.31,133.77,129.36,132.65,132.51,134.05,136.08,126.28,126.42,126.63,125.16,126.35,122.71,129.5,137.2,133,128.24,125.93,131.04,126.28,135.24,121.316,124.6,125.16,122.36,122.325,122.29,122.5,124.95,126,126,123.55,122.71,117.6,119.42,117.67,114.03,113.05,101.57,101.501,99.47,104.02,105.35,98.77,100.03,101.92,97.93,98.56,97.16,100.084,97.72,96.18,99.75,105.07,107.8,107.17,106.82,115.43,112,114.1,109.06,109.55,110.25,114.24,112.42,101.92,91.77,85.75,85.47,80.5,79.31,82.04,81.9,83.65,80.22,79.1,81.55,77.77,77.07,72.8,69.93,71.68,77.21,78.68,73.99,70.77,71.4,67.27,65.1,64.05,64.12,62.93,64.19,60.06,60.13,64.96,65.94,64.19,69.51,68.74,70,73.08,74.06,72.831,70.21,68.31,69.09,67.76,63.14,67.9,62.58,58.8,61.6,63.35,65.765,68.53,70.21,70.7,69.51,76.23,77,79.03,75.46,74.83,77.07,78.05,79.73,84,81.2,80.22,84.98,75.53,75.25,72.1,70.35,73.36,72.8,73.01,71.82,69.58,72.03,73.08,70.28,66.78,63.56,63.98,65.59,66.15,68.67,69.44,63.91,62.44,60.27,60.62,63.28,64.19,64.82,63.63,61.6,61.6,64.05,63.7,64.82,63.07,63.84,65.38,63.84,62.51,49,38.43,37.38,37.1,36.54,35.538,33.32,30.8,31.15,30.03,30.17,29.82,30.1,28.91,30.03,26.6,26.46,24.08,23.66,24.85,26.95,27.09,24.71,23.59,21.98,21.98,21.56,22.61,23.73,24.57,22.61,21.7,21,20.02,20.65,20.86,21.28,23.59,20.79,20.615,18.9,19.53,20.58,20.72,19.964,19.978,18.83,13.37,14.49,12.95,12.67,12.53,13.23,12.95,12.53,12.53,14.21,15.4,13.44,12.25,12.53,12.25,12.53,11.62,11.83,12.11,10.92,12.39,12.11,8.96,8.75,8.47,8.217,9.45,8.82,7.91,7.77,8.26,7.84,7.91,7.622,7.35,7.175,7,6.65,7.21,7.63,7.14,7,7.98,10.64,12.25,12.6,13.51,13.72,11.76,12.32,9.94,11.27,11.13,10.85,10.64,10.43,11.2,10.78,9.73,9.17,9.8,9.87,8.82,8.4,8.61,8.26,8.051,8.33,8.054,8.12,7.84,8.33,8.365,8.75,9.24,9.03,8.05,8.68,7.84,7.35,7.959,8.19,7.916,7.84,8.05,8.05,7.84,8.12,7.35,8.889,7.98,7.7,7.7,9.8,7.994,14.56,13.02,13.86,11.41,11.9,10.92,11.06,11.34,10.71,10.99,11.06,11.2,11.62,12.25,11.9,12.25,12.32,11.9,12.6,12.95,12.95,12.74,12.32,11.97,11.97,11.97,11.97,11.9,12.04,11.83,12.18,11.83,11.76,11.41,11.13,11.13,10.99,11.2,11.48,10.5,10.64,11.13,11.2,11.2,11.62,11.34,11.62,11.9,11.34,11.55,11.41,11.97,11.55,11.474,11.2,10.99,11.13,11.83,11.69,11.9,11.689,11.69,11.39,12.04,12.04,11.83,11.9,11.97,11.9,11.913,12.53,12.145,11.48,11.34,11.69,11.27,11.13,10.92,10.92,10.99,10.99,11.48,11.339,11.48,10.85,11.34,10.92,11.34,11.13,11.09,11.375,11.55,11.83,11.622,11.284,11.67,11.62,11.34,11.48,11.13,11.41,12.04,12.18,11.977,11.411,11.41,12.069,11.76,11.678,12.04,11.83,11.9,11.83,12.53,12.32,12.32,12.549,12.88,12.39,12.53,12.53,12.53,12.39,12.6,12.18,11.41,12.67,14.77,14.56,14.77,14.7,13.72,14.42,12.67,12.95,11.41,8.88,4.8,4.01,4.37,4.33,5.02,5.18,5.87,6.11,6.74,6.44,5.59,5.95,6.17,5.777,5.94,5.93,5.42,5.63,5.08,5.63,5.82,6.57,6.69,6.9,7.6,8.22,7,7,7.26,7.91,7.54,8.48,8.37,8.45,7.9,8,7.66,7.59,7.59,7.2,7.1,7.08,6.793,6.696,6.815,6.73,6.91,6.439,5.55,5.85,5.6,6.22,6.24,6.043,5.97,6.015,5.93,5.95,5.578,5.41,3.39,2.99,3.3,3.5,3.99,3.13,3.14,3.18,3.24,3.45,3.362,3.474,3.49,3.77,3.73,3.25,3.1,3.17,3.11,3.36,4.49,4.53,4.01,4.19,3.94,3.9,3.96,3.8,3.964,4,4.093,4.27,4.35,4.374,4.297,4.31,4.012,3.832,3.67,3.74,3.11,3.1,3.1,3.1,3.18,3.15,3.01,3.08,2.97,2.97,3.05,3.075,2.95,3.02,2.99,3.04,3.06,2.95,2.965,3.08,3.08,2.83,2.93,2.9,2.75,2.54,2.6,2.56,2.522,2.565,2.29,2.65,2.54,2.5,2.42,2.43,2.6,2.59,2.55,2.59,2.49,2.47,2.22,2.57,2.58,2.66,2.45,2.48,2.44,2.48,2.15,2.06,2.15,2.22,2.18,2.2,2.18,2.08,2.05,1.95,1.9,2,1.92,1.86,1.9,1.91,1.94,1.9,1.87,1.94,1.992,2.02,1.97,2.082,2.016,1.97,2.02,2.03,2.06,2.01,2.031,2.05,2.11,2.026,2.137,2.22,2.29,2.32,2.4,2.42],"high":[1120,917,836.948,805,832.762,875.7,940.8,910,882,889,906.5,903,882,834.4,800.8,811.888,1138.2,1188.6,1958.6,1792,1387.4,1435.266,1421,1398.6,1407.14,1426.6,1400,1545.6,1583.4,1506.4,1442,1416.8,1328.6,1357.72,1371.986,1365,1313.2,1316,1316,1409.66,1434.986,1377.6,1428,1428,1428,1430.8,1365,1355.2,1304.8,1337,1307.6,1334.9,1293.6,1285.13,1281,1320.2,1584.8,1646.4,1770.986,1706.6,1687,1720.6,1792.322,1817.2,1813,1817.984,1836.786,1821.4,1689.8,1718.822,1777.622,1782.2,2021.586,2172.8,2302.986,2404.85,2324,2310,2346.4,2773.4,2827.3,2863.42,2738.4,2828,2865.8,2745.4,2800,2837.8,2710.4,2504.6,2415,2408,2431.8,2347.8,2137.8,1839.6,1733.2,1765.4,1690.5,1611.4,1618.19,1695.4,1687,1762.6,1885.8,1821.4,1717.8,1661.8,1640.8,1603,1519.14,1608.46,1538.6,1568,1479.8,1493.8,1523.2,1569.302,1545.6,1507.94,1544.2,1549.8,1574.636,1759.786,1978.186,1923.6,1832.6,1904,2113.44,2279.2,2833.6,2888.2,2658.6,2643.2,2587.2,2492,2277.8,2091.6,2002,2081.8,2037,2118.2,2200.8,2076.2,2072,1906.8,1848,1821.4,1815.8,1783.6,1808.8,1832.6,1853.6,1876,1897,2132.2,2269.232,2121,2164.4,2213.4,2198.14,2240,2205,2213.4,2189.6,2150.4,2107,2188.2,2140.6,2149,2121,2111.2,1838.2,1834,1794.8,1920.506,1965.6,1936.2,1877.4,1864.8,1829.8,1211,1055.6,991.2,988.4,1086.4,1184.386,1234.8,1363.6,1479.8,1653.4,1713.6,1661.8,1649.2,1674.4,1645,1678.6,1649.2,1675.8,1647.8,1680,1647.8,1586.718,1555.4,1495.788,1502.578,1538.6,1569.778,1622.46,1575,1642.2,1584.8,1596,1538.6,1624,1642.2,1612.8,1792,1789.2,1814.4,1765.4,1793.4,1793.4,1799,1752.8,1786.4,2024.4,2038.4,1958.6,2013.2,1972.6,1961.4,1835.4,1848,1771,1773.8,1750,1632.4,1542.8,1680,1818.6,1828.4,1878.8,1899.8,2100,2143.4,2073.4,2100,2095.8,2111.2,2104.2,2167.2,2159.178,2186.8,2184,2212,2296,2289,2333.8,2139.2,2094.4,2083.2,2077.6,2079,2083.2,2072,2010.4,1927.8,1961.4,1818.6,1724.8,1740.2,1862,1803.2,1767.5,1778,1778,1759.1,1709.4,1584.8,1558.2,1489.6,1622.6,1842.4,1674.4,1596,1387.4,1136.8,1097.6,1059.8,1017.8,1019.2,1073.8,1033.2,1020.6,1001,1022,994,992.6,884.8,875.7,834.4,847,904.386,1029,1027.46,879.2,827.4,835.8,831.6,758.1,740.6,707,688.8,637,657.202,663.6,575.4,546,613.2,596.4,554.4,579.6,632.31,653.8,596.386,589.4,579.6,618.8,632.8,625.8,657.3,660.8,596.4,627.2,614.6,585.2,550.2,551.6,555.8,592.2,600.6,614.6,651,635.6,695.8,705.418,634.2,622.062,714,727.3,698.6,687.4,680.4,700,733.6,756,707,698.6,697.97,677.6,677.6,574,525.308,490,498.162,490,487.2,464.8,429.8,404.11,329,323.4,329,324.8,324.8,315,303.8,308,340.2,331.8,317.8,296.8,294,282.8,278.6,263.2,273,273,287,306.306,309.4,319.2,316.4,322,306.6,308,318.934,316.4,315,306.6,292.6,280.028,277.2,270.2,270.186,287,291.186,288.4,288.386,292.6,306.6,303.8,303.8,313.6,314.3,308.7,313.6,316.386,296.8,324.8,316.4,309.4,310.8,305.2,373.8,316.4,315,315,299.6,299.6,289.8,281.4,292.6,274.4,271.6,267.4,253.4,240.8,239.4,229.6,228.2,236.6,228.2,226.8,259,260.4,272.916,278.6,285.6,281.4,275.8,278.6,277.2,406,373.8,361.2,362.586,399,370.3,375.2,371,350,973,848.4,742,705.6,718.2,723.8,770,763,834.4,896,879.2,889,893.2,872.2,882.7,869.4,875,847,802.2,789.32,775.6,736.4,709.8,653.8,634.2,620.2,625.8,653.8,648.76,613.2,609,637,697.06,677.516,644,469,415.688,406,410.2,397.6,386.4,431.2,442.4,458.052,442.4,439.6,441,467.46,446.6,421.4,446.46,443.8,431.2,439.6,476,488.6,483,488.6,525,602,593.6,1034.6,987,1205.4,1032.5,1013.6,859.6,826,756,770,711.2,736.4,716.8,691.6,670.6,667.8,730.8,666.4,673.4,673.4,705.6,730.212,735,729.4,745.962,760.2,775.6,750.4,730.8,735,724.5,723.8,742,759.5,757.4,733.6,758.8,757.4,744.8,737.8,728,707,733.6,742,746.2,792.4,763,721,705.6,715.4,707,719.6,701.4,680.4,665,722.96,714.7,711.2,712.6,695.8,691.6,511,435.4,429.772,417.2,403.9,400.4,452.9,441,431.2,443.8,432.6,445.2,438.2,420,415.8,399,403.2,392,396.2,399,422.8,411.6,405.202,404.6,406,401.8,397.6,397.6,393.4,393.4,390.6,390.6,389.2,387.8,365.4,359.8,340.2,355.6,354.2,357,350,347.2,351.4,354.2,358.4,348.6,350,350,326.2,329,333.2,336,354.2,347.2,352.8,349.916,357,349.3,358.4,364,380.8,386.4,386.4,382.2,350,351.4,343,341.6,344.12,338.8,322,329,352.8,364.98,366.8,362.6,362.6,383.6,375.2,364,352.8,358.4,357,351.4,339.654,312.2,287,273,264.6,253.4,254.1,277.2,270.2,1453.2,1243.2,1082.2,1185.8,1132.6,847,882,904.4,887.6,882,958.3,1048.6,989.8,980,1020.362,1009.4,1008,999.6,945,924,896,907.2,892.556,848.4,828.8,816.2,800.786,768.6,778.4,749,714,743.4,736.4,702.8,705.6,691.096,702.8,746.2,741.986,695.8,812,639.8,635.6,630,585.2,576.8,527.8,467.656,431.2,462,500.5,498.4,523.6,579.6,533.4,526.4,534.8,553,546,478.8,455,446.6,442.4,435.4,422.8,413,443.8,421.4,431.2,428.4,431.2,443.8,430.528,442.4,547.4,481.586,452.2,621.6,572.6,562.8,592.2,595,595,590.8,572.6,569.8,590.8,614.6,616.84,592.2,606.2,639.8,642.6,623,574,578.9,581,590.8,590.8,593.6,583.8,588,603.4,614.6,613.2,603.4,277.2,205.8,194.6,177.8,177.8,189,186.2,184.8,182,184.8,194.6,200.2,196,191.8,191.8,187.6,186.2,179.2,177.8,169.4,169.4,166.6,160.72,154,156.8,154,154,149.8,151.2,150.808,151.2,153.748,172.2,162.4,155.4,153.356,159.6,164.64,162.4,162.4,165.2,163.8,151.2,148.4,147,144.2,147,141.4,149.8,179.62,154,144.9,141.4,145.6,142.8,136.612,141.4,141.4,148.4,152.6,149.8,150.556,149.8,149.8,148.4,145.6,140.448,139.286,142.8,138.586,139.314,138.6,142.8,142.8,140,142.8,144.2,142.8,141.4,139.986,138.586,135.786,130.2,129.346,128.422,130.2,125.286,121.8,121.8,124.6,121.8,118.86,113.372,115.108,115.906,107.721,102.2,102.2,100.623,101.486,99.26,95.2,95.746,95.34,98,99.4,100.352,97.846,99.4,106.4,103.6,109.886,106.4,109.2,114.8,118.72,117.46,133,133.112,131.6,147,154,147.574,135.8,135.786,140,140,137.9,135.8,141.4,128.1,126,122.282,115.5,117.539,121.8,120.386,114.8,114.17,114.17,114.8,114.716,113.974,109.2,107.8,104.87,102.27,105,109.2,112,118.846,120.4,121.8,124.068,117.572,120.4,117.6,114.8,130.2,133,137.34,142.8,159.6,156.8,156.8,151.2,155.358,154,207.2,233.8,264.6,266,385,392,348.6,371,375.2,396.844,588,532,504,592.2,660.8,595,621.6,641.2,347.2,242.2,210,190.4,219.8,329,380.8,345.8,334.6,327.6,330.4,329,330.4,327.6,323.4,303.8,288.4,296.8,292.138,277.144,281.4,280,281.4,288.4,266,267.4,246.4,247.8,247.8,252,236.6,263.2,261.8,257.6,247.8,245,239.33,233.8,236.6,233.8,245,243.6,247.8,291.144,308,280,275.8,252,233.8,222.6,236.642,242.2,242.9,235.2,225.4,203,216.986,189,154,154,134.4,161,211.4,198.8,196.966,180.6,184.8,204.4,196,183.4,182,176.4,159.6,158.2,159.6,172.2,166.6,168,172.2,214.2,201.6,217,215.6,211.4,212.8,203,198.8,194.6,187.6,196,235.2,261.8,238,231,219.8,232.414,224,229.6,228.186,261.8,273,259,236.6,251.3,256.2,243.6,257.6,250.6,238,236.6,225.4,212.8,197.4,218.806,201.04,200.2,217,219.8,222.6,214.2,212.8,208.6,208.6,212.8,211.4,209.3,212.8,219.8,214.186,214.9,215.6,217,208.6,205.8,197.4,196,198.8,193.2,198.8,194.6,198.8,193.2,190.4,183.4,189,201.6,214.2,219.8,211.4,206.5,202.818,198.8,201.6,204.4,202.986,203,207.2,210,257.6,252,222.6,205.8,203,200.032,194.6,194.6,194.32,196,197.4,191.8,189,185.976,224,194.6,193.2,193.2,191.8,190.4,190.4,187.6,187.6,186.2,186.2,187.6,186.2,184.8,182,182,186.2,182,183.4,179.2,172.186,163.8,154,158.2,161,158.2,161,156.8,157.5,159.6,163.8,165.2,168,166.6,165.2,168,189,172.2,175,175,166.6,163.8,161,159.6,159.6,155.4,148.4,146.986,142.352,147,147,154,155.4,156.8,154,144.2,154,154,154,163.8,162.4,162.4,161,149.8,149.8,147,148.4,155.4,151.2,149.8,147,146.818,145.6,144.2,174.3,172.2,177.8,183.4,170.8,168,172.2,172.2,166.6,170.8,168,156.66,150.115,135.94,127.54,127.68,122.78,127.75,145.95,154.21,149.1,153.93,159.53,164.29,158.41,156.03,155.54,156.73,156.1,143.99,141.26,142.205,142.73,141.68,132.159,129.815,128.87,128.45,134.12,151.9,150.223,153.678,152.95,153.09,145.81,158.9,153.93,147.35,141.06,146.86,147,137.34,132.65,130.41,130.41,132.86,126.84,128.73,123.55,120.4,122.36,131.6,129.5,131.6,135.309,135.729,134.96,136.85,138.942,136.5,139.3,136.08,130.358,127.47,128.262,129.71,126.35,128.66,137.9,138.25,136.43,129.29,137.13,133.42,138.18,135.24,126.209,126.14,125.16,123.13,122.43,122.29,127.26,127.82,128.38,126.63,127.75,122.85,119.419,119.84,119.42,114.03,113.05,107.17,103.32,108.709,105.735,108.01,102.515,106.616,102.55,98.07,102.2,104.23,103.704,99.69,100.577,106.68,109.13,111.272,107.17,108.851,115.43,118.23,114.8,111.65,111.58,113.749,115.675,113.61,102.48,95.9,86.94,85.47,80.71,82.04,85.33,84,84.14,81.9,83.369,81.97,78.61,77.56,77.49,72.94,78.19,80.92,79.24,75.145,72.52,72.24,68.528,70.28,65.31,65.31,63.91,65.135,61.425,66.43,67.97,66.045,70.392,70.63,70.98,74.095,74.27,76.23,73.032,70.21,69.895,72.03,69.37,65.38,67.9,66.57,64.68,65.31,66.71,69.859,70.98,72.45,70.84,78.54,76.23,79.38,79.221,78.61,76.3,78.61,81.9,85.539,84.91,82.39,97.3,86.78,78.349,77.559,72.992,74.129,75.04,74.83,73.01,74.62,73.01,74.339,73.92,71.4,68.53,67.34,66.273,68.25,69.23,70.14,69.44,64.41,62.545,61.075,66.71,65.215,65.17,65.87,64.12,61.6,64.47,65.799,65.59,64.82,66.29,65.1,65.38,65.03,62.51,49.245,38.64,38.707,37.415,36.82,35.538,34.65,32.97,31.43,30.87,31.5,31.01,30.8,30.765,30.03,27.37,26.46,24.43,25.924,27.878,27.93,27.405,25.375,23.73,22.26,23.205,23.59,23.73,26.452,24.71,22.75,21.91,22.33,21.7,22.05,22.12,23.1,23.59,21.42,20.615,20.16,20.44,21,20.93,21.07,19.978,18.83,14.699,15.168,13.649,12.845,13.3,14.009,13.789,12.6,14,15.4,16.029,14.21,13.86,13.09,13.3,12.67,12.32,12.495,12.11,12.39,12.6,12.32,9.538,8.96,8.75,9.38,9.45,9.17,7.98,8.33,8.279,8.26,8.26,7.7,7.56,7.279,7,7.56,7.56,7.63,7.77,8.19,17.43,12.6,12.46,16.8,14.98,13.93,13.159,12.69,11.2,12.23,11.48,11.13,10.85,11.62,11.2,10.78,10.08,10.57,10.36,9.87,9.24,9.17,9.24,8.89,8.75,8.61,8.26,8.33,8.33,8.54,8.68,9.24,9.24,9.03,8.89,8.68,8.555,8.68,8.889,8.303,8.05,8.225,8.05,8.05,8.68,8.33,8.47,8.889,8.4,7.91,8.33,10.92,10.85,15.33,13.79,15.26,12.425,12,11.34,11.83,11.55,11.27,11.76,12.32,11.9,13.09,12.88,12.25,12.665,12.32,12.74,13.51,13.37,13.3,13.23,12.6,12.18,12.32,12.39,12.32,12.117,12.53,12.53,12.46,12.46,12.25,11.69,11.55,11.41,11.27,11.34,11.48,10.85,11.2,11.48,11.569,11.632,11.83,11.83,11.83,11.9,11.69,11.83,11.76,11.97,11.551,11.474,11.339,11.34,11.83,11.83,12.11,12.054,12.285,11.899,11.9,12.53,12.32,11.9,12.04,12.53,12.39,12.81,12.53,12.162,11.62,11.689,11.76,11.62,11.48,11.131,11.34,12.32,11.48,11.48,11.339,11.48,11.41,11.375,11.41,11.41,11.585,11.69,11.83,12.11,11.83,11.69,11.48,11.69,11.62,11.34,11.55,11.97,12.179,12.04,12.32,11.977,12.04,12.04,12.069,12.46,11.919,12.04,12.11,12.256,12.25,12.88,12.727,12.74,13.23,12.88,12.39,12.67,12.67,12.58,12.95,12.6,12.53,12.225,15.26,15.19,14.91,15.54,15.05,14.63,14.63,13.16,12.95,13.23,9,4.86,5.49,4.37,5.98,5.48,5.82,6.285,6.86,6.74,6.44,5.835,6.07,6.17,5.95,5.94,5.93,5.681,5.63,5.26,5.99,6.62,6.72,6.7,7.79,8.49,8.22,7.67,7.48,8.155,8,8.12,8.48,8.37,8.45,8.16,8,8.335,8.1,7.6,7.275,7.1,7.33,7.13,7.03,6.815,6.957,6.91,6.59,6.1,6.38,6.13,6.37,6.44,6.5,6.412,6.295,6.247,6.47,5.75,5.41,3.41,3.38,3.5,4.2,4.01,3.488,3.245,3.229,3.37,3.45,3.5,3.49,3.49,3.788,3.73,3.397,3.285,3.17,3.26,4.3,5,4.88,4.14,4.19,3.99,4.03,3.96,3.94,3.97,4.143,4.11,4.445,4.44,4.43,4.33,4.31,4.07,4.21,3.97,3.85,3.44,3.23,3.21,3.18,3.33,3.15,3.11,3.08,3.09,3.04,3.05,3.075,3.2,3.14,3.055,3.052,3.06,3.02,3.07,3.103,3.1,3.02,2.974,3.063,3.15,2.63,2.63,2.613,2.522,2.565,2.74,2.657,2.58,2.5,2.49,2.6,2.79,2.8,2.659,2.59,2.49,2.47,2.589,2.57,2.76,2.7,3.08,2.5,2.44,2.48,2.24,2.17,2.22,2.22,2.3,2.2,2.19,2.1,2.087,2.016,1.96,2.07,2.03,1.9,2,2.08,2.05,1.99,1.95,1.96,2.015,2.06,2.08,2.082,2.09,2.03,2.03,2.065,2.096,2.09,2.14,2.185,2.11,2.07,2.2,2.28,2.42,2.68,2.54,2.4],"low":[737.8,819,791,777,777,793.8,788.2,863.8,798,840,809.2,827.4,798,763,749,774.2,826,945,1162,1316,1206.8,1241.8,1268.4,1311.8,1337,1328.418,1335.614,1339.8,1421.014,1344,1164.8,1218,1257.2,1296.4,1232.014,1255.1,1261.4,1255.8,1267,1290.8,1334.2,1330,1345.414,1379,1380.4,1372,1322.412,1275.4,1274,1276.8,1278.2,1279.6,1274,1248.8,1232,1241.8,1298.5,1526,1555.4,1617,1603,1645,1695.4,1576.4,1643.6,1644.608,1680,1579.2,1568,1513.4,1533.35,1624,1778,2030.014,2154.6,1974,2175.6,2142,2252.6,2398.9,2665.6,2641.8,2576,2647.4,2654.4,2546.614,2433.9,2669.8,2255.4,2312.8,2150.414,2213.4,2312.8,2060.8,1692.6,1659,1632.4,1629.6,1622.6,1451.8,1407,1541.68,1552.6,1654.8,1738.8,1688.4,1610,1541.4,1547.014,1474.2,1416.8,1477,1472.8,1411.76,1407,1404.2,1461.6,1489.6,1448.3,1456,1485.4,1512,1498,1569.4,1743,1771,1775.2,1792,1874.6,2029.328,2234.4,2583,2483.6,2492,2396.8,2245.6,2002.014,1813,1855,1937.6,1920.814,1971.2,2067.8,1916.6,1822.8,1814.4,1720.6,1717.8,1713.6,1695.4,1736,1785,1782.2,1796.2,1783.6,1892.8,2058,2028.6,2023,2126.6,2095.8,2083.2,2094.4,2109.8,2125.2,2051,2056.6,2118.2,2073.4,2081.814,2065,1810.2,1758.4,1706.6,1687,1716.4,1866.2,1848,1754.2,1773.8,1155,980,945,925.4,931,936.6,1017.8,1131.354,1240.4,1289.4,1467.2,1568,1540.644,1547,1508.808,1551.2,1558.2,1577.114,1485.4,1456,1589,1559.6,1400,1457.4,1355.2,1407,1463,1477,1458.8,1422.4,1547,1418.27,1516.2,1451.8,1467.2,1573.6,1542.8,1562.204,1622.6,1618.4,1646.4,1722,1717.8,1658.3,1673.462,1681.442,1722.7,1716.4,1864.1,1859.2,1880.2,1758.4,1772.4,1752.94,1652,1680,1624,1533,1468.754,1499.4,1647.8,1764.7,1761.2,1768.9,1834,1971.2,1863.4,2025.1,2014.6,2028.6,1996.4,2048.2,2003.4,2091.6,2086,2133.6,2163,2135,2066.4,2058.7,2031.4,1989.4,1989.4,1988,2004.8,1877.4,1869,1820,1719.2,1650.6,1639.4,1580.6,1696.8,1706.25,1715,1647.8,1646.54,1663.9,1556.8,1496.6,1439.2,1415.4,1439.2,1540,1526,1503.6,1073.8,1043.7,1001,996.8,953.4,985.6,992.6,956.354,959,945,947.8,946.4,862.358,819,786.8,753.2,763,798,886.2,841.4,806.4,778.414,795.2,731.99,665,691.6,673.4,625.8,586.6,610.4,568.4,512.4,501.2,490,525,505.4,539.7,533.4,550.2,546,540.414,546,553,595,577.5,571.2,564.214,568.4,574,564.2,525,504,511,515.2,523.6,568.4,572.6,583.8,588,603.4,597.8,596.4,518,593.6,627.2,644,641.2,635.6,642.6,656.6,683.2,661.738,665,665,634.2,544.6,509.6,484.4,463.4,470.4,476,417.2,427,392,310.8,312.2,302.4,308,306.6,308,295.4,285.6,285.488,296.8,308,275.8,282.8,271.6,256.2,243.6,239.4,254.8,259,263.2,266,291.2,291.2,292.6,294,288.4,288.4,291.2,266,289.8,284.2,275.8,252,253.4,257.6,260.4,263.2,271.6,273,274.4,281.4,284.2,288.4,291.55,296.8,295.4,280.14,292.6,275.8,275.8,284.2,299.6,288.4,284.2,287.7,294.84,282.8,284.34,287,284.2,270.186,273,274.4,273,242.2,250.6,240.8,233.8,225.4,213.528,215.74,217,219.8,197.4,215.6,224,231.7,240.8,255.5,261.8,259,254.8,257.6,264.6,277.2,315,322.14,336,340.2,331.8,341.6,337.4,296.8,721,753.2,651,632.8,609,631.75,718.2,697.2,690.2,792.4,814.8,813.4,812,795.2,828.8,820.4,805,751.8,764.4,733.67,716.8,652.4,616,588,592.9,579.6,575.47,593.6,574,576.8,586.6,598.5,630,621.894,445.2,378,387.8,350,378,357,333.2,365.4,407.456,410.2,406,400.4,393.54,420,406,400.4,411.6,414.4,406,408.8,416.78,463.54,441,463.4,485.8,539,543.2,820.4,865.2,954.8,928.2,947.8,697.2,730.8,686,702.8,625.8,679,651,646.8,630,609,627.2,623,635.656,630,634.2,691.6,693,697.2,701.4,718.2,733.6,704.2,691.6,701.4,700,700,719.6,739.2,707,707,715.54,716.1,719.6,707,691.6,660.8,687.4,718.2,702.8,729.512,711.2,684.6,694.4,683.2,686,684.6,666.4,658,639.1,655.2,672,673.4,666.4,673.4,667.8,421.4,413,407.4,379.4,375.2,382.2,393.414,413,417.2,427,396.2,399,413,401.8,392,382.2,387.8,383.6,385,389.2,394.8,401.8,390.6,394.8,392,389.2,385,385,378,385,380.8,378,375.2,364,327.6,336,316.4,322,337.4,345.8,329,329.014,343,340.2,343,331.142,329,322,298.2,313.376,319.2,308,313.6,338.8,338.8,336,340.2,336,348.6,352.8,359.8,358.4,366.8,343.938,334.6,338.8,323.4,324.8,329,315,306.6,308,321.944,343,337.4,344.736,344.4,358.4,339.99,336,340.2,330.4,324.8,306.6,306.6,266,263.214,245,239.4,242.69,242.2,250.6,259,798,1078,988.4,903,732.2,716.814,722.4,778.4,798,803.81,851.2,942.2,910,922.6,938,942.2,959,918.4,868,823.2,830.2,848.4,805,758.8,730.8,757.4,749,672,684.6,686,691.6,711.2,687.386,663.6,641.2,645.4,667.8,684.6,672,660.8,618.8,550.2,604.8,569.8,450.856,492.1,448,379.4,379.414,399,438.2,467.6,473.2,511,491.4,498.414,498.4,519.4,439.74,428.4,435.4,431.2,422.8,402.5,399,396.2,396.2,399,403.102,413,414.4,413,413,414.4,434,421.4,416.5,449.4,518,514.122,539,557.2,560,550.9,541.8,553,557.2,558.6,567,540.4,550.2,597.8,592.2,560,551.6,547.4,555.8,560,560,550.2,555.8,558.6,567,582.4,592.2,557.2,173.6,183.4,170.8,170.8,163.8,173.6,169.4,170.8,175,175,182,183.4,184.8,184.8,182,177.8,177.8,172.2,165.2,161,162.4,156.8,145.6,135.8,148.4,148.4,142.8,140,141.4,144.2,144.2,142.8,151.2,152.6,142.8,145.6,147.182,155.4,155.4,148.4,154,148.4,135.8,140,138.614,138.614,140,131.628,138.6,147,140,133,127.414,134.414,134.624,130.27,133,135.814,138.628,142.8,142.8,144.2,141.4,142.8,141.4,135.814,130.2,130.214,131.6,131.67,133,134.4,134.694,137.2,135.8,137.2,137.55,137.536,136.08,134.4,131.698,126.28,120.4,120.4,123.9,122.038,120.4,109.578,112.014,114.8,114.8,111.3,106.61,109.214,102.578,99.4,96.754,93.968,91.14,85.4,86.128,88.228,89.6,91.812,91,93.8,93.8,93.8,91,91.35,95.9,99.568,102.2,104.902,103.628,106.4,106.404,110.6,124.614,125.3,127.554,135.8,128.786,128.94,129.5,131.25,133,130.214,127.4,119.014,119.392,117.18,109.354,105.91,110.432,115.178,114.8,108.78,107.954,106.414,107.38,106.442,102.2,102.2,101.78,99.862,98,102.214,105.392,108.654,110.6,114.1,119,113.274,113.4,113.302,106.904,106.4,110.6,124.32,124.95,127.414,140.336,144.2,147,142.8,147,148.4,152.6,189,217,245,267.4,322,322,331.8,336,351.4,366.8,471.8,439.6,469,574.7,546,576.8,597.646,218.4,207.2,168,169.4,173.6,238,288.4,288.4,294,288.4,298.2,291.2,309.4,312.2,284.2,261.8,261.8,273,271.6,259,264.6,266,267.4,260.4,253.4,242.2,222.6,235.34,238,235.2,222.6,231.14,238,239.4,235.2,233.8,224,214.2,225.4,224,228.2,231,231,245,266,253.4,245,226.8,210,196,214.2,219.8,226.8,219.8,210,187.6,175.014,162.4,140,133,121.8,123.27,154,182,163.8,144.2,159.6,169.456,169.4,156.8,168,156.8,145.6,144.2,145.6,158.2,154,154,161,166.6,186.9,184.8,191.8,197.4,193.2,177.8,182,170.8,175,175,186.2,212.8,217,197.4,198.8,201.6,208.6,212.8,212.8,217,245.028,221.2,219.8,220.528,231,225.4,229.964,229.6,225.4,224,205.8,175,163.8,195.874,186.2,189,190.4,204.4,207.2,201.6,196,191.8,193.2,190.4,198.8,198.8,201.6,207.2,203,205.8,201.6,201.6,191.8,190.4,184.8,187.6,186.2,187.6,184.8,187.6,186.2,184.1,177.8,176.4,176.4,179.2,193.606,200.2,197.4,197.4,186.2,183.4,191.8,191.8,190.4,194.6,196,201.6,203,226.8,207.2,187.6,189,183.4,186.2,186.2,186.2,187.6,188.3,186.2,183.4,179.2,184.8,144.2,182,183.4,180.6,177.8,177.8,177.8,174.3,168,175,180.6,180.6,177.8,169.4,172.2,179.2,176.4,173.6,169.4,158.2,145.6,134.4,142.8,151.2,149.8,149.8,150.962,147,149.8,152.6,154,161.658,161,156.828,159.6,161,155.4,162.4,161.7,159.6,156.8,154,154,147,147,137.2,140,131.376,135.814,137.34,143.122,147,147,140,140,141.4,144.2,147,151.2,148.4,149.8,147,142.8,142.8,140,141.4,144.2,144.2,142.1,141.4,141.4,141.4,137.2,138.6,154,154,161,155.414,159.6,161,158.2,158.2,158.2,154,140.14,135.87,113.89,116.76,116.41,117.53,116.06,124.53,136.57,136.85,145.776,142.8,153.23,147.91,146.65,147.49,147.77,139.3,129.64,136.57,135.17,133.907,132.44,119.56,120.82,122.64,123.9,125.79,136.15,140.07,143.92,147.49,136.57,134.305,135.8,143.78,132.125,133.42,136.64,138.53,123.061,126.63,121.38,118.3,123.27,121.87,119.001,112.56,106.75,114.59,118.125,121.73,124.04,122.71,128.606,128.17,129.36,130.27,130.69,132.02,123.27,122.92,122.5,122.36,123.97,120.96,121.59,128.17,130.34,127.433,123.83,125.93,124.95,125.02,122.99,121.316,122.5,117.81,117.6,116.27,116.647,121.87,120.54,124.74,122.64,122.43,117.601,115.85,115.85,112.28,111.16,101.36,98,99.4,99.47,103.04,99.05,96.74,97.65,98.07,94.64,95.34,97.16,96.95,94.71,96.123,99.75,105.001,104.16,104.37,105,108.64,106.05,107.45,107.87,107.45,110.18,110.6,105.14,90.65,86.03,80.851,79.1,77.07,78.05,80.889,80.71,80.15,78.47,77.21,77.63,77.07,72.03,70,67.27,70.07,75.74,72.835,70.655,69.37,68.81,63.77,63.7,62.09,62.3,60.62,59.15,57.82,57.68,64.261,63.211,63.105,66.57,68.74,68.18,70.14,70,69.79,67.2,65.87,65.87,63.42,62.44,62.3,58.1,57.47,61.39,60.69,63.07,68.25,69.51,69.3,69.51,72.94,76.02,74.83,73.64,72.8,76.3,75.845,78.05,79.52,79.1,80.22,75.67,74.27,67.27,68.951,67.201,71.96,71.75,69.3,69.125,69.44,71.05,70.07,65.24,61.74,63.28,62.09,65.1,66.15,67.69,62.79,61.6,59.36,59.92,59.36,62.02,59.92,61.88,60.2,59.85,61.53,63,61.95,61.6,62.79,62.652,60.9,61.67,58.73,38.22,36.12,36.19,35.28,34.72,33.04,30.31,30.163,29.26,29.4,29.645,29.12,28.77,28.21,26.39,25.41,23.8,19.81,23.66,24.29,26.6,24.5,23.286,21.281,20.705,21.419,21.56,22.014,22.89,22.54,21.28,20.511,19.25,18.97,20.65,20.65,20.86,20.79,20.02,18.2,18.55,18.55,19.46,19.95,18.62,18.55,16.993,12.6,12.95,12.32,11.34,12.53,12.46,12.11,12.25,12.53,14,13.755,12.32,12.11,12.11,11.9,11.55,11.41,11.2,10.99,10.92,11.76,8.75,8.4,8.33,8.4,8.19,8.89,7.84,7.42,7.7,8.085,7.84,7.42,6.721,6.86,6.86,6.668,6.65,7.07,7.28,6.841,6.79,7.706,10.5,11.2,12.11,12.67,11.76,11.13,11.067,9.94,10.672,10.71,10.43,10.08,10.43,10.5,9.66,9.17,9.17,9.31,8.89,7.98,8.4,7.91,8.26,8.05,7.98,7.98,7.84,7.35,7.91,8.12,8.54,8.47,8.4,8.05,7.924,7.28,7,7.42,7.351,7.701,7.7,7.49,7.77,7.77,7.28,7.14,7.42,7.49,7.35,7.7,7.35,7.98,12.25,12.32,11.27,10.85,10.99,10.92,10.64,10.57,10.361,10.92,11.06,11.2,11.62,11.97,11.83,11.62,11.83,11.9,12.6,12.88,12.67,12.301,11.9,11.62,11.55,11.97,11.69,11.76,11.76,11.83,11.97,11.41,11.41,11.27,10.99,10.92,10.99,10.955,10.43,10.5,10.64,10.78,11.13,11.2,11.411,11.301,11.427,11.41,11.34,11.281,11.41,11.62,11.41,11.2,11.06,10.99,11.06,11.27,11.55,11.69,11.684,11.34,11.305,11.55,11.83,11.55,11.671,11.91,11.9,11.913,12.04,11.62,11.34,11.27,11.2,11.06,10.92,10.92,10.92,10.92,10.99,10.92,10.983,11.2,10.85,11.2,10.92,11.13,11.13,11.09,11.375,11.55,11.48,11.48,11.13,11.27,11.2,11.037,11.34,11.13,11.41,11.95,11.55,11.904,11.411,11.34,11.621,11.399,11.556,11.62,11.691,11.55,11.83,12.18,12.25,12.32,12.25,11.9,12.11,12.34,12.47,12.32,12.39,11.9,12.04,11.41,12.25,14.28,14.28,14.493,13.51,13.72,14.07,11.55,11.55,9.8,4,3.71,4.01,4.14,4.3,4.86,5.08,5.87,5.83,6.19,5.575,5.45,5.78,5.36,5.35,5.52,5.4,5.352,5.121,5.08,5.31,5.82,6.15,6.11,6.768,7.32,7,6.52,6.61,7.26,7.53,7.54,7.925,8.01,7.76,7.8,7.47,7.6,7.445,7.02,6.5,6.66,6.745,6.793,6.696,6.365,6.62,6.425,6.1,5.5,5.51,5.6,5.85,6.06,5.978,5.9,5.5,5.542,5.44,5.3,3.21,2.941,2.87,3.18,3.5,3.12,3.11,3.11,3.11,3.226,3.12,3.34,3.395,3.41,3.215,3.349,3,3.1,3.074,3.08,3.35,4.22,4,3.43,3.79,3.79,3.9,3.81,3.68,3.88,4,4.093,4.15,4.3,4.25,4.08,4,3.95,3.832,3.52,3.17,3.1,3.1,3,3.03,3.03,3,3.01,2.97,2.97,2.95,2.95,2.908,2.95,2.98,2.86,2.99,2.9,2.91,2.85,2.85,2.8,2.83,2.83,2.77,2.54,2.5,2.16,2.41,2.3,2.27,2.29,2.51,2.4,2.17,2.235,2.35,2.45,2.58,2.496,2.34,2.33,2.22,2.22,2.34,2.34,2.31,2.31,2.27,2.3,2.1,2.06,2.06,2,2.02,2.05,2.13,2.13,1.9,1.97,1.78,1.84,1.9,1.86,1.81,1.83,1.91,1.87,1.85,1.87,1.93,1.96,2.02,1.97,1.95,1.983,1.95,1.91,1.97,2.02,2,2.03,2.03,1.93,1.95,1.93,1.93,2.15,2.19,2.21,2.3],"close":[929.6,865.2,805,805,791.014,828.8,893.2,910,856.1,840,851.2,840,819,792.4,777.042,778.4,1013.6,1164.8,1645,1335.6,1254.4,1360.8,1397.2,1337,1377.6,1341.2,1381.8,1519,1453.2,1376.2,1220.8,1274,1327.2,1349.6,1306.2,1275.4,1269.8,1303.4,1316,1400,1342.6,1374.8,1400,1400,1428,1398.6,1356.6,1317.4,1288,1314.6,1303.4,1290.8,1278.2,1267,1265.6,1310.4,1530.2,1618.4,1687,1638,1666,1715,1750,1702.4,1750,1762.6,1734.6,1604.4,1589,1513.4,1619.8,1750,2010.4,2156,2224.6,2312.8,2300.2,2298.8,2346.4,2709,2772,2678.2,2696.4,2814,2770.6,2619.4,2781.8,2685.2,2308.6,2318.4,2251.2,2339.4,2354.8,2137.8,1730.4,1678.6,1703.8,1698.2,1636.6,1528.8,1610,1617,1660.4,1715,1813,1688.4,1621.2,1597.4,1573.6,1481.2,1505,1505,1523.2,1450.4,1433.6,1484,1506.4,1554,1519,1488.2,1535.8,1512,1569.4,1734.6,1849.4,1831.2,1803.2,1866.2,2100,2275,2717.4,2646,2643.2,2542.4,2493.4,2262.4,2067.8,1852.2,1964.2,2003.4,2003.4,2114,2133.6,2060.8,1859.2,1870.4,1769.6,1820,1729,1752.8,1793.4,1803.2,1818.6,1831.2,1878.8,2128,2158.8,2042.6,2130.8,2191,2098.6,2182.6,2193.8,2125.2,2167.2,2084.6,2100,2143.4,2100,2093,2095.8,1822.8,1801.8,1729,1745.8,1898.4,1906.8,1871.8,1811.6,1799,1191.4,1012.2,996.8,977.2,961.8,1080.8,1171.8,1233.4,1302,1479.8,1614.2,1580.6,1615.6,1610,1587.6,1619.8,1645,1642.2,1575,1643.6,1635.2,1570.8,1520.4,1474.2,1442,1470,1523.2,1542.8,1506.4,1558.2,1549.8,1540,1534.4,1465.8,1600.2,1580.6,1548.4,1694,1740.2,1656.2,1750,1741.6,1745.8,1678.6,1716.4,1771,1965.6,1943.2,1923.6,1976.8,1965.6,1849.4,1800.4,1800.4,1750,1755.6,1638,1542.8,1507.8,1660.4,1766.8,1808.8,1857.8,1887.2,2065,2097.2,2010.4,2070.6,2083.2,2044,2062.2,2133.6,2077.6,2143.4,2170,2158.8,2230.2,2283.4,2116.8,2072,2051,2045.4,2070.6,2037,2060.8,1948.8,1897,1857.8,1744.4,1654.8,1708,1730.4,1817.2,1754.2,1733.2,1694,1737.4,1699.6,1568,1514.8,1453.2,1454.6,1600.2,1551.2,1554,1524.6,1094.8,1058.4,1027.6,1002.4,1005.2,998.2,1020.6,994,995.4,959,994,959,869.4,854,803.6,767.2,834.4,883.4,1015,846.3,813.4,806.4,817.6,733.6,722.4,695.8,687.4,637,609,627.2,574,535.5,501.2,581,526.4,543.2,547.4,621.6,596.4,585.2,574,554.4,613.2,614.6,599.2,617.4,581,574,609,571.2,543.2,534.8,518,537.6,579.6,595,596.4,602,600.6,670.6,613.2,602,589.4,655.2,677.6,681.8,655.2,666.4,670.6,701.4,690.2,686,673.4,669.2,641.2,544.6,510.3,491.4,483,483,481.6,432.6,429.8,397.6,315,317.8,308,317.8,308,310.8,301,291.2,302.4,317.8,313.6,285.6,285.6,280,257.6,245,256.2,267.4,263.2,277.2,296.8,292.6,303.8,313.6,295.4,292.6,294,309.4,301,302.4,288.4,275.8,263.2,263.2,267.4,263.2,278.6,274.4,285.6,282.8,284.2,294,294,296.8,302.4,295.4,295.4,309.4,278.6,289.8,308,302.4,289.8,291.2,299.6,316.4,294,313.6,294,292.6,284.2,274.4,277.2,275.8,263.2,261.8,250.6,238,240.8,224,219.8,218.4,228.2,225.4,224,240.8,238,260.4,270.2,273,261.8,256.2,273,274.4,362.6,362.6,352.8,350,352.8,347.2,354.2,337.4,329,859.6,765.8,656.6,698.6,625.8,702.8,746.2,709.8,802.2,848.4,823.2,838.6,816.2,866.6,840,840,835.8,778.4,775.6,764.4,733.6,705.6,623,599.2,595,582.4,596.4,627.2,593.6,585.2,600.6,617.4,651,648.2,448,386.4,393.4,403.2,392,365.4,383.6,421.4,441,414.4,435.4,406,438.2,435.4,410.2,418.6,434,417.2,418.6,435.4,469,469,471.8,483,505.4,576.8,579.6,893.2,917.7,991.2,1020.6,978.6,722.4,765.8,754.6,705.6,701.4,707,670.6,665,656.6,623,663.6,641.2,655.2,653.8,701.4,701.4,726.6,707,711.2,742,744.8,709.8,716.8,714,721,719.6,739.2,744.8,708.4,722.4,756,728,728,722.4,701.4,697.2,729.4,732.2,744.8,765.8,715.4,704.2,694.4,697.2,691.6,700,676.2,659.4,646.8,708.4,677.6,704.2,679,676.2,686,424.2,414.4,415.8,383.6,393.4,397.6,446.6,418.6,428.4,427,410.2,434,414.4,415.8,393.4,390.6,390.6,389.2,389.2,397.6,410.2,404.6,401.8,397.6,401.8,399,386.4,387.8,392,389.2,382.2,387.8,389.2,364,362.6,336,323.4,347.2,351.4,350,333.2,345.8,350,348.6,343,334.6,350,324.8,316.4,326.2,329,313.6,340.2,341.6,341.6,345.8,341.6,347.2,355.6,359.8,376.6,383.6,375.2,345.8,347.2,343,334.6,336,331.8,315,312.2,324.8,341.6,344.4,361.2,351.4,359.8,375.2,341.6,337.4,341.6,336,351.4,308,306.6,277.2,274.4,246.4,245,247.8,246.4,267.4,264.6,1449,1113,1008,1036,749,749,838.6,858.2,845.6,869.4,943.6,984.2,970.2,957.6,967.4,1006.6,982.8,924,880.6,858.2,872.2,859.6,835.8,796.6,782.6,761.6,768.6,698.6,763,705.6,709.8,719.6,688.8,697.2,665,666.4,690.2,712.6,683.2,673.4,625.8,625.8,614.6,575.4,569.8,499.8,453.6,411.6,411.6,453.6,485.8,476,508.2,519.4,513.8,516.6,519.4,550.2,467.6,442.4,443.8,442.4,436.8,407.4,407.4,404.6,418.6,404.6,418.6,424.2,422.8,420,418.6,435.4,457.8,432.6,449.4,547.4,525,550.2,579.6,569.8,581,564.2,558.6,565.6,571.2,609,576.8,576.8,602,624.4,621.6,569.8,558.6,564.2,581,561.4,568.4,557.2,575.4,583.8,585.2,606.2,602,569.8,183.4,196,173.6,173.6,176.4,182,175,180.6,176.4,183.4,189,191.8,191.8,190.4,186.2,180.6,177.8,176.4,168,166.6,166.6,158.2,147,151.2,148.4,154,149.8,141.4,151.2,148.4,145.6,148.4,156.8,152.6,147,151.2,159.6,159.6,158.2,161,159.6,149.8,140,142.8,142.8,141.4,142.8,137.494,149.8,156.8,140.7,135.282,140,141.4,136.808,133.854,141.4,140,145.6,147,148.4,147,149.8,145.6,142.8,138.698,131.292,136.626,135.828,135.8,139.314,138.25,142.8,137.984,138.544,141.4,140,137.536,137.2,135.716,131.88,126.826,123.9,126.462,127.4,122.038,120.4,111.44,120.4,115.262,117.152,112.7,109.956,112.14,110.866,100.828,98.574,96.026,95.172,95.284,88.2,92.61,93.618,92.022,97.846,97.286,94.892,95.2,93.772,99.54,103.264,106.302,105.602,107.59,114.646,106.4,114.66,130.2,128.716,127.47,135.8,144.2,128.8,132.062,133.742,136.22,137.774,133.812,127.582,124.418,124.698,118.3,109.48,112.91,117.138,120.372,114.8,113.848,111.902,107.268,109.144,109.83,107.8,102.76,102.2,102.2,101.5,105,109.186,112,113.4,120.4,120.456,113.4,116.2,117.166,114.52,106.414,122.234,127.75,126.896,138.6,149.8,155.4,148.4,147,151.2,152.6,189,219.8,245,264.6,336,336,341.6,336,369.6,392,530.6,497,494.2,555.8,596.4,574,595,609,221.2,215.6,187.6,174.3,208.6,315,341.6,312.2,298.2,319.2,305.2,323.4,323.4,315,294,291.2,264.6,285.6,271.6,261.8,270.2,274.4,267.4,263.2,261.8,245,238,246.4,245,236.6,233.8,259,247.8,242.2,242.2,236.6,226.8,229.6,232.4,231,239.4,238,240.8,277.2,280,270.2,253.4,233.8,215.6,218.4,219.8,232.4,228.2,222.6,215.6,189,187.6,162.4,140,137.2,124.32,154,179.2,194.6,184.8,161,175,186.2,175,179.2,170.8,159.6,152.6,145.6,158.2,162.4,155.4,159.6,170.8,184.8,196,208.6,201.6,200.2,200.2,190.4,182,182,183.4,182,234.5,236.6,229.6,214.2,204.4,205.8,222.6,214.2,219.8,246.4,253.4,242.2,229.6,245,233.8,231,247.8,233.8,228.2,224,205.8,182,183.4,198.8,198.8,193.2,201.6,211.4,217,211.4,210,194.6,198.8,201.6,205.8,201.6,210,210,208.6,211.4,208.6,204.4,197.4,194.6,191.8,193.2,191.8,187.6,190.4,194.6,187.6,186.2,180.6,177.8,186.2,197.4,210,211.4,204.4,200.2,187.6,197.4,200.2,198.8,198.8,203,205.8,208.6,246.4,229.6,208.6,191.8,197.4,184.8,189,193.2,190.4,196,190.4,189,186.2,182,190.4,193.2,193.2,193.2,189,189,186.2,184.8,179.2,184.8,183.4,184.8,183.4,180.6,175,180.6,180.6,176.4,177.8,170.8,161,149.8,145.6,156.8,151.2,155.4,154,154,149.8,156.8,152.6,163.8,163.8,161,159.6,166.6,163.8,166.6,172.2,163.8,163.8,158.2,156.8,155.4,151.2,148.4,142.8,141.4,136.78,147,147,154,148.4,156.8,141.4,142.8,152.6,149.8,152.6,162.4,156.8,151.2,151.2,145.6,142.8,141.4,147,152.6,148.4,142.8,145.6,144.2,142.8,140,172.2,155.4,177.8,168,161,165.2,166.6,161,158.2,161,155.4,154.7,137.76,116.69,119.7,122.78,119,125.65,143.29,138.6,146.23,149.8,157.64,156.94,149.38,154,150.01,153.3,139.3,141.54,139.3,141.19,139.16,133.42,120.75,125.3,125.23,127.61,133,150.08,144.41,152.18,151.06,145.6,140.14,150.99,144.83,142.1,136.57,143.5,139.65,129.36,128.8,123.9,124.39,127.75,125.3,123.62,117.25,118.86,116.83,125.65,125.09,126.28,134.89,133.07,129.85,135.66,133.84,135.31,137.2,125.86,127.05,127.05,123.41,128.94,120.96,126.7,137.48,131.81,128.8,124.25,132.16,125.51,135.31,123.2,122.64,126.14,123.55,121.17,121.94,121.8,123.2,126.49,125.44,125.79,122.43,118.23,117.18,118.44,114.31,112.28,102.55,103.6,100.94,103.6,104.09,99.26,98.7,99.68,99.12,96.88,96.81,99.68,98.07,96.32,98.63,104.51,107.66,105.14,106.82,106.4,111.44,113.12,107.52,110.25,110.81,113.33,113.4,105.14,92.4,86.31,85.4,80.5,78.89,80.78,81.83,83.37,80.92,79.1,81.55,78.54,77.7,72.03,70.42,71.61,77.28,79.45,73.71,71.05,71.61,68.95,65.45,64.19,63.77,62.86,63.07,59.92,60.48,63.91,66.08,63.56,68.6,69.86,70.21,73.08,73.5,72.45,70.91,68.81,67.76,67.69,64.19,64.4,62.44,58.1,60.83,63.91,66.15,67.34,70.28,70.56,69.51,75.6,76.16,78.33,75.95,73.99,75.18,77.35,78.4,83.44,80.71,80.15,84.28,77.35,74.34,70.84,70.56,73.29,73.43,73.36,71.75,69.44,72.24,73.36,70.28,66.64,62.02,64.68,64.19,65.73,68.04,68.74,63.49,61.88,59.78,60.69,63.91,63.77,64.68,63.28,61.6,60.97,64.05,64.05,64.89,63.14,63.07,64.26,62.65,62.93,59.36,39.55,37.8,36.75,36.54,35.14,33.11,30.8,31.22,30.03,30.45,30.66,29.54,29.05,29.47,26.81,26.25,24.36,24.08,24.85,26.95,27.02,25.13,24.15,22.12,21.63,21.84,23.31,22.54,24.71,22.68,21.84,21.07,19.67,21,20.93,20.72,22.89,20.79,20.16,19.25,18.83,20.09,20.44,19.95,19.11,18.97,17.15,14.385,12.95,12.74,12.53,13.23,12.74,12.53,12.46,13.65,15.33,13.93,12.32,12.25,12.18,12.11,11.62,11.69,11.69,11.13,12.32,12.39,8.82,9.03,8.61,8.47,9.24,9.1,7.98,7.56,8.26,8.19,7.91,7.42,7.07,7.21,7,6.79,7,7.42,7.42,7,7.84,12.39,12.6,12.39,14.35,14,11.97,12.46,11.48,10.5,10.71,10.78,10.57,10.43,11.13,10.92,9.87,9.38,9.8,10.01,9.1,8.89,8.96,8.26,8.33,8.61,8.05,8.12,7.98,7.7,8.19,8.61,9.24,8.54,8.4,8.61,8.05,7.28,7.14,8.399,7.56,7.77,7.77,7.991,7.77,8.12,7.35,7.42,7.63,7.7,7.42,7.98,7.42,9.94,13.93,13.16,11.69,12.39,11.27,11.34,10.99,11.34,10.99,11.55,11.55,11.76,12.25,12.25,12.04,12.04,12.18,12.74,12.88,13.09,12.88,12.53,12.04,11.9,12.32,11.97,11.9,12.04,11.76,12.18,12.04,11.69,11.48,11.34,11.2,10.99,11.2,11.34,10.5,10.71,11.13,11.409,11.2,11.48,11.69,11.76,11.62,11.55,11.41,11.48,11.69,11.62,11.41,11.27,11.06,11.34,11.551,11.69,12.11,11.76,11.97,11.395,11.9,12.25,11.97,11.865,11.9,12.32,12.11,12.53,12.25,11.62,11.55,11.48,11.48,11.23,11.13,11.13,11.13,11.34,11.34,10.99,11.13,11.27,11.34,11.34,11.2,11.34,11.34,11.69,11.795,11.76,11.725,11.62,11.41,11.48,11.41,11.27,11.55,11.83,11.9,11.95,11.69,11.97,12.04,12.04,11.821,11.691,11.83,11.935,11.901,12.25,12.18,12.74,12.727,12.53,12.95,12.18,12.32,12.46,12.47,12.496,12.6,12.53,12.39,12.04,14.35,15.05,14.42,14.84,13.93,14.42,14.21,11.76,12.18,13.23,4.95,3.75,4.325,4.35,4.96,5.178,5.79,6.116,6.35,6.225,5.66,5.77,5.98,5.51,5.65,5.69,5.56,5.41,5.18,5.26,5.99,6.49,6.17,6.7,7.31,7.83,7,6.64,7.48,7.93,7.78,7.86,8.1,8.33,7.92,7.8,7.55,7.77,7.75,7.05,6.51,7.07,6.84,6.89,6.86,6.6,6.62,6.62,6.59,5.77,5.75,6,6.1,6.28,6.15,5.91,5.89,6.09,5.44,5.35,3.21,3.01,3.17,3.18,3.91,3.16,3.19,3.11,3.18,3.35,3.31,3.5,3.4,3.44,3.25,3.4,3.03,3.28,3.16,3.2,4.3,4.97,4.75,4.05,4.02,3.99,3.98,3.85,3.94,3.97,4.06,4.11,4.35,4.354,4.26,4.28,4,4.01,4.2,3.95,3.33,3.1,3.19,3.16,3.04,3.15,3.02,3.08,2.97,3.04,3,3.01,3,3,3.05,3.04,3.04,3.02,2.97,2.9,3.06,2.82,2.92,2.87,2.82,2.61,2.6,2.63,2.46,2.49,2.27,2.65,2.58,2.48,2.39,2.36,2.45,2.59,2.63,2.496,2.38,2.33,2.22,2.41,2.48,2.34,2.38,2.45,2.33,2.35,2.169,2.15,2.11,2.2,2.1,2.28,2.16,2.16,2.03,1.97,1.84,1.96,1.9,1.9,1.89,1.98,2.02,1.89,1.85,1.93,1.96,1.99,2.04,1.99,1.95,1.99,1.97,2.03,2.03,2.02,2.03,2.03,2.03,1.94,2.07,1.93,2.21,2.38,2.21,2.39,2.3],"lastOpen":2.4200000762939453,"lastHigh":2.4000000953674316,"lastLow":2.299999952316284,"lastClose":2.299999952316284,"lastVolume":4476,"dataId":"4476|2.3","lastDate":20230922,"prevClose":2.390000104904175,"afterClose":null,"afterChange":null,"chartEvents":[],"patterns":[{"kind":3,"strength":367.4602,"status":1,"bounces":2,"x1":30,"y1":229,"x2":600,"y2":269,"x3":0,"y3":0,"x4":0,"y4":0,"ticker":""}],"patternsMinRange":0,"patternsMaxRange":16};
+                                        data.instrument = 'stock';
+                                        data.premarket = false;
+                                        data.aftermarket = false;
+                                        data.hasPatterns = true;
+                                        data.events = false;
+                                        Quote.create(data);
+                                    })();
+                                  </script><script type="text/javascript">
+                                    var chartConfig = {
+          "layout":"1h1v",
+          "height": 400,
+          "scrollable": false,
+          "colors": undefined,
+          "ideas": false,
+          "editable": false,
+          "editors": ['tools', 'ideas', 'publish'],
+          "charts":[{
+                "height": 400,
+                "timeframe": "d",
+                "dateRange": "",
+                "scale": "linear",
+                "ticker": "KA",
+                "instrument": "stock",
+                "refreshData": true,
+                "premarket": false,
+                "hasChartEvents": false,
+                "aftermarket": false,
+                "panes": []
+              }],
+        };
+                                    var taConfig = JSON.parse(JSON.stringify(FinvizSettings.TA));
+
+                                    taConfig.style = 'candlestick';
+                                    var FinvizQuoteTypeCurrent = taConfig.style;
+
+                                    var mergeChartAndTAConfig = FLibs.Charts.convertTa.mergeChartAndTAConfig;
+                                    mergeChartAndTAConfig(chartConfig, taConfig);
+
+                                    window.globalChartConfig = chartConfig
+                                  </script></div><div class="fv-container">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" valign="top">
+<div class="content" data-testid="quote-data-content"><table width="100%"><tr>
+<td align="center" valign="top">
+<table cellpadding="3" cellspacing="0" class="fullview-title" width="100%">
+<tr class="text-blue-500"><td align="center"><h1><a class="tab-link" href="quote.ashx?t=KA&amp;ty=c&amp;ta=1&amp;p=d" id="ticker">KA</a> | <span><a class="tab-link" href="https://kinetabio.com" rel="nofollow" target="_blank"><b>Kineta, Inc.</b></a></span></h1></td></tr>
+<tr><td align="center" class="fullview-links"><a class="tab-link" href="screener.ashx?v=111&amp;f=sec_healthcare">Healthcare</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=ind_biotechnology">Biotechnology</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=geo_usa">USA</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=exch_nasd">NASD</a></td></tr>
+</table>
+<div class="my-3"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_970x91_1" style="width:970px;height:100px;max-height:100px"></div></div><table cellpding="0" cellspacing="0" class="fullview-links" width="100%">
+<td align="left" class="js-quote-correlation-links-container" width="80%">
+<td align="right" width="20%">
+<a class="tab-link" href="#statements">Scroll to Statements<svg class="fill-current inline-block ml-0.5" height="12" width="12">
+<use href="/assets/icons.svg?rev=3#arrowDown"></use>
+</svg></a></td>
+</td></table></td></tr>
+</table></div></td>
+</tr></table>
+<div class="snapshot-table-wrapper"><table border="0" cellpadding="3" cellspacing="0" class="snapshot-table2" width="100%">
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Major index membership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Index</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Earnings (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/E</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Diluted EPS (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS (ttm)</td><td align="left" class="snapshot-td2" width="8%"><b>-1.77</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Insider ownership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Insider Own</td><td align="left" class="snapshot-td2" width="8%"><b>1.20%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Shares outstanding] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shs Outstand</td><td align="left" class="snapshot-td2" width="8%"><b>9.94M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Week)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Week</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">19.17%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Market capitalization] offsetx=[10] offsety=[20] delay=[300]" width="7%">Market Cap</td><td align="left" class="snapshot-td2" width="8%"><b>24.08M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Forward Price-to-Earnings (next fiscal year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Forward P/E</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS estimate for next year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Y</td><td align="left" class="snapshot-td2" width="8%"><b>-1.44</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Insider transactions (6-Month change in Insider Ownership)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Insider Trans</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">46.71%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Shares float] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shs Float</td><td align="left" class="snapshot-td2" width="8%"><b>6.60M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Month</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">19.17%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Income (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Income</td><td align="left" class="snapshot-td2" width="8%"><b>-51.20M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Earnings-to-Growth] offsetx=[10] offsety=[20] delay=[300]" width="7%">PEG</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS estimate for next quarter] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Q</td><td align="left" class="snapshot-td2" width="8%"><b>-0.56</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Institutional ownership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Inst Own</td><td align="left" class="snapshot-td2" width="8%"><b>22.60%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Short interest share / ratio] offsetx=[10] offsety=[20] delay=[300]" width="7%">Short Float / Ratio</td><td align="left" class="snapshot-td2" width="8%"><b>0.50% / 1.32</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Quarter)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Quarter</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-12.55%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Revenue (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales</td><td align="left" class="snapshot-td2" width="8%"><b>4.70M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Sales (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/S</td><td align="left" class="snapshot-td2" width="8%"><b>5.12</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS growth this year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS this Y</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">52.10%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Institutional transactions (3-Month change in Institutional Ownership)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Inst Trans</td><td align="left" class="snapshot-td2" width="8%"><b>-12.40%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Short interest] offsetx=[10] offsety=[20] delay=[300]" width="7%">Short Interest</td><td align="left" class="snapshot-td2" width="8%"><b>0.03M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Half Year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Half Y</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-41.18%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Book value per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Book/sh</td><td align="left" class="snapshot-td2" width="8%"><b>0.75</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Book (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/B</td><td align="left" class="snapshot-td2" width="8%"><b>3.07</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS growth next year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Y</td><td align="left" class="snapshot-td2" width="8%"><b>9.40%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Assets (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROA</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Analysts' mean target price] offsetx=[10] offsety=[20] delay=[300]" width="7%">Target Price</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">10.75</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Year</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-79.97%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Cash per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Cash/sh</td><td align="left" class="snapshot-td2" width="8%"><b>0.74</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price to cash per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/C</td><td align="left" class="snapshot-td2" width="8%"><b>3.09</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Long term annual growth estimate (5 years)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next 5Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Equity (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROE</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[52-Week trading range] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W Range</td><td align="left" class="snapshot-td2" width="8%"><b><small>1.78 - 15.54</small></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Year To Date)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf YTD</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-63.78%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend (annual)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Dividend</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price to Free Cash Flow (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/FCF</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Annual EPS growth past 5 years] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS past 5Y</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">47.70%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Investment (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROI</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-792.10%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 52-Week High] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W High</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-85.20%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Beta] offsetx=[10] offsety=[20] delay=[300]" width="7%">Beta</td><td align="left" class="snapshot-td2" width="8%"><b>0.45</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend yield (annual)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Dividend %</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quick Ratio (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Quick Ratio</td><td align="left" class="snapshot-td2" width="8%"><b>1.40</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Annual sales growth past 5 years] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales past 5Y</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-18.20%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Gross Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Gross Margin</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 52-Week Low] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W Low</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">29.22%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Average True Range (14)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ATR</td><td align="left" class="snapshot-td2" width="8%"><b>0.20</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Full time employees] offsetx=[10] offsety=[20] delay=[300]" width="7%">Employees</td><td align="left" class="snapshot-td2" width="8%"><b>11</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Current Ratio (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Current Ratio</td><td align="left" class="snapshot-td2" width="8%"><b>1.40</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quarterly revenue growth (YoY)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales Q/Q</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">205.90%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Operating Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Oper. Margin</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Relative Strength Index] offsetx=[10] offsety=[20] delay=[300]" width="7%">RSI (14)</td><td align="left" class="snapshot-td2" width="8%"><b>57.44</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Volatility (Week, Month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Volatility</td><td align="left" class="snapshot-td2" width="8%"><b><small>14.47% 7.73%</small></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Stock has options trading on a market exchange] offsetx=[10] offsety=[20] delay=[300]" width="7%">Optionable</td><td align="left" class="snapshot-td2" width="8%"><b>No</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Total Debt to Equity (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Debt/Eq</td><td align="left" class="snapshot-td2" width="8%"><b>0.11</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quarterly earnings growth (YoY)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS Q/Q</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">101.20%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Net Profit Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Profit Margin</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Relative volume] offsetx=[10] offsety=[20] delay=[300]" width="7%">Rel Volume</td><td align="left" class="snapshot-td2" width="8%"><b>0.18</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Previous close] offsetx=[10] offsety=[20] delay=[300]" width="7%">Prev Close</td><td align="left" class="snapshot-td2" width="8%"><b>2.39</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Stock available to sell short] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shortable</td><td align="left" class="snapshot-td2" width="8%"><b>Yes</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Long Term Debt to Equity (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">LT Debt/Eq</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">0.05</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Earnings date&lt;br&gt;&lt;br&gt;BMO = Before Market Open&lt;br&gt;AMC = After Market Close] offsetx=[10] offsety=[20] delay=[300]" width="7%">Earnings</td><td align="left" class="snapshot-td2" width="8%"><b>Aug 11 AMC</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend Payout Ratio (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Payout</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Average volume (3 month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Avg Volume</td><td align="left" class="snapshot-td2" width="8%"><b>25.08K</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Current stock price] offsetx=[10] offsety=[20] delay=[300]" width="7%">Price</td><td align="left" class="snapshot-td2" width="8%"><b>2.30</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Analysts' mean recommendation (1=Buy 5=Sell)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Recom</td><td align="left" class="snapshot-td2" width="8%"><b>2.00</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 20-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA20</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">11.68%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 50-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA50</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">9.16%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 200-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA200</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-48.10%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Volume] offsetx=[10] offsety=[20] delay=[300]" width="7%">Volume</td><td align="left" class="snapshot-td2" width="8%"><b>4,476</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (today)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Change</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-3.77%</span></b></td>
+</tr>
+</table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr><td align="center"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_3x6_1" style="width:970px;height:315px;max-height:315px"></div></td></tr><tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" width="100%"><tr><td><div class="body-table-news-wrapper"><table border="0" cellpadding="1" cellspacing="0" class="fullview-news-outer" id="news-table" width="100%">
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-announces-research-agreement-evaluate-133000716.html');">
+<td align="right" width="130">
+            Sep-18-23 09:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-announces-research-agreement-evaluate-133000716.html" rel="nofollow" target="_blank">Kineta Announces New Research Agreement to Evaluate VISTA Biomarker Expression</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span> <span class="body-table-news-gain">+14.51%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GuruFocus.com', 'https://finance.yahoo.com/news/insider-buying-thierry-guillaudeux-acquires-010054188.html');">
+<td align="right" width="130">
+            Sep-16-23 09:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/insider-buying-thierry-guillaudeux-acquires-010054188.html" rel="nofollow" target="_blank">Insider Buying: Thierry Guillaudeux Acquires 10,000 Shares of Kineta Inc</a>
+</div>
+<div class="news-link-right">
+<span>(GuruFocus.com)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-participate-upcoming-investor-conferences-133000037.html');">
+<td align="right" width="130">
+            Aug-31-23 09:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-participate-upcoming-investor-conferences-133000037.html" rel="nofollow" target="_blank">Kineta to Participate in Upcoming Investor Conferences</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Zacks Small Cap Research', 'https://finance.yahoo.com/news/ka-second-quarter-results-104400933.html');">
+<td align="right" width="130">
+            Aug-16-23 06:44AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/ka-second-quarter-results-104400933.html" rel="nofollow" target="_blank">KA: Second Quarter Results</a>
+</div>
+<div class="news-link-right">
+<span>(Zacks Small Cap Research)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'AP Finance', 'https://finance.yahoo.com/news/kineta-q2-earnings-snapshot-200715726.html');">
+<td align="right" width="130">
+            Aug-11-23 04:07PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-q2-earnings-snapshot-200715726.html" rel="nofollow" target="_blank">Kineta: Q2 Earnings Snapshot</a>
+</div>
+<div class="news-link-right">
+<span>(AP Finance)</span> <span class="body-table-news-gain">+6.51%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-reports-second-quarter-2023-200100017.html');">
+<td align="right" width="130">
+            04:01PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-reports-second-quarter-2023-200100017.html" rel="nofollow" target="_blank">Kineta Reports Second Quarter 2023 Financial Results and Provides Corporate Update</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Zacks Small Cap Research', 'https://finance.yahoo.com/news/force-webinar-kineta-ushering-era-102300680.html');">
+<td align="right" width="130">
+            Aug-04-23 06:23AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/force-webinar-kineta-ushering-era-102300680.html" rel="nofollow" target="_blank">Force Webinar: Kineta, Ushering In A New Era Of Immunotherapy</a>
+</div>
+<div class="news-link-right">
+<span>(Zacks Small Cap Research)</span> <span class="body-table-news-loss">-5.26%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Zacks Small Cap Research', 'https://finance.yahoo.com/news/force-webinar-kineta-ushering-era-120300868.html');">
+<td align="right" width="130">
+            Aug-03-23 08:03AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/force-webinar-kineta-ushering-era-120300868.html" rel="nofollow" target="_blank">Force Webinar: Kineta, Ushering In A New Era Of Immunotherapy</a>
+</div>
+<div class="news-link-right">
+<span>(Zacks Small Cap Research)</span> <span class="body-table-news-gain">+8.57%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/northland-capital-markets-institutional-investor-173000930.html');">
+<td align="right" width="130">
+            Jul-26-23 01:30PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/northland-capital-markets-institutional-investor-173000930.html" rel="nofollow" target="_blank">Northland Capital Markets Institutional Investor Conference</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-receive-5-million-milestone-103000544.html');">
+<td align="right" width="130">
+            Jun-29-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-receive-5-million-milestone-103000544.html" rel="nofollow" target="_blank">Kineta to Receive $5 Million Milestone Payment from Merck</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span> <span class="body-table-news-gain">+16.74%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-expands-board-directors-biotech-103000541.html');">
+<td align="right" width="130">
+            Jun-28-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-expands-board-directors-biotech-103000541.html" rel="nofollow" target="_blank">Kineta Expands Board of Directors with Biotech Industry Leaders Kim Drapkin and Scott Dylla</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span> <span class="body-table-news-loss">-8.84%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Zacks Small Cap Research', 'https://finance.yahoo.com/news/ka-vista-cure-095000585.html');">
+<td align="right" width="130">
+            Jun-20-23 05:50AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/ka-vista-cure-095000585.html" rel="nofollow" target="_blank">KA: A VISTA to a Cure</a>
+</div>
+<div class="news-link-right">
+<span>(Zacks Small Cap Research)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-set-join-russell-microcap-103000618.html');">
+<td align="right" width="130">
+            May-24-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-set-join-russell-microcap-103000618.html" rel="nofollow" target="_blank">Kineta Set to Join Russell Microcap® Index</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-present-jefferies-healthcare-conference-103000715.html');">
+<td align="right" width="130">
+            May-23-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-present-jefferies-healthcare-conference-103000715.html" rel="nofollow" target="_blank">Kineta to Present at Jefferies Healthcare Conference</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'AP Finance', 'https://finance.yahoo.com/news/kineta-q1-earnings-snapshot-213902171.html');">
+<td align="right" width="130">
+            May-11-23 05:39PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-q1-earnings-snapshot-213902171.html" rel="nofollow" target="_blank">Kineta: Q1 Earnings Snapshot</a>
+</div>
+<div class="news-link-right">
+<span>(AP Finance)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-reports-first-quarter-2023-212000044.html');">
+<td align="right" width="130">
+            05:20PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-reports-first-quarter-2023-212000044.html" rel="nofollow" target="_blank">Kineta Reports First Quarter 2023 Financial Results and Provides Corporate Update</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-inc-announces-closing-6-200100011.html');">
+<td align="right" width="130">
+            Apr-24-23 04:01PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-inc-announces-closing-6-200100011.html" rel="nofollow" target="_blank">Kineta, Inc. Announces Closing of $6 Million Registered Direct Offering Priced At-The-Market under Nasdaq Rules</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-inc-announces-6-million-123800540.html');">
+<td align="right" width="130">
+            Apr-20-23 08:38AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-inc-announces-6-million-123800540.html" rel="nofollow" target="_blank">Kineta, Inc. Announces $6 Million Registered Direct Offering Priced At-The-Market under Nasdaq Rules</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span> <span class="body-table-news-loss">-14.74%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-unveils-vista-biomarker-data-103000211.html');">
+<td align="right" width="130">
+            Apr-17-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-unveils-vista-biomarker-data-103000211.html" rel="nofollow" target="_blank">Kineta Unveils New VISTA Biomarker Data and KVA12123 Phase 1/2 Clinical Trial Update at AACR Annual Meeting 2023</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span> <span class="body-table-news-gain">+34.38%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-announces-first-patient-dosed-103000054.html');">
+<td align="right" width="130">
+            Apr-12-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-announces-first-patient-dosed-103000054.html" rel="nofollow" target="_blank">Kineta Announces First Patient Dosed in Phase 1/2 Clinical Study of KVA12123 for Advanced Solid Tumors</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span> <span class="body-table-news-gain">+8.25%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-present-22nd-annual-needham-103000031.html');">
+<td align="right" width="130">
+            Apr-03-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-present-22nd-annual-needham-103000031.html" rel="nofollow" target="_blank">Kineta to Present at 22nd Annual Needham Healthcare Conference</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span> <span class="body-table-news-gain">+5.74%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-reports-full-2022-financial-200100626.html');">
+<td align="right" width="130">
+            Mar-31-23 04:01PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-reports-full-2022-financial-200100626.html" rel="nofollow" target="_blank">Kineta Reports Full Year 2022 Financial Results and Provides Corporate Update</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-present-vista-biomarker-data-103000892.html');">
+<td align="right" width="130">
+            Mar-22-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-present-vista-biomarker-data-103000892.html" rel="nofollow" target="_blank">Kineta to Present VISTA Biomarker Data at AACR Annual Meeting 2023</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-present-oppenheimer-33rd-annual-113000024.html');">
+<td align="right" width="130">
+            Mar-08-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-present-oppenheimer-33rd-annual-113000024.html" rel="nofollow" target="_blank">Kineta to Present at the Oppenheimer 33rd Annual Healthcare Conference</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-host-key-opinion-leader-113000547.html');">
+<td align="right" width="130">
+            Mar-06-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-host-key-opinion-leader-113000547.html" rel="nofollow" target="_blank">Kineta to Host Key Opinion Leader Event on KVA12123: VISTA as an Immuno-Oncology Target</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/kineta-appoints-internationally-renowned-clinical-113000489.html');">
+<td align="right" width="130">
+            Mar-01-23 06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/kineta-appoints-internationally-renowned-clinical-113000489.html" rel="nofollow" target="_blank">Kineta Appoints Internationally-Renowned Clinical Immuno-oncology Experts to its Scientific Advisory Board</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+</table>
+</div>
+</td><td style="padding-left: 10px" valign="top" width="300"><div class="fullview-news-outer" data-testid="quote-stocktwits-widget-news-container" id="stocktwits-widget-news">
+<div class="footer-cover"></div>
+<div class="right-side-cover"></div>
+</div>
+<script type="text/javascript">
+    function StocktwitsInit() {
+        var StocktwitsHeight = document.getElementById('news-table').clientHeight - 0;
+        if(typeof STWT !== 'undefined') {
+            var isNewLayout = true;
+            var isDarkTheme = true;
+            var MIN_TWIT_HEIGHT = 71;
+            var quoteTicker = 'KA';
+            var bgColor = isNewLayout ? (isDarkTheme ? '22262F' : 'FFFFFF') : 'transparent';
+            var text_color = isNewLayout ? (isDarkTheme ? 'C3C6D0' : '4C5263') : '000000';
+            var link_color = isNewLayout ? (isDarkTheme ? '57aefb' : '306DCA') : '4871a8';
+            var divider_color = isNewLayout ? (isDarkTheme ? '353945' : 'DEDFE5') : 'd3d3d3';
+            var time_color = isNewLayout ? '868EA5' : '999999';
+            var username_color = isNewLayout ? (isDarkTheme ? 'F3F3F5' : '22262F') : '600D0B';
+            var font_size = isNewLayout ? 12 : 11;
+            STWT.Widget({
+                container: 'stocktwits-widget-news',
+                symbol: quoteTicker,
+                width: '300',
+                height: StocktwitsHeight,
+                limit: Math.ceil(StocktwitsHeight / MIN_TWIT_HEIGHT),
+                scrollbars: 0,
+                header: 0,
+                streaming: 'true',
+                style: { link_color, link_hover_color: link_color, header_text_color: text_color, border_color: bgColor, border_color_2: bgColor, divider_color, divider_type: 'solid', box_color: bgColor, stream_color: bgColor, text_color, time_color, font: 'Verdana, Arial, Tahoma', font_size, time_font_size: 10, username_font: 'Verdana, Arial, Tahoma', username_size: font_size, username_color, username_hover_color: username_color }
+            });
+        }
+    }
+
+    function loadStocktwitsScript() {
+        var s = document.createElement('script');
+        s.addEventListener('load', StocktwitsInit)
+        s.setAttribute('async', true)
+        s.src = '//api.stocktwits.com/addon/widget/2/widget-loader.min.js'
+        document.body.appendChild(s)
+    }
+
+    if (document.readyState != 'loading'){
+        loadStocktwitsScript();
+    } else {
+        document.addEventListener('DOMContentLoaded', loadStocktwitsScript);
+    }
+</script></td></tr></table></td>
+</tr>
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr class="table-light3-row">
+<td align="left" class="fullview-profile"><div>Kineta, Inc., a clinical-stage biotechnology company, develops immunotherapies in the field of immuno-oncology, cancer, neurology, and arenaviruses. The company is developing KVA12123, an anti-VISTA antagonist mAb immunotherapy, which is in Phase 1/2 clinical trials for the treatment of solid tumors, including non-small cell lung cancer, ovarian cancer, colorectal cancer, colon cancer, pancreatic cancer, and gastric cancer. It is also developing anti-CD27 agonist mAb immunotherapy, which is in Phase 1 clinical trials for the treatment of advanced solid tumors, such as renal cell carcinoma, ovarian cancer, and colorectal cancer. In addition, the company develops immunotherapies for pain management and anti-viral therapy for the treatment of emerging diseases. Kineta, Inc. has collaboration and license agreements with MSD International Business GmbH, and GigaGen, Inc. The company was formerly known as Lecura, Inc. Kineta, Inc. was founded in 2007 and is headquartered in Seattle, Washington.</div></td></tr>
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr><td width="100%"><div id="statements"></div></td></tr><tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" class="body-table insider-trading-table" width="100%">
+<tr>
+<td align="left" class="table-top is-white">Insider Trading</td>
+<td align="left" class="table-top is-white">Relationship</td>
+<td align="left" class="table-top is-white">Date</td>
+<td align="center" class="table-top is-white">Transaction</td>
+<td align="right" class="table-top is-white">Cost</td>
+<td align="right" class="table-top is-white">#Shares</td>
+<td align="right" class="table-top is-white">Value ($)</td>
+<td align="right" class="table-top is-white">#Shares Total</td>
+<td align="center" class="table-top is-white">SEC Form 4</td>
+</tr>
+<tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1441383&amp;tc=7">PHILIPS CRAIG W.</a></td><td style="white-space:nowrap">President</td><td>Sep 21</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">2.40</td><td align="right" class="value">2,900</td><td align="right" class="value">6,970</td><td align="right" class="value">57,811</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1441383/000120919123050298/xslF345X05/doc4.xml" target="_blank">Sep 21 04:58 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1958184&amp;tc=7">Iadonato Shawn</a></td><td style="white-space:nowrap">Chief Executive Officer</td><td>Sep 20</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">2.50</td><td align="right" class="value">10,000</td><td align="right" class="value">25,042</td><td align="right" class="value">670,230</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123050295/xslF345X05/doc4.xml" target="_blank">Sep 21 04:57 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1958090&amp;tc=7">Kenny Pauline</a></td><td style="white-space:nowrap">General Counsel &amp; Secretary</td><td>Sep 20</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">2.58</td><td align="right" class="value">1,500</td><td align="right" class="value">3,870</td><td align="right" class="value">18,448</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123050297/xslF345X05/doc4.xml" target="_blank">Sep 21 04:57 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1441383&amp;tc=7">PHILIPS CRAIG W.</a></td><td style="white-space:nowrap">President</td><td>Sep 20</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">2.54</td><td align="right" class="value">600</td><td align="right" class="value">1,525</td><td align="right" class="value">54,911</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1441383/000120919123050298/xslF345X05/doc4.xml" target="_blank">Sep 21 04:58 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1730052&amp;tc=7">Bartoszek Raymond J.</a></td><td style="white-space:nowrap">Director</td><td>Sep 19</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">2.37</td><td align="right" class="value">2,000</td><td align="right" class="value">4,745</td><td align="right" class="value">14,956</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123050293/xslF345X05/doc4.xml" target="_blank">Sep 21 04:56 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1958092&amp;tc=7">Baker Keith</a></td><td style="white-space:nowrap">Chief Financial Officer</td><td>Sep 18</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">2.13</td><td align="right" class="value">5,000</td><td align="right" class="value">10,672</td><td align="right" class="value">16,880</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123049993/xslF345X05/doc4.xml" target="_blank">Sep 19 05:03 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1730052&amp;tc=7">Bartoszek Raymond J.</a></td><td style="white-space:nowrap">Director</td><td>Sep 18</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">2.08</td><td align="right" class="value">2,500</td><td align="right" class="value">5,200</td><td align="right" class="value">12,956</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123049991/xslF345X05/doc4.xml" target="_blank">Sep 19 05:02 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1730052&amp;tc=7">Bartoszek Raymond J.</a></td><td style="white-space:nowrap">Director</td><td>Sep 15</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">2.18</td><td align="right" class="value">500</td><td align="right" class="value">1,090</td><td align="right" class="value">10,456</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123049991/xslF345X05/doc4.xml" target="_blank">Sep 19 05:02 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1958094&amp;tc=7">Guillaudeux Thierry</a></td><td style="white-space:nowrap">Chief Scientific Officer</td><td>Sep 14</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">2.00</td><td align="right" class="value">10,000</td><td align="right" class="value">20,000</td><td align="right" class="value">21,696</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123049649/xslF345X05/doc4.xml" target="_blank">Sep 15 06:49 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1958092&amp;tc=7">Baker Keith</a></td><td style="white-space:nowrap">Chief Financial Officer</td><td>Jun 16</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">2.92</td><td align="right" class="value">5,000</td><td align="right" class="value">14,600</td><td align="right" class="value">11,880</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123037891/xslF345X04/doc4.xml" target="_blank">Jun 16 04:28 PM</a></td></tr><tr class="insider-row is-option" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1730052&amp;tc=7">Bartoszek Raymond J.</a></td><td style="white-space:nowrap">Director</td><td>Jun 14</td><td align="center" class="transaction" style="white-space:nowrap"><span>Option Exercise</span></td><td align="right" class="value">0.14</td><td align="right" class="value">60,018</td><td align="right" class="value">8,403</td><td align="right" class="value">844,478</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123037895/xslF345X04/doc4.xml" target="_blank">Jun 16 04:29 PM</a></td></tr><tr class="insider-row is-option" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1441383&amp;tc=7">PHILIPS CRAIG W.</a></td><td style="white-space:nowrap">President</td><td>Jun 14</td><td align="center" class="transaction" style="white-space:nowrap"><span>Option Exercise</span></td><td align="right" class="value">0.14</td><td align="right" class="value">1,382</td><td align="right" class="value">193</td><td align="right" class="value">34,654</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1441383/000120919123037914/xslF345X04/doc4.xml" target="_blank">Jun 16 04:31 PM</a></td></tr><tr class="insider-row is-option" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1958184&amp;tc=7">Iadonato Shawn</a></td><td style="white-space:nowrap">Chief Executive Officer</td><td>Jun 14</td><td align="center" class="transaction" style="white-space:nowrap"><span>Option Exercise</span></td><td align="right" class="value">0.14</td><td align="right" class="value">1,382</td><td align="right" class="value">193</td><td align="right" class="value">667,669</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123037900/xslF345X04/doc4.xml" target="_blank">Jun 16 04:29 PM</a></td></tr><tr class="insider-row is-sale-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1958184&amp;tc=7">Iadonato Shawn</a></td><td style="white-space:nowrap">Chief Executive Officer</td><td>Mar 20</td><td align="center" class="transaction" style="white-space:nowrap"><span>Sale</span></td><td align="right" class="value">3.29</td><td align="right" class="value">1,119</td><td align="right" class="value">3,678</td><td align="right" class="value">666,287</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123020395/xslF345X04/doc4.xml" target="_blank">Mar 21 07:15 PM</a></td></tr><tr class="insider-row is-sale-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1441383&amp;tc=7">PHILIPS CRAIG W.</a></td><td style="white-space:nowrap">President</td><td>Mar 20</td><td align="center" class="transaction" style="white-space:nowrap"><span>Sale</span></td><td align="right" class="value">3.29</td><td align="right" class="value">872</td><td align="right" class="value">2,866</td><td align="right" class="value">66,977</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1441383/000120919123020397/xslF345X04/doc4.xml" target="_blank">Mar 21 07:16 PM</a></td></tr><tr class="insider-row is-sale-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1958090&amp;tc=7">Kenny Pauline</a></td><td style="white-space:nowrap">General Counsel &amp; Secretary</td><td>Mar 20</td><td align="center" class="transaction" style="white-space:nowrap"><span>Sale</span></td><td align="right" class="value">3.29</td><td align="right" class="value">544</td><td align="right" class="value">1,788</td><td align="right" class="value">17,806</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123020396/xslF345X04/doc4.xml" target="_blank">Mar 21 07:15 PM</a></td></tr><tr class="insider-row is-sale-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1958184&amp;tc=7">Iadonato Shawn</a></td><td style="white-space:nowrap">Chief Executive Officer</td><td>Mar 17</td><td align="center" class="transaction" style="white-space:nowrap"><span>Sale</span></td><td align="right" class="value">4.94</td><td align="right" class="value">1,580</td><td align="right" class="value">7,808</td><td align="right" class="value">667,406</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123020395/xslF345X04/doc4.xml" target="_blank">Mar 21 07:15 PM</a></td></tr><tr class="insider-row is-sale-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1441383&amp;tc=7">PHILIPS CRAIG W.</a></td><td style="white-space:nowrap">President</td><td>Mar 17</td><td align="center" class="transaction" style="white-space:nowrap"><span>Sale</span></td><td align="right" class="value">4.94</td><td align="right" class="value">1,231</td><td align="right" class="value">6,086</td><td align="right" class="value">67,849</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1441383/000120919123020397/xslF345X04/doc4.xml" target="_blank">Mar 21 07:16 PM</a></td></tr><tr class="insider-row is-sale-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1958090&amp;tc=7">Kenny Pauline</a></td><td style="white-space:nowrap">General Counsel &amp; Secretary</td><td>Mar 17</td><td align="center" class="transaction" style="white-space:nowrap"><span>Sale</span></td><td align="right" class="value">4.94</td><td align="right" class="value">767</td><td align="right" class="value">3,793</td><td align="right" class="value">18,350</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123020396/xslF345X04/doc4.xml" target="_blank">Mar 21 07:15 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1730052&amp;tc=7">Bartoszek Raymond J.</a></td><td style="white-space:nowrap">Director</td><td>Dec 30</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">6.22</td><td align="right" class="value">5,000</td><td align="right" class="value">31,125</td><td align="right" class="value">9,956</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123000878/xslF345X03/doc4.xml" target="_blank">Jan 04 04:14 PM</a></td></tr><tr class="insider-row is-buy-1" valign="top"><td><a class="tab-link" href="insidertrading.ashx?oc=1730052&amp;tc=7">Bartoszek Raymond J.</a></td><td style="white-space:nowrap">Director</td><td>Dec 30</td><td align="center" class="transaction" style="white-space:nowrap"><span>Buy</span></td><td align="right" class="value">6.22</td><td align="right" class="value">2,001</td><td align="right" class="value">12,456</td><td align="right" class="value">1,001</td><td align="center" style="white-space:nowrap"><a class="tab-link" href="http://www.sec.gov/Archives/edgar/data/1445283/000120919123000878/xslF345X03/doc4.xml" target="_blank">Jan 04 04:14 PM</a></td></tr></table>
+</td>
+</tr>
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 21px auto 14px auto">
+<tr class="flex">
+<td align="left" class="fullview-links flex items-center" valign="center">
+<a class="tab-link" href="https://finance.yahoo.com/quote/KA" rel="nofollow" target="_blank">open in yahoo</a> | <a class="tab-link" href="https://www.reuters.com/companies/KA.OQ" rel="nofollow" target="_blank">open in reuters</a> | <a class="tab-link" href="https://www.marketwatch.com/investing/stock/ka" rel="nofollow" target="_blank">open in marketwatch</a> | <a class="tab-link" href="https://www.google.com/finance/quote/KA:NASDAQ" rel="nofollow" target="_blank">open in google</a> | <a class="tab-link" href="https://www.sec.gov/edgar/browse/?CIK=1445283" rel="nofollow" target="_blank">open in EDGAR</a></td>
+</tr>
+</table>
+</table></div><script onerror="window.handleScriptNotLoaded(this)" src="/script/recent_quotes.js?v=344" type="text/javascript"></script>
+</div></div><div class="my-3"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_3x3_1" style="width:970px;height:250px;max-height:250px"></div></div>
+<div class="footer" style="margin-top: 20px;padding-bottom: 215px">
+<div class="footer_links">
+<a class="tab-link" href="/affiliate.ashx">affiliate</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/advertise.ashx">advertise</a>
+<span class="footer_dot"> • </span><a class="tab-link" href="/careers.ashx">careers</a>
+<span class="footer_dot"> • </span><a class="tab-link" href="#" onclick="setChartThemeCookie('light')">toggle light mode</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/contact.ashx">contact</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/privacy.ashx">privacy</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/help/screener.ashx">help</a>
+<br/>
+<a class="tab-link" href="javascript:void(0)" onclick="window.__uspapi &amp;&amp; window.__uspapi('displayUspUi');">do not sell my data</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="javascript:void(0)" onclick="window.__tcfapi &amp;&amp; window.__tcfapi('displayConsentUi', 2, function() {})">privacy settings</a>
+</div>
+    Quotes delayed 15 minutes for NASDAQ, NYSE and AMEX.
+    <br/>
+    Copyright © 2007-2023 FINVIZ.com. All Rights Reserved.
+    
+</div><script>SearchFocus();</script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/4187.fd7fe045.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/quote.d837ebfb.js"></script><script>
+            function FinvizReady(fn) {
+              if (document.readyState != 'loading'){
+                fn();
+              } else {
+                document.addEventListener('DOMContentLoaded', fn);
+              }
+            }
+
+            (typeof StocktwitsInit === 'function' && FinvizReady(StocktwitsInit));
+            (typeof FinvizSettings === 'object' && (FinvizSettings.quoteSearchExt = '&ty=c&ta=1&p=d'));
+        </script>
+<div class="hidden" data-set-search-ext-argument="&amp;ty=c&amp;ta=1&amp;p=d" id="js-set-search-ext-argument"></div>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-3261808-1"></script>
+<script>
+              function getSystemTheme() {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                  return 'Dark';
+                }
+                else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                  return 'Light';
+                }
+                return 'No Preference';
+              }
+
+              var systemTheme = getSystemTheme()
+
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('set', {'dimension1': 'NotLoggedIn'});
+              gtag('set', {'dimension3': window.devicePixelRatio + ''});
+              gtag('set', {'layoutTheme': 'dark'});
+              gtag('set', {'systemTheme': systemTheme });
+              gtag('set', {'bundle': 'modern' });
+
+              gtag('config', 'UA-3261808-1', { sample_rate: 10 });
+              gtag('config', 'G-ZT9VQEWD4N', {'dimension1': 'NotLoggedIn', 'dimension3': window.devicePixelRatio + '', 'layoutTheme': 'dark', 'systemTheme': systemTheme });
+              
+            </script>
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_1x1_1"></div><div class="modal-elite-ad" id="modal-elite-ad">
+<div class="modal-elite-ad_content" id="modal-elite-ad_content">
+<button class="modal-elite-ad_close" id="modal-elite-ad-close" type="button">×</button>
+<!--<div id="modal-elite-ad-content-0" style="display: none">
+			                        <h2>Ever heard of Finviz*Elite?</h2>
+                                    <p>
+                                        Our premium service offers you real-time quotes, advanced visualizations, technical studies, and much more.<br>
+                                        Become Elite and make informed financial decisions.
+                                    </p>
+                                    <a href="/elite.ashx?utm_source=finviz&utm_medium=banner&utm_campaign=modal-0" id="modal-elite-ad-btn-0" class="" target="_blank">Find out more</a>
+                                </div>-->
+<div id="modal-elite-ad-content-1" style="display: block">
+<h2>Upgrade your FINVIZ experience</h2>
+<p>
+                                        Join thousands of traders who make more informed decisions with our premium features.
+                                        Real-time quotes, advanced visualizations, backtesting, and much more.
+                                    </p>
+<a class="modal-elite_button" href="/elite.ashx?utm_source=finviz&amp;utm_medium=banner&amp;utm_campaign=modal-1" id="modal-elite-ad-btn-1" target="_blank">Learn more about FINVIZ*Elite</a>
+</div>
+</div>
+</div><script async="" src="/script/pv.js?rev=344"></script><script defer="">window.renderScriptNotLoaded();</script>
+<script crossorigin="anonymous" data-cf-beacon='{"rayId":"80b1fc7fbbc6f3d1","token":"e53f08f6c9e04bfd9760701085ec93b4","version":"2023.8.0","si":100}' defer="" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"></script>
+</div></body>
+</html>

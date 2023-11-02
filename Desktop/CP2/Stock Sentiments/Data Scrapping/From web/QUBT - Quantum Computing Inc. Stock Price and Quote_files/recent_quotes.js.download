@@ -1,0 +1,264 @@
+function simpleFetch(url, options) {
+  var getError = function(status, message, extra) {
+    var error = new Error(status + ' ' + (message || 'NetworkError'))
+    error.status = status
+    error.extra = extra
+    return error
+  }
+
+  return fetch(url, options)
+    .then(function(response) {
+      if (!response.ok || response.status >= 500) {
+          throw getError(response.status, response.statusText, {
+              rayId: response.headers.get('cf-ray')
+          })
+      }
+      return response
+    })
+    .catch(function(error) {
+      if (error.status >= 500) {
+          window.Sentry && window.Sentry.withScope((scope) => {
+              scope.setContext('Cloudflare', error.extra)
+
+              if (error.status === 500) {
+                  window.Sentry.captureException(error)
+              } else {
+                  window.Sentry.captureMessage(`${error.status} ${error.message}`)
+              }
+          })
+      }
+    })
+}
+
+if (typeof Array.prototype.indexOf !== 'function') {
+  Array.prototype.indexOf = function (item) {
+    for (var i = 0; i < this.length; i++) {
+      if (this[i] === item) {
+        return i
+      }
+    }
+    return -1
+  }
+}
+
+var RECENT_QUOTES_TO_RENDER = 16
+var MAX_RECENT_QUOTES = 16
+var RECENT_QUOTES_KEY = 'recentQuotes'
+
+RenderRecentQuotes()
+
+function RenderRecentQuotes() {
+  var recentQuotes = getRecentQuotes()
+  var ticker, i
+
+  var tickerEl = document.getElementById('ticker')
+  if (window.location.pathname === '/quote.ashx' && tickerEl !== null) {
+    ticker = tickerEl.innerText || tickerEl.textContent
+
+    var tickerPosition = recentQuotes.indexOf(ticker)
+    if (tickerPosition !== -1) {
+      recentQuotes.splice(tickerPosition, 1)
+    } else if (recentQuotes.length === MAX_RECENT_QUOTES) {
+      recentQuotes.splice(0, 1)
+    }
+    recentQuotes.push(ticker)
+
+    setRecentQuotes(recentQuotes)
+  }
+
+  if (
+    window.location.pathname === '/' ||
+    window.location.pathname === '/index.ashx'
+  ) {
+    var isSmallTable = !!document.getElementById('js-small-recent-quotes-table')
+    var QUOTES_PER_ROW = isSmallTable ? 3 : 4
+    if (recentQuotes.length === 0) {
+      // used to distinguish between old/new index
+      var recentQuotesTablePlaceholder = document.getElementById('js-recent-quotes-table')
+      if (recentQuotesTablePlaceholder) {
+        var html = '<table class="t-home-table" width="100%" cellpadding="1" cellspacing="0" border="0">'
+        html +=
+          '<tr class="t-home-table-top" id="recent-quotes-heading"><td colspan="' + QUOTES_PER_ROW + '"><a href="javascript:void(0)" id="recent-quotes-anchor" class="tab-link"><b>Recent quotes</b></a></td></tr>'
+        html += '</table>'
+        recentQuotesTablePlaceholder.innerHTML = html
+      }
+      return
+    }
+
+    simpleFetch('/request_quote_full.ashx?t=' + recentQuotes.slice(-(isSmallTable ? 6 : MAX_RECENT_QUOTES)).join(','))
+      .then(function(res){
+        if (!res) {
+          return Promise.resolve(undefined)
+        }
+        return res.text()
+      })
+      .then(function (data) {
+        if (data === undefined) {
+          return
+        }
+        data = processAJAXResponse(data)
+        for (i = 0; i < recentQuotes.length; i++) {
+          if (typeof data[recentQuotes[i]] === 'undefined') {
+            // ticker no longer exists
+            recentQuotes.splice(i, 1)
+            i--
+          }
+        }
+        setRecentQuotes(recentQuotes)
+
+        // also used to distinguish between old/new index
+        var recentQuotesTablePlaceholder = document.getElementById('js-recent-quotes-table')
+
+        var recentQuotesEl = document.getElementById('recent-quotes')
+        if (recentQuotesEl !== null) {
+          recentQuotesEl.parentNode.removeChild(recentQuotesEl)
+        }
+
+        var tr = document.createElement('tr')
+        tr.id = 'recent-quotes'
+        var td = document.createElement('td')
+        if (isSmallTable) {
+          td.classList.add('is-small')
+        }
+        tr.appendChild(td)
+        //var html = '<tr id="recent-quotes"><td>';
+        var html = '<table class="t-home-table table-empty-rounded table-recent-quotes" width="100%" cellpadding="1" cellspacing="0" border="0">'
+
+        if (recentQuotesTablePlaceholder !== null) {
+          html +=
+            '<tr class="t-home-table-top" id="recent-quotes-heading"><td colspan="' + QUOTES_PER_ROW + '"><a href="javascript:void(0)" id="recent-quotes-anchor" class="tab-link"><b>Recent quotes</b></a></td></tr>'
+        }
+
+        recentQuotes.reverse()
+        var emptyCells = recentQuotes.length % QUOTES_PER_ROW
+        var renderedQuotes = recentQuotes.length + (emptyCells === 0 ? 0 : QUOTES_PER_ROW - emptyCells)
+        for (i = 0; i < Math.min(renderedQuotes, RECENT_QUOTES_TO_RENDER); i++) {
+          var item = data[recentQuotes[i]]
+
+          if (i % QUOTES_PER_ROW === 0) {
+            html += '<tr class="recent-quotes-row">'
+          }
+
+          if (!item) {
+            html+= '<td width="' + (100 / QUOTES_PER_ROW) + '%">&nbsp;</td>'
+            continue
+          }
+
+          const chart = window.FLibs.getHoverChartImg(item.ticker, true)
+
+          html +=
+            '<td width="' + (100 / QUOTES_PER_ROW) + '%" class=\'table-light-cell-cp\' data-boxover="cssbody=[hoverchart] cssheader=[tabchrthdr] body=[' +
+            chart.img +
+            "<div><b>" +
+            item.company +
+            '</b>' +
+            item.industry +
+            ' | ' +
+            item.country +
+            ' | ' +
+            item.marketCap +
+            `</div>] offsetx=[${(chart.width * -1) + 25}] offsety=[${(chart.height * -1) - 75}] delay=[250]">`
+          html += '<div>'
+          html += '<a href="quote.ashx?t=' + item.ticker + '" class="tab-link">' + item.ticker + '</a> '
+          html += '<small><span>' + formatLastChange(item.lastChange) + '</span></small>'
+          html += '</div>'
+          html += '</td>'
+
+          if (i % QUOTES_PER_ROW === QUOTES_PER_ROW - 1) {
+            html += '</tr>'
+          }
+        }
+        html += '</td></tr>'
+        html += '</table>'
+
+        td.innerHTML = html
+
+        // document.getElementById('recent-quotes-heading').parentNode.appendChild(tr);
+        var recentQuotesHeadingElement = document.getElementById('recent-quotes-heading')
+
+        if (recentQuotes.length > 0) {
+          recentQuotesHeadingElement.classList.remove('hidden')
+
+          var recentQuotesBottomSpacerElement = document.getElementById('js-recent-quotes-bottom-spacer')
+
+          if (recentQuotesBottomSpacerElement) {
+            recentQuotesBottomSpacerElement.classList.remove('hidden')
+          }
+        }
+
+        if (recentQuotesTablePlaceholder !== null) {
+          recentQuotesTablePlaceholder.innerHTML = html
+        } else {
+          recentQuotesHeadingElement.parentNode.insertBefore(tr, recentQuotesHeadingElement.nextSibling)
+        }
+
+        var anchor = document.getElementById('recent-quotes-anchor')
+        anchor.href = '/screener.ashx?v=320&t=' + recentQuotes.slice().reverse().join(',')
+      })
+  }
+}
+
+// http://stackoverflow.com/questions/13102116/access-denied-for-localstorage-in-ie10
+function getRecentQuotes() {
+  try {
+    var tickers = localStorage.getItem(RECENT_QUOTES_KEY)
+    return tickers ? tickers.split('|') : []
+  } catch (e) {
+    return []
+  }
+}
+
+function setRecentQuotes(quotes) {
+  localStorage.setItem(RECENT_QUOTES_KEY, quotes.join('|'))
+}
+
+function processAJAXResponse(data) {
+  var lines = data.split('\n'),
+    tickers = {}
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i]
+    if (line === '') {
+      continue
+    }
+
+    var cols = line.split('|')
+    var ticker = cols[0]
+    var lastChange = cols[2]
+    var company = cols[3]
+    var industry = cols[4]
+    var country = cols[5]
+    var marketCap = cols[6]
+    tickers[ticker] = {
+      ticker: ticker,
+      lastChange: lastChange,
+      company: company,
+      industry: industry,
+      country: country,
+      marketCap: marketCap,
+    }
+  }
+  return tickers
+}
+
+function formatLastChange(change) {
+  var value = parseFloat(change),
+    below = 0,
+    above = 0,
+    background = 5,
+    bold = 10,
+    className = '',
+    str = '<span class="'
+
+  if (value < below) {
+    if (Math.abs(value) >= bold) className = 'negative-200'
+    else if (value < -background) className = 'negative-100'
+    else className = 'negative-50'
+  } else if (value > above) {
+    if (value >= bold) className = 'positive-200'
+    else if (value > background) className = 'positive-100'
+    else className = 'positive-50'
+  }
+
+  str += className + '">' + change + '</span>'
+  return str
+}

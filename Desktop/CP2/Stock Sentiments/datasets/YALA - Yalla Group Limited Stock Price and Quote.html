@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<title>YALA - Yalla Group Limited Stock Price and Quote</title>
+<meta charset="utf-8"/><meta content="width=1024" name="viewport"/><meta content="YALA - Yalla Group Limited - Stock screener for investors and traders, financial visualizations." name="description"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-regular.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-700.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-900.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/inter-latin.woff2" rel="preload"/>
+<script>
+                window.notificationsArray = [];
+                window.renderScriptNotLoaded = function () {};
+                window.handleScriptNotLoaded = function (element) {
+                    window.notificationsArray.push(element);
+                    window.sentryDisabled = true;
+                    window.handleScriptNotLoaded = function () {};
+                };
+            </script>
+<link href="/assets/dist/finviz.5f37f1c7.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/assets/dist/redesign.8c6f6ebc.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/assets/dist/main.965d9b7f.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/favicon_2x.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/quote.ashx?t=YALA" rel="canonical"/>
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script async="true" type="text/javascript">
+          (function() {
+            var host = 'finviz.com';
+            var element = document.createElement('script');
+            var firstScript = document.getElementsByTagName('script')[0];
+            var url = 'https://cmp.quantcast.com'
+              .concat('/choice/', 'c2W8esUZ6Q8oA', '/', host, '/choice.js?tag_version=V2');
+            var uspTries = 0;
+            var uspTriesLimit = 3;
+            element.async = true;
+            element.type = 'text/javascript';
+            element.src = url;
+
+            firstScript.parentNode.insertBefore(element, firstScript);
+
+            function makeStub() {
+              var TCF_LOCATOR_NAME = '__tcfapiLocator';
+              var queue = [];
+              var win = window;
+              var cmpFrame;
+
+              function addFrame() {
+                var doc = win.document;
+                var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+                if (!otherCMP) {
+                  if (doc.body) {
+                    var iframe = doc.createElement('iframe');
+
+                    iframe.style.cssText = 'display:none';
+                    iframe.name = TCF_LOCATOR_NAME;
+                    doc.body.appendChild(iframe);
+                  } else {
+                    setTimeout(addFrame, 5);
+                  }
+                }
+                return !otherCMP;
+              }
+
+              function tcfAPIHandler() {
+                var gdprApplies;
+                var args = arguments;
+
+                if (!args.length) {
+                  return queue;
+                } else if (args[0] === 'setGdprApplies') {
+                  if (
+                    args.length > 3 &&
+                    args[2] === 2 &&
+                    typeof args[3] === 'boolean'
+                  ) {
+                    gdprApplies = args[3];
+                    if (typeof args[2] === 'function') {
+                      args[2]('set', true);
+                    }
+                  }
+                } else if (args[0] === 'ping') {
+                  var retr = {
+                    gdprApplies: gdprApplies,
+                    cmpLoaded: false,
+                    cmpStatus: 'stub'
+                  };
+
+                  if (typeof args[2] === 'function') {
+                    args[2](retr);
+                  }
+                } else {
+                  if(args[0] === 'init' && typeof args[3] === 'object') {
+                    args[3] = Object.assign(args[3], { tag_version: 'V2' });
+                  }
+                  queue.push(args);
+                }
+              }
+
+              function postMessageEventHandler(event) {
+                var msgIsString = typeof event.data === 'string';
+                var json = {};
+
+                try {
+                  if (msgIsString) {
+                    json = JSON.parse(event.data);
+                  } else {
+                    json = event.data;
+                  }
+                } catch (ignore) {}
+
+                var payload = json.__tcfapiCall;
+
+                if (payload) {
+                  window.__tcfapi(
+                    payload.command,
+                    payload.version,
+                    function(retValue, success) {
+                      var returnMsg = {
+                        __tcfapiReturn: {
+                          returnValue: retValue,
+                          success: success,
+                          callId: payload.callId
+                        }
+                      };
+                      if (msgIsString) {
+                        returnMsg = JSON.stringify(returnMsg);
+                      }
+                      if (event && event.source && event.source.postMessage) {
+                        event.source.postMessage(returnMsg, '*');
+                      }
+                    },
+                    payload.parameter
+                  );
+                }
+              }
+
+              while (win) {
+                try {
+                  if (win.frames[TCF_LOCATOR_NAME]) {
+                    cmpFrame = win;
+                    break;
+                  }
+                } catch (ignore) {}
+
+                if (win === window.top) {
+                  break;
+                }
+                win = win.parent;
+              }
+              if (!cmpFrame) {
+                addFrame();
+                win.__tcfapi = tcfAPIHandler;
+                win.addEventListener('message', postMessageEventHandler, false);
+              }
+            };
+
+            makeStub();
+
+            var uspStubFunction = function() {
+              var arg = arguments;
+              if (typeof window.__uspapi !== uspStubFunction) {
+                setTimeout(function() {
+                  if (typeof window.__uspapi !== 'undefined') {
+                    window.__uspapi.apply(window.__uspapi, arg);
+                  }
+                }, 500);
+              }
+            };
+
+            var checkIfUspIsReady = function() {
+              uspTries++;
+              if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+                console.warn('USP is not accessible');
+              } else {
+                clearInterval(uspInterval);
+              }
+            };
+
+            if (typeof window.__uspapi === 'undefined') {
+              window.__uspapi = uspStubFunction;
+              var uspInterval = setInterval(checkIfUspIsReady, 6000);
+            }
+          })();
+          </script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script>
+            FinvizSettings = {
+                hasUserPremium: false,
+                name: "",
+                email: "",
+                nodeChartsDomain: "https://charts2-node.finviz.com",
+                hasUserRetinaNodeCharts: true,
+                hasUserStickyHeader: true,
+                adsProvider: 1,
+                hasRedesignEnabled: true,
+                hasQuoteOptions: false,
+                hasForexFuturesCryptoNodeCharts: true,
+                quoteSearchExt: '',
+            };
+        </script><script src="/script/browser_check.js?rev=344"></script><script src="/script/vendor/boxover.js?rev=344"></script>
+<script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/runtime.c62c08ff.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/7345.b33e04ab.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/738.128340f6.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/libs_init.cc67a770.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/5904.aa665648.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/3372.46f66dc0.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/header.1f97a566.js"></script></head>
+<script>
+            const channelIdToLabel = {
+                '1': 'MarketWatch',
+                '2': 'WSJ',
+                '3': 'Reuters',
+                '4': 'Yahoo Finance',
+                '5': 'CNN',
+                '6': 'The New York Times',
+                '7': 'Bloomberg',
+                '9': 'BBC',
+                '10': 'CNBC',
+                '11': 'Fox Business',
+                '102': 'Mish\'s Global Economic Trend Analysis',
+                '105': 'Trader Feed',
+                '113': 'Howard Lindzon',
+                '114': 'Seeking Alpha',
+                '123': 'Fallond Stock Picks',
+                '132': 'Zero Hedge',
+                '133': 'market folly',
+                '136': 'Daily Reckoning',
+                '141': 'Abnormal Returns',
+                '142': 'Calculated Risk',
+            }
+            function trackAndOpenNews(event, channel, url) {
+              event.preventDefault()
+              window.open(url, '_blank')
+
+              let channelLabel
+              if (typeof channel === 'string') {
+                channelLabel = channel
+              } else {
+                const label = channelIdToLabel[channel]
+                channelLabel = label !== undefined ? label : channel
+              }
+              window.gtag && window.gtag('event', 'click', {
+                send_to: 'G-ZT9VQEWD4N',
+                non_interaction: true,
+                event_category: 'news',
+                event_label: channelLabel,
+                value: 1 });
+            }
+          </script>
+<body class="m-0 yellow-tooltip is-quote min-w-[1009px] table w-full">
+<script>
+                var cookieName = 'fv_block';
+                var selector = '[ic_placementid]';
+                var selectorFrame = selector + ' iframe, ' + selector + ' [id*=aax]';
+                var cookieExpiry = 5 * 60 * 1000; // 5min
+                var checkTimeout = 20 * 1000; // 20sec
+
+                function getCookie(value) {
+                    var expiration = +new Date() + cookieExpiry;
+                    return cookieName + '=' + value + '; expires=' + (new Date(expiration)).toUTCString() + '; path=/';
+                }
+
+                var finvizBannersLoaded = false;
+                function loadFinvizBanners(setCookie) {
+                    if (setCookie) document.cookie = getCookie('block');
+                    finvizBannersLoaded = true;
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = '/script/finviz_b.js?rev=344';
+                    document.head.appendChild(s);
+                }
+
+                function checkBannersLoaded() {
+                    var checkEnd = +new Date() + checkTimeout;
+                    function asyncCheckIfExists(selector, resolve) {
+                        var now = +new Date();
+                        var container = document.querySelector(selector);
+                        if (!container && checkEnd > now) return setTimeout(function () { asyncCheckIfExists(selector, resolve) }, 1000)
+                        resolve(!!container);
+                    }
+                    
+                    asyncCheckIfExists(selector, function (exists) {
+                        if (!exists) return loadFinvizBanners(true);
+
+                        asyncCheckIfExists(selectorFrame, function (hasIframe) {
+                            if (!hasIframe) return loadFinvizBanners(true);
+                        })
+                    })
+                }
+
+                if (document.cookie.indexOf(cookieName) >= 0) {
+                    loadFinvizBanners(false);
+                } else {
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.onerror = loadFinvizBanners;
+                    s.onload = checkBannersLoaded;
+                    s.src = 'https://u5.investingchannel.com/static/uat.js';
+                    document.head.appendChild(s);
+
+                    InvestingChannelQueue = window.InvestingChannelQueue || [];
+                    var ic_page;
+
+                    function refreshAd(container, refreshes) { 
+                        var placementTag, adslot;
+                        window.InvestingChannelQueue.push(function () {
+                            var pubTags = ic_page.getPubTag.call(ic_page, container.id);
+                            if (!pubTags) return;
+                            var pubTag = pubTags[0];
+                            placementTag = pubTag.mPlacements[0].mTagToRender;
+                            adslot = pubTag.mPlacements[0].mPublisherKval.adslot[0];
+                            // Update div ID
+                            var id = container.id.split('_');
+                            var numberOfDivs = document.querySelectorAll('[id*=' + id.slice(0, id.length - 1).join('_') + ']').length;
+                            var newDivNumber = Number(id.pop()) + numberOfDivs * refreshes;
+                            container.setAttribute('id', id.join('_') + '_' + newDivNumber);
+                            // Destroy previous pubtag & reset container html (loading span)
+                            pubTag.destroy();
+                            container.innerHTML = '';
+                        }); 
+                        window.InvestingChannelQueue.push(function () {
+                            if (!placementTag || !adslot) return
+                            // Create new pub tag
+                            var newTag;
+                            var layoutId = placementTag.mNativeLayout ? placementTag.mNativeLayout.nativelayoutid : null;
+                            if (layoutId) {
+                                newTag = ic_page.defineNativeTag('finviz/' + placementTag.mTarget.dfpkeyname, placementTag.mAdSize, container.id, layoutId);
+                                var nativeLayout, layoutData
+
+                                try {
+                                  nativeLayout = newTag.mPlacements[0].mTags[0].mNativeLayout;
+                                } catch (e) {
+                                    console.log(e.message)
+                                }
+
+                                try {
+                                  layoutData = newTag.mTemplate.mNativeLayout[layoutId].Data
+                                  if (layoutData && nativeLayout && !nativeLayout.layout) {
+                                    newTag.mPlacements[0].mTags[0].mNativeLayout = layoutData
+                                  }
+                                } catch (e) {
+                                    console.log(e.message)
+                                }
+                            } else {
+                                newTag = ic_page.defineTag('finviz/' + placementTag.mTarget.dfpkeyname, placementTag.mAdSize, container.id);
+                            }
+                            // Set adslot param
+                            newTag.setKval({ adslot: adslot });
+                            newTag.setKval({ kw: 'ajax' });
+                            newTag.render();
+                        });
+                    }
+
+                    var refreshCount = 1;
+                    function refreshAds(selectors) { 
+                        if (window.ic_page) {
+                            document.querySelectorAll(selectors).forEach(function (element) {
+                                try {
+                                    refreshAd(element, refreshCount);
+                                } catch (e) {
+                                    console.log('Ad refresh error for:', element, e);
+                                }
+                            }); 
+                            refreshCount++;
+                        } 
+                    }
+
+
+                    InvestingChannelQueue.push(function() {
+                        ic_page = InvestingChannel.UAT.Run('df0d0d52-cc7f-11e8-82a5-0abbb61c4a6a');
+                    });
+
+                    var hash = null;
+                    if (typeof hash === 'string') {
+                      InvestingChannelQueue.push(function() {
+                          if (ic_page) {
+                              ic_page.setUserId('email', hash, true);
+                          }
+                      });
+                    }
+                }
+            </script>
+<script>
+            function checkMediaQuery(matches) {
+              if (matches) {
+                FinvizSettings.hasUserStickyHeader = true;
+                document.body.classList.add('is-header-sticky');
+              } else {
+                FinvizSettings.hasUserStickyHeader = false;
+                document.body.classList.remove('is-header-sticky');
+              }
+            }
+            var mediaMatch = window.matchMedia('(min-width: 1025px) and (min-height: 650px)');
+            checkMediaQuery(mediaMatch.matches);
+            mediaMatch.addListener(function (ev) { checkMediaQuery(ev.matches) });
+          </script>
+<div id="notifications-container"></div><table class="header">
+<tr class="align-top">
+<td>
+<table class="header-container">
+<tr>
+<td class="w-[30%]">
+<table class="w-full">
+<tr>
+<td class="h-[50px] align-middle">
+<a class="logo" href="/"><svg class="block" height="32" width="225">
+<use class="dark:hidden" href="/img/logo.svg#free"></use>
+<use class="hidden dark:block" href="/img/logo.svg#free-dark"></use>
+</svg></a>
+</td>
+</tr>
+<tr>
+<td id="search" style="padding-top: 7px">
+<div class="navbar-search-placeholder">
+<span class="icon-wrapper">
+<svg class="icon" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.9 15.5l4 4c.2.2.1.5 0 .7l-.7.7a.5.5 0 01-.8 0l-4-4c0-.2-.2-.3-.3-.4l-.7-1a7 7 0 01-11.2-4 7 7 0 1112.2 3l1 .6.5.4zM5 10a5 5 0 1010 0 5 5 0 00-10 0z"></path>
+</svg>
+</span>
+<input class="search-input is-free" placeholder="Search ticker, company or profile"/>
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td class="align-bottom pb-1">
+<div class="hidden xl:flex items-center h-[37px] pl-2" id="microbar_position"><div>
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_88x31_1" style="width:88px;height:31px;max-height:31px"></div>
+</div></div>
+</td>
+<td class="relative w-[730px] text-right">
+<div class="overflow-hidden absolute top-0 right-0 w-full h-24" id="banner_position">
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_728x90_1" style="width:728px;height:90px;max-height:90px"></div>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="w-[994px]" style="font-size:0">
+<img alt="" class="w-[994px] h-px" src="/gfx/nic2x2.gif"/>
+</td>
+</tr>
+</table>
+<table class="navbar">
+<tr>
+<td class="h-[30px]">
+<table class="header-container">
+<tr><td><a class="nav-link is-first" href="/">Home</a></td><td><a class="nav-link" href="/news.ashx">News</a></td><td><a class="nav-link" href="/screener.ashx">Screener</a></td><td><a class="nav-link" href="/map.ashx">Maps</a></td><td><a class="nav-link" href="/groups.ashx">Groups</a></td><td><a class="nav-link" href="/portfolio.ashx">Portfolio</a></td><td><a class="nav-link" href="/insidertrading.ashx">Insider</a></td><td><a class="nav-link" href="/futures.ashx">Futures</a></td><td><a class="nav-link" href="/forex.ashx">Forex</a></td><td><a class="nav-link" href="/crypto.ashx">Crypto</a></td><td><a class="nav-link" href="/elite.ashx?utm_source=finviz&amp;utm_medium=banner&amp;utm_campaign=main-navbar-backtests">Backtests</a></td><td><a class="nav-link is-elite" href="/elite.ashx">Elite</a></td><td class="w-full relative"><div class="absolute bottom-0 left-0 right-0 top-0"><div class="pr-1" id="time"></div></div></td>
+<td class="nav relative">
+<a class="!flex !bg-transparent !border-b-0 mt-1 !py-0 !px-1" data-testid="chart-layout-theme" href="#" onclick="setChartThemeCookie('light', true)" style="border-left: 1px solid #444a57" title="Toggle Light/Dark mode">
+<div class="relative box-content flex rounded-full w-10 h-5 border border-gray-750 bg-gray-800 text-white justify-end">
+<div class="box-border w-1/2 rounded-full p-px border border-gray-800 bg-[#4c5261] flex justify-center items-center">
+<svg class="fill-current text-white inline-block -ml-px" height="16" width="16">
+<use href="/assets/icons.svg?rev=3#moonOutlined"></use>
+</svg>
+</div>
+</div>
+<span class="ml-1 select-none font-medium text-xs text-white">Theme</span>
+</a>
+</td>
+<td>
+<a class="nav-link is-help" href="/help/screener.ashx" style="border-left: 1px solid #444a57"><span class="fa fa-question-circle"></span>Help</a>
+</td>
+<td><a class="nav-link sign-in" href="/login.ashx">Login</a></td>
+<td><a class="nav-link sign-up" href="/register.ashx">Register</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<script>
+            function reloadPage () { location.reload() }
+            function setChartThemeCookie(chartsTheme) {
+              fetch('/api/set_cookie.ashx?cookie=chartsTheme&value=' + chartsTheme ).catch(function(){}).then(function(){
+                window.gtag && window.gtag('event', 'click', { event_category: 'theme', event_label: 'toggle', value: chartsTheme, event_callback: reloadPage });
+                setTimeout(reloadPage,1000);
+              })
+            }
+          </script><div class="content"><div class="ticker-wrapper gradient-fade">
+<div class="quote-menu empty:py-3 empty:min-h-8" data-ischarttas="1" data-isscreener="1"></div>
+<div id="react-root"></div>
+<script>
+            FinvizSettings.TA = {"style":"candlestick","overlays":[{"name":"sma","parameters":"20","color":"rgba(220,  50, 179, 0.39)"},{"name":"sma","parameters":"50","color":"rgba(255, 143,  51, 0.78)"},{"name":"sma","parameters":"200","color":"rgba(220, 179,  50, 0.43)"},{"name":"patterns","parameters":"","color":"rgba(135, 206, 239, 1)|rgba(220, 159, 229, 1)"}],"indicators":[]};
+        </script><div style="display: flex; flex-direction: column; align-items: center">
+<link href="/assets/dist-charts/main.1855f85e.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet"/>
+<div class="interactive-chart" id="app">
+<div id="chart" style="min-height: 401px; position: relative"></div>
+</div>
+<div id="js-charts-modal"><div class="overlay modal hidden has-footer"></div></div>
+<div class="context-menu hidden"></div>
+<script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/runtime.4eb20b9b.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/976.76a22507.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/main.393da18b.js"></script><script>
+                                    (function() {
+                                        var Quote = FLibs.Charts.Quote;
+                                        var data = {"ticker":"YALA","timeframe":"d","volume":[13234144,2438760,1169209,1038981,1866195,2542067,2189728,2059414,549217,431520,993220,1498535,1588304,829848,514775,288074,206901,970069,560223,225476,508608,698473,241491,1533760,528414,2401322,536715,2024530,2402574,2076032,1039131,1726500,771344,979763,1353086,1279054,531291,912689,2176539,2198801,1096053,654539,6590627,5017675,1839596,2393263,5350812,2794566,3276781,6355759,2196823,3132641,2315901,3084862,1868228,1713744,3375924,3003789,2720794,2911932,1341642,2474959,1459878,1859777,2019627,1629376,890975,2136764,1479164,1086271,4625587,2719955,2290499,1213672,2028252,1775601,2623192,2108788,1644003,6814617,6304349,2612184,3754969,3768961,2850539,2282221,2149151,1779814,2727491,2099270,2228571,2179486,3773820,1536929,2030026,2001147,5046766,2690964,2585820,3352978,2204423,2600862,3029376,3194246,2994985,1694424,2567903,2364230,1596780,2599206,2231706,3637911,3276345,7194801,5621264,4114168,2139248,3179684,3356455,3993174,3101251,2130105,2672578,1941296,1564254,1651429,1526710,2338800,1115658,1217050,826647,1185816,868658,682985,1873090,1291258,1085531,914688,1175107,876778,1798012,1912440,2542483,2322953,2005938,3024833,1171757,712740,916853,697771,1262360,824907,1686364,1732221,2356850,2059973,1262460,2606400,1859876,4847963,4690118,9496096,3486101,2370845,2844390,1346869,1058993,3183542,2488024,1302946,987137,1054681,1310947,1135185,920571,398006,998178,935664,542032,720864,644659,1234001,750314,804913,543096,1369777,1984586,952648,1721841,2529319,1634296,1941106,1033156,1328070,500313,609118,875326,1018343,801186,1113136,1715002,481838,755842,683014,3940923,1447077,2304258,1800198,561682,816657,502769,467255,1032954,855942,547995,1288643,5307595,1206350,954867,860271,1496000,1454415,977555,972128,1268840,647499,1076109,583697,694162,559505,748035,572396,1175506,830566,688342,1199884,714877,1304271,779010,735277,1181402,912764,488942,547631,1018545,680343,828335,513436,546356,470714,771530,7186666,2507356,1336536,1000100,326891,742130,1360629,881157,932488,811715,529196,471329,487283,1585056,910826,1425448,509218,1022773,423850,363126,357591,387921,668523,1197017,1213770,765699,659938,1365471,1954238,9735090,1980563,2285652,837135,8550895,2814301,1448645,2551474,1558648,2085413,2707767,492284,528531,602237,1760958,1339668,714697,1631817,926911,837914,1137609,683143,955644,591195,615124,611393,947479,629935,968446,1250868,627488,767461,683291,1360325,1519800,2539054,1855257,452928,863260,623840,952954,568704,487936,568762,577638,706877,737663,738178,595905,1029778,907938,804975,406165,441468,617948,518944,625188,754832,399222,410389,143375,632258,224594,401566,354588,293494,191043,949898,830025,753417,686939,1016309,705902,869109,412193,682900,748870,549547,659548,880770,931991,459822,517465,565977,998506,2105365,1320081,2145979,575065,1424842,1000019,773190,1468706,774897,771338,302482,400985,736109,510360,526301,916890,663774,631141,394523,133973,293297,269597,173569,268245,461074,245011,308913,175226,233501,191701,223420,168967,304774,509574,185516,227074,393787,636095,368318,262135,421220,394407,210197,174100,222230,694309,220436,220114,401806,228027,326451,177759,271000,212871,379830,582818,919898,552612,822153,830004,1114202,919033,940946,904408,1220565,875408,610565,182817,355850,334378,480978,385735,240672,286376,188741,138406,87987,562317,199098,246172,63455,401496,191282,175974,128394,122166,225033,65878,760855,215433,240370,255636,260583,108235,126992,87229,184473,159433,323579,281899,273512,439230,322135,469625,556015,287431,128085,212400,165671,497569,347684,412866,479165,491346,592460,1110099,775488,652200,823926,321165,606081,161727,69601,84647,85254,141357,133758,200296,123325,125500,159427,85817,98893,108560,177754,100651,83718,140303,142559,73454,225181,117198,53597,47560,77818,74582,79429,49801,82359,81266,104731,145883,104776,247023,123601,221885,118329,115092,89296,79967,172456,110840,146402,115187,153499,205504,86347,111411,141948,217749,239079,383937,162181,225706,145438,122692,95203,89727,76953,1204266,288714,399729,131016,162381,698458,388719,169891,516392,219405,141176,224440,209367,337377,226721,80555,339040,266019,74916,82988,147014,288005,495213,98512,119413,223705,246642,380785,283517,139810,121908,153011,94622,101369,49869,30707,170547,174314,619998,151367,639455,187402,780388,238612,465094,369270,211045,178550,111508,79404,276626,193560,149753,63046,254384,152367,208351,291909,105103,59485,152153,95542,61502,65191,103986,53804,157831,98796,62978,123502,81040,205450,353285,208356,248988,135338,83028,94046,75073,136470,94002,115890,53342,113025,157139,94454,59149,45969,100788,27635,43117,59013,48704,52139,41967,66754,67787,133141,245751,190698,95059,36579,80981,74409,135180,32875,72382,52013,77693,76038,59402,81119,99103,123282,81699,124908,170913,269888,236153,169213,469434,133915,106210,227305,217644,580968,557857,328681,335421,276356,381440,536612,503107,157176,168524,266897,104316,148385,262153,235045,229308,170743,135987,68031,124501,172953,73115,105908,82980,99623,118948,91483,238548,375940,167331,220173,222083,222295,124967,192447,163403,147522,248732,284657,187145,326862,259169,254342,171095,237718,240378,182972,373238,264616,221948,183795,210630,167888,228319,174725,230813,335770,386664,257192,178859,283736,164107,216776,246572,288752,344536,434067,404586,359308,450019,277569,255347,191991,238172,1658715,420491,240631,442179,330664,254381,68737],"date":[1601470800,1601557200,1601643600,1601902800,1601989200,1602075600,1602162000,1602248400,1602507600,1602594000,1602680400,1602766800,1602853200,1603112400,1603198800,1603285200,1603371600,1603458000,1603717200,1603803600,1603890000,1603976400,1604062800,1604325600,1604412000,1604498400,1604584800,1604671200,1604930400,1605016800,1605103200,1605189600,1605276000,1605535200,1605621600,1605708000,1605794400,1605880800,1606140000,1606226400,1606312800,1606485600,1606744800,1606831200,1606917600,1607004000,1607090400,1607349600,1607436000,1607522400,1607608800,1607695200,1607954400,1608040800,1608127200,1608213600,1608300000,1608559200,1608645600,1608732000,1608818400,1609164000,1609250400,1609336800,1609423200,1609768800,1609855200,1609941600,1610028000,1610114400,1610373600,1610460000,1610546400,1610632800,1610719200,1611064800,1611151200,1611237600,1611324000,1611583200,1611669600,1611756000,1611842400,1611928800,1612188000,1612274400,1612360800,1612447200,1612533600,1612792800,1612879200,1612965600,1613052000,1613138400,1613484000,1613570400,1613656800,1613743200,1614002400,1614088800,1614175200,1614261600,1614348000,1614607200,1614693600,1614780000,1614866400,1614952800,1615212000,1615298400,1615384800,1615471200,1615557600,1615813200,1615899600,1615986000,1616072400,1616158800,1616418000,1616504400,1616590800,1616677200,1616763600,1617022800,1617109200,1617195600,1617282000,1617627600,1617714000,1617800400,1617886800,1617973200,1618232400,1618318800,1618405200,1618491600,1618578000,1618837200,1618923600,1619010000,1619096400,1619182800,1619442000,1619528400,1619614800,1619701200,1619787600,1620046800,1620133200,1620219600,1620306000,1620392400,1620651600,1620738000,1620824400,1620910800,1620997200,1621256400,1621342800,1621429200,1621515600,1621602000,1621861200,1621947600,1622034000,1622120400,1622206800,1622552400,1622638800,1622725200,1622811600,1623070800,1623157200,1623243600,1623330000,1623416400,1623675600,1623762000,1623848400,1623934800,1624021200,1624280400,1624366800,1624453200,1624539600,1624626000,1624885200,1624971600,1625058000,1625144400,1625230800,1625576400,1625662800,1625749200,1625835600,1626094800,1626181200,1626267600,1626354000,1626440400,1626699600,1626786000,1626872400,1626958800,1627045200,1627304400,1627390800,1627477200,1627563600,1627650000,1627909200,1627995600,1628082000,1628168400,1628254800,1628514000,1628600400,1628686800,1628773200,1628859600,1629118800,1629205200,1629291600,1629378000,1629464400,1629723600,1629810000,1629896400,1629982800,1630069200,1630328400,1630414800,1630501200,1630587600,1630674000,1631019600,1631106000,1631192400,1631278800,1631538000,1631624400,1631710800,1631797200,1631883600,1632142800,1632229200,1632315600,1632402000,1632488400,1632747600,1632834000,1632920400,1633006800,1633093200,1633352400,1633438800,1633525200,1633611600,1633698000,1633957200,1634043600,1634130000,1634216400,1634302800,1634562000,1634648400,1634734800,1634821200,1634907600,1635166800,1635253200,1635339600,1635426000,1635512400,1635771600,1635858000,1635944400,1636030800,1636117200,1636380000,1636466400,1636552800,1636639200,1636725600,1636984800,1637071200,1637157600,1637244000,1637330400,1637589600,1637676000,1637762400,1637935200,1638194400,1638280800,1638367200,1638453600,1638540000,1638799200,1638885600,1638972000,1639058400,1639144800,1639404000,1639490400,1639576800,1639663200,1639749600,1640008800,1640095200,1640181600,1640268000,1640613600,1640700000,1640786400,1640872800,1640959200,1641218400,1641304800,1641391200,1641477600,1641564000,1641823200,1641909600,1641996000,1642082400,1642168800,1642514400,1642600800,1642687200,1642773600,1643032800,1643119200,1643205600,1643292000,1643378400,1643637600,1643724000,1643810400,1643896800,1643983200,1644242400,1644328800,1644415200,1644501600,1644588000,1644847200,1644933600,1645020000,1645106400,1645192800,1645538400,1645624800,1645711200,1645797600,1646056800,1646143200,1646229600,1646316000,1646402400,1646661600,1646748000,1646834400,1646920800,1647007200,1647262800,1647349200,1647435600,1647522000,1647608400,1647867600,1647954000,1648040400,1648126800,1648213200,1648472400,1648558800,1648645200,1648731600,1648818000,1649077200,1649163600,1649250000,1649336400,1649422800,1649682000,1649768400,1649854800,1649941200,1650286800,1650373200,1650459600,1650546000,1650632400,1650891600,1650978000,1651064400,1651150800,1651237200,1651496400,1651582800,1651669200,1651755600,1651842000,1652101200,1652187600,1652274000,1652360400,1652446800,1652706000,1652792400,1652878800,1652965200,1653051600,1653310800,1653397200,1653483600,1653570000,1653656400,1654002000,1654088400,1654174800,1654261200,1654520400,1654606800,1654693200,1654779600,1654866000,1655125200,1655211600,1655298000,1655384400,1655470800,1655816400,1655902800,1655989200,1656075600,1656334800,1656421200,1656507600,1656594000,1656680400,1657026000,1657112400,1657198800,1657285200,1657544400,1657630800,1657717200,1657803600,1657890000,1658149200,1658235600,1658322000,1658408400,1658494800,1658754000,1658840400,1658926800,1659013200,1659099600,1659358800,1659445200,1659531600,1659618000,1659704400,1659963600,1660050000,1660136400,1660222800,1660309200,1660568400,1660654800,1660741200,1660827600,1660914000,1661173200,1661259600,1661346000,1661432400,1661518800,1661778000,1661864400,1661950800,1662037200,1662123600,1662469200,1662555600,1662642000,1662728400,1662987600,1663074000,1663160400,1663246800,1663333200,1663592400,1663678800,1663765200,1663851600,1663938000,1664197200,1664283600,1664370000,1664456400,1664542800,1664802000,1664888400,1664974800,1665061200,1665147600,1665406800,1665493200,1665579600,1665666000,1665752400,1666011600,1666098000,1666184400,1666270800,1666357200,1666616400,1666702800,1666789200,1666875600,1666962000,1667221200,1667307600,1667394000,1667480400,1667566800,1667829600,1667916000,1668002400,1668088800,1668175200,1668434400,1668520800,1668607200,1668693600,1668780000,1669039200,1669125600,1669212000,1669384800,1669644000,1669730400,1669816800,1669903200,1669989600,1670248800,1670335200,1670421600,1670508000,1670594400,1670853600,1670940000,1671026400,1671112800,1671199200,1671458400,1671544800,1671631200,1671717600,1671804000,1672149600,1672236000,1672322400,1672408800,1672754400,1672840800,1672927200,1673013600,1673272800,1673359200,1673445600,1673532000,1673618400,1673964000,1674050400,1674136800,1674223200,1674482400,1674568800,1674655200,1674741600,1674828000,1675087200,1675173600,1675260000,1675346400,1675432800,1675692000,1675778400,1675864800,1675951200,1676037600,1676296800,1676383200,1676469600,1676556000,1676642400,1676988000,1677074400,1677160800,1677247200,1677506400,1677592800,1677679200,1677765600,1677852000,1678111200,1678197600,1678284000,1678370400,1678456800,1678712400,1678798800,1678885200,1678971600,1679058000,1679317200,1679403600,1679490000,1679576400,1679662800,1679922000,1680008400,1680094800,1680181200,1680267600,1680526800,1680613200,1680699600,1680786000,1681131600,1681218000,1681304400,1681390800,1681477200,1681736400,1681822800,1681909200,1681995600,1682082000,1682341200,1682427600,1682514000,1682600400,1682686800,1682946000,1683032400,1683118800,1683205200,1683291600,1683550800,1683637200,1683723600,1683810000,1683896400,1684155600,1684242000,1684328400,1684414800,1684501200,1684760400,1684846800,1684933200,1685019600,1685106000,1685451600,1685538000,1685624400,1685710800,1685970000,1686056400,1686142800,1686229200,1686315600,1686574800,1686661200,1686747600,1686834000,1686920400,1687266000,1687352400,1687438800,1687525200,1687784400,1687870800,1687957200,1688043600,1688130000,1688389200,1688562000,1688648400,1688734800,1688994000,1689080400,1689166800,1689253200,1689339600,1689598800,1689685200,1689771600,1689858000,1689944400,1690203600,1690290000,1690376400,1690462800,1690549200,1690808400,1690894800,1690981200,1691067600,1691154000,1691413200,1691499600,1691586000,1691672400,1691758800,1692018000,1692104400,1692190800,1692277200,1692363600,1692622800,1692709200,1692795600,1692882000,1692968400,1693227600,1693314000,1693400400,1693486800,1693573200,1693918800,1694005200,1694091600,1694178000,1694437200,1694523600,1694610000,1694696400,1694782800,1695042000,1695128400,1695214800,1695301200,1695387600],"open":[9.75,7.21,6.45,6.7,6.62,7.6,8.3,9.3,8.71,8.51,8.28,7.75,9,8.91,8.45,8.44,8.12,8.16,8.39,8.28,8.2,8.22,8.55,8.67,8.76,9,8.64,8.94,11.09,9.82,10.05,9.21,9.03,9,8.73,9.3,9.2,9.23,9.82,10.67,10.7,10.65,11,15.4,13.5,13.79,14.78,18.45,17.13,19.49,19.07,20.15,20.24,18.07,16.71,16.98,15.97,17.42,18.41,19.08,17.49,17.3,16.72,16.51,15.36,14.14,15.3,15.43,14.6,15.49,15.2,17.97,17.79,18.5,17.81,16.77,17.78,18.73,18.1,19.65,24.63,24.2,24.28,23.76,26.17,30,30,30.76,30,37.35,34.6,34.9,33.45,38.01,39.5,36,32.2,29.1,26.8,23.56,25.57,26.32,22.26,23.11,25.33,24.6,21.09,21.33,19.31,18.5,20.65,21.29,22.03,27.5,24.08,25.77,27.35,25.74,28.31,26.35,23.89,19.96,22.9,21.5,22.13,24.72,26,27,24.56,24.32,24.12,23.91,22.98,23.1,23.65,23.52,22.07,22.75,23,21.93,23.58,22.92,24.91,25.97,23.9,23,20.5,21.71,21.26,21.23,20.41,20.5,19.98,19.06,20.1,20.64,19.21,19.94,18.49,17.6,16.89,17.57,17.21,15.64,15.05,15.96,16.01,16.02,18.09,17.62,18.34,17.75,19.11,19.9,19.51,19.26,19.25,18.66,17.98,18.17,18.39,17.86,18,18.28,18.59,18.6,20,19.9,19.4,19.92,18.89,17.75,16.8,15.77,16.65,16.57,16.08,16.41,16.11,16.5,16.18,15.34,15.33,15.8,15,13.25,12.99,12.91,13.65,12.89,13.11,13.36,12.97,12.57,13.03,12.85,13.41,10.98,10.74,10.76,10.2,9.78,9.95,9.71,9.14,9.53,10.15,10.04,9.98,9.88,9.96,9.88,10.24,10.07,10,10.2,10.12,9.74,10.13,9.51,9.25,8.69,8.45,8.46,8.18,7.89,7.67,8,7.74,7.6,7.43,7.2,7.45,7.67,7.57,7.23,7.25,7.2,7.51,7.39,7.53,7.33,7.46,7.12,6.9,6.58,7.03,6.96,6.88,6.88,6.7,6.55,6.38,6.59,6.42,6.6,6.65,6.82,6.74,6.74,8.5,8.53,7.75,8.67,8.87,9.34,9.04,8.93,8.1,7.98,8,7.72,7.72,7.68,7.38,7.24,6.85,6.79,6.33,6.7,6.81,7.16,7.16,6.82,6.11,6.22,6.5,6.12,6.02,6.09,6.2,6.33,6.31,6.07,5.91,6.02,6.91,6.79,6.74,6.26,6.2,6.12,6.1,6.15,6.68,6.7,6.6,6.3,6.07,6.45,6.17,6.04,6.21,6.2,5.81,5.37,5.53,6.21,6.36,5.99,6.08,6.11,6.27,6.6,6.56,6.64,6.52,6.57,6.89,6.66,6.65,6.05,6.24,5.79,6.25,6.04,6.08,6,6.11,5.58,5.38,5.08,5.26,5.31,5.1,4.01,3.91,4.313,4.43,4.62,4.82,4.73,5,4.91,4.74,4.65,4.83,4.71,4.59,4.66,4.59,4.89,4.75,4.75,4.48,4.27,4.6,4.48,4.61,4.24,4.23,4.31,4.19,4.1,4.01,3.96,3.83,3.79,4.16,4.09,4.07,3.92,4.11,3.98,3.79,3.64,3.49,3.18,3.41,3.56,3.63,3.67,3.76,3.82,3.45,3.41,3.27,3.3,3.59,3.86,3.71,3.54,3.57,3.72,3.77,3.85,3.98,3.74,3.56,3.58,3.63,3.68,3.83,3.94,4.1,4.03,4.24,4.3,4.24,3.91,4.01,3.89,3.98,4.2,4.06,4.12,4.05,4.07,4.01,4.3,4.08,4.16,4.28,4.22,4.75,4.76,4.59,4.6,4.54,4.58,4.35,4.34,4.16,4.46,4.65,4.35,4.5,4.65,4.63,4.49,4.33,4.51,4.35,4.36,4.06,4.1,4.05,3.86,3.72,3.76,4.15,3.92,4.2,4.19,4.26,4.17,4.05,3.86,3.87,3.97,4.03,4.05,3.86,3.81,3.75,3.65,3.66,3.65,3.52,3.39,3.34,3.45,3.36,3.35,3.23,3.24,3.29,3.26,3.24,3.28,3.2,3.2,3.19,3.1,3.27,3.28,3.36,3.26,3.33,3.35,3.16,3.07,3.14,3.16,3.09,3.01,3.19,3.21,3.24,3.45,3.46,3.69,3.65,3.7,3.89,4.13,4.25,4.01,3.77,3.85,3.67,3.73,3.78,3.77,3.58,3.6,3.47,3.52,3.61,3.91,4.01,3.65,3.73,3.98,3.95,3.91,3.93,3.91,3.57,3.44,3.5,3.7,3.71,3.55,3.44,3.4,3.5,3.57,3.55,3.75,3.98,4.18,4.53,4.21,4.29,4.39,4.54,4.47,4.32,4.12,4.2,4.44,4.36,4.89,4.91,5.46,5.21,4.7,4.77,5.3,5.13,4.79,5.02,4.95,5.04,5.05,4.87,4.87,4.95,5.16,4.85,4.83,4.56,4.61,4.51,4.38,4.32,4.41,4.17,4.19,4.2,4,3.99,3.95,3.78,4,3.85,3.75,3.52,3.81,3.64,3.68,3.8,3.82,3.82,3.8,3.93,3.88,3.84,3.93,3.94,3.9,3.89,3.88,3.87,3.87,3.91,3.92,3.88,3.92,3.89,3.85,3.85,3.68,3.55,3.55,3.71,3.76,3.65,3.58,3.58,3.56,3.56,3.41,3.62,3.6,3.73,3.735,3.68,3.84,3.66,3.81,4,3.94,3.95,4.19,4.01,3.96,3.97,4.01,4.38,4.22,4.23,4.26,4.2,4.33,4.51,4.57,4.5,4.49,4.48,4.46,4.4,4.35,4.25,4.15,4.19,4.1,4.15,4.2,4.37,4.38,4.36,4.37,4.21,4.3,4.39,4.64,4.95,4.95,5.14,5.04,5.29,5.34,5.08,5.04,5.18,5.22,5.1,5.42,5.55,5.6,5.61,5.36,5.33,5.41,5.22,4.99,4.98,5.22,5.06,5.17,5.11,5.35,5.22,5.05,4.73,4.78,4.99,5.07,5.13,4.97,5.04,5.13,5.03,5.13,5.11,5.01,5,5.03,5.09,5.09,5.05,5.16,5.12,5.13,5.05,5.18,5.28,5.15],"high":[10.99,7.34,6.84,6.7,7.49,8.48,9.43,9.33,9.06,8.6,8.5,8.99,9.05,9.2,8.79,8.7,8.31,9.01,8.698,8.53,8.5,9,8.85,9.68,9.08,9.5,9.15,10.35,11.88,10.46,10.08,9.36,9.03,9.3,9.6,9.96,9.59,9.772,10.8,11.58,11.04,11.09,15.655,15.585,13.78,15,18.03,18.51,19.87,23.18,20.6,22.26,20.24,18.398,17.5,17.23,18.85,19.5,20.7,19.34,17.83,17.3,16.72,16.51,15.47,15.979,15.59,15.43,15.75,15.65,18.6,18.19,19.47,18.58,18.1,17.85,19,19.64,18.95,24.78,27.47,26.32,25.6,28.4,29.18,31,31.88,31.86,35.4,37.35,36.656,36.6,41.35,40.81,39.6,36.215,32.39,31.97,27.71,26.55,27.74,26.65,23.12,25.94,27.75,25,22.377,21.35,19.84,20.18,21.37,23.45,24.68,27.58,28.5,29.48,28,28.95,28.83,26.458,23.9,22.2,23.257,23.1,24.39,26.228,27.1,27,25.7,25.48,24.97,24.48,23.7,23.65,25.08,24.18,23.19,23.89,23,23.55,24.72,25,25.75,26,24.28,23.255,21.95,22.58,21.39,21.49,20.41,20.99,20.1,20.38,22.1,20.99,20.42,20.08,19.351,18.36,17.18,19.5,17.21,16.15,16.28,16.88,16.375,18.62,19.05,18.78,18.48,18.93,19.985,20.495,19.93,19.46,19.49,18.8,18.45,19.05,18.76,19.19,18.188,18.99,18.95,19.954,21,20.49,20.49,20.49,18.9,17.84,17,16.4,16.879,16.753,16.54,16.89,16.8,17.12,16.29,15.44,15.94,15.85,15.305,13.8,12.99,13.64,13.87,13.52,13.76,13.4,13.452,13.25,13.22,13.65,13.41,11.099,11,10.97,10.6,10.15,10.24,10.04,9.52,10.02,10.5,10.08,10.29,10.18,10.04,10.22,10.3,10.22,10.43,10.62,10.25,10.19,10.355,9.52,9.25,8.7,8.49,8.46,8.2,8.15,8,8,7.81,7.61,7.45,7.63,7.716,7.84,7.6,7.508,7.43,7.62,7.56,7.79,7.74,7.5,7.478,7.28,6.982,7.08,7.25,7.13,6.95,6.935,6.85,6.66,6.665,6.59,6.95,6.86,6.83,6.9,7.15,7.41,9.66,8.6,8.83,8.69,10.4,9.59,9.43,8.93,8.364,8.42,8.07,8.27,7.94,7.74,7.76,7.44,7.11,6.81,6.57,7.01,7.44,7.48,7.4,6.82,6.38,6.4,6.51,6.32,6.13,6.52,6.41,6.34,6.322,6.072,6.219,7.3,7.103,6.97,6.74,6.59,6.41,6.4,6.16,6.6,6.89,6.8,6.81,6.61,6.4,6.63,6.34,6.35,6.34,6.26,5.86,5.48,6.22,6.52,6.38,6.24,6.228,6.55,6.54,6.955,6.9,6.83,6.76,7.01,7.01,6.94,6.667,6.503,6.54,6.25,6.3,6.4,6.5,6.16,6.23,5.815,5.53,5.24,5.502,5.31,5.101,4.02,3.99,4.7,4.665,5.1,5.08,5.25,5.25,4.99,4.81,4.88,4.9,4.74,4.59,4.72,5,4.95,4.87,4.77,4.55,4.58,4.72,4.6,4.61,4.34,4.42,4.35,4.283,4.26,4.06,3.963,3.93,3.94,4.37,4.14,4.1,4.27,4.3,4,3.828,3.674,3.49,3.44,3.6,3.595,3.94,3.9,3.87,3.82,3.51,3.41,3.39,3.57,3.78,3.88,3.83,3.75,3.68,3.9,3.9,4.088,3.98,3.8,3.64,3.679,3.88,3.83,3.9,4.18,4.16,4.23,4.35,4.3,4.24,4.09,4.01,4.057,4.2,4.21,4.205,4.245,4.16,4.15,4.24,4.3,4.11,4.29,4.29,4.855,4.958,4.83,4.66,4.6,4.6,4.599,4.46,4.38,4.49,4.56,4.67,4.475,4.738,4.7,4.63,4.66,4.58,4.52,4.41,4.39,4.2,4.2,4.06,3.88,3.86,4.09,4.22,4.23,4.25,4.48,4.26,4.25,4.113,3.97,4,4.1,4.15,4.05,3.86,3.88,3.77,3.702,3.83,3.67,3.58,3.4,3.59,3.57,3.43,3.38,3.39,3.39,3.42,3.35,3.41,3.31,3.28,3.27,3.27,3.29,3.35,3.39,3.45,3.35,3.65,3.43,3.19,3.26,3.42,3.211,3.17,3.11,3.25,3.408,3.32,3.56,3.73,3.74,3.72,3.9,4.17,4.23,4.3,4.025,3.85,3.9,3.85,3.8,3.8,3.77,3.69,3.69,3.614,3.742,3.78,4.2,4.04,3.733,4.08,3.99,3.95,3.95,4.02,3.93,3.67,3.64,3.87,3.84,3.82,3.59,3.565,3.65,3.74,3.605,3.788,4.15,4.25,4.51,4.68,4.345,4.461,4.538,4.56,4.47,4.32,4.24,4.49,4.49,5.15,4.89,5.57,5.46,5.27,5.025,5.36,5.49,5.29,5.09,5.04,5.049,5.18,5.05,5.04,5.02,5.25,5.16,4.91,4.83,4.66,4.8,4.51,4.47,4.43,4.41,4.22,4.37,4.25,4.044,4.03,4.01,3.95,4.11,3.98,3.75,3.9,3.88,3.7,3.82,3.82,3.89,3.83,3.97,3.94,3.925,4.09,3.99,3.961,3.91,3.9,3.92,3.94,3.96,3.93,3.98,3.95,3.97,3.94,3.9,3.9,3.734,3.64,3.69,3.76,3.76,3.701,3.68,3.59,3.68,3.58,3.63,3.73,3.74,3.74,3.8,3.77,3.88,3.91,4.05,4,3.98,4.25,4.2,4.02,4.08,4.085,4.4,4.38,4.37,4.35,4.28,4.4,4.54,4.7,4.6,4.57,4.515,4.48,4.5,4.49,4.406,4.27,4.3,4.19,4.2,4.225,4.37,4.41,4.42,4.45,4.37,4.3,4.4,4.68,4.94,4.99,5.16,5.25,5.32,5.32,5.48,5.24,5.21,5.41,5.24,5.32,5.58,5.64,5.77,5.64,5.51,5.47,5.43,5.27,5.09,5.28,5.3,5.22,5.21,5.37,5.38,5.25,5.055,4.84,4.98,5.14,5.15,5.14,5.09,5.22,5.13,5.18,5.21,5.11,5.1,5.07,5.195,5.21,5.195,5.13,5.16,5.15,5.13,5.19,5.47,5.31,5.19],"low":[6.98,6.26,6.4,6.27,6.6,7.6,8.08,8.15,8.51,8.15,7.5,7.578,8.58,8.33,8.12,8.05,7.88,8.16,8.12,8.25,8.14,8.22,8.27,8.52,8.65,8.31,8.62,8.82,10.29,9.08,9.12,8.68,8.6,8.5,8.68,9.01,9.08,9.15,9.7,10.46,10.05,10.55,10.48,13.02,12.61,13.75,14.58,16.22,17.03,17.51,18.7,19.48,17.83,15.84,16.35,15.72,15.89,16.86,18,16.86,16.26,15.01,15.2,15.1,13.85,14.01,14.73,14.148,14.21,14.73,14.68,16.06,17.79,17.11,16.2,16.02,17.17,17.85,17.68,19.45,21.8,22.51,21.02,23.75,25.15,28.01,28.75,28.2,29.984,34.11,32.51,31.2,33,37.17,35.35,33,26.1,28.21,25.25,21,24.2,22.02,20.68,22.616,23.5,22.15,19.4,17.563,17.7,18.3,19.472,20.874,21.52,22.83,23.75,25.18,25.53,25.2,25.36,22.25,20,19.4,20.23,21.14,21.71,24.44,25.33,24.25,24.13,23.579,23.88,22.38,22.77,22.71,22.96,21.461,21.19,22.41,21.32,21.57,22.1,22.82,24.31,23.4,22.562,20.4,20.5,21.34,19.93,20.03,19,20.21,18.52,18.82,19.92,18.28,18.83,18.1,18,16.73,15.33,16.53,15.44,14.85,14.61,15.7,15.51,16.02,17.15,17.62,17.4,17.62,19.1,19.223,18.34,18.72,18.12,17.66,17.561,18.17,17.77,17.515,17.33,18.11,18.34,18.37,19.67,19.21,19.01,18.23,17.47,16.53,16.01,15.39,16.1,15.98,15.7,15.95,16,16.32,14.71,14.72,15.15,15.27,13.25,13.05,11.72,12.68,12.65,12.51,13.11,12.634,12.64,12.44,12.67,12.85,10.95,10.58,10.5,10.35,9.84,9.554,9.8,9.31,9.03,9.41,9.9,9.81,9.63,9.7,9.43,9.82,9.82,9.79,9.92,10.1,9.69,9.72,9.56,8.93,8.65,8.3,8.22,8.22,7.71,7.65,7.58,7.7,7.63,7.3,7.02,6.82,6.97,7.35,7.18,7.15,7.03,7.2,7.15,7.35,7.22,7.12,7.12,6.94,6.34,6.58,6.7,6.85,6.51,6.6,6.53,6.38,6.26,6.3,6.4,6.38,6.38,6.48,6.61,6.74,7.98,7.49,7.62,8.085,8.721,8.81,8.615,7.71,7.84,7.545,7.53,7.53,7.6,7.3,6.95,6.83,6.66,6.192,6.01,6.7,6.71,7.02,6.8,6.172,6.04,5.88,5.98,6,5.89,6.09,6.11,6.15,6.07,5.8,5.64,6.02,6.62,6.61,6.26,6.01,5.9,6.08,5.921,6.15,6.53,6.48,6.26,6.029,6.06,6.11,6.05,5.71,5.935,5.68,5.34,5.17,5.53,5.93,6,5.96,6.03,6.11,6.23,6.51,6.51,6.42,6.43,6.56,6.6,6.51,6.16,6.01,5.97,5.79,5.98,5.96,5.94,5.81,5.595,5.4,5.01,4.845,5.26,4.9,4.36,3.65,3.51,4,4.32,4.35,4.69,4.7,4.8,4.6,4.49,4.58,4.73,4.5,4.38,4.44,4.58,4.7,4.6,4.45,4.38,4.205,4.4,4.419,4.25,4.07,4.132,4.1,4.06,4.05,3.9,3.77,3.68,3.69,4.03,3.94,3.89,3.9,3.984,3.8,3.5,3.3,3.26,3.1,3.41,3.46,3.61,3.66,3.7,3.36,3.32,3.2,3.26,3.19,3.56,3.7,3.51,3.48,3.5,3.695,3.66,3.73,3.7,3.57,3.495,3.45,3.573,3.61,3.692,3.902,3.99,4,4.18,4.17,3.88,3.86,3.86,3.88,3.93,4,4.05,4.05,3.98,3.96,3.89,4.05,4,4.11,4.16,4.22,4.7,4.55,4.49,4.36,4.42,4.38,4.31,4.195,4.11,4.35,4.32,4.3,4.432,4.3,4.22,4.31,4.24,4.36,4.285,4.1,4.01,4,3.83,3.66,3.66,3.71,3.9,3.87,4.02,4.05,3.97,3.98,3.87,3.83,3.83,3.94,4,3.86,3.71,3.76,3.66,3.52,3.605,3.52,3.4,3.3,3.34,3.33,3.25,3.2,3.21,3.195,3.25,3.23,3.24,3.2,3.16,3.05,3.15,3.07,3.165,3.25,3.25,3.22,3.32,3.26,3.03,3,3.03,3.1,3.08,3.01,3.15,3.19,3.18,3.4,3.42,3.65,3.53,3.7,3.85,4.03,4,3.73,3.609,3.78,3.65,3.68,3.7,3.58,3.44,3.36,3.43,3.52,3.61,3.872,3.61,3.61,3.7,3.87,3.72,3.73,3.74,3.53,3.45,3.43,3.49,3.69,3.51,3.48,3.4,3.4,3.47,3.5,3.55,3.73,3.863,4.18,4.07,4.12,4.23,4.22,4.42,4.21,4.104,4.12,4.151,4.295,4.27,4.63,4.91,5.2,4.58,4.675,4.77,5.07,4.79,4.73,4.84,4.91,5.031,4.77,4.81,4.87,4.9,4.78,4.72,4.51,4.483,4.51,4.21,4.29,4.274,4.18,4.08,4.19,3.97,3.93,3.94,3.81,3.76,3.81,3.7,3.56,3.52,3.62,3.54,3.62,3.64,3.75,3.71,3.76,3.815,3.78,3.82,3.88,3.84,3.85,3.77,3.802,3.83,3.84,3.816,3.87,3.87,3.87,3.85,3.75,3.59,3.52,3.53,3.53,3.61,3.61,3.58,3.563,3.51,3.51,3.41,3.41,3.56,3.6,3.65,3.67,3.67,3.73,3.55,3.78,3.91,3.9,3.913,4.01,3.963,3.9,3.95,3.922,3.97,4.16,4.218,4.19,4.13,4.21,4.482,4.44,4.4,4.32,4.34,4.42,4.34,4.22,4.07,4.14,4.11,4.1,4.13,4.17,4.335,4.31,4.35,4.24,4.13,4.17,4.39,4.57,4.81,4.84,4.963,5.01,5.185,5.145,4.97,4.86,5.06,5.06,5.06,5.25,5.465,5.5,5.5,5.26,5.21,5.22,4.92,4.911,4.96,5.08,5.05,5,5,5.14,5,4.71,4.61,4.78,4.97,5,4.92,4.93,4.964,5.002,5.03,5.06,4.85,4.93,4.83,4.947,5.09,5.06,4.98,5.05,4.99,5.05,5.05,5.103,5.04,5.11],"close":[7,6.92,6.7,6.6,7.41,8.08,9,8.6,8.51,8.35,7.76,8.96,8.91,8.48,8.48,8.22,8.14,8.99,8.15,8.52,8.22,8.8,8.41,8.65,8.84,8.52,8.94,10.29,11.53,9.51,9.21,9.03,9,8.66,9.56,9.02,9.22,9.6,10.65,10.88,10.5,10.81,15.41,13.35,13.48,14.58,17.14,16.98,19.87,18.68,20.15,19.99,18.67,16.15,16.98,15.81,17.9,17.9,18.15,17.48,17.01,16.5,16.12,15.25,14.33,15.2,15.54,14.38,15.5,15.19,17.71,17.79,18.1,17.34,16.36,17.02,18.57,18.01,18.6,24.64,25.88,23.16,24.72,25.49,28.78,29.38,28.98,29.79,35.28,35.6,34.2,32.03,40.62,39.2,37.14,33.85,27.26,28.47,25.89,26.39,25.5,22.75,21.71,25.75,23.73,22.5,20.52,19.63,17.94,19.55,19.76,23.29,23.91,23.55,27.15,28.2,25.95,27.79,26.49,23.13,20.32,21.25,20.94,21.99,24.25,25.01,26.52,25.33,24.91,23.86,24.5,22.85,23.05,23.19,23.52,21.99,22.84,23.13,22.5,23.02,22.67,24.56,25.34,24.36,22.61,20.66,21.8,21.57,21.18,20.37,20.07,20.49,19.55,19.9,20.59,18.64,20.13,18.36,18.32,17.01,15.96,16.9,15.5,14.85,16.05,15.94,15.57,17.88,18.33,18.29,17.76,18.93,19.94,19.26,18.78,19.43,18.62,17.99,18.42,18.5,17.89,18.44,17.98,18.37,18.51,19.61,20,19.47,19.99,18.85,18.02,16.53,16.34,16.26,16.66,16.1,16.14,16.09,16.28,16.84,15.23,15.27,15.68,15.6,14.01,13.22,12.33,13.4,12.97,13.06,13.38,12.94,12.72,12.91,12.7,13.55,10.99,10.97,10.91,10.41,10.06,9.88,10.04,9.4,9.41,9.85,10.01,9.96,9.78,9.89,9.89,10.16,10.1,9.89,10.02,10.17,9.8,10.11,9.56,9.17,8.71,8.51,8.39,8.34,7.84,7.7,7.95,7.87,7.66,7.48,7.17,7.36,7.59,7.62,7.27,7.38,7.05,7.48,7.31,7.45,7.34,7.46,7.14,6.96,6.49,6.93,6.97,6.95,6.81,6.78,6.56,6.38,6.63,6.42,6.63,6.62,6.8,6.68,6.62,7.36,8.52,7.54,8.49,8.38,9.31,9.16,9,7.92,8.02,8.11,7.85,8.22,7.68,7.49,7.16,6.85,6.86,6.39,6.42,6.86,7.24,7.07,6.86,6.29,6.25,6.37,6.19,6.25,6.09,6.44,6.37,6.3,6.09,5.92,6.04,7.08,6.71,6.72,6.35,6.13,5.98,6.18,6.13,6.52,6.76,6.76,6.54,6.05,6.2,6.12,6.13,6.34,6.09,5.74,5.42,5.47,6.21,6.29,6.11,6.08,6.17,6.29,6.53,6.82,6.6,6.55,6.49,6.96,6.73,6.74,6.29,6.16,6.06,6.25,6.12,6.08,5.95,6.1,5.65,5.41,5.05,5.11,5.43,5.05,4.37,3.7,3.84,4.67,4.63,4.97,4.78,5.12,4.88,4.82,4.61,4.72,4.75,4.61,4.48,4.49,4.91,4.89,4.81,4.52,4.47,4.51,4.42,4.6,4.3,4.28,4.29,4.13,4.11,4.05,3.94,3.79,3.69,3.91,4.09,4.09,3.98,4.21,4.04,3.89,3.56,3.46,3.27,3.36,3.53,3.49,3.75,3.73,3.74,3.46,3.49,3.28,3.3,3.53,3.76,3.7,3.54,3.66,3.59,3.79,3.79,4.06,3.71,3.72,3.53,3.58,3.84,3.72,3.86,4.1,4.01,4.19,4.26,4.2,3.91,4.07,3.9,4.04,4.19,4.03,4.18,4.08,4.05,4.09,4.21,4.1,4.05,4.2,4.26,4.77,4.74,4.59,4.63,4.47,4.56,4.44,4.43,4.22,4.47,4.56,4.44,4.47,4.61,4.6,4.41,4.31,4.54,4.41,4.39,4.11,4.15,4.11,3.86,3.74,3.76,4.01,3.97,4.2,4.07,4.29,4.08,4.09,3.89,3.92,3.93,4.02,4.15,3.86,3.85,3.78,3.69,3.66,3.68,3.52,3.44,3.38,3.41,3.37,3.39,3.22,3.24,3.23,3.34,3.27,3.26,3.24,3.19,3.18,3.22,3.25,3.17,3.32,3.29,3.32,3.4,3.35,3.08,3.15,3.23,3.1,3.1,3.09,3.23,3.27,3.32,3.53,3.69,3.67,3.53,3.71,4.06,4.09,4.08,3.76,3.83,3.83,3.75,3.77,3.77,3.58,3.48,3.39,3.49,3.67,3.73,4.03,3.67,3.69,4,3.94,3.72,3.85,3.96,3.54,3.45,3.52,3.71,3.8,3.55,3.56,3.4,3.46,3.59,3.5,3.68,4,4.13,4.51,4.08,4.27,4.42,4.49,4.46,4.31,4.13,4.16,4.45,4.33,4.8,4.84,5.45,5.42,4.73,4.75,5.28,5.22,4.81,5.02,4.96,5,5.09,4.79,4.9,4.9,5.17,4.79,4.86,4.56,4.56,4.61,4.33,4.31,4.35,4.21,4.18,4.26,4.02,4,3.98,3.81,3.85,3.99,3.81,3.57,3.85,3.65,3.6,3.79,3.71,3.84,3.81,3.93,3.87,3.82,3.91,3.94,3.91,3.91,3.89,3.9,3.93,3.88,3.89,3.93,3.95,3.88,3.93,3.9,3.65,3.64,3.57,3.67,3.7,3.64,3.58,3.6,3.55,3.55,3.42,3.6,3.66,3.71,3.69,3.75,3.74,3.81,3.84,4,3.94,3.92,4.21,4.02,3.98,3.97,4,4.38,4.21,4.21,4.29,4.19,4.34,4.5,4.57,4.46,4.46,4.48,4.46,4.46,4.36,4.28,4.18,4.21,4.12,4.12,4.21,4.37,4.36,4.36,4.41,4.26,4.27,4.4,4.6,4.9,4.91,5.13,5.1,5.32,5.27,5.16,5.04,5.19,5.21,5.12,5.25,5.42,5.59,5.71,5.55,5.39,5.41,5.22,5.14,5.04,5.19,5.13,5.14,5.18,5.21,5.18,5.15,4.73,4.77,4.98,5.13,5.14,4.97,5.05,5.13,5.1,5.12,5.17,5.01,5.08,5,5.14,5.12,5.06,5.09,5.11,5.14,5.06,5.16,5.32,5.1,5.13],"lastOpen":5.150000095367432,"lastHigh":5.190000057220459,"lastLow":5.110000133514404,"lastClose":5.130000114440918,"lastVolume":68737,"dataId":"68737|5.13","lastDate":20230922,"prevClose":5.099999904632568,"afterClose":null,"afterChange":null,"chartEvents":[],"patterns":[{"kind":1,"strength":1007.915,"status":2,"bounces":0,"x1":0,"y1":250,"x2":600,"y2":250,"x3":0,"y3":0,"x4":0,"y4":0,"ticker":""},{"kind":2,"strength":1721.586,"status":2,"bounces":2,"x1":105,"y1":54,"x2":600,"y2":21,"x3":0,"y3":0,"x4":0,"y4":0,"ticker":""},{"kind":3,"strength":569.5818,"status":0,"bounces":2,"x1":310,"y1":259,"x2":600,"y2":85,"x3":0,"y3":0,"x4":0,"y4":0,"ticker":""}],"patternsMinRange":3,"patternsMaxRange":6};
+                                        data.instrument = 'stock';
+                                        data.premarket = false;
+                                        data.aftermarket = false;
+                                        data.hasPatterns = true;
+                                        data.events = false;
+                                        Quote.create(data);
+                                    })();
+                                  </script><script type="text/javascript">
+                                    var chartConfig = {
+          "layout":"1h1v",
+          "height": 400,
+          "scrollable": false,
+          "colors": undefined,
+          "ideas": false,
+          "editable": false,
+          "editors": ['tools', 'ideas', 'publish'],
+          "charts":[{
+                "height": 400,
+                "timeframe": "d",
+                "dateRange": "",
+                "scale": "linear",
+                "ticker": "YALA",
+                "instrument": "stock",
+                "refreshData": true,
+                "premarket": false,
+                "hasChartEvents": false,
+                "aftermarket": false,
+                "panes": []
+              }],
+        };
+                                    var taConfig = JSON.parse(JSON.stringify(FinvizSettings.TA));
+
+                                    taConfig.style = 'candlestick';
+                                    var FinvizQuoteTypeCurrent = taConfig.style;
+
+                                    var mergeChartAndTAConfig = FLibs.Charts.convertTa.mergeChartAndTAConfig;
+                                    mergeChartAndTAConfig(chartConfig, taConfig);
+
+                                    window.globalChartConfig = chartConfig
+                                  </script></div><div class="fv-container">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" valign="top">
+<div class="content" data-testid="quote-data-content"><table width="100%"><tr>
+<td align="center" valign="top">
+<table cellpadding="3" cellspacing="0" class="fullview-title" width="100%">
+<tr class="text-blue-500"><td align="center"><h1><a class="tab-link" href="quote.ashx?t=YALA&amp;ty=c&amp;ta=1&amp;p=d" id="ticker">YALA</a> | <span><a class="tab-link" href="https://www.yalla.com" rel="nofollow" target="_blank"><b>Yalla Group Limited</b></a></span></h1></td></tr>
+<tr><td align="center" class="fullview-links"><a class="tab-link" href="screener.ashx?v=111&amp;f=sec_technology">Technology</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=ind_softwareapplication">Software - Application</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=geo_unitedarabemirates">United Arab Emirates</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=exch_nyse">NYSE</a></td></tr>
+</table>
+<div class="my-3"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_970x91_1" style="width:970px;height:100px;max-height:100px"></div></div><table cellpding="0" cellspacing="0" class="fullview-links" width="100%">
+<td align="left" class="js-quote-correlation-links-container" width="80%">
+<td align="right" width="20%">
+<a class="tab-link" href="#statements">Scroll to Statements<svg class="fill-current inline-block ml-0.5" height="12" width="12">
+<use href="/assets/icons.svg?rev=3#arrowDown"></use>
+</svg></a></td>
+</td></table></td></tr>
+</table></div></td>
+</tr></table>
+<div class="snapshot-table-wrapper"><table border="0" cellpadding="3" cellspacing="0" class="snapshot-table2" width="100%">
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Major index membership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Index</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Earnings (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/E</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">10.06</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Diluted EPS (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS (ttm)</td><td align="left" class="snapshot-td2" width="8%"><b>0.51</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Insider ownership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Insider Own</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">31.28%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Shares outstanding] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shs Outstand</td><td align="left" class="snapshot-td2" width="8%"><b>158.87M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Week)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Week</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-0.19%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Market capitalization] offsetx=[10] offsety=[20] delay=[300]" width="7%">Market Cap</td><td align="left" class="snapshot-td2" width="8%"><b>796.84M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Forward Price-to-Earnings (next fiscal year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Forward P/E</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">7.54</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS estimate for next year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Y</td><td align="left" class="snapshot-td2" width="8%"><b>0.68</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Insider transactions (6-Month change in Insider Ownership)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Insider Trans</td><td align="left" class="snapshot-td2" width="8%"><b>0.00%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Shares float] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shs Float</td><td align="left" class="snapshot-td2" width="8%"><b>90.37M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Month</td><td align="left" class="snapshot-td2" width="8%"><b>0.00%</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Income (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Income</td><td align="left" class="snapshot-td2" width="8%"><b>91.30M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Earnings-to-Growth] offsetx=[10] offsety=[20] delay=[300]" width="7%">PEG</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS estimate for next quarter] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Q</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Institutional ownership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Inst Own</td><td align="left" class="snapshot-td2" width="8%"><b>27.10%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Short interest share / ratio] offsetx=[10] offsety=[20] delay=[300]" width="7%">Short Float / Ratio</td><td align="left" class="snapshot-td2" width="8%"><b>1.68% / 5.92</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Quarter)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Quarter</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">24.51%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Revenue (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales</td><td align="left" class="snapshot-td2" width="8%"><b>307.90M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Sales (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/S</td><td align="left" class="snapshot-td2" width="8%"><b>2.59</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS growth this year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS this Y</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-1.70%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Institutional transactions (3-Month change in Institutional Ownership)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Inst Trans</td><td align="left" class="snapshot-td2" width="8%"><b>4.28%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Short interest] offsetx=[10] offsety=[20] delay=[300]" width="7%">Short Interest</td><td align="left" class="snapshot-td2" width="8%"><b>1.52M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Half Year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Half Y</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">33.59%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Book value per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Book/sh</td><td align="left" class="snapshot-td2" width="8%"><b>3.15</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Book (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/B</td><td align="left" class="snapshot-td2" width="8%"><b>1.63</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS growth next year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Assets (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROA</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">17.50%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Analysts' mean target price] offsetx=[10] offsety=[20] delay=[300]" width="7%">Target Price</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">6.25</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Year</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">45.74%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Cash per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Cash/sh</td><td align="left" class="snapshot-td2" width="8%"><b>3.29</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price to cash per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/C</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">1.56</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Long term annual growth estimate (5 years)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next 5Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Equity (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROE</td><td align="left" class="snapshot-td2" width="8%"><b>20.00%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[52-Week trading range] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W Range</td><td align="left" class="snapshot-td2" width="8%"><b><small>3.00 - 5.77</small></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Year To Date)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf YTD</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">46.57%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend (annual)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Dividend</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price to Free Cash Flow (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/FCF</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Annual EPS growth past 5 years] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS past 5Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Investment (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROI</td><td align="left" class="snapshot-td2" width="8%"><b>17.10%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 52-Week High] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W High</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-11.09%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Beta] offsetx=[10] offsety=[20] delay=[300]" width="7%">Beta</td><td align="left" class="snapshot-td2" width="8%"><b>1.34</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend yield (annual)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Dividend %</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quick Ratio (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Quick Ratio</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">7.70</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Annual sales growth past 5 years] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales past 5Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Gross Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Gross Margin</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">63.20%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 52-Week Low] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W Low</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">71.00%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Average True Range (14)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ATR</td><td align="left" class="snapshot-td2" width="8%"><b>0.20</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Full time employees] offsetx=[10] offsety=[20] delay=[300]" width="7%">Employees</td><td align="left" class="snapshot-td2" width="8%"><b>829</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Current Ratio (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Current Ratio</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">7.70</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quarterly revenue growth (YoY)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales Q/Q</td><td align="left" class="snapshot-td2" width="8%"><b>4.10%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Operating Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Oper. Margin</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">25.80%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Relative Strength Index] offsetx=[10] offsety=[20] delay=[300]" width="7%">RSI (14)</td><td align="left" class="snapshot-td2" width="8%"><b>51.08</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Volatility (Week, Month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Volatility</td><td align="left" class="snapshot-td2" width="8%"><b><small>3.69% 3.57%</small></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Stock has options trading on a market exchange] offsetx=[10] offsety=[20] delay=[300]" width="7%">Optionable</td><td align="left" class="snapshot-td2" width="8%"><b>Yes</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Total Debt to Equity (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Debt/Eq</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">0.00</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quarterly earnings growth (YoY)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS Q/Q</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">38.70%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Net Profit Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Profit Margin</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">29.70%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Relative volume] offsetx=[10] offsety=[20] delay=[300]" width="7%">Rel Volume</td><td align="left" class="snapshot-td2" width="8%"><b>0.27</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Previous close] offsetx=[10] offsety=[20] delay=[300]" width="7%">Prev Close</td><td align="left" class="snapshot-td2" width="8%"><b>5.10</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Stock available to sell short] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shortable</td><td align="left" class="snapshot-td2" width="8%"><b>Yes</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Long Term Debt to Equity (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">LT Debt/Eq</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">0.00</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Earnings date&lt;br&gt;&lt;br&gt;BMO = Before Market Open&lt;br&gt;AMC = After Market Close] offsetx=[10] offsety=[20] delay=[300]" width="7%">Earnings</td><td align="left" class="snapshot-td2" width="8%"><b>Aug 14 AMC</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend Payout Ratio (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Payout</td><td align="left" class="snapshot-td2" width="8%"><b>0.00%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Average volume (3 month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Avg Volume</td><td align="left" class="snapshot-td2" width="8%"><b>256.70K</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Current stock price] offsetx=[10] offsety=[20] delay=[300]" width="7%">Price</td><td align="left" class="snapshot-td2" width="8%"><b>5.13</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Analysts' mean recommendation (1=Buy 5=Sell)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Recom</td><td align="left" class="snapshot-td2" width="8%"><b>2.50</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 20-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA20</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">0.52%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 50-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA50</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-0.63%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 200-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA200</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">16.85%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Volume] offsetx=[10] offsety=[20] delay=[300]" width="7%">Volume</td><td align="left" class="snapshot-td2" width="8%"><b>68,737</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (today)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Change</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">0.59%</span></b></td>
+</tr>
+</table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr><td align="center"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_3x6_1" style="width:970px;height:315px;max-height:315px"></div></td></tr><tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr class="js-ratings-row">
+<td>
+<table border="0" cellpadding="0" cellspacing="0" class="js-table-ratings fullview-ratings-outer" width="100%">
+<tr>
+<td align="left" width="140">Date</td>
+<td align="left" width="320">Action</td>
+<td align="left" width="320">Analyst</td>
+<td align="left" width="320">Rating Change</td>
+<td align="left" width="320">Price Target Change</td>
+</tr><tr class="body-table-rating-upgrade"><td align="left" width="140">Mar-12-21</td><td align="left" width="320"><b>Upgrade</b></td>
+<td align="left" width="320">Oppenheimer</td>
+<td align="left" width="320">Perform → Outperform</td>
+<td align="left" width="320">$28</td>
+</tr>
+<tr class="body-table-rating-upgrade"><td align="left" width="140">Mar-12-21</td><td align="left" width="320"><b>Upgrade</b></td>
+<td align="left" width="320">Oppenheimer</td>
+<td align="left" width="320">Perform → Outperform</td>
+<td align="left" width="320"></td>
+</tr>
+<tr class="body-table-rating-neutral"><td align="left" width="140">Dec-11-20</td><td align="left" width="320"><b>Initiated</b></td>
+<td align="left" width="320">Oppenheimer</td>
+<td align="left" width="320">Perform</td>
+<td align="left" width="320"></td>
+</tr>
+<tr class="body-table-rating-neutral last-row"><td align="left" width="140">Oct-26-20</td><td align="left" width="320"><b>Initiated</b></td>
+<td align="left" width="320">Morgan Stanley</td>
+<td align="left" width="320">Equal-Weight</td>
+<td align="left" width="320"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" width="100%"><tr><td><div class="body-table-news-wrapper"><table border="0" cellpadding="1" cellspacing="0" class="fullview-news-outer" id="news-table" width="100%">
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'InvestorPlace', 'https://finance.yahoo.com/news/3-small-cap-stocks-smart-103510822.html');">
+<td align="right" width="130">
+            Aug-17-23 06:35AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/3-small-cap-stocks-smart-103510822.html" rel="nofollow" target="_blank">3 Small-Cap Stocks That Smart Investors Are Buying Now</a>
+</div>
+<div class="news-link-right">
+<span>(InvestorPlace)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Thomson Reuters StreetEvents', 'https://finance.yahoo.com/news/q2-2023-yalla-group-ltd-184804126.html');">
+<td align="right" width="130">
+            Aug-15-23 02:48PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/q2-2023-yalla-group-ltd-184804126.html" rel="nofollow" target="_blank">Q2 2023 Yalla Group Ltd Earnings Call</a>
+</div>
+<div class="news-link-right">
+<span>(Thomson Reuters StreetEvents)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000234.html');">
+<td align="right" width="130">
+            Aug-14-23 05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000234.html" rel="nofollow" target="_blank">Yalla Group Limited Announces Unaudited Second Quarter 2023 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-report-second-100000443.html');">
+<td align="right" width="130">
+            Aug-08-23 06:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-report-second-100000443.html" rel="nofollow" target="_blank">Yalla Group Limited to Report Second Quarter 2023 Financial Results on August 14, 2023 Eastern Time</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-establishes-sustainable-account-100000390.html');">
+<td align="right" width="130">
+            Aug-02-23 06:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-establishes-sustainable-account-100000390.html" rel="nofollow" target="_blank">Yalla Group Establishes Sustainable Account with Standard Chartered</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Insider Monkey', 'https://finance.yahoo.com/news/10-richest-arab-countries-2023-113624013.html');">
+<td align="right" width="130">
+            Jul-12-23 07:36AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/10-richest-arab-countries-2023-113624013.html" rel="nofollow" target="_blank">10 Richest Arab Countries in 2023</a>
+</div>
+<div class="news-link-right">
+<span>(Insider Monkey)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-showcases-latest-hard-core-090000863.html');">
+<td align="right" width="130">
+            Jun-29-23 05:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-showcases-latest-hard-core-090000863.html" rel="nofollow" target="_blank">Yalla Showcases Latest Hard-Core Game at Dubai Esports and Games Festival 2023</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/yalla-group-limiteds-nyse-yala-145855962.html');">
+<td align="right" width="130">
+            Jun-08-23 10:58AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limiteds-nyse-yala-145855962.html" rel="nofollow" target="_blank">Yalla Group Limited's (NYSE:YALA) Stock's On An Uptrend: Are Strong Financials Guiding The Market?</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/42-stake-yalla-group-limited-125957955.html');">
+<td align="right" width="130">
+            May-25-23 08:59AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/42-stake-yalla-group-limited-125957955.html" rel="nofollow" target="_blank">With a 42% stake, Yalla Group Limited (NYSE:YALA) insiders have a lot riding on the company</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'InvestorPlace', 'https://finance.yahoo.com/news/7-tech-stocks-own-now-190447743.html');">
+<td align="right" width="130">
+            May-21-23 03:04PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/7-tech-stocks-own-now-190447743.html" rel="nofollow" target="_blank">The 7 Tech Stocks You Need to Own Now for Maximum Returns</a>
+</div>
+<div class="news-link-right">
+<span>(InvestorPlace)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Thomson Reuters StreetEvents', 'https://finance.yahoo.com/news/q1-2023-yalla-group-ltd-152739426.html');">
+<td align="right" width="130">
+            May-16-23 11:27AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/q1-2023-yalla-group-ltd-152739426.html" rel="nofollow" target="_blank">Q1 2023 Yalla Group Ltd Earnings Call</a>
+</div>
+<div class="news-link-right">
+<span>(Thomson Reuters StreetEvents)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000289.html');">
+<td align="right" width="130">
+            May-15-23 05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000289.html" rel="nofollow" target="_blank">Yalla Group Limited Announces Unaudited First Quarter 2023 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/yalla-groups-nyse-yala-investors-120941304.html');">
+<td align="right" width="130">
+            May-11-23 08:09AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-groups-nyse-yala-investors-120941304.html" rel="nofollow" target="_blank">Yalla Group's (NYSE:YALA) investors will be pleased with their 13% return over the last year</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-report-first-100000838.html');">
+<td align="right" width="130">
+            May-08-23 06:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-report-first-100000838.html" rel="nofollow" target="_blank">Yalla Group Limited to Report First Quarter 2023 Financial Results on May 15, 2023 Eastern Time</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Insider Monkey', 'https://finance.yahoo.com/news/12-cheap-internet-stocks-buy-154507189.html');">
+<td align="right" width="130">
+            Apr-26-23 11:45AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/12-cheap-internet-stocks-buy-154507189.html" rel="nofollow" target="_blank">12 Cheap Internet Stocks to Buy Now</a>
+</div>
+<div class="news-link-right">
+<span>(Insider Monkey)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/yalla-group-full-2022-earnings-120204675.html');">
+<td align="right" width="130">
+            Apr-22-23 08:02AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-full-2022-earnings-120204675.html" rel="nofollow" target="_blank">Yalla Group Full Year 2022 Earnings: In Line With Expectations</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-releases-2022-esg-090000178.html');">
+<td align="right" width="130">
+            Apr-21-23 05:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-releases-2022-esg-090000178.html" rel="nofollow" target="_blank">Yalla Group Releases 2022 ESG Report</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-files-2022-105000859.html');">
+<td align="right" width="130">
+            Apr-20-23 06:50AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-files-2022-105000859.html" rel="nofollow" target="_blank">Yalla Group Limited Files 2022 Annual Report on Form 20-F</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span> <span class="body-table-news-loss">-6.41%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Insider Monkey', 'https://finance.yahoo.com/news/10-cheap-social-media-stocks-212443977.html');">
+<td align="right" width="130">
+            Apr-08-23 05:24PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/10-cheap-social-media-stocks-212443977.html" rel="nofollow" target="_blank">10 Cheap Social Media Stocks to Buy According to Hedge Funds</a>
+</div>
+<div class="news-link-right">
+<span>(Insider Monkey)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/investigate-yalla-group-limited-nyse-100214702.html');">
+<td align="right" width="130">
+            Apr-03-23 06:02AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/investigate-yalla-group-limited-nyse-100214702.html" rel="nofollow" target="_blank">Should You Investigate Yalla Group Limited (NYSE:YALA) At US$3.94?</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Insider Monkey', 'https://finance.yahoo.com/news/yalla-group-limited-nyse-yala-152114354.html');">
+<td align="right" width="130">
+            Mar-14-23 11:21AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-nyse-yala-152114354.html" rel="nofollow" target="_blank">Yalla Group Limited (NYSE:YALA) Q4 2022 Earnings Call Transcript</a>
+</div>
+<div class="news-link-right">
+<span>(Insider Monkey)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Thomson Reuters StreetEvents', 'https://finance.yahoo.com/news/q4-2022-yalla-group-ltd-144128004.html');">
+<td align="right" width="130">
+            10:41AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/q4-2022-yalla-group-ltd-144128004.html" rel="nofollow" target="_blank">Q4 2022 Yalla Group Ltd Earnings Call</a>
+</div>
+<div class="news-link-right">
+<span>(Thomson Reuters StreetEvents)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000786.html');">
+<td align="right" width="130">
+            Mar-13-23 05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000786.html" rel="nofollow" target="_blank">Yalla Group Limited Announces Unaudited Fourth Quarter and Full Year 2022 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/heres-why-think-yalla-group-100835655.html');">
+<td align="right" width="130">
+            06:08AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/heres-why-think-yalla-group-100835655.html" rel="nofollow" target="_blank">Here's Why We Think Yalla Group (NYSE:YALA) Is Well Worth Watching</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-report-fourth-100000323.html');">
+<td align="right" width="130">
+            Mar-03-23 05:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-report-fourth-100000323.html" rel="nofollow" target="_blank">Yalla Group Limited to Report Fourth Quarter and Full Year 2022 Financial Results on March 13, 2023 Eastern Time</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'InvestorPlace', 'https://finance.yahoo.com/news/3-best-penny-stocks-buy-125847956.html');">
+<td align="right" width="130">
+            Feb-13-23 07:58AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/3-best-penny-stocks-buy-125847956.html" rel="nofollow" target="_blank">The 3 Best Penny Stocks to Buy for February 2023</a>
+</div>
+<div class="news-link-right">
+<span>(InvestorPlace)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/intrinsic-calculation-yalla-group-limited-195042218.html');">
+<td align="right" width="130">
+            Jan-13-23 02:50PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/intrinsic-calculation-yalla-group-limited-195042218.html" rel="nofollow" target="_blank">An Intrinsic Calculation For Yalla Group Limited (NYSE:YALA) Suggests It's 44% Undervalued</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/yalla-group-limiteds-nyse-yala-142823012.html');">
+<td align="right" width="130">
+            Dec-28-22 09:28AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limiteds-nyse-yala-142823012.html" rel="nofollow" target="_blank">Yalla Group Limited's (NYSE:YALA) Stock Has Been Sliding But Fundamentals Look Strong: Is The Market Wrong?</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Insider Monkey', 'https://finance.yahoo.com/news/yalla-group-limited-nyse-yala-025805486.html');">
+<td align="right" width="130">
+            Dec-27-22 09:58PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-nyse-yala-025805486.html" rel="nofollow" target="_blank">Yalla Group Limited (NYSE:YALA) Q3 2022 Earnings Call Transcript</a>
+</div>
+<div class="news-link-right">
+<span>(Insider Monkey)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/yalla-group-limited-nyse-yala-104736556.html');">
+<td align="right" width="130">
+            Nov-16-22 05:47AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-nyse-yala-104736556.html" rel="nofollow" target="_blank">Yalla Group Limited (NYSE:YALA) Stock Rockets 29% But Many Are Still Ignoring The Company</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span> <span class="body-table-news-loss">-7.84%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-220000064.html');">
+<td align="right" width="130">
+            Nov-14-22 05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-220000064.html" rel="nofollow" target="_blank">Yalla Group Limited Announces Unaudited Third Quarter 2022 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-report-third-100000710.html');">
+<td align="right" width="130">
+            Nov-04-22 06:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-report-third-100000710.html" rel="nofollow" target="_blank">Yalla Group Limited to Report Third Quarter 2022 Financial Results on November 14, 2022 Eastern Time</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span> <span class="body-table-news-gain">+6.33%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/owning-48-yalla-group-limited-141932577.html');">
+<td align="right" width="130">
+            Nov-03-22 10:19AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/owning-48-yalla-group-limited-141932577.html" rel="nofollow" target="_blank">Owning 48% in Yalla Group Limited (NYSE:YALA) means that insiders are heavily invested in the company's future</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/yalla-group-limiteds-nyse-yala-110617396.html');">
+<td align="right" width="130">
+            Oct-07-22 07:06AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limiteds-nyse-yala-110617396.html" rel="nofollow" target="_blank">What Is Yalla Group Limited's (NYSE:YALA) Share Price Doing?</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-president-named-2022-most-100000665.html');">
+<td align="right" width="130">
+            Sep-13-22 06:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-president-named-2022-most-100000665.html" rel="nofollow" target="_blank">Yalla President Named 2022 Most Inspiring Business Leader</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span> <span class="body-table-news-loss">-6.99%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/forbes-publishes-yalla-presidents-opinion-203000380.html');">
+<td align="right" width="130">
+            Aug-23-22 04:30PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/forbes-publishes-yalla-presidents-opinion-203000380.html" rel="nofollow" target="_blank">Forbes Publishes Yalla President's Opinion on Digital Entertainment Startups in MENA</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000489.html');">
+<td align="right" width="130">
+            Aug-08-22 05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000489.html" rel="nofollow" target="_blank">Yalla Group Limited Announces Unaudited Second Quarter 2022 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-report-second-100000858.html');">
+<td align="right" width="130">
+            Aug-02-22 06:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-report-second-100000858.html" rel="nofollow" target="_blank">Yalla Group Limited to Report Second Quarter 2022 Financial Results on August 8, 2022 Eastern Time</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span> <span class="body-table-news-gain">+5.92%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-announces-board-changes-090000116.html');">
+<td align="right" width="130">
+            Aug-01-22 05:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-announces-board-changes-090000116.html" rel="nofollow" target="_blank">Yalla Group Announces Board Changes</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/yalla-group-limiteds-nyse-yala-121055719.html');">
+<td align="right" width="130">
+            Jul-21-22 08:10AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limiteds-nyse-yala-121055719.html" rel="nofollow" target="_blank">Is Yalla Group Limited's (NYSE:YALA) Latest Stock Performance A Reflection Of Its Financial Health?</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Bloomberg', 'https://finance.yahoo.com/news/nyse-pitches-us-listings-gulf-073336458.html');">
+<td align="right" width="130">
+            Jul-01-22 03:33AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/nyse-pitches-us-listings-gulf-073336458.html" rel="nofollow" target="_blank">NYSE Pitches US Listings to Gulf Tech Firms Amid Global Selloff</a>
+</div>
+<div class="news-link-right">
+<span>(Bloomberg)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/yalla-group-nyse-yala-shareholders-133513716.html');">
+<td align="right" width="130">
+            Jun-05-22 09:35AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-nyse-yala-shareholders-133513716.html" rel="nofollow" target="_blank">Yalla Group (NYSE:YALA) shareholders have endured a 80% loss from investing in the stock a year ago</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000572.html');">
+<td align="right" width="130">
+            May-16-22 05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000572.html" rel="nofollow" target="_blank">Yalla Group Limited Announces Unaudited First Quarter 2022 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-report-first-100000058.html');">
+<td align="right" width="130">
+            May-09-22 06:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-report-first-100000058.html" rel="nofollow" target="_blank">Yalla Group Limited to Report First Quarter 2022 Financial Results on May 16, 2022 Eastern Time</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span> <span class="body-table-news-loss">-8.48%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/much-yalla-group-limited-nyse-184140030.html');">
+<td align="right" width="130">
+            May-05-22 02:41PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/much-yalla-group-limited-nyse-184140030.html" rel="nofollow" target="_blank">How Much Of Yalla Group Limited (NYSE:YALA) Do Insiders Own?</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-releases-inaugural-esg-093000692.html');">
+<td align="right" width="130">
+            Apr-26-22 05:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-releases-inaugural-esg-093000692.html" rel="nofollow" target="_blank">Yalla Group Releases Inaugural ESG Report</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-files-2021-211000456.html');">
+<td align="right" width="130">
+            Apr-25-22 05:10PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-files-2021-211000456.html" rel="nofollow" target="_blank">Yalla Group Limited Files 2021 Annual Report on Form 20-F</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-wins-top-30-100000371.html');">
+<td align="right" width="130">
+            Apr-12-22 06:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-wins-top-30-100000371.html" rel="nofollow" target="_blank">Yalla Group Wins Top 30 Overall EMEA Headquartered Publishers in data.ai's Level Up Top Publisher Awards 2022</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-wins-gold-2022-middle-090000070.html');">
+<td align="right" width="130">
+            Mar-25-22 05:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-wins-gold-2022-middle-090000070.html" rel="nofollow" target="_blank">Yalla Wins Gold at 2022 Middle East &amp; North Africa Stevie Awards</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000671.html');">
+<td align="right" width="130">
+            Mar-14-22 05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-210000671.html" rel="nofollow" target="_blank">Yalla Group Limited Announces Unaudited Fourth Quarter and Full Year 2021 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span> <span class="body-table-news-loss">-15.33%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-report-fourth-110000041.html');">
+<td align="right" width="130">
+            Mar-04-22 06:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-report-fourth-110000041.html" rel="nofollow" target="_blank">Yalla Group Limited to Report Fourth Quarter and Full Year 2021 Financial Results on March 14, 2022 Eastern Time</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/boasting-23-return-equity-yalla-170823913.html');">
+<td align="right" width="130">
+            Feb-11-22 12:08PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/boasting-23-return-equity-yalla-170823913.html" rel="nofollow" target="_blank">Boasting A 23% Return On Equity, Is Yalla Group Limited (NYSE:YALA) A Top Quality Stock?</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-president-named-menas-leading-220000382.html');">
+<td align="right" width="130">
+            Feb-03-22 05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-president-named-menas-leading-220000382.html" rel="nofollow" target="_blank">Yalla President Named MENA's Leading Personality of the Year</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-announces-dismissal-securities-230000118.html');">
+<td align="right" width="130">
+            Jan-19-22 06:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-announces-dismissal-securities-230000118.html" rel="nofollow" target="_blank">Yalla Group Announces Dismissal of Securities Class Action Lawsuit</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Simply Wall St.', 'https://finance.yahoo.com/news/yalla-group-limited-nyse-yala-172429641.html');">
+<td align="right" width="130">
+            Nov-29-21 12:24PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-nyse-yala-172429641.html" rel="nofollow" target="_blank">Is Yalla Group Limited (NYSE:YALA) Trading At A 37% Discount?</a>
+</div>
+<div class="news-link-right">
+<span>(Simply Wall St.)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Motley Fool', 'https://www.fool.com/investing/2021/11/09/why-yalla-investors-yelled-hurray-today/?source=eptyholnk0000202&amp;utm_source=yahoo-host&amp;utm_medium=feed&amp;utm_campaign=article');">
+<td align="right" width="130">
+            Nov-09-21 12:17PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://www.fool.com/investing/2021/11/09/why-yalla-investors-yelled-hurray-today/?source=eptyholnk0000202&amp;utm_source=yahoo-host&amp;utm_medium=feed&amp;utm_campaign=article" rel="nofollow" target="_blank">Why Yalla Investors Yelled "Hurray!" Today</a>
+</div>
+<div class="news-link-right">
+<span>(Motley Fool)</span> <span class="body-table-news-gain">+15.76%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-announces-appointment-independent-220500916.html');">
+<td align="right" width="130">
+            Nov-08-21 05:05PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-announces-appointment-independent-220500916.html" rel="nofollow" target="_blank">Yalla Group Announces Appointment of Independent Director</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span> <span class="body-table-news-gain">+11.18%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-220000077.html');">
+<td align="right" width="130">
+            05:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-announces-unaudited-220000077.html" rel="nofollow" target="_blank">Yalla Group Limited Announces Unaudited Third Quarter 2021 Financial Results</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Bloomberg', 'https://finance.yahoo.com/news/yalla-showed-promise-uae-first-040110345.html');">
+<td align="right" width="130">
+            Nov-01-21 08:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-showed-promise-uae-first-040110345.html" rel="nofollow" target="_blank">Hounded by Short Sellers, $6 Billion Tech Unicorns ADRs Implode</a>
+</div>
+<div class="news-link-right">
+<span>(Bloomberg)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-limited-report-third-090000767.html');">
+<td align="right" width="130">
+            Oct-29-21 05:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-limited-report-third-090000767.html" rel="nofollow" target="_blank">Yalla Group Limited to Report Third Quarter 2021 Financial Results on November 8, 2021 Eastern Time</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/yalla-group-wins-middle-east-090000637.html');">
+<td align="right" width="130">
+            Oct-28-21 05:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-group-wins-middle-east-090000637.html" rel="nofollow" target="_blank">Yalla Group Wins Middle East Technology Excellence Award</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/shareholder-alert-levi-korsinsky-llp-161200683.html');">
+<td align="right" width="130">
+            Oct-12-21 12:12PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/shareholder-alert-levi-korsinsky-llp-161200683.html" rel="nofollow" target="_blank">SHAREHOLDER ALERT: Levi &amp; Korsinsky, LLP Notifies Shareholders of Yalla Group Limited of a Class Action Lawsuit and a Lead Plaintiff Deadline of October 12, 2021 - YALA</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/yala-final-deadline-today-nationally-142300942.html');">
+<td align="right" width="130">
+            10:23AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yala-final-deadline-today-nationally-142300942.html" rel="nofollow" target="_blank">YALA Final Deadline Today: Nationally Ranked Rosen Law Firm, Encourages Yalla Group Limited Investors with Losses in Excess of $100K to Secure Counsel Before Important October 12 Deadline in Securities Class Action - YALA</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/yala-final-deadline-bronstein-gewirtz-140000375.html');">
+<td align="right" width="130">
+            10:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yala-final-deadline-bronstein-gewirtz-140000375.html" rel="nofollow" target="_blank">YALA Final Deadline: Bronstein, Gewirtz &amp; Grossman, LLC Reminds Yalla Group Limited Investors of Class Action and Lead Plaintiff Deadline: October 12, 2021</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/shareholder-alert-yala-kplt-sesn-134500215.html');">
+<td align="right" width="130">
+            09:45AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/shareholder-alert-yala-kplt-sesn-134500215.html" rel="nofollow" target="_blank">SHAREHOLDER ALERT: YALA KPLT SESN: The Law Offices of Vincent Wong Reminds Investors of Important Class Action Deadlines</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/deadline-today-schall-law-firm-123000629.html');">
+<td align="right" width="130">
+            08:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/deadline-today-schall-law-firm-123000629.html" rel="nofollow" target="_blank">DEADLINE TODAY: The Schall Law Firm Reminds Investors of a Class Action Lawsuit Against Yalla Group Limited and Encourages Investors with Losses in Excess of $100,000 to Contact the Firm</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/class-action-yala-hyre-ear-094000672.html');">
+<td align="right" width="130">
+            05:40AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/class-action-yala-hyre-ear-094000672.html" rel="nofollow" target="_blank">CLASS ACTION UPDATE for YALA, HYRE and EAR: Levi &amp; Korsinsky, LLP Reminds Investors of Class Actions on Behalf of Shareholders</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Business Wire', 'https://finance.yahoo.com/news/yalla-alert-bragar-eagel-squire-010000111.html');">
+<td align="right" width="130">
+            Oct-11-21 09:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-alert-bragar-eagel-squire-010000111.html" rel="nofollow" target="_blank">YALLA ALERT: Bragar Eagel &amp; Squire, P.C. Reminds Investors that a Class Action Lawsuit Has Been Filed Against Yalla Group Limited and Encourages Investors to Contact the Firm</a>
+</div>
+<div class="news-link-right">
+<span>(Business Wire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/gross-law-firm-announces-class-211500392.html');">
+<td align="right" width="130">
+            05:15PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/gross-law-firm-announces-class-211500392.html" rel="nofollow" target="_blank">The Gross Law Firm Announces Class Actions on Behalf of Shareholders of YALA, LIVE and ANVS</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/shareholder-alert-pomerantz-law-firm-202600192.html');">
+<td align="right" width="130">
+            04:26PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/shareholder-alert-pomerantz-law-firm-202600192.html" rel="nofollow" target="_blank">SHAREHOLDER ALERT: Pomerantz Law Firm Investigates Claims On Behalf of Investors of Yalla Group Limited - YALA</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/shareholder-alert-yala-wdh-hnst-165000496.html');">
+<td align="right" width="130">
+            12:50PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/shareholder-alert-yala-wdh-hnst-165000496.html" rel="nofollow" target="_blank">SHAREHOLDER ALERT: YALA WDH HNST: The Law Offices of Vincent Wong Reminds Investors of Important Class Action Deadlines</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/deadline-alert-yala-live-law-161000032.html');">
+<td align="right" width="130">
+            12:10PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/deadline-alert-yala-live-law-161000032.html" rel="nofollow" target="_blank">DEADLINE ALERT for YALA and LIVE: The Law Offices of Frank R. Cruz Reminds Investors of Class Actions on Behalf of Shareholders</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/yalla-final-deadline-tomorrow-rosen-160000210.html');">
+<td align="right" width="130">
+            12:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-final-deadline-tomorrow-rosen-160000210.html" rel="nofollow" target="_blank">YALLA FINAL DEADLINE TOMORROW: ROSEN, NATIONAL TRIAL LAWYERS, Encourages Yalla Group Limited Investors to Secure Counsel Before Important October 12 Deadline in Securities Class Action  YALA</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Business Wire', 'https://finance.yahoo.com/news/yala-deadline-alert-bronstein-gewirtz-150000034.html');">
+<td align="right" width="130">
+            11:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yala-deadline-alert-bronstein-gewirtz-150000034.html" rel="nofollow" target="_blank">YALA Deadline Alert: Bronstein, Gewirtz &amp; Grossman, LLC Reminds Yalla Group Limited Investors of Class Action and Lead Plaintiff Deadline: October 12, 2021</a>
+</div>
+<div class="news-link-right">
+<span>(Business Wire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/class-action-yala-slqt-atip-130000797.html');">
+<td align="right" width="130">
+            09:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/class-action-yala-slqt-atip-130000797.html" rel="nofollow" target="_blank">CLASS ACTION UPDATE for YALA, SLQT and ATIP: Levi &amp; Korsinsky, LLP Reminds Investors of Class Actions on Behalf of Shareholders</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/deadline-tomorrow-schall-law-firm-123000664.html');">
+<td align="right" width="130">
+            08:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/deadline-tomorrow-schall-law-firm-123000664.html" rel="nofollow" target="_blank">DEADLINE TOMORROW: The Schall Law Firm Reminds Investors of a Class Action Lawsuit Against Yalla Group Limited and Encourages Investors with Losses in Excess of $100,000 to Contact the Firm</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/shareholder-alert-levi-korsinsky-llp-142100890.html');">
+<td align="right" width="130">
+            Oct-10-21 10:27AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/shareholder-alert-levi-korsinsky-llp-142100890.html" rel="nofollow" target="_blank">SHAREHOLDER ALERT: Levi &amp; Korsinsky, LLP Notifies Shareholders of Yalla Group Limited of a Class Action Lawsuit and a Lead Plaintiff Deadline of October 12, 2021 - YALA</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/yalla-123000896.html');">
+<td align="right" width="130">
+            08:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-123000896.html" rel="nofollow" target="_blank">Yalla Update</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/yalla-deadline-alert-faruqi-faruqi-123000391.html');">
+<td align="right" width="130">
+            08:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-deadline-alert-faruqi-faruqi-123000391.html" rel="nofollow" target="_blank">YALLA DEADLINE ALERT: Faruqi &amp; Faruqi LLP Securities Litigation Partner James (Josh) Wilson Encourages Investors Who Suffered Losses Exceeding $50,000 In Yalla To Contact Him Directly To Discuss Their Options</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/shareholder-alert-pomerantz-law-firm-203300346.html');">
+<td align="right" width="130">
+            Oct-09-21 04:33PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/shareholder-alert-pomerantz-law-firm-203300346.html" rel="nofollow" target="_blank">SHAREHOLDER ALERT: Pomerantz Law Firm Investigates Claims On Behalf of Investors of Yalla Group Limited - YALA</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/yalla-final-deadline-tuesday-rosen-191500896.html');">
+<td align="right" width="130">
+            03:15PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-final-deadline-tuesday-rosen-191500896.html" rel="nofollow" target="_blank">YALLA Final Deadline Tuesday: Rosen, a Leading Investor Rights Law Firm, Encourages Yalla Group Limited Investors to Secure Counsel Before Important October 12 Deadline in Securities Class Action - YALA</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Business Wire', 'https://finance.yahoo.com/news/yalla-alert-bragar-eagel-squire-010000269.html');">
+<td align="right" width="130">
+            Oct-08-21 09:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-alert-bragar-eagel-squire-010000269.html" rel="nofollow" target="_blank">YALLA ALERT: Bragar Eagel &amp; Squire, P.C. Reminds Investors That a Class Action Lawsuit Has Been Filed Against Yalla Group Limited and Encourages Investors to Contact the Firm</a>
+</div>
+<div class="news-link-right">
+<span>(Business Wire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/gross-law-firm-announces-class-235000736.html');">
+<td align="right" width="130">
+            07:50PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/gross-law-firm-announces-class-235000736.html" rel="nofollow" target="_blank">The Gross Law Firm Announces Class Actions on Behalf of Shareholders of YALA, WDH and APPH</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/yalla-class-action-reminder-223600456.html');">
+<td align="right" width="130">
+            06:36PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-class-action-reminder-223600456.html" rel="nofollow" target="_blank">Yalla Class Action Reminder</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/klein-law-firm-reminds-investors-212500179.html');">
+<td align="right" width="130">
+            05:25PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/klein-law-firm-reminds-investors-212500179.html" rel="nofollow" target="_blank">The Klein Law Firm Reminds Investors of Class Actions on Behalf of Shareholders of YALA, SESN and NNOX</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/final-notice-robbins-geller-rudman-202000807.html');">
+<td align="right" width="130">
+            04:20PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/final-notice-robbins-geller-rudman-202000807.html" rel="nofollow" target="_blank">FINAL NOTICE: Robbins Geller Rudman &amp; Dowd LLP Announces that Yalla Group Limited Investors with Substantial Losses Have Opportunity to Lead the Class Action Lawsuit  YALA</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/yala-lawsuit-filed-jakubowitz-law-192000986.html');">
+<td align="right" width="130">
+            03:20PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yala-lawsuit-filed-jakubowitz-law-192000986.html" rel="nofollow" target="_blank">YALA Lawsuit Filed: Jakubowitz Law Pursues Claims on Behalf of Yalla Group Limited Shareholders</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/yalla-100k-loss-alert-rosen-175000091.html');">
+<td align="right" width="130">
+            01:50PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-100k-loss-alert-rosen-175000091.html" rel="nofollow" target="_blank">YALLA $100K LOSS ALERT: ROSEN, LEADING GLOBAL INVESTOR COUNSEL, Encourages Yalla Group Limited Investors with LARGE LOSSES to Secure Counsel Before Important October 12 Deadline in Securities Class Action - YALA</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/yala-alert-klein-law-firm-171300910.html');">
+<td align="right" width="130">
+            01:13PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yala-alert-klein-law-firm-171300910.html" rel="nofollow" target="_blank">YALA ALERT: The Klein Law Firm Announces a Lead Plaintiff Deadline of October 12, 2021 in the Class Action Filed on Behalf of Yalla Group Limited Limited Shareholders</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Business Wire', 'https://finance.yahoo.com/news/law-offices-frank-r-cruz-154500842.html');">
+<td align="right" width="130">
+            11:45AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/law-offices-frank-r-cruz-154500842.html" rel="nofollow" target="_blank">The Law Offices of Frank R. Cruz Reminds Investors of Looming Deadline in the Class Action Lawsuit Against Yalla Group Limited (YALA)</a>
+</div>
+<div class="news-link-right">
+<span>(Business Wire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/upcoming-class-action-deadlines-yala-150000803.html');">
+<td align="right" width="130">
+            11:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/upcoming-class-action-deadlines-yala-150000803.html" rel="nofollow" target="_blank">Upcoming Class Action Deadlines - YALA, PHG &amp; ATIP - Bronstein, Gewirtz &amp; Grossman, LLC Reminds Investors</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/shareholder-alert-levi-korsinsky-llp-131600966.html');">
+<td align="right" width="130">
+            09:16AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/shareholder-alert-levi-korsinsky-llp-131600966.html" rel="nofollow" target="_blank">SHAREHOLDER ALERT: Levi &amp; Korsinsky, LLP Notifies Shareholders of Yalla Group Limited of a Class Action Lawsuit and a Lead Plaintiff Deadline of October 12, 2021 - YALA</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'ACCESSWIRE', 'https://finance.yahoo.com/news/deadline-tuesday-alert-schall-law-114500038.html');">
+<td align="right" width="130">
+            07:45AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/deadline-tuesday-alert-schall-law-114500038.html" rel="nofollow" target="_blank">DEADLINE TUESDAY ALERT: The Schall Law Firm Reminds Investors of a Class Action Lawsuit Against Yalla Group Limited and Encourages Investors with Losses in Excess of $100,000 to Contact the Firm</a>
+</div>
+<div class="news-link-right">
+<span>(ACCESSWIRE)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/bragar-eagel-squire-p-c-020000574.html');">
+<td align="right" width="130">
+            Oct-07-21 10:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/bragar-eagel-squire-p-c-020000574.html" rel="nofollow" target="_blank">Bragar Eagel &amp; Squire, P.C. Reminds Investors That Class Action Lawsuits Have Been Filed Against Yalla, Sesen Bio, HyreCar, and loanDepot and Encourages Investors to Contact the Firm</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span> <span class="body-table-news-gain">+6.10%</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/shareholder-alert-gross-law-firm-004400731.html');">
+<td align="right" width="130">
+            08:44PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/shareholder-alert-gross-law-firm-004400731.html" rel="nofollow" target="_blank">SHAREHOLDER ALERT: The Gross Law Firm Notifies Shareholders of Yalla Group Limited of a Class Action Lawsuit and a Lead Plaintiff Deadline of October 12, 2021 - (YALA)</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/tuesday-deadline-notice-schall-law-231300760.html');">
+<td align="right" width="130">
+            07:13PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/tuesday-deadline-notice-schall-law-231300760.html" rel="nofollow" target="_blank">TUESDAY DEADLINE NOTICE: The Schall Law Firm Reminds Investors of a Class Action Lawsuit Against Yalla Group Limited and Encourages Investors with Losses in Excess of $100,000 to Contact the Firm</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/shareholder-alert-pomerantz-law-firm-230000886.html');">
+<td align="right" width="130">
+            07:00PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/shareholder-alert-pomerantz-law-firm-230000886.html" rel="nofollow" target="_blank">SHAREHOLDER ALERT: Pomerantz Law Firm Investigates Claims On Behalf of Investors of Yalla Group Limited - YALA</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/yalla-shareholder-notice-222200592.html');">
+<td align="right" width="130">
+            06:22PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yalla-shareholder-notice-222200592.html" rel="nofollow" target="_blank">Yalla Shareholder Notice</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Newsfile', 'https://finance.yahoo.com/news/yala-lawsuit-law-offices-vincent-215500491.html');">
+<td align="right" width="130">
+            05:55PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/yala-lawsuit-law-offices-vincent-215500491.html" rel="nofollow" target="_blank">YALA LAWSUIT: The Law Offices of Vincent Wong Notify Investors of a Class Action Lawsuit Involving Yalla Group Limited</a>
+</div>
+<div class="news-link-right">
+<span>(Newsfile)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/investor-reminder-lead-plaintiff-deadline-202300734.html');">
+<td align="right" width="130">
+            04:23PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/investor-reminder-lead-plaintiff-deadline-202300734.html" rel="nofollow" target="_blank">INVESTOR REMINDER: Lead Plaintiff Deadline Approaching in Securities Class Action Against Yalla Group Limited (NYSE: YALA)</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+</table>
+</div>
+</td><td style="padding-left: 10px" valign="top" width="300"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_300x250_1" style="width:300px;height:250px;max-height:250px"></div><div class="fullview-news-outer" data-testid="quote-stocktwits-widget-news-container" id="stocktwits-widget-news">
+<div class="footer-cover"></div>
+<div class="right-side-cover"></div>
+</div>
+<script type="text/javascript">
+    function StocktwitsInit() {
+        var StocktwitsHeight = document.getElementById('news-table').clientHeight - 500;
+        if(typeof STWT !== 'undefined') {
+            var isNewLayout = true;
+            var isDarkTheme = true;
+            var MIN_TWIT_HEIGHT = 71;
+            var quoteTicker = 'YALA';
+            var bgColor = isNewLayout ? (isDarkTheme ? '22262F' : 'FFFFFF') : 'transparent';
+            var text_color = isNewLayout ? (isDarkTheme ? 'C3C6D0' : '4C5263') : '000000';
+            var link_color = isNewLayout ? (isDarkTheme ? '57aefb' : '306DCA') : '4871a8';
+            var divider_color = isNewLayout ? (isDarkTheme ? '353945' : 'DEDFE5') : 'd3d3d3';
+            var time_color = isNewLayout ? '868EA5' : '999999';
+            var username_color = isNewLayout ? (isDarkTheme ? 'F3F3F5' : '22262F') : '600D0B';
+            var font_size = isNewLayout ? 12 : 11;
+            STWT.Widget({
+                container: 'stocktwits-widget-news',
+                symbol: quoteTicker,
+                width: '300',
+                height: StocktwitsHeight,
+                limit: Math.ceil(StocktwitsHeight / MIN_TWIT_HEIGHT),
+                scrollbars: 0,
+                header: 0,
+                streaming: 'true',
+                style: { link_color, link_hover_color: link_color, header_text_color: text_color, border_color: bgColor, border_color_2: bgColor, divider_color, divider_type: 'solid', box_color: bgColor, stream_color: bgColor, text_color, time_color, font: 'Verdana, Arial, Tahoma', font_size, time_font_size: 10, username_font: 'Verdana, Arial, Tahoma', username_size: font_size, username_color, username_hover_color: username_color }
+            });
+        }
+    }
+
+    function loadStocktwitsScript() {
+        var s = document.createElement('script');
+        s.addEventListener('load', StocktwitsInit)
+        s.setAttribute('async', true)
+        s.src = '//api.stocktwits.com/addon/widget/2/widget-loader.min.js'
+        document.body.appendChild(s)
+    }
+
+    if (document.readyState != 'loading'){
+        loadStocktwitsScript();
+    } else {
+        document.addEventListener('DOMContentLoaded', loadStocktwitsScript);
+    }
+</script><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_300x250_2" style="width:300px;height:250px;max-height:250px"></div></td></tr></table></td>
+</tr>
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr class="table-light3-row">
+<td align="left" class="fullview-profile"><div>Yalla Group Limited operates a social networking and entertainment platform primarily in the Middle East and North Africa region. It provides mobile applications, including Yalla, a voice-centric group chat platform; and Yalla Ludo, a casual gaming application. The company's platform offers group chatting and games services; and sells virtual items, as well as provides upgrade services. The company was formerly known as FYXTech Corporation. Yalla Group Limited was founded in 2016 and is headquartered in Dubai, the United Arab Emirates.</div></td></tr>
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr><td width="100%"><div id="statements"></div></td></tr><tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 21px auto 14px auto">
+<tr class="flex">
+<td align="left" class="fullview-links flex items-center" valign="center">
+<a class="tab-link" href="https://finance.yahoo.com/quote/YALA" rel="nofollow" target="_blank">open in yahoo</a> | <a class="tab-link" href="https://www.reuters.com/companies/YALA.N" rel="nofollow" target="_blank">open in reuters</a> | <a class="tab-link" href="https://www.marketwatch.com/investing/stock/yala" rel="nofollow" target="_blank">open in marketwatch</a> | <a class="tab-link" href="https://www.google.com/finance/quote/YALA:NYSE" rel="nofollow" target="_blank">open in google</a> | <a class="tab-link" href="https://www.sec.gov/edgar/browse/?CIK=1794350" rel="nofollow" target="_blank">open in EDGAR</a></td>
+</tr>
+</table>
+</table></div><script onerror="window.handleScriptNotLoaded(this)" src="/script/recent_quotes.js?v=344" type="text/javascript"></script>
+</div></div><div class="my-3"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_3x3_1" style="width:970px;height:250px;max-height:250px"></div></div>
+<div class="footer" style="margin-top: 20px;padding-bottom: 215px">
+<div class="footer_links">
+<a class="tab-link" href="/affiliate.ashx">affiliate</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/advertise.ashx">advertise</a>
+<span class="footer_dot"> • </span><a class="tab-link" href="/careers.ashx">careers</a>
+<span class="footer_dot"> • </span><a class="tab-link" href="#" onclick="setChartThemeCookie('light')">toggle light mode</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/contact.ashx">contact</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/privacy.ashx">privacy</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/help/screener.ashx">help</a>
+<br/>
+<a class="tab-link" href="javascript:void(0)" onclick="window.__uspapi &amp;&amp; window.__uspapi('displayUspUi');">do not sell my data</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="javascript:void(0)" onclick="window.__tcfapi &amp;&amp; window.__tcfapi('displayConsentUi', 2, function() {})">privacy settings</a>
+</div>
+    Quotes delayed 15 minutes for NASDAQ, NYSE and AMEX.
+    <br/>
+    Copyright © 2007-2023 FINVIZ.com. All Rights Reserved.
+    
+</div><script>SearchFocus();</script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/4187.fd7fe045.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/quote.d837ebfb.js"></script><script>
+            function FinvizReady(fn) {
+              if (document.readyState != 'loading'){
+                fn();
+              } else {
+                document.addEventListener('DOMContentLoaded', fn);
+              }
+            }
+
+            (typeof StocktwitsInit === 'function' && FinvizReady(StocktwitsInit));
+            (typeof FinvizSettings === 'object' && (FinvizSettings.quoteSearchExt = '&ty=c&ta=1&p=d'));
+        </script>
+<div class="hidden" data-set-search-ext-argument="&amp;ty=c&amp;ta=1&amp;p=d" id="js-set-search-ext-argument"></div>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-3261808-1"></script>
+<script>
+              function getSystemTheme() {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                  return 'Dark';
+                }
+                else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                  return 'Light';
+                }
+                return 'No Preference';
+              }
+
+              var systemTheme = getSystemTheme()
+
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('set', {'dimension1': 'NotLoggedIn'});
+              gtag('set', {'dimension3': window.devicePixelRatio + ''});
+              gtag('set', {'layoutTheme': 'dark'});
+              gtag('set', {'systemTheme': systemTheme });
+              gtag('set', {'bundle': 'modern' });
+
+              gtag('config', 'UA-3261808-1', { sample_rate: 10 });
+              gtag('config', 'G-ZT9VQEWD4N', {'dimension1': 'NotLoggedIn', 'dimension3': window.devicePixelRatio + '', 'layoutTheme': 'dark', 'systemTheme': systemTheme });
+              
+            </script>
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_1x1_1"></div><div class="modal-elite-ad" id="modal-elite-ad">
+<div class="modal-elite-ad_content" id="modal-elite-ad_content">
+<button class="modal-elite-ad_close" id="modal-elite-ad-close" type="button">×</button>
+<!--<div id="modal-elite-ad-content-0" style="display: none">
+			                        <h2>Ever heard of Finviz*Elite?</h2>
+                                    <p>
+                                        Our premium service offers you real-time quotes, advanced visualizations, technical studies, and much more.<br>
+                                        Become Elite and make informed financial decisions.
+                                    </p>
+                                    <a href="/elite.ashx?utm_source=finviz&utm_medium=banner&utm_campaign=modal-0" id="modal-elite-ad-btn-0" class="" target="_blank">Find out more</a>
+                                </div>-->
+<div id="modal-elite-ad-content-1" style="display: block">
+<h2>Upgrade your FINVIZ experience</h2>
+<p>
+                                        Join thousands of traders who make more informed decisions with our premium features.
+                                        Real-time quotes, advanced visualizations, backtesting, and much more.
+                                    </p>
+<a class="modal-elite_button" href="/elite.ashx?utm_source=finviz&amp;utm_medium=banner&amp;utm_campaign=modal-1" id="modal-elite-ad-btn-1" target="_blank">Learn more about FINVIZ*Elite</a>
+</div>
+</div>
+</div><script async="" src="/script/pv.js?rev=344"></script><script defer="">window.renderScriptNotLoaded();</script>
+<script crossorigin="anonymous" data-cf-beacon='{"rayId":"80b20e643880f47a","token":"e53f08f6c9e04bfd9760701085ec93b4","version":"2023.8.0","si":100}' defer="" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"></script>
+</div></body>
+</html>

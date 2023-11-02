@@ -1,0 +1,20 @@
+﻿// This file is imported as script, and function is invoked later
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function notice (elements) {
+    var elementMap = {}
+
+    for (var index = 0; index < elements.length; index++) {
+      var element = elements[index];
+      elementMap[element.dataset.fvNotice] = element
+
+      window.gtag && window.gtag('event', 'impression', { event_category: element.dataset.fvNotice, non_interaction: true });
+    }
+
+  window.FinvizCloseNotice = function(noticeId) {
+    fetch('/api/set_cookie.ashx?cookie=' + noticeId).catch()
+
+    elementMap[noticeId].style.display = "none";
+
+    window.gtag && window.gtag('event', 'close', { event_category: noticeId, non_interaction: true });
+  }
+}

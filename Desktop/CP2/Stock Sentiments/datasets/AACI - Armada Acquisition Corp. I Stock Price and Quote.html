@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<title>AACI - Armada Acquisition Corp. I Stock Price and Quote</title>
+<meta charset="utf-8"/><meta content="width=1024" name="viewport"/><meta content="AACI - Armada Acquisition Corp. I - Stock screener for investors and traders, financial visualizations." name="description"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-regular.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-700.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/lato-v17-latin-ext_latin-900.woff2" rel="preload"/>
+<link as="font" crossorigin="" href="/fonts/inter-latin.woff2" rel="preload"/>
+<script>
+                window.notificationsArray = [];
+                window.renderScriptNotLoaded = function () {};
+                window.handleScriptNotLoaded = function (element) {
+                    window.notificationsArray.push(element);
+                    window.sentryDisabled = true;
+                    window.handleScriptNotLoaded = function () {};
+                };
+            </script>
+<link href="/assets/dist/finviz.5f37f1c7.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/assets/dist/redesign.8c6f6ebc.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/assets/dist/main.965d9b7f.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet" type="text/css"/>
+<link href="/favicon_2x.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/quote.ashx?t=AACI" rel="canonical"/>
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script async="true" type="text/javascript">
+          (function() {
+            var host = 'finviz.com';
+            var element = document.createElement('script');
+            var firstScript = document.getElementsByTagName('script')[0];
+            var url = 'https://cmp.quantcast.com'
+              .concat('/choice/', 'c2W8esUZ6Q8oA', '/', host, '/choice.js?tag_version=V2');
+            var uspTries = 0;
+            var uspTriesLimit = 3;
+            element.async = true;
+            element.type = 'text/javascript';
+            element.src = url;
+
+            firstScript.parentNode.insertBefore(element, firstScript);
+
+            function makeStub() {
+              var TCF_LOCATOR_NAME = '__tcfapiLocator';
+              var queue = [];
+              var win = window;
+              var cmpFrame;
+
+              function addFrame() {
+                var doc = win.document;
+                var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+                if (!otherCMP) {
+                  if (doc.body) {
+                    var iframe = doc.createElement('iframe');
+
+                    iframe.style.cssText = 'display:none';
+                    iframe.name = TCF_LOCATOR_NAME;
+                    doc.body.appendChild(iframe);
+                  } else {
+                    setTimeout(addFrame, 5);
+                  }
+                }
+                return !otherCMP;
+              }
+
+              function tcfAPIHandler() {
+                var gdprApplies;
+                var args = arguments;
+
+                if (!args.length) {
+                  return queue;
+                } else if (args[0] === 'setGdprApplies') {
+                  if (
+                    args.length > 3 &&
+                    args[2] === 2 &&
+                    typeof args[3] === 'boolean'
+                  ) {
+                    gdprApplies = args[3];
+                    if (typeof args[2] === 'function') {
+                      args[2]('set', true);
+                    }
+                  }
+                } else if (args[0] === 'ping') {
+                  var retr = {
+                    gdprApplies: gdprApplies,
+                    cmpLoaded: false,
+                    cmpStatus: 'stub'
+                  };
+
+                  if (typeof args[2] === 'function') {
+                    args[2](retr);
+                  }
+                } else {
+                  if(args[0] === 'init' && typeof args[3] === 'object') {
+                    args[3] = Object.assign(args[3], { tag_version: 'V2' });
+                  }
+                  queue.push(args);
+                }
+              }
+
+              function postMessageEventHandler(event) {
+                var msgIsString = typeof event.data === 'string';
+                var json = {};
+
+                try {
+                  if (msgIsString) {
+                    json = JSON.parse(event.data);
+                  } else {
+                    json = event.data;
+                  }
+                } catch (ignore) {}
+
+                var payload = json.__tcfapiCall;
+
+                if (payload) {
+                  window.__tcfapi(
+                    payload.command,
+                    payload.version,
+                    function(retValue, success) {
+                      var returnMsg = {
+                        __tcfapiReturn: {
+                          returnValue: retValue,
+                          success: success,
+                          callId: payload.callId
+                        }
+                      };
+                      if (msgIsString) {
+                        returnMsg = JSON.stringify(returnMsg);
+                      }
+                      if (event && event.source && event.source.postMessage) {
+                        event.source.postMessage(returnMsg, '*');
+                      }
+                    },
+                    payload.parameter
+                  );
+                }
+              }
+
+              while (win) {
+                try {
+                  if (win.frames[TCF_LOCATOR_NAME]) {
+                    cmpFrame = win;
+                    break;
+                  }
+                } catch (ignore) {}
+
+                if (win === window.top) {
+                  break;
+                }
+                win = win.parent;
+              }
+              if (!cmpFrame) {
+                addFrame();
+                win.__tcfapi = tcfAPIHandler;
+                win.addEventListener('message', postMessageEventHandler, false);
+              }
+            };
+
+            makeStub();
+
+            var uspStubFunction = function() {
+              var arg = arguments;
+              if (typeof window.__uspapi !== uspStubFunction) {
+                setTimeout(function() {
+                  if (typeof window.__uspapi !== 'undefined') {
+                    window.__uspapi.apply(window.__uspapi, arg);
+                  }
+                }, 500);
+              }
+            };
+
+            var checkIfUspIsReady = function() {
+              uspTries++;
+              if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+                console.warn('USP is not accessible');
+              } else {
+                clearInterval(uspInterval);
+              }
+            };
+
+            if (typeof window.__uspapi === 'undefined') {
+              window.__uspapi = uspStubFunction;
+              var uspInterval = setInterval(checkIfUspIsReady, 6000);
+            }
+          })();
+          </script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script>
+            FinvizSettings = {
+                hasUserPremium: false,
+                name: "",
+                email: "",
+                nodeChartsDomain: "https://charts2-node.finviz.com",
+                hasUserRetinaNodeCharts: true,
+                hasUserStickyHeader: true,
+                adsProvider: 1,
+                hasRedesignEnabled: true,
+                hasQuoteOptions: false,
+                hasForexFuturesCryptoNodeCharts: true,
+                quoteSearchExt: '',
+            };
+        </script><script src="/script/browser_check.js?rev=344"></script><script src="/script/vendor/boxover.js?rev=344"></script>
+<script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/runtime.c62c08ff.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/7345.b33e04ab.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/738.128340f6.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/libs_init.cc67a770.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/5904.aa665648.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/3372.46f66dc0.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/header.1f97a566.js"></script></head>
+<script>
+            const channelIdToLabel = {
+                '1': 'MarketWatch',
+                '2': 'WSJ',
+                '3': 'Reuters',
+                '4': 'Yahoo Finance',
+                '5': 'CNN',
+                '6': 'The New York Times',
+                '7': 'Bloomberg',
+                '9': 'BBC',
+                '10': 'CNBC',
+                '11': 'Fox Business',
+                '102': 'Mish\'s Global Economic Trend Analysis',
+                '105': 'Trader Feed',
+                '113': 'Howard Lindzon',
+                '114': 'Seeking Alpha',
+                '123': 'Fallond Stock Picks',
+                '132': 'Zero Hedge',
+                '133': 'market folly',
+                '136': 'Daily Reckoning',
+                '141': 'Abnormal Returns',
+                '142': 'Calculated Risk',
+            }
+            function trackAndOpenNews(event, channel, url) {
+              event.preventDefault()
+              window.open(url, '_blank')
+
+              let channelLabel
+              if (typeof channel === 'string') {
+                channelLabel = channel
+              } else {
+                const label = channelIdToLabel[channel]
+                channelLabel = label !== undefined ? label : channel
+              }
+              window.gtag && window.gtag('event', 'click', {
+                send_to: 'G-ZT9VQEWD4N',
+                non_interaction: true,
+                event_category: 'news',
+                event_label: channelLabel,
+                value: 1 });
+            }
+          </script>
+<body class="m-0 yellow-tooltip is-quote min-w-[1009px] table w-full">
+<script>
+                var cookieName = 'fv_block';
+                var selector = '[ic_placementid]';
+                var selectorFrame = selector + ' iframe, ' + selector + ' [id*=aax]';
+                var cookieExpiry = 5 * 60 * 1000; // 5min
+                var checkTimeout = 20 * 1000; // 20sec
+
+                function getCookie(value) {
+                    var expiration = +new Date() + cookieExpiry;
+                    return cookieName + '=' + value + '; expires=' + (new Date(expiration)).toUTCString() + '; path=/';
+                }
+
+                var finvizBannersLoaded = false;
+                function loadFinvizBanners(setCookie) {
+                    if (setCookie) document.cookie = getCookie('block');
+                    finvizBannersLoaded = true;
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.src = '/script/finviz_b.js?rev=344';
+                    document.head.appendChild(s);
+                }
+
+                function checkBannersLoaded() {
+                    var checkEnd = +new Date() + checkTimeout;
+                    function asyncCheckIfExists(selector, resolve) {
+                        var now = +new Date();
+                        var container = document.querySelector(selector);
+                        if (!container && checkEnd > now) return setTimeout(function () { asyncCheckIfExists(selector, resolve) }, 1000)
+                        resolve(!!container);
+                    }
+                    
+                    asyncCheckIfExists(selector, function (exists) {
+                        if (!exists) return loadFinvizBanners(true);
+
+                        asyncCheckIfExists(selectorFrame, function (hasIframe) {
+                            if (!hasIframe) return loadFinvizBanners(true);
+                        })
+                    })
+                }
+
+                if (document.cookie.indexOf(cookieName) >= 0) {
+                    loadFinvizBanners(false);
+                } else {
+                    var s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.onerror = loadFinvizBanners;
+                    s.onload = checkBannersLoaded;
+                    s.src = 'https://u5.investingchannel.com/static/uat.js';
+                    document.head.appendChild(s);
+
+                    InvestingChannelQueue = window.InvestingChannelQueue || [];
+                    var ic_page;
+
+                    function refreshAd(container, refreshes) { 
+                        var placementTag, adslot;
+                        window.InvestingChannelQueue.push(function () {
+                            var pubTags = ic_page.getPubTag.call(ic_page, container.id);
+                            if (!pubTags) return;
+                            var pubTag = pubTags[0];
+                            placementTag = pubTag.mPlacements[0].mTagToRender;
+                            adslot = pubTag.mPlacements[0].mPublisherKval.adslot[0];
+                            // Update div ID
+                            var id = container.id.split('_');
+                            var numberOfDivs = document.querySelectorAll('[id*=' + id.slice(0, id.length - 1).join('_') + ']').length;
+                            var newDivNumber = Number(id.pop()) + numberOfDivs * refreshes;
+                            container.setAttribute('id', id.join('_') + '_' + newDivNumber);
+                            // Destroy previous pubtag & reset container html (loading span)
+                            pubTag.destroy();
+                            container.innerHTML = '';
+                        }); 
+                        window.InvestingChannelQueue.push(function () {
+                            if (!placementTag || !adslot) return
+                            // Create new pub tag
+                            var newTag;
+                            var layoutId = placementTag.mNativeLayout ? placementTag.mNativeLayout.nativelayoutid : null;
+                            if (layoutId) {
+                                newTag = ic_page.defineNativeTag('finviz/' + placementTag.mTarget.dfpkeyname, placementTag.mAdSize, container.id, layoutId);
+                                var nativeLayout, layoutData
+
+                                try {
+                                  nativeLayout = newTag.mPlacements[0].mTags[0].mNativeLayout;
+                                } catch (e) {
+                                    console.log(e.message)
+                                }
+
+                                try {
+                                  layoutData = newTag.mTemplate.mNativeLayout[layoutId].Data
+                                  if (layoutData && nativeLayout && !nativeLayout.layout) {
+                                    newTag.mPlacements[0].mTags[0].mNativeLayout = layoutData
+                                  }
+                                } catch (e) {
+                                    console.log(e.message)
+                                }
+                            } else {
+                                newTag = ic_page.defineTag('finviz/' + placementTag.mTarget.dfpkeyname, placementTag.mAdSize, container.id);
+                            }
+                            // Set adslot param
+                            newTag.setKval({ adslot: adslot });
+                            newTag.setKval({ kw: 'ajax' });
+                            newTag.render();
+                        });
+                    }
+
+                    var refreshCount = 1;
+                    function refreshAds(selectors) { 
+                        if (window.ic_page) {
+                            document.querySelectorAll(selectors).forEach(function (element) {
+                                try {
+                                    refreshAd(element, refreshCount);
+                                } catch (e) {
+                                    console.log('Ad refresh error for:', element, e);
+                                }
+                            }); 
+                            refreshCount++;
+                        } 
+                    }
+
+
+                    InvestingChannelQueue.push(function() {
+                        ic_page = InvestingChannel.UAT.Run('df0d0d52-cc7f-11e8-82a5-0abbb61c4a6a');
+                    });
+
+                    var hash = null;
+                    if (typeof hash === 'string') {
+                      InvestingChannelQueue.push(function() {
+                          if (ic_page) {
+                              ic_page.setUserId('email', hash, true);
+                          }
+                      });
+                    }
+                }
+            </script>
+<script>
+            function checkMediaQuery(matches) {
+              if (matches) {
+                FinvizSettings.hasUserStickyHeader = true;
+                document.body.classList.add('is-header-sticky');
+              } else {
+                FinvizSettings.hasUserStickyHeader = false;
+                document.body.classList.remove('is-header-sticky');
+              }
+            }
+            var mediaMatch = window.matchMedia('(min-width: 1025px) and (min-height: 650px)');
+            checkMediaQuery(mediaMatch.matches);
+            mediaMatch.addListener(function (ev) { checkMediaQuery(ev.matches) });
+          </script>
+<div id="notifications-container"></div><table class="header">
+<tr class="align-top">
+<td>
+<table class="header-container">
+<tr>
+<td class="w-[30%]">
+<table class="w-full">
+<tr>
+<td class="h-[50px] align-middle">
+<a class="logo" href="/"><svg class="block" height="32" width="225">
+<use class="dark:hidden" href="/img/logo.svg#free"></use>
+<use class="hidden dark:block" href="/img/logo.svg#free-dark"></use>
+</svg></a>
+</td>
+</tr>
+<tr>
+<td id="search" style="padding-top: 7px">
+<div class="navbar-search-placeholder">
+<span class="icon-wrapper">
+<svg class="icon" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.9 15.5l4 4c.2.2.1.5 0 .7l-.7.7a.5.5 0 01-.8 0l-4-4c0-.2-.2-.3-.3-.4l-.7-1a7 7 0 01-11.2-4 7 7 0 1112.2 3l1 .6.5.4zM5 10a5 5 0 1010 0 5 5 0 00-10 0z"></path>
+</svg>
+</span>
+<input class="search-input is-free" placeholder="Search ticker, company or profile"/>
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td class="align-bottom pb-1">
+<div class="hidden xl:flex items-center h-[37px] pl-2" id="microbar_position"><div>
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_88x31_1" style="width:88px;height:31px;max-height:31px"></div>
+</div></div>
+</td>
+<td class="relative w-[730px] text-right">
+<div class="overflow-hidden absolute top-0 right-0 w-full h-24" id="banner_position">
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_728x90_1" style="width:728px;height:90px;max-height:90px"></div>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="w-[994px]" style="font-size:0">
+<img alt="" class="w-[994px] h-px" src="/gfx/nic2x2.gif"/>
+</td>
+</tr>
+</table>
+<table class="navbar">
+<tr>
+<td class="h-[30px]">
+<table class="header-container">
+<tr><td><a class="nav-link is-first" href="/">Home</a></td><td><a class="nav-link" href="/news.ashx">News</a></td><td><a class="nav-link" href="/screener.ashx">Screener</a></td><td><a class="nav-link" href="/map.ashx">Maps</a></td><td><a class="nav-link" href="/groups.ashx">Groups</a></td><td><a class="nav-link" href="/portfolio.ashx">Portfolio</a></td><td><a class="nav-link" href="/insidertrading.ashx">Insider</a></td><td><a class="nav-link" href="/futures.ashx">Futures</a></td><td><a class="nav-link" href="/forex.ashx">Forex</a></td><td><a class="nav-link" href="/crypto.ashx">Crypto</a></td><td><a class="nav-link" href="/elite.ashx?utm_source=finviz&amp;utm_medium=banner&amp;utm_campaign=main-navbar-backtests">Backtests</a></td><td><a class="nav-link is-elite" href="/elite.ashx">Elite</a></td><td class="w-full relative"><div class="absolute bottom-0 left-0 right-0 top-0"><div class="pr-1" id="time"></div></div></td>
+<td class="nav relative">
+<a class="!flex !bg-transparent !border-b-0 mt-1 !py-0 !px-1" data-testid="chart-layout-theme" href="#" onclick="setChartThemeCookie('light', true)" style="border-left: 1px solid #444a57" title="Toggle Light/Dark mode">
+<div class="relative box-content flex rounded-full w-10 h-5 border border-gray-750 bg-gray-800 text-white justify-end">
+<div class="box-border w-1/2 rounded-full p-px border border-gray-800 bg-[#4c5261] flex justify-center items-center">
+<svg class="fill-current text-white inline-block -ml-px" height="16" width="16">
+<use href="/assets/icons.svg?rev=3#moonOutlined"></use>
+</svg>
+</div>
+</div>
+<span class="ml-1 select-none font-medium text-xs text-white">Theme</span>
+</a>
+</td>
+<td>
+<a class="nav-link is-help" href="/help/screener.ashx" style="border-left: 1px solid #444a57"><span class="fa fa-question-circle"></span>Help</a>
+</td>
+<td><a class="nav-link sign-in" href="/login.ashx">Login</a></td>
+<td><a class="nav-link sign-up" href="/register.ashx">Register</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<script>
+            function reloadPage () { location.reload() }
+            function setChartThemeCookie(chartsTheme) {
+              fetch('/api/set_cookie.ashx?cookie=chartsTheme&value=' + chartsTheme ).catch(function(){}).then(function(){
+                window.gtag && window.gtag('event', 'click', { event_category: 'theme', event_label: 'toggle', value: chartsTheme, event_callback: reloadPage });
+                setTimeout(reloadPage,1000);
+              })
+            }
+          </script><div class="content"><div class="ticker-wrapper gradient-fade">
+<div class="quote-menu empty:py-3 empty:min-h-8" data-ischarttas="1" data-isscreener="1"></div>
+<div id="react-root"></div>
+<script>
+            FinvizSettings.TA = {"style":"candlestick","overlays":[{"name":"sma","parameters":"20","color":"rgba(220,  50, 179, 0.39)"},{"name":"sma","parameters":"50","color":"rgba(255, 143,  51, 0.78)"},{"name":"sma","parameters":"200","color":"rgba(220, 179,  50, 0.43)"},{"name":"patterns","parameters":"","color":"rgba(135, 206, 239, 1)|rgba(220, 159, 229, 1)"}],"indicators":[]};
+        </script><div style="display: flex; flex-direction: column; align-items: center">
+<link href="/assets/dist-charts/main.1855f85e.css" onerror="window.handleScriptNotLoaded(this)" rel="stylesheet"/>
+<div class="interactive-chart" id="app">
+<div id="chart" style="min-height: 401px; position: relative"></div>
+</div>
+<div id="js-charts-modal"><div class="overlay modal hidden has-footer"></div></div>
+<div class="context-menu hidden"></div>
+<script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/runtime.4eb20b9b.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/976.76a22507.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist-charts/main.393da18b.js"></script><script>
+                                    (function() {
+                                        var Quote = FLibs.Charts.Quote;
+                                        var data = {"ticker":"AACI","timeframe":"d","volume":[373293,24405,943316,13630,190750,7133,94874,82436,12244,16556,941,214,1436,101595,43524,6389,17258,70992,10539,29211,257,4612,5954,26570,267516,149156,51076,6523,8442,15682,9022,6741,8912,112300,1799,447937,970,8345,768,37576,1510,17996,21766,103,204116,2315,12334,445,34013,2153,2147,306,3600,96000,36937,802,16895,9171,8444,264,21259,1479,858,7929,73691,3277,10505,101,132952,371,6003,1370,705,2736,221,8020,104,3583,2133,174251,158,203,28804,9407,111,170,3400,4856,758,1183,1000,2100,6817,23754,200,6143,14278,4452,103,1733,10113,56667,61320,413,156,10007,2274,208301,203,673,408383,181467,22979,617,302,1250,5429,5365,8584,17112,5583,8734,3090,1563,916,2101,90920,414,743,1668,12879,210,103,1000,1009,1922,2800,3074,1016,454,1590,405,4037,33195,137890,4698,4059,4950,1702,1950,3366,5939,1603,1626,963,3000,3410,11232,456,213,1193,1207,687,20418,50750,83731,91802,3148,2076,4043,831,3648,1326,3842,6381,4633,1334,204,11675,108,19213,20672,15728,7253,647479,514,54724,62902,9446,2129,14020,1309,7021,674,15356,11246,2860,495827,589964,173179,127001,429098,17274,11651,330,3506,66380,38506,13323,6241,32463,572,417,6416,14801,4414,177564,287,336,4812,684,993,686,4487,1263,2310,4167,2919,2204,305,5684,1305,9118,5021,182,1730,304,1618,100,100,105,19654,404,100682,235,35669,158,211,100,219,307,120,127,27581,45757,315757,10292,98536,64966,5544,16843,320,2766,1048,2206,159323,2743,25162,142874,40305,3316,3245,61364,54208,32270,1745,15104,4176,12353,850,3415,5755,9986,7218,150,8050,38987,103,203,211,835,161,121,199,48],"date":[1636552800,1636639200,1636725600,1636984800,1637071200,1637157600,1637244000,1637330400,1637589600,1637676000,1637762400,1637935200,1638194400,1638367200,1638453600,1638540000,1638799200,1638885600,1639058400,1639144800,1639404000,1639576800,1639663200,1639749600,1640008800,1640095200,1640181600,1640268000,1640613600,1640700000,1640786400,1640872800,1640959200,1641218400,1641304800,1641477600,1641564000,1641823200,1641909600,1642082400,1642168800,1642514400,1642600800,1642687200,1642773600,1643032800,1643119200,1643292000,1643724000,1643810400,1643896800,1644328800,1644588000,1644847200,1644933600,1645192800,1645538400,1645624800,1645711200,1645797600,1646056800,1646143200,1646229600,1646316000,1646661600,1646748000,1646834400,1646920800,1647262800,1647435600,1647867600,1647954000,1648040400,1648213200,1648558800,1648731600,1649077200,1649250000,1649336400,1649422800,1649682000,1649854800,1651064400,1651237200,1651582800,1651669200,1652101200,1652706000,1652792400,1652878800,1653310800,1653483600,1653570000,1653656400,1654002000,1654088400,1654174800,1654261200,1654520400,1654693200,1654779600,1655125200,1655211600,1655298000,1655816400,1655902800,1656075600,1656334800,1656421200,1656507600,1656594000,1657026000,1657112400,1657198800,1657544400,1657630800,1657717200,1657890000,1658149200,1658235600,1658322000,1658494800,1658840400,1658926800,1659099600,1659358800,1660050000,1661173200,1661346000,1661518800,1661950800,1662123600,1662728400,1662987600,1663074000,1663246800,1663765200,1663851600,1663938000,1664197200,1664283600,1664370000,1664456400,1664542800,1664802000,1664974800,1665061200,1665493200,1665579600,1665666000,1666011600,1666098000,1666270800,1666616400,1666789200,1666875600,1667221200,1667307600,1667829600,1668088800,1668175200,1668434400,1668607200,1668693600,1669039200,1669125600,1669212000,1669644000,1669816800,1669903200,1669989600,1670248800,1670335200,1670508000,1670853600,1670940000,1671199200,1671458400,1671804000,1672149600,1672236000,1672408800,1672754400,1672840800,1672927200,1673013600,1673272800,1673359200,1673445600,1673532000,1673618400,1673964000,1674050400,1674223200,1674482400,1674568800,1674655200,1674741600,1674828000,1675087200,1675173600,1675260000,1675346400,1675432800,1675692000,1675778400,1675864800,1675951200,1676037600,1676296800,1676383200,1676469600,1676556000,1676642400,1676988000,1677074400,1677247200,1677506400,1677592800,1677679200,1677765600,1677852000,1678111200,1678197600,1678370400,1678798800,1679058000,1679922000,1680181200,1680526800,1680699600,1681131600,1681218000,1681390800,1681909200,1681995600,1682082000,1682427600,1682514000,1683205200,1683291600,1683637200,1683723600,1684242000,1684501200,1684846800,1684933200,1685019600,1685106000,1685451600,1685538000,1685710800,1686574800,1686747600,1687352400,1687525200,1687784400,1687870800,1687957200,1688043600,1688562000,1688734800,1689080400,1689166800,1689598800,1689685200,1689771600,1689858000,1689944400,1690203600,1690290000,1690376400,1690462800,1690549200,1690808400,1690894800,1690981200,1691067600,1691154000,1691672400,1691758800,1692104400,1692190800,1692709200,1692968400,1693400400,1693573200,1693918800,1694437200,1694610000,1695042000,1695128400,1695214800,1695301200,1695387600],"open":[9.77,9.76,9.78,9.78,9.75,9.73,9.78,9.79,9.841,9.8,9.79,9.34,9.89,9.88,9.78,9.77,9.77,9.78,9.77,9.75,9.75,9.74,9.75,9.8,9.78,9.795,9.82,9.82,9.84,9.8,9.8,9.81,9.8,9.81,9.87,9.8,9.89,9.84,9.85,9.85,9.85,9.864,9.856,9.84,9.84,9.85,9.825,9.8,9.83,9.89,9.823,9.84,9.91,9.85,9.852,9.83,9.8,9.81,9.81,9.81,9.8,9.8,9.8,9.81,9.81,9.82,9.81,9.82,9.82,9.845,9.83,9.9,9.84,9.833,9.871,9.86,9.84,9.845,9.841,9.99,9.85,9.85,9.875,9.86,9.89,9.86,9.86,9.855,9.84,9.84,9.851,9.85,9.89,9.85,9.86,9.86,9.88,9.87,9.87,9.85,9.875,9.86,9.86,9.85,9.84,9.86,9.88,9.88,9.875,9.88,9.91,9.89,9.87,9.9,9.87,9.881,9.895,9.88,9.895,9.89,9.89,9.89,9.91,9.913,9.92,9.92,9.91,9.92,9.91,9.9,9.91,9.92,9.89,9.898,9.89,9.92,9.911,9.9,9.91,10.1,9.93,9.93,9.92,9.92,9.92,10.1,9.93,9.92,9.92,9.92,9.92,9.92,9.94,9.93,9.95,9.96,9.98,9.965,9.98,9.97,9.98,9.97,9.965,9.97,9.97,9.99,9.975,10,9.98,9.99,9.995,9.99,9.99,9.995,10,10.01,10.05,10.06,10.06,10.06,10.07,10.18,10.12,10.13,10.13,10.16,10.165,10.165,10.165,10.17,10.13,10.18,10.4,10.16,10.14,10.135,10.129,9.51,10.95,10.41,10.7,10.6,10.42,10.58,10.225,10.58,10.4,10.2,10.04,10.041,10.05,10.095,10.04,10.14,10.03,10.04,10.03,10.03,10.1,10.1,10.04,10.04,10.04,10.045,10.04,10.04,10.06,10.07,10.093,10.09,10.1,10.095,10.1,10.1,10.11,10.11,10.145,10.11,10.19,10.12,10.12,10.18,10.2,10.23,10.27,10.27,10.26,10.25,10.2,10.22,10.38,10.239,10.2,10.2,10.22,10.25,10.3,10.3,10.38,10.45,10.44,10.41,10.44,10.4,10.44,10.51,10.51,10.52,10.52,10.59,10.57,10.56,10.56,10.57,10.572,10.57,10.57,10.59,10.55,10.59,10.56,10.59,10.74,10.59,10.61,10.59,10.54,10.74,10.54,10.75,10.56,10.7,10.7,10.7,10.73],"high":[9.78,9.82,9.8,9.79,9.78,9.79,9.8,9.818,9.859,9.805,9.79,9.34,9.89,9.88,9.79,9.78,9.79,9.79,9.77,9.78,9.75,9.75,9.75,9.825,9.802,9.815,9.84,9.82,9.85,9.89,9.8,9.82,9.8,9.91,9.9,9.8,9.89,9.89,9.85,9.86,9.854,9.864,9.856,9.84,9.84,9.87,9.825,9.8,9.95,9.89,9.823,9.84,9.91,9.87,9.908,9.83,9.84,9.83,9.81,9.81,9.81,9.8,9.8,9.81,9.82,9.83,9.84,9.82,9.86,9.845,9.84,9.9,9.84,9.87,9.871,9.86,9.84,9.87,9.86,9.99,9.85,9.85,9.875,9.86,9.89,9.86,9.86,9.855,9.84,9.84,9.851,9.86,9.89,9.86,9.86,9.87,9.89,9.88,9.87,9.87,9.89,9.86,9.865,9.85,9.84,9.86,9.88,9.88,9.875,9.88,9.91,9.89,9.88,9.9,9.87,9.881,9.895,9.885,9.895,9.91,9.89,9.898,9.91,9.913,9.92,9.92,9.93,9.92,9.91,9.9,9.91,9.92,9.89,9.898,9.9,9.92,9.911,9.921,9.91,10.1,9.93,9.93,9.92,9.92,9.98,10.1,9.93,9.92,9.92,9.92,9.925,9.93,9.94,9.93,9.95,9.98,9.98,9.965,9.98,9.97,9.98,9.97,9.978,9.98,9.97,9.99,9.98,10,9.99,9.99,9.995,10,9.993,9.995,10,10.018,10.06,10.06,10.06,10.06,10.1,10.18,10.14,10.14,10.16,10.16,10.165,10.17,10.17,10.175,10.18,10.18,10.4,10.16,10.165,10.15,10.129,10.72,10.95,12.2,11,10.6,10.75,10.58,10.225,10.6,10.635,10.22,10.15,10.065,10.14,10.095,10.04,10.14,10.05,10.05,10.07,10.03,10.1,10.1,10.04,10.05,10.065,10.05,10.04,10.042,10.09,10.07,10.093,10.09,10.1,10.1,10.1,10.1,10.11,10.155,10.145,10.12,10.19,10.12,10.12,10.19,10.21,10.25,10.27,10.27,10.26,10.25,10.2,10.22,10.38,10.239,10.2,10.2,10.28,10.25,10.3,10.4,10.5,10.475,10.44,10.41,10.44,10.4,10.44,10.57,10.54,10.53,10.587,10.6,10.57,10.57,10.57,10.59,10.6,10.571,10.575,10.59,10.57,10.59,10.56,10.695,10.79,10.6,10.61,10.59,10.54,10.74,10.75,10.75,10.7,10.7,10.7,10.7,10.73],"low":[9.75,9.75,9.72,9.73,9.73,9.73,9.75,9.79,9.8,9.79,9.79,9.34,9.78,9.78,9.76,9.75,9.77,9.765,9.75,9.75,9.75,9.74,9.75,9.75,9.77,9.795,9.8,9.8,9.8,9.8,9.8,9.8,9.79,9.81,9.865,9.8,9.811,9.84,9.85,9.85,9.85,9.84,9.84,9.84,9.8,9.817,9.8,9.8,9.83,9.85,9.823,9.84,9.83,9.84,9.83,9.83,9.8,9.81,9.8,9.81,9.79,9.8,9.8,9.81,9.81,9.81,9.81,9.82,9.82,9.845,9.83,9.85,9.83,9.833,9.871,9.82,9.84,9.845,9.841,9.978,9.85,9.85,9.85,9.855,9.89,9.86,9.86,9.84,9.84,9.84,9.851,9.84,9.84,9.84,9.86,9.86,9.88,9.86,9.87,9.85,9.87,9.86,9.85,9.85,9.84,9.84,9.86,9.88,9.875,9.88,9.87,9.885,9.86,9.878,9.87,9.881,9.88,9.88,9.89,9.89,9.89,9.89,9.91,9.913,9.92,9.91,9.91,9.91,9.91,9.9,9.88,9.89,9.89,9.898,9.89,9.92,9.911,9.9,9.91,9.93,9.925,9.93,9.92,9.92,9.9,9.93,9.92,9.92,9.92,9.92,9.92,9.92,9.94,9.93,9.945,9.96,9.951,9.965,9.96,9.97,9.98,9.96,9.965,9.97,9.97,9.985,9.97,9.984,9.98,9.99,9.99,9.99,9.99,9.99,10,10,10.05,10.06,10.05,10.06,10.07,10.12,10.12,10.13,10.13,10.16,10.16,10.16,10.165,10.17,10.13,10.17,10.04,10.13,10.13,10.13,10.01,8.56,10.02,10.12,10.02,10.08,10.02,10.13,10.225,10.25,10.04,10.04,10.04,10.04,10.05,10.095,10.04,10.03,10,10.03,10.03,10.03,10.09,10.03,10.03,10.04,10.04,10.04,10.04,10.04,10.06,10.07,10.08,10.09,10.1,10.09,10.09,10.1,10.11,10.11,10.145,10.11,10.19,10.12,10.12,10.18,10.2,10.23,10.27,10.25,10.26,10.25,10.2,10.22,10.25,10.239,10.2,10.199,10.22,10.24,10.28,10.3,10.36,10.44,10.44,10.41,10.41,10.39,10.44,10.51,10.51,10.52,10.5,10.52,10.55,10.56,10.54,10.56,10.55,10.5,10.56,10.47,10.5,10.52,10.52,10.57,10.74,10.59,10.61,10.53,10.54,10.74,10.54,10.75,10.56,10.7,10.7,10.7,10.73],"close":[9.75,9.78,9.75,9.79,9.75,9.785,9.8,9.8,9.8,9.8,9.79,9.34,9.785,9.78,9.775,9.78,9.77,9.77,9.76,9.76,9.75,9.75,9.75,9.78,9.8,9.815,9.83,9.8,9.8,9.8,9.8,9.816,9.79,9.91,9.9,9.8,9.87,9.88,9.85,9.86,9.85,9.85,9.85,9.84,9.81,9.817,9.8,9.8,9.91,9.85,9.823,9.84,9.87,9.85,9.89,9.83,9.82,9.83,9.8,9.81,9.808,9.8,9.8,9.81,9.82,9.83,9.84,9.82,9.86,9.845,9.84,9.85,9.83,9.87,9.871,9.82,9.84,9.85,9.86,9.978,9.85,9.85,9.86,9.86,9.89,9.86,9.86,9.84,9.84,9.84,9.851,9.85,9.84,9.85,9.86,9.87,9.89,9.88,9.87,9.87,9.88,9.86,9.85,9.85,9.84,9.84,9.88,9.88,9.875,9.88,9.87,9.885,9.88,9.878,9.87,9.881,9.88,9.885,9.89,9.89,9.89,9.89,9.91,9.913,9.92,9.91,9.93,9.91,9.91,9.9,9.9,9.89,9.89,9.898,9.9,9.92,9.911,9.921,9.91,9.93,9.925,9.93,9.92,9.92,9.98,9.93,9.925,9.92,9.92,9.92,9.92,9.93,9.94,9.93,9.945,9.98,9.96,9.965,9.96,9.97,9.98,9.97,9.978,9.97,9.97,9.985,9.98,9.984,9.99,9.99,9.99,9.99,9.993,9.99,10,10.018,10.06,10.06,10.06,10.06,10.1,10.12,10.13,10.14,10.15,10.16,10.16,10.165,10.17,10.17,10.18,10.17,10.09,10.13,10.145,10.14,10.065,10.3,10.56,10.45,10.02,10.33,10.16,10.27,10.225,10.25,10.04,10.1,10.07,10.065,10.05,10.095,10.04,10.03,10.03,10.03,10.03,10.03,10.1,10.03,10.04,10.045,10.04,10.04,10.04,10.04,10.09,10.07,10.08,10.09,10.1,10.1,10.1,10.1,10.11,10.11,10.145,10.12,10.19,10.12,10.12,10.19,10.2,10.25,10.27,10.25,10.26,10.25,10.2,10.22,10.25,10.239,10.2,10.2,10.25,10.25,10.3,10.4,10.5,10.45,10.44,10.41,10.41,10.39,10.44,10.51,10.54,10.52,10.51,10.56,10.56,10.57,10.57,10.59,10.57,10.5,10.56,10.57,10.5,10.58,10.53,10.65,10.79,10.59,10.61,10.53,10.54,10.74,10.75,10.75,10.7,10.7,10.7,10.7,10.575],"lastOpen":10.729999542236328,"lastHigh":10.729999542236328,"lastLow":10.729999542236328,"lastClose":10.574899673461914,"lastVolume":48,"dataId":"48|10.5749","lastDate":20230922,"prevClose":10.699999809265137,"afterClose":null,"afterChange":null,"chartEvents":[],"patterns":[{"kind":1,"strength":1554.778,"status":1,"bounces":0,"x1":0,"y1":107,"x2":600,"y2":107,"x3":0,"y3":0,"x4":0,"y4":0,"ticker":""},{"kind":2,"strength":1683.865,"status":1,"bounces":2,"x1":310,"y1":97,"x2":600,"y2":97,"x3":0,"y3":0,"x4":0,"y4":0,"ticker":""},{"kind":3,"strength":1844.168,"status":0,"bounces":2,"x1":307,"y1":213,"x2":600,"y2":118,"x3":0,"y3":0,"x4":0,"y4":0,"ticker":""},{"kind":12,"strength":3,"status":1,"bounces":2,"x1":310,"y1":97,"x2":600,"y2":97,"x3":0,"y3":0,"x4":0,"y4":0,"ticker":""}],"patternsMinRange":8.5,"patternsMaxRange":12};
+                                        data.instrument = 'stock';
+                                        data.premarket = false;
+                                        data.aftermarket = false;
+                                        data.hasPatterns = true;
+                                        data.events = false;
+                                        Quote.create(data);
+                                    })();
+                                  </script><script type="text/javascript">
+                                    var chartConfig = {
+          "layout":"1h1v",
+          "height": 400,
+          "scrollable": false,
+          "colors": undefined,
+          "ideas": false,
+          "editable": false,
+          "editors": ['tools', 'ideas', 'publish'],
+          "charts":[{
+                "height": 400,
+                "timeframe": "d",
+                "dateRange": "",
+                "scale": "linear",
+                "ticker": "AACI",
+                "instrument": "stock",
+                "refreshData": true,
+                "premarket": false,
+                "hasChartEvents": false,
+                "aftermarket": false,
+                "panes": []
+              }],
+        };
+                                    var taConfig = JSON.parse(JSON.stringify(FinvizSettings.TA));
+
+                                    taConfig.style = 'candlestick';
+                                    var FinvizQuoteTypeCurrent = taConfig.style;
+
+                                    var mergeChartAndTAConfig = FLibs.Charts.convertTa.mergeChartAndTAConfig;
+                                    mergeChartAndTAConfig(chartConfig, taConfig);
+
+                                    window.globalChartConfig = chartConfig
+                                  </script></div><div class="fv-container">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="center" valign="top">
+<div class="content" data-testid="quote-data-content"><table width="100%"><tr>
+<td align="center" valign="top">
+<table cellpadding="3" cellspacing="0" class="fullview-title" width="100%">
+<tr class="text-blue-500"><td align="center"><h1><a class="tab-link" href="quote.ashx?t=AACI&amp;ty=c&amp;ta=1&amp;p=d" id="ticker">AACI</a> | <span><a class="tab-link" href="https://armadaacq.com" rel="nofollow" target="_blank"><b>Armada Acquisition Corp. I</b></a></span></h1></td></tr>
+<tr><td align="center" class="fullview-links"><a class="tab-link" href="screener.ashx?v=111&amp;f=sec_financial">Financial</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=ind_shellcompanies">Shell Companies</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=geo_usa">USA</a> | <a class="tab-link" href="screener.ashx?v=111&amp;f=exch_nasd">NASD</a></td></tr>
+</table>
+<div class="my-3"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_970x91_1" style="width:970px;height:100px;max-height:100px"></div></div><table cellpding="0" cellspacing="0" class="fullview-links" width="100%">
+<td align="left" class="js-quote-correlation-links-container" width="80%">
+<td align="right" width="20%">
+<a class="tab-link" href="#statements">Scroll to Statements<svg class="fill-current inline-block ml-0.5" height="12" width="12">
+<use href="/assets/icons.svg?rev=3#arrowDown"></use>
+</svg></a></td>
+</td></table></td></tr>
+</table></div></td>
+</tr></table>
+<div class="snapshot-table-wrapper"><table border="0" cellpadding="3" cellspacing="0" class="snapshot-table2" width="100%">
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Major index membership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Index</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Earnings (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/E</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Diluted EPS (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS (ttm)</td><td align="left" class="snapshot-td2" width="8%"><b>-0.03</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Insider ownership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Insider Own</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">60.17%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Shares outstanding] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shs Outstand</td><td align="left" class="snapshot-td2" width="8%"><b>9.22M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Week)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Week</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-1.63%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Market capitalization] offsetx=[10] offsety=[20] delay=[300]" width="7%">Market Cap</td><td align="left" class="snapshot-td2" width="8%"><b>85.34M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Forward Price-to-Earnings (next fiscal year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Forward P/E</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS estimate for next year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Insider transactions (6-Month change in Insider Ownership)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Insider Trans</td><td align="left" class="snapshot-td2" width="8%"><b>0.00%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Shares float] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shs Float</td><td align="left" class="snapshot-td2" width="8%"><b>2.53M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Month</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-0.14%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Income (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Income</td><td align="left" class="snapshot-td2" width="8%"><b>0.10M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Earnings-to-Growth] offsetx=[10] offsety=[20] delay=[300]" width="7%">PEG</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS estimate for next quarter] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Q</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Institutional ownership] offsetx=[10] offsety=[20] delay=[300]" width="7%">Inst Own</td><td align="left" class="snapshot-td2" width="8%"><b>68.90%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Short interest share / ratio] offsetx=[10] offsety=[20] delay=[300]" width="7%">Short Float / Ratio</td><td align="left" class="snapshot-td2" width="8%"><b>0.03% / 0.03</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Quarter)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Quarter</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">4.70%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Revenue (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Sales (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/S</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS growth this year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS this Y</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-714.40%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Institutional transactions (3-Month change in Institutional Ownership)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Inst Trans</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">20.19%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Short interest] offsetx=[10] offsety=[20] delay=[300]" width="7%">Short Interest</td><td align="left" class="snapshot-td2" width="8%"><b>0.00M</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Half Year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Half Y</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">5.85%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Book value per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Book/sh</td><td align="left" class="snapshot-td2" width="8%"><b>3.18</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price-to-Book (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/B</td><td align="left" class="snapshot-td2" width="8%"><b>3.33</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[EPS growth next year] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Assets (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROA</td><td align="left" class="snapshot-td2" width="8%"><b>0.20%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Analysts' mean target price] offsetx=[10] offsety=[20] delay=[300]" width="7%">Target Price</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Year)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf Year</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">7.36%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Cash per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Cash/sh</td><td align="left" class="snapshot-td2" width="8%"><b>0.00</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price to cash per share (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/C</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Long term annual growth estimate (5 years)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS next 5Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Equity (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROE</td><td align="left" class="snapshot-td2" width="8%"><b>0.20%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[52-Week trading range] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W Range</td><td align="left" class="snapshot-td2" width="8%"><b><small>8.56 - 12.20</small></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (Year To Date)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Perf YTD</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">4.50%</span></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend (annual)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Dividend</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Price to Free Cash Flow (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">P/FCF</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Annual EPS growth past 5 years] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS past 5Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Return on Investment (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ROI</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 52-Week High] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W High</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-13.32%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Beta] offsetx=[10] offsety=[20] delay=[300]" width="7%">Beta</td><td align="left" class="snapshot-td2" width="8%"><b>0.00</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend yield (annual)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Dividend %</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quick Ratio (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Quick Ratio</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">0.00</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Annual sales growth past 5 years] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales past 5Y</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Gross Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Gross Margin</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 52-Week Low] offsetx=[10] offsety=[20] delay=[300]" width="7%">52W Low</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">23.54%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Average True Range (14)] offsetx=[10] offsety=[20] delay=[300]" width="7%">ATR</td><td align="left" class="snapshot-td2" width="8%"><b>0.07</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Full time employees] offsetx=[10] offsety=[20] delay=[300]" width="7%">Employees</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Current Ratio (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Current Ratio</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">0.00</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quarterly revenue growth (YoY)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Sales Q/Q</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Operating Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Oper. Margin</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Relative Strength Index] offsetx=[10] offsety=[20] delay=[300]" width="7%">RSI (14)</td><td align="left" class="snapshot-td2" width="8%"><b>48.21</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Volatility (Week, Month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Volatility</td><td align="left" class="snapshot-td2" width="8%"><b><small>0.27% 0.47%</small></b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Stock has options trading on a market exchange] offsetx=[10] offsety=[20] delay=[300]" width="7%">Optionable</td><td align="left" class="snapshot-td2" width="8%"><b>No</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Total Debt to Equity (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Debt/Eq</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">0.07</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Quarterly earnings growth (YoY)] offsetx=[10] offsety=[20] delay=[300]" width="7%">EPS Q/Q</td><td align="left" class="snapshot-td2" width="8%"><b>6.00%</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Net Profit Margin (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Profit Margin</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Relative volume] offsetx=[10] offsety=[20] delay=[300]" width="7%">Rel Volume</td><td align="left" class="snapshot-td2" width="8%"><b>0.00</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Previous close] offsetx=[10] offsety=[20] delay=[300]" width="7%">Prev Close</td><td align="left" class="snapshot-td2" width="8%"><b>10.70</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Stock available to sell short] offsetx=[10] offsety=[20] delay=[300]" width="7%">Shortable</td><td align="left" class="snapshot-td2" width="8%"><b>Yes</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Long Term Debt to Equity (mrq)] offsetx=[10] offsety=[20] delay=[300]" width="7%">LT Debt/Eq</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">0.00</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Earnings date&lt;br&gt;&lt;br&gt;BMO = Before Market Open&lt;br&gt;AMC = After Market Close] offsetx=[10] offsety=[20] delay=[300]" width="7%">Earnings</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Dividend Payout Ratio (ttm)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Payout</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Average volume (3 month)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Avg Volume</td><td align="left" class="snapshot-td2" width="8%"><b>29.56K</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Current stock price] offsetx=[10] offsety=[20] delay=[300]" width="7%">Price</td><td align="left" class="snapshot-td2" width="8%"><b>10.57</b></td>
+</tr>
+<tr class="table-dark-row">
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Analysts' mean recommendation (1=Buy 5=Sell)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Recom</td><td align="left" class="snapshot-td2" width="8%"><b>-</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 20-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA20</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-0.50%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 50-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA50</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">0.89%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Distance from 200-Day Simple Moving Average] offsetx=[10] offsety=[20] delay=[300]" width="7%">SMA200</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-green">4.40%</span></b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Volume] offsetx=[10] offsety=[20] delay=[300]" width="7%">Volume</td><td align="left" class="snapshot-td2" width="8%"><b>48</b></td>
+<td align="left" class="snapshot-td2-cp" data-boxover="cssbody=[tooltip_short_bdy] cssheader=[tooltip_short_hdr] body=[Performance (today)] offsetx=[10] offsety=[20] delay=[300]" width="7%">Change</td><td align="left" class="snapshot-td2" width="8%"><b><span class="is-red">-1.17%</span></b></td>
+</tr>
+</table>
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr><td align="center"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_3x6_1" style="width:970px;height:315px;max-height:315px"></div></td></tr><tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" width="100%"><tr><td><div class="body-table-news-wrapper"><table border="0" cellpadding="1" cellspacing="0" class="fullview-news-outer" id="news-table" width="100%">
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'PR Newswire', 'https://finance.yahoo.com/news/rezolve-ai-limited-announces-filing-120000176.html');">
+<td align="right" width="130">
+            Jun-23-23 08:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-ai-limited-announces-filing-120000176.html" rel="nofollow" target="_blank">Rezolve AI Limited Announces Filing of Registration Statement on Form F-4 to Become Publicly Traded in Connection with its Proposed Business Combination with Armada Acquisition Corp. I</a>
+</div>
+<div class="news-link-right">
+<span>(PR Newswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/rezolve-secures-250-million-equity-120000921.html');">
+<td align="right" width="130">
+            Feb-27-23 07:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-secures-250-million-equity-120000921.html" rel="nofollow" target="_blank">Rezolve Secures $250 Million Equity Funding from Yorkville Advisors in connection with Upcoming Public Listing</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/rezolve-grupo-carso-enter-strategic-123000236.html');">
+<td align="right" width="130">
+            Jan-18-23 07:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-grupo-carso-enter-strategic-123000236.html" rel="nofollow" target="_blank">Rezolve and Grupo Carso enter into strategic partnership to transform Latin American market for Omni Channel Mobile Engagement</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/armada-acquisition-corp-extends-deadline-140000449.html');">
+<td align="right" width="130">
+            Nov-11-22 09:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/armada-acquisition-corp-extends-deadline-140000449.html" rel="nofollow" target="_blank">Armada Acquisition Corp. I Extends Deadline To Consummate Business Combination with Rezolve</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/rezolve-appoints-sauvik-banerjjee-global-113000405.html');">
+<td align="right" width="130">
+            Aug-08-22 07:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-appoints-sauvik-banerjjee-global-113000405.html" rel="nofollow" target="_blank">Rezolve Appoints Sauvik Banerjjee as Global CEO of Products, Technology, and Digital Services</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/rezolve-launches-smartcodes-designed-engage-113000607.html');">
+<td align="right" width="130">
+            Jul-13-22 07:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-launches-smartcodes-designed-engage-113000607.html" rel="nofollow" target="_blank">Rezolve Launches SmartCodes Designed to Engage Consumers and Drive Instant Transactions</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/rezolve-strategically-partners-aci-worldwide-110000648.html');">
+<td align="right" width="130">
+            Jun-22-22 07:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-strategically-partners-aci-worldwide-110000648.html" rel="nofollow" target="_blank">Rezolve Strategically Partners with ACI Worldwide to Transform Omni Channel Commerce and Mobile Engagement for Merchants</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/rezolve-acquires-lifestyle-marketing-germany-120000596.html');">
+<td align="right" width="130">
+            Jun-15-22 08:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-acquires-lifestyle-marketing-germany-120000596.html" rel="nofollow" target="_blank">Rezolve acquires ANY Lifestyle Marketing in Germany intended to revolutionize Mobile Engagement</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'Benzinga', 'https://finance.yahoo.com/news/exclusive-armada-acquisition-partner-rezolve-110024599.html');">
+<td align="right" width="130">
+            07:00AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/exclusive-armada-acquisition-partner-rezolve-110024599.html" rel="nofollow" target="_blank">EXCLUSIVE: Armada Acquisition Partner Rezolve Scoops ANY Lifestyle Marketing Firm In Germany</a>
+</div>
+<div class="news-link-right">
+<span>(Benzinga)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/rezolve-computop-announce-strategic-partnership-130500304.html');">
+<td align="right" width="130">
+            Apr-21-22 09:05AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-computop-announce-strategic-partnership-130500304.html" rel="nofollow" target="_blank">Rezolve and Computop Announce Strategic Partnership on Mobile Engagement and Payments, Extending Rezolves Presence in German Markets and Beyond</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/rezolve-now-expects-138-million-113000297.html');">
+<td align="right" width="130">
+            Apr-06-22 07:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-now-expects-138-million-113000297.html" rel="nofollow" target="_blank">Rezolve now expects $138 million improvement in 2022 cash burn outlook, maintains 2022 revenue assumption of $219 million</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/rezolve-names-former-adobe-marketing-053000093.html');">
+<td align="right" width="130">
+            Feb-16-22 12:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-names-former-adobe-marketing-053000093.html" rel="nofollow" target="_blank">Rezolve Names Former Adobe Marketing Head Sunder Madakshira CEO of India Operations</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/rezolve-expands-board-two-additional-123000107.html');">
+<td align="right" width="130">
+            Jan-31-22 07:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/rezolve-expands-board-two-additional-123000107.html" rel="nofollow" target="_blank">Rezolve Expands Board With Two Additional Members Bringing Experience In Payments, E-Commerce</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/armada-acquisition-corp-acquire-rezolve-123000997.html');">
+<td align="right" width="130">
+            Dec-17-21 07:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/armada-acquisition-corp-acquire-rezolve-123000997.html" rel="nofollow" target="_blank">Armada Acquisition Corp. I to acquire Rezolve Mobile Engagement Platform in $2bn deal</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'The Wall Street Journal', 'https://www.wsj.com/articles/mobile-commerce-platform-rezolve-reaches-2-billion-spac-deal-to-go-public-11639740602?mod=itp_wsj');">
+<td align="right" width="130">
+            06:30AM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://www.wsj.com/articles/mobile-commerce-platform-rezolve-reaches-2-billion-spac-deal-to-go-public-11639740602?mod=itp_wsj" rel="nofollow" target="_blank">Mobile Commerce Platform Rezolve Reaches $2 Billion SPAC Deal to Go Public</a>
+</div>
+<div class="news-link-right">
+<span>(The Wall Street Journal)</span></div></div></td></tr>
+<tr class="cursor-pointer" onclick="trackAndOpenNews(event, 'GlobeNewswire', 'https://finance.yahoo.com/news/armada-acquisition-corp-announces-separate-213000894.html');">
+<td align="right" width="130">
+            Nov-16-21 04:30PM
+        </td>
+<td align="left">
+<div class="news-link-container">
+<div class="news-link-left">
+<a class="tab-link-news" href="https://finance.yahoo.com/news/armada-acquisition-corp-announces-separate-213000894.html" rel="nofollow" target="_blank">Armada Acquisition Corp. I Announces Separate Trading of its Common Stock and Warrants, Commencing November 16, 2021</a>
+</div>
+<div class="news-link-right">
+<span>(GlobeNewswire)</span></div></div></td></tr>
+</table>
+</div>
+</td><td style="padding-left: 10px" valign="top" width="300"><div class="fullview-news-outer" data-testid="quote-stocktwits-widget-news-container" id="stocktwits-widget-news">
+<div class="footer-cover"></div>
+<div class="right-side-cover"></div>
+</div>
+<script type="text/javascript">
+    function StocktwitsInit() {
+        var StocktwitsHeight = document.getElementById('news-table').clientHeight - 0;
+        if(typeof STWT !== 'undefined') {
+            var isNewLayout = true;
+            var isDarkTheme = true;
+            var MIN_TWIT_HEIGHT = 71;
+            var quoteTicker = 'AACI';
+            var bgColor = isNewLayout ? (isDarkTheme ? '22262F' : 'FFFFFF') : 'transparent';
+            var text_color = isNewLayout ? (isDarkTheme ? 'C3C6D0' : '4C5263') : '000000';
+            var link_color = isNewLayout ? (isDarkTheme ? '57aefb' : '306DCA') : '4871a8';
+            var divider_color = isNewLayout ? (isDarkTheme ? '353945' : 'DEDFE5') : 'd3d3d3';
+            var time_color = isNewLayout ? '868EA5' : '999999';
+            var username_color = isNewLayout ? (isDarkTheme ? 'F3F3F5' : '22262F') : '600D0B';
+            var font_size = isNewLayout ? 12 : 11;
+            STWT.Widget({
+                container: 'stocktwits-widget-news',
+                symbol: quoteTicker,
+                width: '300',
+                height: StocktwitsHeight,
+                limit: Math.ceil(StocktwitsHeight / MIN_TWIT_HEIGHT),
+                scrollbars: 0,
+                header: 0,
+                streaming: 'true',
+                style: { link_color, link_hover_color: link_color, header_text_color: text_color, border_color: bgColor, border_color_2: bgColor, divider_color, divider_type: 'solid', box_color: bgColor, stream_color: bgColor, text_color, time_color, font: 'Verdana, Arial, Tahoma', font_size, time_font_size: 10, username_font: 'Verdana, Arial, Tahoma', username_size: font_size, username_color, username_hover_color: username_color }
+            });
+        }
+    }
+
+    function loadStocktwitsScript() {
+        var s = document.createElement('script');
+        s.addEventListener('load', StocktwitsInit)
+        s.setAttribute('async', true)
+        s.src = '//api.stocktwits.com/addon/widget/2/widget-loader.min.js'
+        document.body.appendChild(s)
+    }
+
+    if (document.readyState != 'loading'){
+        loadStocktwitsScript();
+    } else {
+        document.addEventListener('DOMContentLoaded', loadStocktwitsScript);
+    }
+</script></td></tr></table></td>
+</tr>
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr class="table-light3-row">
+<td align="left" class="fullview-profile"><div>Armada Acquisition Corp. I focuses on effecting a merger, capital stock exchange, asset acquisition, stock purchase, reorganization, or related business combination with one or more businesses. It intends to focus on target businesses that provide technological services to the financial services industry. Armada Acquisition Corp. I was incorporated in 2020 and is based in Philadelphia, Pennsylvania.</div></td></tr>
+<tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<tr><td width="100%"><div id="statements"></div></td></tr><tr><td style="height:10px;font-size:0"><img src="gfx/nic2x2.gif" style="width:685px;height:10px"/></td></tr>
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 21px auto 14px auto">
+<tr class="flex">
+<td align="left" class="fullview-links flex items-center" valign="center">
+<a class="tab-link" href="https://finance.yahoo.com/quote/AACI" rel="nofollow" target="_blank">open in yahoo</a> | <a class="tab-link" href="https://www.reuters.com/companies/AACI.OQ" rel="nofollow" target="_blank">open in reuters</a> | <a class="tab-link" href="https://www.marketwatch.com/investing/stock/aaci" rel="nofollow" target="_blank">open in marketwatch</a> | <a class="tab-link" href="https://www.google.com/finance/quote/AACI:NASDAQ" rel="nofollow" target="_blank">open in google</a> | <a class="tab-link" href="https://www.sec.gov/edgar/browse/?CIK=1844817" rel="nofollow" target="_blank">open in EDGAR</a></td>
+</tr>
+</table>
+</table></div><script onerror="window.handleScriptNotLoaded(this)" src="/script/recent_quotes.js?v=344" type="text/javascript"></script>
+</div></div><div class="my-3"><div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_3x3_1" style="width:970px;height:250px;max-height:250px"></div></div>
+<div class="footer" style="margin-top: 20px;padding-bottom: 215px">
+<div class="footer_links">
+<a class="tab-link" href="/affiliate.ashx">affiliate</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/advertise.ashx">advertise</a>
+<span class="footer_dot"> • </span><a class="tab-link" href="/careers.ashx">careers</a>
+<span class="footer_dot"> • </span><a class="tab-link" href="#" onclick="setChartThemeCookie('light')">toggle light mode</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/contact.ashx">contact</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/privacy.ashx">privacy</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="/help/screener.ashx">help</a>
+<br/>
+<a class="tab-link" href="javascript:void(0)" onclick="window.__uspapi &amp;&amp; window.__uspapi('displayUspUi');">do not sell my data</a>
+<span class="footer_dot"> • </span>
+<a class="tab-link" href="javascript:void(0)" onclick="window.__tcfapi &amp;&amp; window.__tcfapi('displayConsentUi', 2, function() {})">privacy settings</a>
+</div>
+    Quotes delayed 15 minutes for NASDAQ, NYSE and AMEX.
+    <br/>
+    Copyright © 2007-2023 FINVIZ.com. All Rights Reserved.
+    
+</div><script>SearchFocus();</script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/4187.fd7fe045.js"></script><script onerror="window.handleScriptNotLoaded(this)" src="/assets/dist/quote.d837ebfb.js"></script><script>
+            function FinvizReady(fn) {
+              if (document.readyState != 'loading'){
+                fn();
+              } else {
+                document.addEventListener('DOMContentLoaded', fn);
+              }
+            }
+
+            (typeof StocktwitsInit === 'function' && FinvizReady(StocktwitsInit));
+            (typeof FinvizSettings === 'object' && (FinvizSettings.quoteSearchExt = '&ty=c&ta=1&p=d'));
+        </script>
+<div class="hidden" data-set-search-ext-argument="&amp;ty=c&amp;ta=1&amp;p=d" id="js-set-search-ext-argument"></div>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-3261808-1"></script>
+<script>
+              function getSystemTheme() {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                  return 'Dark';
+                }
+                else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                  return 'Light';
+                }
+                return 'No Preference';
+              }
+
+              var systemTheme = getSystemTheme()
+
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('set', {'dimension1': 'NotLoggedIn'});
+              gtag('set', {'dimension3': window.devicePixelRatio + ''});
+              gtag('set', {'layoutTheme': 'dark'});
+              gtag('set', {'systemTheme': systemTheme });
+              gtag('set', {'bundle': 'modern' });
+
+              gtag('config', 'UA-3261808-1', { sample_rate: 10 });
+              gtag('config', 'G-ZT9VQEWD4N', {'dimension1': 'NotLoggedIn', 'dimension3': window.devicePixelRatio + '', 'layoutTheme': 'dark', 'systemTheme': systemTheme });
+              
+            </script>
+<div class="relative overflow-hidden flex items-center justify-center w-full mx-auto" id="IC_D_1x1_1"></div><div class="modal-elite-ad" id="modal-elite-ad">
+<div class="modal-elite-ad_content" id="modal-elite-ad_content">
+<button class="modal-elite-ad_close" id="modal-elite-ad-close" type="button">×</button>
+<!--<div id="modal-elite-ad-content-0" style="display: none">
+			                        <h2>Ever heard of Finviz*Elite?</h2>
+                                    <p>
+                                        Our premium service offers you real-time quotes, advanced visualizations, technical studies, and much more.<br>
+                                        Become Elite and make informed financial decisions.
+                                    </p>
+                                    <a href="/elite.ashx?utm_source=finviz&utm_medium=banner&utm_campaign=modal-0" id="modal-elite-ad-btn-0" class="" target="_blank">Find out more</a>
+                                </div>-->
+<div id="modal-elite-ad-content-1" style="display: block">
+<h2>Upgrade your FINVIZ experience</h2>
+<p>
+                                        Join thousands of traders who make more informed decisions with our premium features.
+                                        Real-time quotes, advanced visualizations, backtesting, and much more.
+                                    </p>
+<a class="modal-elite_button" href="/elite.ashx?utm_source=finviz&amp;utm_medium=banner&amp;utm_campaign=modal-1" id="modal-elite-ad-btn-1" target="_blank">Learn more about FINVIZ*Elite</a>
+</div>
+</div>
+</div><script async="" src="/script/pv.js?rev=344"></script><script defer="">window.renderScriptNotLoaded();</script>
+<script crossorigin="anonymous" data-cf-beacon='{"rayId":"80b1df5aa96984e9","token":"e53f08f6c9e04bfd9760701085ec93b4","version":"2023.8.0","si":100}' defer="" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"></script>
+</div></body>
+</html>
